@@ -284,20 +284,20 @@
                     </div>
 
                     <!-- Previous Button -->
-                    <!-- <button id="prevBtn" 
-                            class="absolute left-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
+                    <button id="prevBtn" 
+                            class="invisible absolute left-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
-                    </button> -->
+                    </button>
 
                     <!-- Next Button -->
-                    <!-- <button id="nextBtn" 
-                            class="absolute right-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
+                    <button id="nextBtn" 
+                            class="invisible absolute right-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
-                    </button> -->
+                    </button>
 
                     <!-- Indicators -->
                     <div class="flex justify-center gap-2 mt-4">
@@ -362,9 +362,172 @@
             </div>
         </div>
 
+        <div class="mt-4 w-full">
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Klien Kami</h1>
+            <div class="container mx-auto px-4 py-8">
+                <!-- Carousel Container 2 -->
+                <div class="relative max-w-4xl mx-auto">
+                    
+                    <!-- Carousel Wrapper -->
+                    <div class="overflow-hidden rounded-lg">
+                        <div id="carousel2" class="flex transition-transform duration-500 ease-in-out">
+                            
+                            <!-- Slide 1 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/mobile-client-1.png');">
+                                <img src="/assets/mobile-client-1.png" 
+                                    alt="Slide 1" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/mobile-client-2.png');">
+                                <img src="/assets/mobile-client-2.png" 
+                                    alt="Slide 2" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/mobile-client-3.png');">
+                                <img src="/assets/mobile-client-3.png" 
+                                    alt="Slide 3" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous Button -->
+                    <button id="prevBtn2" 
+                            class="invisible absolute left-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Next Button -->
+                    <button id="nextBtn2" 
+                            class="invisible absolute right-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Indicators -->
+                    <div class="flex justify-center gap-2 mt-4">
+                        <button class="indicator2 w-3 h-3 rounded-full bg-gray-800 transition-all duration-300" data-index="0"></button>
+                        <button class="indicator2 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="1"></button>
+                        <button class="indicator2 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="2"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
+        <script>
+            // Carousel 2 JavaScript
+            const carousel2 = document.getElementById('carousel2');
+            const prevBtn2 = document.getElementById('prevBtn2');
+            const nextBtn2 = document.getElementById('nextBtn2');
+            const indicators2 = document.querySelectorAll('.indicator2');
+            
+            let currentIndex2 = 0;
+            const totalSlides2 = 3;
+            let autoPlayInterval2;
+
+            // Function to update carousel position
+            function updateCarousel2() {
+                carousel2.style.transform = `translateX(-${currentIndex2 * 100}%)`;
+                
+                // Update indicators
+                indicators2.forEach((indicator, index) => {
+                    if (index === currentIndex2) {
+                        indicator.classList.remove('bg-gray-400');
+                        indicator.classList.add('bg-gray-800', 'w-8');
+                    } else {
+                        indicator.classList.remove('bg-gray-800', 'w-8');
+                        indicator.classList.add('bg-gray-400');
+                    }
+                });
+            }
+
+            // Next slide
+            function nextSlide2() {
+                currentIndex2 = (currentIndex2 + 1) % totalSlides2;
+                updateCarousel2();
+            }
+
+            // Previous slide
+            function prevSlide2() {
+                currentIndex2 = (currentIndex2 - 1 + totalSlides2) % totalSlides2;
+                updateCarousel2();
+            }
+
+            // Event listeners
+            nextBtn2.addEventListener('click', () => {
+                nextSlide2();
+                resetAutoPlay2();
+            });
+
+            prevBtn2.addEventListener('click', () => {
+                prevSlide2();
+                resetAutoPlay2();
+            });
+
+            // Indicator click
+            indicators2.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex2 = index;
+                    updateCarousel2();
+                    resetAutoPlay2();
+                });
+            });
+
+            // Auto play
+            function startAutoPlay2() {
+                autoPlayInterval2 = setInterval(nextSlide2, 3000);
+            }
+
+            function resetAutoPlay2() {
+                clearInterval(autoPlayInterval2);
+                startAutoPlay2();
+            }
+
+            // Touch/Swipe support
+            let touchStartX2 = 0;
+            let touchEndX2 = 0;
+
+            carousel2.addEventListener('touchstart', (e) => {
+                touchStartX2 = e.changedTouches[0].screenX;
+            });
+
+            carousel2.addEventListener('touchend', (e) => {
+                touchEndX2 = e.changedTouches[0].screenX;
+                handleSwipe2();
+            });
+
+            function handleSwipe2() {
+                if (touchStartX2 - touchEndX2 > 50) {
+                    nextSlide2();
+                    resetAutoPlay2();
+                }
+                if (touchEndX2 - touchStartX2 > 50) {
+                    prevSlide2();
+                    resetAutoPlay2();
+                }
+            }
+
+            // Start autoplay on load
+            startAutoPlay2();
+
+            // Pause autoplay on hover
+            carousel2.addEventListener('mouseenter', () => {
+                clearInterval(autoPlayInterval2);
+            });
+
+            carousel2.addEventListener('mouseleave', () => {
+                startAutoPlay2();
+            });
+        </script>
        <script>
             // Carousel JavaScript
             const carousel = document.getElementById('carousel');

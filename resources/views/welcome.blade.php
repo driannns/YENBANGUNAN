@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>YEN BANGUNAN - Toko Bangunan Cikarang Terlengkap &` Terbesar</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -19,7 +19,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.cdnfonts.com/css/d-din" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
-    
+
+        <!-- Box Icons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -88,10 +91,10 @@
             <source src="/assets/newvideo-1.mp4" type="video/mp4">
         </video>
         <div class="w-full h-screen grid content-center p-8 text-white absolute top-0 left-0">
-            <nav class="fixed w-full z-40 top-0 start-0 text-white">
-                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-1 px-2">
+            <nav class="fixed w-full z-40 top-0 start-0 text-white p-1 font-d-din uppercase">
+                <div class="flex flex-wrap items-center justify-between mx-auto py-1 px-2">
                     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="/assets/logo.png" class="h-5" alt="Flowbite Logo" />
+                    <img src="/assets/logo.png" class="h-5" alt="Yen Bangunan Logo" />
                     </a>
                     <div class="z-50 flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                         <button type="button" class="flex text-sm bg-neutral-primary rounded-full md:me-0 focus:ring-4 focus:ring-neutral-tertiary" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
@@ -124,7 +127,7 @@
                             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
                         </button>
                     </div>
-                    <div class="bg-white text-black font-special-gothic items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+                    <div class="bg-white lg:bg-transparent lg:text-white text-black font-special-gothic items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
                         <ul class="font-medium flex flex-col p-4 md:p-0 mt-1 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
                         <li>
                             <a href="#" class="block py-2 px-3 bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
@@ -162,19 +165,20 @@
             </div>
         </div>
 
-        <div class="">
-            <div class="font-montserrat px-6 py-16">
-                <h1 class="text-4xl font-extrabold">YEN BANGUNAN FOR EVERYTHING & EVERYONE</h1>
-                <p class="mt-2 leading-7 text-base">
+        <div class="flex flex-col lg:flex-row-reverse w-full">
+            <div class="font-montserrat px-6 py-16 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
+                <h1 class="text-4xl font-extrabold lg:w-5/6">YEN BANGUNAN FOR EVERYTHING & EVERYONE</h1>
+                <p class="mt-2 leading-7 text-base lg:w-5/6">
                     Yen Bangunan adalah solusi tepat untuk segala kebutuhan konstruksi, renovasi, dan pengadaan material, baik untuk individu, kontraktor, maupun perusahaan. Dengan layanan andal dan produk lengkap, kami hadir untuk anda, di segala kondisi.
                 </p>
             </div>
-            <div style="background-image: url('/assets/home-1.jpeg'); height: 70vh;" class="position-center bg-cover no-repeat bg-center">
+            <div style="background-image: url('/assets/home-1.jpeg'); height: 70vh;" class="position-center bg-cover no-repeat bg-center lg:w-1/2">
                 <img src="/assets/home-1.jpeg" alt="Home" class="invisible">
             </div>
         </div>
-        <div class="">
-            <div class="font-montserrat px-6 py-16">
+
+        <div class="flex flex-col lg:flex-row w-full">
+            <div class="font-montserrat px-6 py-16 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
                 <h1 class="text-4xl font-extrabold">YEN BANGUNAN SERVICES & DELIVERY</h1>
                 <ul class="list-disc mt-2 leading-7 text-base pl-4">
                     <li class="font-semibold">Free Delivery</li>
@@ -185,61 +189,61 @@
                     Kami menyediakan berbagai kebutuhan material proyek dan pabrik dalam satu tempat
                 </ul>
             </div>
-            <div style="background-image: url('/assets/home-2.jpeg'); height: 70vh;" class="position-center bg-cover no-repeat bg-center">
+            <div style="background-image: url('/assets/home-2.jpeg'); height: 70vh;" class="position-center bg-cover no-repeat bg-center lg:w-1/2">
                 <img src="/assets/home-2.jpeg" alt="Home" class="invisible">
             </div>
         </div>
 
-        <div class="mt-4">
+        <div class="mt-8">
             <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Produk Kami</h1>
-            <div class="grid grid-cols-4 gap-4 p-4">
+            <div class="grid grid-cols-4 lg:grid-cols-6 gap-8 conte p-4">
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
+                    <img src="/assets/product/besi-dan-baja.png" alt="Product">
                     <p>Besi & Baja</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/hebel-dan-bata.png" alt="Product">
+                    <p>Hebel & Bata</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/atap.png" alt="Product">
+                    <p>Atap</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/pipa-dan-sanitasi.png" alt="Product">
+                    <p>Pipa & Sanitasi</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/lampu-dan-kelistrikan.png" alt="Product">
+                    <p>Lampu & Kelistrikan</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/mesin.png" alt="Product">
+                    <p>Mesin</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/perkakas.png" alt="Product">
+                    <p>Perkakas</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/paku-dan-baut.png" alt="Product">
+                    <p>Paku & Baut</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/consumable-industri.png" alt="Product">
+                    <p>Consumable Industry</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/safety.png" alt="Product">
+                    <p>Safety Industry</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/keramik-dan-granit.png" alt="Product">
+                    <p>Keramik & Granit</p>
                 </div>
                 <div class="font-d-din font-bold uppercase text-center">
-                    <img src="/assets/product.jpg" alt="Product">
-                    <p>Besi & Baja</p>
+                    <img src="/assets/product/cat.png" alt="Product">
+                    <p>Cat</p>
                 </div>
             </div>
         </div>
@@ -318,9 +322,9 @@
                 tim purchasing. dengan menyediakan kelengkapan kebutuhan serta harga yang kompetitif untuk memastikan 
                 efisiensi dan kemudahan dalam setiap pengadaan.
             </p>
-            <div class="flex flex-col mt-4">
-                <div class="flex flex-col lg:flex-row gap-4">
-                    <div class="border-2 border-black p-3">
+            <div class="flex flex-col mt-4 lg:p-8">
+                <div class="flex flex-col lg:flex-row gap-4 lg:gap-10">
+                    <div class="border-2 border-black p-3 lg:w-1/2">
                         <div class="flex items-center gap-4">
                             <img src="" alt="">
                             <h1 class="text-2xl font-bold">Free Delivery</h1>
@@ -329,7 +333,7 @@
                             kami menyediakan layanan free delivery untuk pengiriman di area Cikarang, memastikan kemudahan dan efisiensi bagi setiap pelanggan.
                         </p>
                     </div>
-                    <div class="border-2 border-black p-3 bg-black text-white">
+                    <div class="border-2 border-black p-3 bg-black text-white lg:w-1/2">
                         <div class="flex items-center gap-4">
                             <img src="" alt="">
                             <h1 class="text-2xl font-bold">Request Order</h1>
@@ -339,8 +343,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="flex flex-col lg:flex-row gap-4 mt-4">
-                    <div class="border-2 border-black p-3">
+                <div class="flex flex-col lg:flex-row gap-4 mt-4 lg:gap-10">
+                    <div class="border-2 border-black p-3 lg:w-1/2">
                         <div class="flex items-center gap-4">
                             <img src="" alt="">
                             <h1 class="text-2xl font-bold">All in One and Competitive</h1>
@@ -349,7 +353,7 @@
                             Kami menyediakan all-around product dalam satu tempat, menghadirkan solusi lengkap dengan harga kompetitif untuk memenuhi setiap kebutuhan pelanggan.
                         </p>
                     </div>
-                    <div class="border-2 border-black p-3 bg-black text-white">
+                    <div class="border-2 border-black p-3 bg-black text-white lg:w-1/2">
                         <div class="flex items-center gap-4">
                             <img src="" alt="">
                             <h1 class="text-2xl font-bold">24 Hours Customer Service</h1>
@@ -420,9 +424,508 @@
             </div>
         </div>
 
+        <div class="mt-4 w-full px-4">
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Layanan Supplier</h1>
+            <p class="text-center mt-3">Yen Bangunan juga siap menjadi suplier bahan bangunan terpercaya untuk proyek perkantoran, perumahan. dan pabrik. Menyediakan produk berkualitas tinggi dengan harga kompetitif dan layanan profesional di area Cikarang.</p>
+            <div class="container mx-auto px-4 py-8">
+                <!-- Carousel Container 3 -->
+                <div class="relative max-w-4xl mx-auto">
+                    
+                    <!-- Carousel Wrapper -->
+                    <div class="overflow-hidden rounded-lg shadow-lg">
+                        <div id="carousel3" class="flex transition-transform duration-500 ease-in-out">
+                            
+                            <!-- Slide 1 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/pabrik.jpeg');">
+                                <img src="/assets/pabrik.jpeg" 
+                                    alt="Slide 1" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/perkantoran.jpeg');">
+                                <img src="/assets/perkantoran.jpeg" 
+                                    alt="Slide 2" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/perumahan.jpeg');">
+                                <img src="/assets/perumahan.jpeg" 
+                                    alt="Slide 3" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous Button -->
+                    <button id="prevBtn3" 
+                            class="absolute left-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Next Button -->
+                    <button id="nextBtn3" 
+                            class="absolute right-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Indicators -->
+                    <div class="flex justify-center gap-2 mt-4">
+                        <button class="indicator3 w-3 h-3 rounded-full bg-gray-800 transition-all duration-300" data-index="0"></button>
+                        <button class="indicator3 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="1"></button>
+                        <button class="indicator3 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="2"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 w-full px-4">
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Projek</h1>
+            <div class="container mx-auto px-4 py-8">
+                <!-- Carousel Container 4 -->
+                <div class="relative max-w-4xl mx-auto">
+                    
+                    <!-- Carousel Wrapper -->
+                    <div class="overflow-hidden rounded-lg">
+                        <div id="carousel4" class="flex transition-transform duration-500 ease-in-out">
+                            
+                            <!-- Slide 1 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/project-1.png');">
+                                <img src="/assets/project-1.png" 
+                                    alt="Slide 1" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/project-2.png');">
+                                <img src="/assets/project-2.png" 
+                                    alt="Slide 2" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/project-3.png');">
+                                <img src="/assets/project-3.png" 
+                                    alt="Slide 3" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/project-4.png');">
+                                <img src="/assets/project-4.png" 
+                                    alt="Slide 4" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous Button -->
+                    <button id="prevBtn4" 
+                            class="absolute left-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Next Button -->
+                    <button id="nextBtn4" 
+                            class="absolute right-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Indicators -->
+                    <div class="flex justify-center gap-2 mt-4">
+                        <button class="indicator4 w-3 h-3 rounded-full bg-gray-800 transition-all duration-300" data-index="0"></button>
+                        <button class="indicator4 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="1"></button>
+                        <button class="indicator4 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="2"></button>
+                        <button class="indicator4 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="3"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+            
+        <div class="mt-4 w-full px-4 font-montserrat">
+            <h1 class="font-medium font-lg text-center">Dalam lebih dari <span class="font-bold">15</span> tahun pelayanan kami, kami telah mencapai</h1>
+            <div class="flex flex-col items-center gap-8 mt-4">
+                <div class="flex flex-col items-center gap-8">
+                    <div class="text-4xl font-extrabold border-y-2 border-black py-4">
+                        5,000+ <span class="text-2xl font-semibold">SKU Produk</span>
+                    </div>
+                    <div class="text-4xl font-extrabold border-y-2 border-black py-4">
+                        700+ <span class="text-2xl font-semibold">Projek</span>
+                    </div>
+                </div>
+                <div class="text-4xl font-extrabold border-y-2 border-black py-4">
+                    400+ <span class="text-2xl font-semibold">Pelanggan</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 w-full px-4">
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Galeri Yen Bangunan</h1>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-base" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full px-4 mt-5">
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">APA KATA MEREKA TENTANG YENBANGUNAN?</h1>
+            <div class="container mx-auto px-4 py-8">
+                <!-- Carousel Container 5 -->
+                <div class="relative max-w-4xl mx-auto">
+                    
+                    <!-- Carousel Wrapper -->
+                    <div class="overflow-hidden rounded-lg">
+                        <div id="carousel5" class="flex transition-transform duration-500 ease-in-out">
+                            
+                            <!-- Slide 1 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/review-1.png');">
+                                <img src="/assets/review-1.png" 
+                                    alt="Slide 1" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/review-2.png');">
+                                <img src="/assets/review-2.png" 
+                                    alt="Slide 2" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/review-3.png');">
+                                <img src="/assets/review-3.png" 
+                                    alt="Slide 3" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/review-4.png');">
+                                <img src="/assets/review-4.png" 
+                                    alt="Slide 4" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/review-5.png');">
+                                <img src="/assets/review-5.png" 
+                                    alt="Slide 5" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/review-6.png');">
+                                <img src="/assets/review-6.png" 
+                                    alt="Slide 6" 
+                                    class="w-full object-cover invisible">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous Button -->
+                    <button id="prevBtn5" 
+                            class="invisible absolute left-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Next Button -->
+                    <button id="nextBtn5" 
+                            class="invisible absolute right-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Indicators -->
+                    <div class="flex justify-center gap-2 mt-4">
+                        <button class="indicator5 w-3 h-3 rounded-full bg-gray-800 transition-all duration-300" data-index="0"></button>
+                        <button class="indicator5 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="1"></button>
+                        <button class="indicator5 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="2"></button>
+                        <button class="indicator5 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="3"></button>
+                        <button class="indicator5 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="4"></button>
+                        <button class="indicator5 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="5"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-black text-white">
+            <div class="flex items-start gap-6 p-6">
+                <div class="flex flex-col gap-4 w-5/12">
+                    <img src="/assets/logo.png" class="w-2/3 lg:w-1/3" alt="Yen Bangunan Logo" />
+                    <p class="text-sm lg:text-base">Lippo Cikarang Sukadami, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat, 17530</p>
+                    <div class="flex items-center gap-2">
+                        <i class='bx bxl-whatsapp  bx-sm'></i>
+                        <p class="text-sm">081315147952</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 w-4/12">
+                    <h1 class="font-bold">LINK</h1>
+                    <ul class="flex flex-col gap-4 text-sm lg:text-base lg:gap-6">
+                        <li>Home</li>
+                        <li>Produk</li>
+                        <li>Tentang Kami</li>
+                        <li>Blok</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-2 w-3/12">
+                    <h1 class="font-bold">Follow Kami</h1>
+                    <p>@yenbangunan</p>
+                </div>
+            </div>
+
+        </footer>
+
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
+        <script>
+            // Carousel 5 JavaScript
+            const carousel5 = document.getElementById('carousel5');
+            const prevBtn5 = document.getElementById('prevBtn5');
+            const nextBtn5 = document.getElementById('nextBtn5');
+            const indicators5 = document.querySelectorAll('.indicator5');
+            
+            let currentIndex5 = 0;
+            const totalSlides5 = 6; // 6 slides
+            let autoPlayInterval5;
+
+            // Function to update carousel position
+            function updateCarousel5() {
+                carousel5.style.transform = `translateX(-${currentIndex5 * 100}%)`;
+                
+                // Update indicators
+                indicators5.forEach((indicator, index) => {
+                    if (index === currentIndex5) {
+                        indicator.classList.remove('bg-gray-400');
+                        indicator.classList.add('bg-gray-800', 'w-8');
+                    } else {
+                        indicator.classList.remove('bg-gray-800', 'w-8');
+                        indicator.classList.add('bg-gray-400');
+                    }
+                });
+            }
+
+            // Next slide
+            function nextSlide5() {
+                currentIndex5 = (currentIndex5 + 1) % totalSlides5;
+                updateCarousel5();
+            }
+
+            // Previous slide
+            function prevSlide5() {
+                currentIndex5 = (currentIndex5 - 1 + totalSlides5) % totalSlides5;
+                updateCarousel5();
+            }
+
+            // Event listeners
+            nextBtn5.addEventListener('click', () => {
+                nextSlide5();
+                resetAutoPlay5();
+            });
+
+            prevBtn5.addEventListener('click', () => {
+                prevSlide5();
+                resetAutoPlay5();
+            });
+
+            // Indicator click
+            indicators5.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex5 = index;
+                    updateCarousel5();
+                    resetAutoPlay5();
+                });
+            });
+
+            // Auto play
+            function startAutoPlay5() {
+                autoPlayInterval5 = setInterval(nextSlide5, 3000);
+            }
+
+            function resetAutoPlay5() {
+                clearInterval(autoPlayInterval5);
+                startAutoPlay5();
+            }
+
+            // Touch/Swipe support
+            let touchStartX5 = 0;
+            let touchEndX5 = 0;
+
+            carousel5.addEventListener('touchstart', (e) => {
+                touchStartX5 = e.changedTouches[0].screenX;
+            });
+
+            carousel5.addEventListener('touchend', (e) => {
+                touchEndX5 = e.changedTouches[0].screenX;
+                handleSwipe5();
+            });
+
+            function handleSwipe5() {
+                if (touchStartX5 - touchEndX5 > 50) {
+                    nextSlide5();
+                    resetAutoPlay5();
+                }
+                if (touchEndX5 - touchStartX5 > 50) {
+                    prevSlide5();
+                    resetAutoPlay5();
+                }
+            }
+
+            // Start autoplay on load
+            startAutoPlay5();
+
+            // Pause autoplay on hover
+            carousel5.addEventListener('mouseenter', () => {
+                clearInterval(autoPlayInterval5);
+            });
+
+            carousel5.addEventListener('mouseleave', () => {
+                startAutoPlay5();
+            });
+        </script>
+        <script>
+            // Carousel 4 JavaScript
+            const carousel4 = document.getElementById('carousel4');
+            const prevBtn4 = document.getElementById('prevBtn4');
+            const nextBtn4 = document.getElementById('nextBtn4');
+            const indicators4 = document.querySelectorAll('.indicator4');
+            
+            let currentIndex4 = 0;
+            const totalSlides4 = 4; // 4 slides
+            let autoPlayInterval4;
+
+            // Function to update carousel position
+            function updateCarousel4() {
+                carousel4.style.transform = `translateX(-${currentIndex4 * 100}%)`;
+                
+                // Update indicators
+                indicators4.forEach((indicator, index) => {
+                    if (index === currentIndex4) {
+                        indicator.classList.remove('bg-gray-400');
+                        indicator.classList.add('bg-gray-800', 'w-8');
+                    } else {
+                        indicator.classList.remove('bg-gray-800', 'w-8');
+                        indicator.classList.add('bg-gray-400');
+                    }
+                });
+            }
+
+            // Next slide
+            function nextSlide4() {
+                currentIndex4 = (currentIndex4 + 1) % totalSlides4;
+                updateCarousel4();
+            }
+
+            // Previous slide
+            function prevSlide4() {
+                currentIndex4 = (currentIndex4 - 1 + totalSlides4) % totalSlides4;
+                updateCarousel4();
+            }
+
+            // Event listeners
+            nextBtn4.addEventListener('click', () => {
+                nextSlide4();
+                resetAutoPlay4();
+            });
+
+            prevBtn4.addEventListener('click', () => {
+                prevSlide4();
+                resetAutoPlay4();
+            });
+
+            // Indicator click
+            indicators4.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex4 = index;
+                    updateCarousel4();
+                    resetAutoPlay4();
+                });
+            });
+
+            // Auto play
+            function startAutoPlay4() {
+                autoPlayInterval4 = setInterval(nextSlide4, 3000);
+            }
+
+            function resetAutoPlay4() {
+                clearInterval(autoPlayInterval4);
+                startAutoPlay4();
+            }
+
+            // Touch/Swipe support
+            let touchStartX4 = 0;
+            let touchEndX4 = 0;
+
+            carousel4.addEventListener('touchstart', (e) => {
+                touchStartX4 = e.changedTouches[0].screenX;
+            });
+
+            carousel4.addEventListener('touchend', (e) => {
+                touchEndX4 = e.changedTouches[0].screenX;
+                handleSwipe4();
+            });
+
+            function handleSwipe4() {
+                if (touchStartX4 - touchEndX4 > 50) {
+                    nextSlide4();
+                    resetAutoPlay4();
+                }
+                if (touchEndX4 - touchStartX4 > 50) {
+                    prevSlide4();
+                    resetAutoPlay4();
+                }
+            }
+
+            // Start autoplay on load
+            startAutoPlay4();
+
+            // Pause autoplay on hover
+            carousel4.addEventListener('mouseenter', () => {
+                clearInterval(autoPlayInterval4);
+            });
+
+            carousel4.addEventListener('mouseleave', () => {
+                startAutoPlay4();
+            });
+        </script>
         <script>
             // Carousel 2 JavaScript
             const carousel2 = document.getElementById('carousel2');
@@ -642,6 +1145,111 @@
 
             carousel.addEventListener('mouseleave', () => {
                 startAutoPlay();
+            });
+        </script>
+        <script>
+            // Carousel 3 JavaScript
+            const carousel3 = document.getElementById('carousel3');
+            const prevBtn3 = document.getElementById('prevBtn3');
+            const nextBtn3 = document.getElementById('nextBtn3');
+            const indicators3 = document.querySelectorAll('.indicator3');
+            
+            let currentIndex3 = 0;
+            const totalSlides3 = 3; // 3 slides
+            let autoPlayInterval3;
+
+            // Function to update carousel position
+            function updateCarousel3() {
+                carousel3.style.transform = `translateX(-${currentIndex3 * 100}%)`;
+                
+                // Update indicators
+                indicators3.forEach((indicator, index) => {
+                    if (index === currentIndex3) {
+                        indicator.classList.remove('bg-gray-400');
+                        indicator.classList.add('bg-gray-800', 'w-8');
+                    } else {
+                        indicator.classList.remove('bg-gray-800', 'w-8');
+                        indicator.classList.add('bg-gray-400');
+                    }
+                });
+            }
+
+            // Next slide
+            function nextSlide3() {
+                currentIndex3 = (currentIndex3 + 1) % totalSlides3;
+                updateCarousel3();
+            }
+
+            // Previous slide
+            function prevSlide3() {
+                currentIndex3 = (currentIndex3 - 1 + totalSlides3) % totalSlides3;
+                updateCarousel3();
+            }
+
+            // Event listeners
+            nextBtn3.addEventListener('click', () => {
+                nextSlide3();
+                resetAutoPlay3();
+            });
+
+            prevBtn3.addEventListener('click', () => {
+                prevSlide3();
+                resetAutoPlay3();
+            });
+
+            // Indicator click
+            indicators3.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex3 = index;
+                    updateCarousel3();
+                    resetAutoPlay3();
+                });
+            });
+
+            // Auto play
+            function startAutoPlay3() {
+                autoPlayInterval3 = setInterval(nextSlide3, 3000);
+            }
+
+            function resetAutoPlay3() {
+                clearInterval(autoPlayInterval3);
+                startAutoPlay3();
+            }
+
+            // Touch/Swipe support
+            let touchStartX3 = 0;
+            let touchEndX3 = 0;
+
+            carousel3.addEventListener('touchstart', (e) => {
+                touchStartX3 = e.changedTouches[0].screenX;
+            });
+
+            carousel3.addEventListener('touchend', (e) => {
+                touchEndX3 = e.changedTouches[0].screenX;
+                handleSwipe3();
+            });
+
+            function handleSwipe3() {
+                if (touchStartX3 - touchEndX3 > 50) {
+                    nextSlide3();
+                    resetAutoPlay3();
+                }
+                if (touchEndX3 - touchStartX3 > 50) {
+                    prevSlide3();
+                    resetAutoPlay3();
+                }
+            }
+
+            // Start autoplay on load
+            startAutoPlay3();
+
+            // Pause autoplay on hover
+            carousel3.addEventListener('mouseenter', () => {
+                clearInterval(autoPlayInterval3);
+            });
+
+            carousel3.addEventListener('mouseleave', () => {
+                startAutoPlay3();
             });
         </script>
     </body>

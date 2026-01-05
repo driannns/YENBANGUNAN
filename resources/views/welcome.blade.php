@@ -86,7 +86,7 @@
         @endif
     </head>
     <body class="relative bg-[#FDFDFC] text-[#1b1b18] flex items-center lg:justify-center min-h-screen flex-col">
-        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20bertanya" 
+        <a href="https://wa.link/3v66z0" 
         target="_blank"
         class="fixed whatsapp-pulse whatsapp-bounce bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:scale-110 transition-all duration-300 z-50" aria-label="WhatsApp">
             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -105,17 +105,39 @@
                 60% { transform: translateY(-1px); }
             }
         </style>
-        <div class="w-full bg-[#e58039] text-white py-3 overflow-hidden shadow-lg fixed top-0 z-50">
-            <div class="flex items-center">
-                <!-- Label -->
-                <div class="bg-white text-red-600 px-4 py-1 font-bold text-sm uppercase flex-shrink-0">
-                    PROMO
-                </div>
-                
-                <!-- Scrolling Text Container -->
-                <div class="flex-1 overflow-hidden ml-4 relative">
-                    <div id="tickerContent" class="whitespace-nowrap inline-block text-black text-lg font-semibold" style="position: relative;">
-                        <!-- Konten akan di-generate oleh JavaScript -->
+        <div id="countdownBanner" class="w-full bg-white text-white py-4 shadow-lg relative">
+            <div class="container mx-auto">
+                <div class="flex items-center justify-between">
+                    <!-- Close Button -->
+                    
+                    <!-- Countdown Timer -->
+                    <div class="flex items-center justify-between text-red-600 w-full">
+                        <a href="https://wa.link/5guxjh" target="_blank" class="text-sm w-1/4 hover:font-semibold hover:text-red-800 transition-all">POTONGAN 25%!!! UNTUK PEMBELIAN PERTAMA (S&K Berlaku)</a>
+                        <div class="w-2/4 flex items-center justify-center gap-2 text-lg md:text-xl font-bold">
+                            <!-- Square Icon -->
+                            <div class="w-6 h-6 md:w-8 md:h-8 bg-red-600"></div>
+                            
+                            <!-- Days -->
+                            <span id="days" class="text-red-600">00</span>
+                            <span class="text-red-600">D:</span>
+                            
+                            <!-- Hours -->
+                            <span id="hours" class="text-red-600">00</span>
+                            <span class="text-red-600">H:</span>
+                            
+                            <!-- Minutes -->
+                            <span id="minutes" class="text-red-600">00</span>
+                            <span class="text-red-600">M:</span>
+                            
+                            <!-- Seconds -->
+                            <span id="seconds" class="text-red-600">00</span>
+                            <span class="text-red-600">S</span>
+                        </div>
+                        <button id="closeBanner" class="w-1/4 flex justify-end text-red hover:text-red-800 transition-colors p-1">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -131,7 +153,7 @@
                             <img src="/assets/logo.png" class="h-5" alt="Yen Bangunan Logo" />
                         </a>
                         <div class="z-50 flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                            <button class="hidden lg:block bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</button>
+                            <a href="https://wa.me/6282123269622" class="hidden lg:block bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
                             <button type="button" class="hidden text-sm bg-neutral-primary rounded-full md:me-0 focus:ring-4 focus:ring-neutral-tertiary" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                                 <span class="sr-only">Open user menu</span>
                                 <img class="w-8 h-8 rounded-full" src="/assets/product.jpg" alt="user photo">
@@ -872,50 +894,54 @@
             <div class="h-14.5 hidden lg:block"></div>
         @endif
         <script>
-            // News Ticker dengan JavaScript
-            const messages = [
-                '      POTONGAN 25%!!! UNTUK PEMBELIAN PERTAMA (S&K Berlaku)!      ',
-                '      POTONGAN 25%!!! UNTUK PEMBELIAN PERTAMA (S&K Berlaku)!      ',
-                '      POTONGAN 25%!!! UNTUK PEMBELIAN PERTAMA (S&K Berlaku)!      ',
-                '      POTONGAN 25%!!! UNTUK PEMBELIAN PERTAMA (S&K Berlaku)!      ',
-            ];
-
-            const tickerContent = document.getElementById('tickerContent');
-            const fullText = messages.join('    •    ') + ' • ' + messages.join('      •      ');
+            // Countdown Timer
+            const countdownBanner = document.getElementById('countdownBanner');
+            const closeBanner = document.getElementById('closeBanner');
             
-            // Create ticker text
-            tickerContent.innerHTML = `<span class="inline-block px-4">${fullText}</span>`;
+            // Set target date: 7 Januari 2026, 23:59:59
+            const targetDate = new Date('2026-01-07T23:59:59').getTime();
             
-            let position = 0;
-            const speed = 0.5; // pixel per frame
-            let animationId;
-            let isPaused = false;
-
-            function animate() {
-                if (!isPaused) {
-                    position -= speed;
-                    
-                    // Reset position for seamless loop
-                    if (Math.abs(position) >= tickerContent.scrollWidth / 2) {
-                        position = 0;
-                    }
-                    
-                    tickerContent.style.transform = `translateX(${position}px)`;
-                }
+            // Update countdown every second
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
                 
-                animationId = requestAnimationFrame(animate);
+                // Calculate time units
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Display countdown
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+                
+                // Check if countdown is finished
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                }
             }
-
-            // Start animation
-            animate();
-
-            // Pause on hover
-            tickerContent.addEventListener('mouseenter', () => {
-                isPaused = true;
-            });
-
-            tickerContent.addEventListener('mouseleave', () => {
-                isPaused = false;
+            
+            // Initial call
+            updateCountdown();
+            
+            // Close button functionality
+            closeBanner.addEventListener('click', () => {
+                countdownBanner.style.transition = 'all 0.3s ease-out';
+                countdownBanner.style.transform = 'translateY(-100%)';
+                countdownBanner.style.opacity = '0';
+                
+                setTimeout(() => {
+                    countdownBanner.style.display = 'none';
+                }, 300);
             });
         </script>
         <script>

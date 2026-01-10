@@ -15,6 +15,8 @@ Route::get('/about-us', function () {
     return view('about-us');
 });
 
+Route::get('/blog', [App\Http\Controllers\BlogController::class, 'all'])->name('blog');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

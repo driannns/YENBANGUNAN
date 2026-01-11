@@ -14,6 +14,7 @@
         <!-- Flowbite CSS -->
         <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
         <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +44,22 @@
                     height: 100vh;
                     object-fit: cover;
                     z-index: -1;
+                }
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+                
+                .animate-marquee {
+                    animation: marquee 30s linear infinite;
+                }
+                
+                .animate-marquee:hover {
+                    animation-play-state: paused;
                 }
                 @keyframes pulse-ring {
                     0% {
@@ -146,52 +163,45 @@
                 </div>
             </div>
         </nav>
-        <div class="w-full flex flex-col text-white md:flex-row bg-black p-10" style="height: 80vh;">
-            <h1 class="text-4xl font-bold">Posts</h1>
-            <p>Membangun rumah minimalis masih menjadi pilihan favorit banyak orang karena desainnya simpel, fungsional, dan relatif lebih efisien secara biaya. Namun, pertanyaan yang hampir selalu muncul adalah: <em>sebenarnya berapa estimasi biaya membangun rumah minimalis per meter persegi?</em> Dan yang tak kalah penting, bagaimana cara mengatur anggarannya agar tidak jebol di tengah jalan?</p>
- <p>Artikel ini akan membahas estimasi biaya terbaru sekaligus tips anggaran praktis, khususnya untuk kamu yang ingin membangun rumah minimalis dengan perhitungan matang bersama <strong>Yen Bangunan</strong>.</p>
- <strong><span dir="auto">Baca juga:</span></strong>
- 
- <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
- 
- <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
- 
- <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
- <h2>Estimasi Biaya Membangun Rumah Minimalis per Meter Persegi</h2>
- <p>Secara umum, estimasi biaya membangun rumah minimalis per meter persegi di Indonesia saat ini berada di kisaran:</p>
- 
- <ul>
- <li>
- <p><strong>Rp3.000.000 – Rp3.500.000/m²</strong> untuk spesifikasi standar</p>
- </li>
- <li>
- <p><strong>Rp3.500.000 – Rp4.500.000/m²</strong> untuk spesifikasi menengah</p>
- </li>
- <li>
- <p><strong>Rp5.000.000+/m²</strong> untuk spesifikasi premium</p>
- </li>
- </ul>
- <p>Angka tersebut sudah mencakup pekerjaan struktur, dinding, lantai, atap, hingga finishing dasar. Namun perlu dicatat, estimasi biaya membangun rumah minimalis per meter persegi sangat dipengaruhi oleh beberapa faktor, seperti lokasi proyek, harga material, upah tukang, serta kompleksitas desain.</p>
- <p>Sebagai contoh, rumah minimalis 60 m² dengan spesifikasi menengah bisa membutuhkan anggaran sekitar <strong>Rp210–270 juta</strong>. Angka ini masih bisa berubah tergantung pilihan material dan detail finishing yang digunakan.</p>
- 
- <h2>Faktor Penting yang Mempengaruhi Biaya Bangun Rumah Minimalis</h2>
- <p>Agar estimasi tidak meleset jauh, ada beberapa faktor krusial yang perlu diperhatikan sejak awal. Pertama, <strong>desain rumah</strong>. Semakin sederhana bentuk bangunan, semakin efisien pula biaya konstruksi. Kedua, <strong>pemilihan material bangunan</strong>. Material berkualitas memang lebih mahal di awal, tetapi sering kali lebih hemat dalam jangka panjang.</p>
- <p>Selain itu, <strong>metode pengerjaan</strong> juga berpengaruh. Sistem borongan biasanya terasa lebih praktis, sementara sistem harian memberi fleksibilitas lebih besar, namun perlu pengawasan ekstra agar biaya tetap terkendali.</p>
- 
- <h2>Tips Anggaran Agar Biaya Tidak Membengkak</h2>
- <p>Mengatur anggaran adalah kunci utama keberhasilan proyek rumah minimalis. Berikut beberapa tips yang realistis dan sering diabaikan:</p>
- <p>Pertama, buat <strong>RAB (Rencana Anggaran Biaya)</strong> sedetail mungkin sejak awal. Jangan hanya fokus pada biaya besar, tapi perhitungkan juga detail kecil seperti instalasi listrik, sanitasi, dan cadangan biaya tak terduga (minimal 10%).</p>
- <p>Kedua, prioritaskan kebutuhan, bukan keinginan. Rumah minimalis idealnya fokus pada fungsi. Finishing mewah bisa dilakukan bertahap setelah rumah siap dihuni.</p>
- <p>Ketiga, beli material dari supplier terpercaya. Dengan memilih toko bahan bangunan yang transparan dan konsisten kualitasnya seperti <strong>Yen Bangunan</strong>, kamu bisa mengurangi risiko salah spesifikasi dan pemborosan biaya.</p>
- 
- <h2>Strategi Cerdas Membangun Rumah Minimalis Bertahap</h2>
- <p>Jika anggaran terbatas, membangun rumah minimalis secara bertahap bisa menjadi solusi. Mulailah dari struktur utama dan ruang esensial. Pendekatan ini cukup efektif untuk menjaga cash flow tetap aman tanpa mengorbankan kualitas bangunan.</p>
- 
- <h2>Kesimpulan</h2>
- <p>Memahami estimasi biaya membangun rumah minimalis per meter persegi sejak awal akan membantumu mengambil keputusan yang lebih rasional dan terukur. Dengan perencanaan matang, pemilihan material yang tepat, serta manajemen anggaran yang disiplin, rumah minimalis impian bukan lagi sekadar wacana.</p>
- <p><img class="alignnone size-full wp-image-1713" src="https://andrian064.wordpress.com/wp-content/uploads/2025/03/whatsapp-image-2025-08-15-at-07.11.33.jpeg" alt="Toko Alat Teknik Cikarang" width="719" height="1280" /></p>
- <p><strong>Ingin anggaran bangunan lebih terkontrol dan material berkualitas? Konsultasikan kebutuhan bangunanmu sekarang bersama Yen Bangunan dan wujudkan rumah minimalis yang efisien, kuat, dan nyaman.</strong></p>
-        </div>
+        <main class="flex-grow w-full bg-black p-10">
+            <h1 class="text-white text-4xl font-bold">Posts</h1>
+            <div class="grid grid-cols-1 md:grid-cols-4 mt-4">
+                @foreach ($blogs as $blog)
+                    <a href="{{ route('blog.show', $blog->slug) }}" class="bg-white rounded-lg overflow-hidden shadow-lg m-4 hover:scale-110 hover:shadow-xl transition-all duration-300">
+                        @if($blog->image)
+                        <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" class="w-full h-48 object-cover">
+                        @else
+                        <img src="{{ asset('/assets/logo-crop.png') }}" alt="{{ $blog->title }}" class="w-full h-48 object-cover">
+                        @endif
+                        <div class="p-4">
+                            <h2 class="text-xl font-bold mb-2">{{ $blog->title }}</h2>
+                            <p>{{ \Carbon\Carbon::parse( $blog->published_at)->translatedFormat('F j, Y') }}</p>
+                            <!-- <p class="text-gray-700 text-base mb-4">{{ Str::limit($blog->content, 100) }}</p> -->
+                        </div>
+                    </a>
+                @endforeach
+            </div>
+            <div class="w-full flex justify-end my-6">
+                  <nav class="inline-flex items-center space-x-2" role="navigation" aria-label="pagination">
+                    @if ($blogs->onFirstPage())
+                        <span class="px-4 py-2 text-gray-500 bg-white border rounded">Previous</span>
+                    @else
+                        <a href="{{ $blogs->previousPageUrl() }}" class="px-4 py-2 bg-white border rounded hover:bg-gray-100">Previous</a>
+                    @endif
+
+                    <span class="px-4 py-2 bg-white border rounded">
+                        Page {{ $blogs->currentPage() }} of {{ $blogs->lastPage() }}
+                    </span>
+
+                    @if ($blogs->hasMorePages())
+                        <a href="{{ $blogs->nextPageUrl() }}" class="px-4 py-2 bg-white border rounded hover:bg-gray-100">Next</a>
+                    @else
+                        <span class="px-4 py-2 text-gray-500 bg-white border rounded">Next</span>
+                    @endif
+                </nav>
+            </div>
+</main>
+        
         
         <footer class="bg-black text-white">
             <div class="flex items-start gap-6 p-6 lg:px-20 lg:py-12 ">

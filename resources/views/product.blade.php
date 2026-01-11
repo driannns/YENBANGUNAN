@@ -14,6 +14,7 @@
         <!-- Flowbite CSS -->
         <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
         <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +44,22 @@
                     height: 100vh;
                     object-fit: cover;
                     z-index: -1;
+                }
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+                
+                .animate-marquee {
+                    animation: marquee 30s linear infinite;
+                }
+                
+                .animate-marquee:hover {
+                    animation-play-state: paused;
                 }
                 @keyframes pulse-ring {
                     0% {

@@ -16,6 +16,9 @@ Route::get('/about-us', function () {
 });
 
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'all'])->name('blog');
+Route::get('/{year}/{month}/{day}/{slug}', [App\Http\Controllers\BlogController::class, 'show'])
+    ->where(['year' => '\\d{4}', 'month' => '\\d{2}', 'day' => '\\d{2}', 'slug' => '[^/]+'])
+    ->name('blog.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

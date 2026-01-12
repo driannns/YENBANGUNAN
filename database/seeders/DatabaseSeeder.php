@@ -23,6 +23,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // Run blog seeders (split into two parts)
-        $this->call([BlogPart1::class, BlogPart2::class]);
+        $this->call([Blog::class, BlogPart1::class]);
     }
 }

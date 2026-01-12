@@ -1,0 +1,776 @@
+[
+  {
+    "title": "Toko Bangunan Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bangunan-cikarang",
+    "new": "2025/05/18/toko-bangunan-cikarang-2"
+  },
+  {
+    "title": "Toko Bangunan Terbesar & Terlengkap di Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bangunan-terbesar-terlengkap-di-cikarang",
+    "new": "2025/05/11/toko-bangunan-terbesar-terlengkap-di-cikarang"
+  },
+  {
+    "title": "Toko Bangunan dan Toko Material Terdekat di Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bangunan-dan-toko-material-terdekat-di-cikarang",
+    "new": "2025/05/18/toko-bangunan-dan-toko-material-terdekat-di-cikarang"
+  },
+  {
+    "title": "TOKO BANGUNAN CIKARANG",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bangunan-cikarang-2",
+    "new": "2025/05/18/toko-bangunan-cikarang-2"
+  },
+  {
+    "title": "Toko Bangunan Cikarang Terlengkap dan Terpercaya: Yenbangunan, Solusi Bahan Bangunan Murah & Lengkap",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bangunan-cikarang-terlengkap-dan-terpercaya-yenbangunan-solusi-bahan-bangunan-murah-lengkap",
+    "new": "2025/06/24/toko-bangunan-cikarang-terlengkap-dan-terpercaya-yenbangunan-solusi-bahan-bangunan-murah-lengkap"
+  },
+  {
+    "title": "Temukan Cat Tembok Berkualitas dengan Harga Terjangkau di Yenbangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "temukan-cat-tembok-berkualitas-dengan-harga-terjangkau-di-yenbangunan",
+    "new": "2025/06/24/temukan-cat-tembok-berkualitas-dengan-harga-terjangkau-di-yenbangunan"
+  },
+  {
+    "title": "Distributor Material Bangunan Cikarang untuk Proyek & Rumah",
+    "file": "database/seeders/Blog.php",
+    "old": "distributor-material-bangunan-cikarang-untuk-proyek-rumah",
+    "new": "2025/07/03/distributor-material-bangunan-cikarang-untuk-proyek-rumah"
+  },
+  {
+    "title": "Toko Keramik Cikarang: Pilihan Tepat untuk Semua Jenis Ruangan",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-keramik-cikarang-pilihan-tepat-untuk-semua-jenis-ruangan",
+    "new": "2025/07/03/toko-keramik-cikarang-pilihan-tepat-untuk-semua-jenis-ruangan"
+  },
+  {
+    "title": "Toko Bangunan Terdekat Cikarang: Tips Memilih yang Paling Aman & Terpercaya",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bangunan-terdekat-cikarang-tips-memilih-yang-paling-aman-terpercaya",
+    "new": "2025/07/11/toko-bangunan-terdekat-cikarang-tips-memilih-yang-paling-aman-terpercaya"
+  },
+  {
+    "title": "Kesalahan Umum Saat Membangun Rumah Pertama Kali (dan Cara Menghindarinya)",
+    "file": "database/seeders/Blog.php",
+    "old": "kesalahan-umum-saat-membangun-rumah-pertama-kali-dan-cara-menghindarinya",
+    "new": "2025/07/11/kesalahan-umum-saat-membangun-rumah-pertama-kali-dan-cara-menghindarinya"
+  },
+  {
+    "title": "Bahan Bangunan Murah Cikarang: Wajib Tahu 5 Material Dasar Ini",
+    "file": "database/seeders/Blog.php",
+    "old": "bahan-bangunan-murah-cikarang-wajib-tahu-5-material-dasar-ini",
+    "new": "2025/07/12/bahan-bangunan-murah-cikarang-wajib-tahu-5-material-dasar-ini"
+  },
+  {
+    "title": "Perbedaan Pondasi Cakar Ayam dan Pondasi Batu Kali: Mana yang Lebih Cocok untuk Rumah Anda?",
+    "file": "database/seeders/Blog.php",
+    "old": "perbedaan-pondasi-cakar-ayam-dan-pondasi-batu-kali-mana-yang-lebih-cocok-untuk-rumah-anda",
+    "new": "2025/07/17/perbedaan-pondasi-cakar-ayam-dan-pondasi-batu-kali-mana-yang-lebih-cocok-untuk-rumah-anda"
+  },
+  {
+    "title": "Kapan Waktu Terbaik untuk Membangun Rumah? Ini Jawaban Para Tukang",
+    "file": "database/seeders/Blog.php",
+    "old": "kapan-waktu-terbaik-untuk-membangun-rumah-ini-jawaban-para-tukang",
+    "new": "2025/07/17/kapan-waktu-terbaik-untuk-membangun-rumah-ini-jawaban-para-tukang"
+  },
+  {
+    "title": "Hebel vs Bata Merah: Mana Lebih Kokoh & Hemat untuk Bangunan Anda?",
+    "file": "database/seeders/Blog.php",
+    "old": "apakah-hebel-bata-ringan-lebih-baik-dari-bata-merah",
+    "new": "2025/07/17/apakah-hebel-bata-ringan-lebih-baik-dari-bata-merah"
+  },
+  {
+    "title": "Toko Bangunan Grosir Cikarang, Pilihan Tepat untuk Proyek Developer!",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bangunan-grosir-cikarang-pilihan-tepat-untuk-proyek-developer",
+    "new": "2025/07/29/toko-bangunan-grosir-cikarang-pilihan-tepat-untuk-proyek-developer"
+  },
+  {
+    "title": "Tempat Jual Semen Murah di Cikarang, Panduan Lengkap untuk Proyek Anda!",
+    "file": "database/seeders/Blog.php",
+    "old": "tempat-jual-semen-murah-di-cikarang-panduan-lengkap-untuk-proyek-anda",
+    "new": "2025/07/29/tempat-jual-semen-murah-di-cikarang-panduan-lengkap-untuk-proyek-anda"
+  },
+  {
+    "title": "Rekomendasi Toko Material Bangunan Cikarang dengan Layanan Antar Cepat",
+    "file": "database/seeders/Blog.php",
+    "old": "rekomendasi-toko-material-bangunan-cikarang-dengan-layanan-antar-cepat",
+    "new": "2025/07/31/rekomendasi-toko-material-bangunan-cikarang-dengan-layanan-antar-cepat"
+  },
+  {
+    "title": "Supplier Pasir & Batu Split Terdekat di Cikarang untuk Proyek Perumahan",
+    "file": "database/seeders/Blog.php",
+    "old": "supplier-pasir-batu-split-terdekat-di-cikarang-untuk-proyek-perumahan",
+    "new": "2025/07/31/supplier-pasir-batu-split-terdekat-di-cikarang-untuk-proyek-perumahan"
+  },
+  {
+    "title": "Cara Memilih Toko Bangunan yang Tepat di Cikarang untuk Proyek Rumah Anda",
+    "file": "database/seeders/Blog.php",
+    "old": "cara-memilih-toko-bangunan-yang-tepat-di-cikarang-untuk-proyek-rumah-anda",
+    "new": "2025/08/01/cara-memilih-toko-bangunan-yang-tepat-di-cikarang-untuk-proyek-rumah-anda"
+  },
+  {
+    "title": "Apa Itu Hebel? Kenali Material Bangunan Modern yang Makin Populer",
+    "file": "database/seeders/Blog.php",
+    "old": "apa-itu-hebel-kenali-material-bangunan-modern-yang-makin-populer",
+    "new": "2025/08/05/apa-itu-hebel-kenali-material-bangunan-modern-yang-makin-populer"
+  },
+  {
+    "title": "Perbandingan Harga Cat Tembok di Cikarang: Dulux, Avitex, dan Nippon Paint",
+    "file": "database/seeders/Blog.php",
+    "old": "perbandingan-harga-cat-tembok-di-cikarang-dulux-avitex-dan-nippon-paint",
+    "new": "2025/08/05/perbandingan-harga-cat-tembok-di-cikarang-dulux-avitex-dan-nippon-paint"
+  },
+  {
+    "title": "Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu",
+    "file": "database/seeders/Blog.php",
+    "old": "rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu",
+    "new": "2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu"
+  },
+  {
+    "title": "Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!",
+    "file": "database/seeders/Blog.php",
+    "old": "beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal",
+    "new": "2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal"
+  },
+  {
+    "title": "1 Pail Berapa Liter? Ini Jawaban Lengkap dan Praktisnya!",
+    "file": "database/seeders/Blog.php",
+    "old": "1-pail-berapa-liter-ini-jawaban-lengkap-dan-praktisnya",
+    "new": "2025/08/07/1-pail-berapa-liter-ini-jawaban-lengkap-dan-praktisnya"
+  },
+  {
+    "title": "Cara Menghitung Kebutuhan Semen dan Pasir untuk Bangunan Rumah agar Tidak Boros!",
+    "file": "database/seeders/Blog.php",
+    "old": "cara-menghitung-kebutuhan-semen-dan-pasir-untuk-bangunan-rumah-agar-tidak-boros",
+    "new": "2025/08/09/cara-menghitung-kebutuhan-semen-dan-pasir-untuk-bangunan-rumah-agar-tidak-boros"
+  },
+  {
+    "title": "Mau Bangun Rumah di Cikarang? Yen Bangunan Cikarang Siap Penuhi Semua Kebutuhan Anda!",
+    "file": "database/seeders/Blog.php",
+    "old": "mau-bangun-rumah-di-cikarang-yen-bangunan-cikarang-siap-penuhi-semua-kebutuhan-anda",
+    "new": "2025/08/11/mau-bangun-rumah-di-cikarang-yen-bangunan-cikarang-siap-penuhi-semua-kebutuhan-anda"
+  },
+  {
+    "title": "Butuh Semen & Material Bangunan Cepat? Ini Toko Bahan Bangunan Cikarang yang Bisa Kamu Andalkan",
+    "file": "database/seeders/Blog.php",
+    "old": "butuh-semen-material-bangunan-cepat-ini-toko-bahan-bangunan-cikarang-yang-bisa-kamu-andalkan",
+    "new": "2025/08/12/butuh-semen-material-bangunan-cepat-ini-toko-bahan-bangunan-cikarang-yang-bisa-kamu-andalkan"
+  },
+  {
+    "title": "Cara Memilih Pasir yang Bagus untuk Konstruksi Rumah",
+    "file": "database/seeders/Blog.php",
+    "old": "cara-memilih-pasir-yang-bagus-untuk-konstruksi-rumah",
+    "new": "2025/08/13/cara-memilih-pasir-yang-bagus-untuk-konstruksi-rumah"
+  },
+  {
+    "title": "Jenis-jenis Pasir untuk Konstruksi dan Fungsinya",
+    "file": "database/seeders/Blog.php",
+    "old": "jenis-jenis-pasir-untuk-konstruksi-dan-fungsinya",
+    "new": "2025/08/13/jenis-jenis-pasir-untuk-konstruksi-dan-fungsinya"
+  },
+  {
+    "title": "Perbedaan Semen Portland dan Semen Campuran untuk Bangunan Rumah",
+    "file": "database/seeders/Blog.php",
+    "old": "perbedaan-semen-portland-dan-semen-campuran-untuk-bangunan-rumah",
+    "new": "2025/08/14/perbedaan-semen-portland-dan-semen-campuran-untuk-bangunan-rumah"
+  },
+  {
+    "title": "Harga Semen Terbaru 2025: Update Lengkap untuk Semua Merek Populer",
+    "file": "database/seeders/Blog.php",
+    "old": "harga-semen-terbaru-2025-update-lengkap-untuk-semua-merek-populer",
+    "new": "2025/08/14/harga-semen-terbaru-2025-update-lengkap-untuk-semua-merek-populer"
+  },
+  {
+    "title": "Perbedaan Batu Bata Merah, Hebel, dan Batako: Mana yang Paling Efisien?",
+    "file": "database/seeders/Blog.php",
+    "old": "perbedaan-batu-bata-merah-hebel-dan-batako-mana-yang-paling-efisien",
+    "new": "2025/08/15/perbedaan-batu-bata-merah-hebel-dan-batako-mana-yang-paling-efisien"
+  },
+  {
+    "title": "Perbedaan Baja Ringan & Kayu: Solusi Atap Rumah di Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "perbedaan-baja-ringan-kayu-solusi-atap-rumah-di-cikarang",
+    "new": "2025/08/18/perbedaan-baja-ringan-kayu-solusi-atap-rumah-di-cikarang"
+  },
+  {
+    "title": "Keramik vs Granit: Mana Pilihan Material Lantai Terbaik untuk Rumah Modern?",
+    "file": "database/seeders/Blog.php",
+    "old": "keramik-vs-granit-mana-pilihan-material-lantai-terbaik-untuk-rumah-modern",
+    "new": "2025/08/19/keramik-vs-granit-mana-pilihan-material-lantai-terbaik-untuk-rumah-modern"
+  },
+  {
+    "title": "Estimasi Biaya Renovasi Rumah di Cikarang (2025)",
+    "file": "database/seeders/Blog.php",
+    "old": "estimasi-biaya-renovasi-rumah-di-cikarang-2025",
+    "new": "2025/08/19/estimasi-biaya-renovasi-rumah-di-cikarang-2025"
+  },
+  {
+    "title": "Harga Talang Air di Toko Bangunan Terbaru 2025",
+    "file": "database/seeders/Blog.php",
+    "old": "harga-talang-air-di-toko-bangunan-terbaru-2025",
+    "new": "2025/08/20/harga-talang-air-di-toko-bangunan-terbaru-2025"
+  },
+  {
+    "title": "Solusi Pengadaan Material untuk Proyek Skala Besar di Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "solusi-pengadaan-material-untuk-proyek-skala-besar-di-cikarang",
+    "new": "2025/08/21/solusi-pengadaan-material-untuk-proyek-skala-besar-di-cikarang"
+  },
+  {
+    "title": "Daftar Harga Talang Air per Meter di Cikarang dan Sekitarnya (Update 2025)",
+    "file": "database/seeders/Blog.php",
+    "old": "daftar-harga-talang-air-per-meter-di-cikarang-dan-sekitarnya-update-2025",
+    "new": "2025/08/22/daftar-harga-talang-air-per-meter-di-cikarang-dan-sekitarnya-update-2025"
+  },
+  {
+    "title": "Daftar Harga Batako per Biji di Cikarang, Bekasi, dan Sekitarnya",
+    "file": "database/seeders/Blog.php",
+    "old": "daftar-harga-batako-per-biji-di-cikarang-bekasi-dan-sekitarnya",
+    "new": "2025/08/25/daftar-harga-batako-per-biji-di-cikarang-bekasi-dan-sekitarnya"
+  },
+  {
+    "title": "10 Jenis Batu Alam Terpopuler untuk Rumah Minimalis, Mana Favoritmu?",
+    "file": "database/seeders/Blog.php",
+    "old": "10-jenis-batu-alam-terpopuler-untuk-rumah-minimalis-mana-favoritmu",
+    "new": "2025/08/26/10-jenis-batu-alam-terpopuler-untuk-rumah-minimalis-mana-favoritmu"
+  },
+  {
+    "title": "Supplier Bahan Bangunan Grosir untuk Kontraktor Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "supplier-bahan-bangunan-grosir-untuk-kontraktor-cikarang",
+    "new": "2025/08/27/supplier-bahan-bangunan-grosir-untuk-kontraktor-cikarang"
+  },
+  {
+    "title": "Jenis-Jenis Cat Tembok & Fungsinya: Mana yang Cocok untuk Rumah Anda?",
+    "file": "database/seeders/Blog.php",
+    "old": "jenis-jenis-cat-tembok-fungsinya-mana-yang-cocok-untuk-rumah-anda",
+    "new": "2025/08/28/jenis-jenis-cat-tembok-fungsinya-mana-yang-cocok-untuk-rumah-anda"
+  },
+  {
+    "title": "YEN BANGUNAN CIKARANG - Pusat Bahan Material Bangunan Lengkap & Terpercaya di Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "yen-bangunan-cikarang-pusat-bahan-material-bangunan-lengkap-terpercaya",
+    "new": "2025/08/29/yen-bangunan-cikarang-pusat-bahan-material-bangunan-lengkap-terpercaya"
+  },
+  {
+    "title": "Jenis-Jenis Exhaust Fan dan Kegunaannya",
+    "file": "database/seeders/Blog.php",
+    "old": "jenis-jenis-exhaust-fan-dan-kegunaannya",
+    "new": "2025/09/02/jenis-jenis-exhaust-fan-dan-kegunaannya"
+  },
+  {
+    "title": "Genteng Metal Terbaik 2025: Rekomendasi & Harga",
+    "file": "database/seeders/Blog.php",
+    "old": "genteng-metal-terbaik-2025-rekomendasi-harga",
+    "new": "2025/09/03/genteng-metal-terbaik-2025-rekomendasi-harga"
+  },
+  {
+    "title": "Harga Besi Beton Cikarang: Panduan Lengkap untuk Proyek Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "harga-besi-beton-cikarang-panduan-lengkap-untuk-proyek-bangunan",
+    "new": "2025/09/04/harga-besi-beton-cikarang-panduan-lengkap-untuk-proyek-bangunan"
+  },
+  {
+    "title": "Supplier Besi Cikarang: Pilihan Grosir untuk Proyek Kecil & Menengah!",
+    "file": "database/seeders/Blog.php",
+    "old": "supplier-besi-cikarang-pilihan-grosir-untuk-proyek-kecil-menengah",
+    "new": "2025/09/08/supplier-besi-cikarang-pilihan-grosir-untuk-proyek-kecil-menengah"
+  },
+  {
+    "title": "Supplier Bahan Bangunan Grosir & Eceran di Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "supplier-bahan-bangunan-grosir-eceran-di-cikarang",
+    "new": "2025/09/10/supplier-bahan-bangunan-grosir-eceran-di-cikarang"
+  },
+  {
+    "title": "Jenis-Jenis Pipa Air & Fungsinya - YEN Bangunan Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "jenis-jenis-pipa-air-fungsinya-yen-bangunan-cikarang",
+    "new": "2025/09/11/jenis-jenis-pipa-air-fungsinya-yen-bangunan-cikarang"
+  },
+  {
+    "title": "5 Kelebihan Batu Alam Sebagai Material Bangunan yang Nggak Banyak Orang Tahu",
+    "file": "database/seeders/Blog.php",
+    "old": "5-kelebihan-batu-alam-sebagai-material-bangunan-yang-nggak-banyak-orang-tahu",
+    "new": "2025/09/12/5-kelebihan-batu-alam-sebagai-material-bangunan-yang-nggak-banyak-orang-tahu"
+  },
+  {
+    "title": "Batu Alam vs Keramik: Mana yang Lebih Baik untuk Area Outdoor?",
+    "file": "database/seeders/Blog.php",
+    "old": "batu-alam-vs-keramik-mana-yang-lebih-baik-untuk-area-outdoor",
+    "new": "2025/09/15/batu-alam-vs-keramik-mana-yang-lebih-baik-untuk-area-outdoor"
+  },
+  {
+    "title": "Besi Hollow Cikarang - Rekomendasi Toko Terpercaya",
+    "file": "database/seeders/Blog.php",
+    "old": "besi-hollow-cikarang-rekomendasi-toko-terpercaya",
+    "new": "2025/09/16/besi-hollow-cikarang-rekomendasi-toko-terpercaya"
+  },
+  {
+    "title": "38 Rumah Adat Setiap Provinsi di Indonesia dan Filosofinya",
+    "file": "database/seeders/Blog.php",
+    "old": "38-rumah-adat-setiap-provinsi-di-indonesia-dan-filosofinya",
+    "new": "2025/09/17/38-rumah-adat-setiap-provinsi-di-indonesia-dan-filosofinya"
+  },
+  {
+    "title": "Toko Alat Teknik Cikarang - Yen Bangunan Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-alat-teknik-cikarang-yen-bangunan-cikarang",
+    "new": "2025/09/18/toko-alat-teknik-cikarang-yen-bangunan-cikarang"
+  },
+  {
+    "title": "Jual Kain Majun Cikarang Terpercaya - YEN Bangunan Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "jual-majun-cikarang-terpercaya-yen-bangunan-cikarang",
+    "new": "2025/09/19/jual-majun-cikarang-terpercaya-yen-bangunan-cikarang"
+  },
+  {
+    "title": "Toko Cat Cikarang Terbaik: YEN Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "rekomendasi-toko-cat-cikarang-yen-bangunan-cikarang",
+    "new": "2025/09/22/rekomendasi-toko-cat-cikarang-yen-bangunan-cikarang"
+  },
+  {
+    "title": "Supplier Besi Cikarang untuk Proyek - YEN Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "supplier-besi-cikarang-untuk-proyek-yen-bangunan",
+    "new": "2025/09/23/supplier-besi-cikarang-untuk-proyek-yen-bangunan"
+  },
+  {
+    "title": "Jual Triplek di Cikarang - Beli Satuan maupun Supplier",
+    "file": "database/seeders/Blog.php",
+    "old": "jual-triplek-di-cikarang-beli-satuan-maupun-supplier",
+    "new": "2025/09/24/jual-triplek-di-cikarang-beli-satuan-maupun-supplier"
+  },
+  {
+    "title": "Jenis-jenis Genteng Metal dan Fungsinya",
+    "file": "database/seeders/Blog.php",
+    "old": "jenis-jenis-genteng-metal-dan-fungsinya",
+    "new": "2025/09/25/jenis-jenis-genteng-metal-dan-fungsinya"
+  },
+  {
+    "title": "Perbedaan Exhaust Fan dan Ventilasi Biasa, Mana yang Lebih Efektif?",
+    "file": "database/seeders/Blog.php",
+    "old": "perbedaan-exhaust-fan-dan-ventilasi-biasa-mana-yang-lebih-efektif",
+    "new": "2025/09/26/perbedaan-exhaust-fan-dan-ventilasi-biasa-mana-yang-lebih-efektif"
+  },
+  {
+    "title": "Toko Keramik Cikarang Terlengkap: Yen Bangunan Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-keramik-cikarang-terlengkap-yen-bangunan-cikarang",
+    "new": "2025/09/29/toko-keramik-cikarang-terlengkap-yen-bangunan-cikarang"
+  },
+  {
+    "title": "Toko Listrik Cikarang - Solusi Lengkap untuk Kebutuhan Instalasi",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi",
+    "new": "2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi"
+  },
+  {
+    "title": "Toko Baut Cikarang Terlengkap - Pilihan Grosir & Eceran untuk Proyek",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-baut-cikarang-terlengkap-pilihan-grosir-eceran-untuk-proyek",
+    "new": "2025/10/01/toko-baut-cikarang-terlengkap-pilihan-grosir-eceran-untuk-proyek"
+  },
+  {
+    "title": "Apa Itu Multiplek dan Triplek? Ini Bedanya dan Cara Memilih yang Tepat",
+    "file": "database/seeders/Blog.php",
+    "old": "apa-itu-multiplek-dan-triplek-ini-bedanya-dan-cara-memilih-yang-tepat",
+    "new": "2025/10/02/apa-itu-multiplek-dan-triplek-ini-bedanya-dan-cara-memilih-yang-tepat"
+  },
+  {
+    "title": "Toko Consumable Material Cikarang untuk Industri & Proyek | Yen Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-consumable-material-cikarang-untuk-industri-proyek-yen-bangunan",
+    "new": "2025/10/03/toko-consumable-material-cikarang-untuk-industri-proyek-yen-bangunan"
+  },
+  {
+    "title": "Distributor Bahan Bangunan Cikarang - Pilihan Lengkap untuk Proyek Anda",
+    "file": "database/seeders/Blog.php",
+    "old": "distributor-bahan-bangunan-cikarang-pilihan-lengkap-untuk-proyek-anda",
+    "new": "2025/10/07/distributor-bahan-bangunan-cikarang-pilihan-lengkap-untuk-proyek-anda"
+  },
+  {
+    "title": "Distributor Tekiro Cikarang - Solusi Kebutuhan Alat Teknik",
+    "file": "database/seeders/Blog.php",
+    "old": "distributor-tekiro-cikarang-solusi-kebutuhan-alat-teknik",
+    "new": "2025/10/09/distributor-tekiro-cikarang-solusi-kebutuhan-alat-teknik"
+  },
+  {
+    "title": "Harga Batu Alam Terbaru 2025: Jenis, Ukuran, dan Tips Beli Paling Lengkap!",
+    "file": "database/seeders/Blog.php",
+    "old": "harga-batu-alam-terbaru-2025-jenis-ukuran-dan-tips-beli-paling-lengkap",
+    "new": "2025/10/10/harga-batu-alam-terbaru-2025-jenis-ukuran-dan-tips-beli-paling-lengkap"
+  },
+  {
+    "title": "5 Merek Talang Air Terbaik di Toko Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "5-merek-talang-air-terbaik-di-toko-bangunan",
+    "new": "2025/10/10/5-merek-talang-air-terbaik-di-toko-bangunan"
+  },
+  {
+    "title": "Jual Pasir Cikarang: List Harga & Panduan dari Yen Bangunan Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "jual-pasir-cikarang-list-harga-panduan-dari-yen-bangunan-cikarang",
+    "new": "2025/10/13/jual-pasir-cikarang-list-harga-panduan-dari-yen-bangunan-cikarang"
+  },
+  {
+    "title": "Jual Baja Cikarang: Pusat Baja Konstruksi Lengkap & Terpercaya",
+    "file": "database/seeders/Blog.php",
+    "old": "jual-baja-cikarang-pusat-baja-konstruksi-lengkap-terpercaya",
+    "new": "2025/10/14/jual-baja-cikarang-pusat-baja-konstruksi-lengkap-terpercaya"
+  },
+  {
+    "title": "Toko Genteng di Cikarang: Pilihan Genteng Berkualitas untuk Hunian & Proyek",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-genteng-di-cikarang-pilihan-genteng-berkualitas-untuk-hunian-proyek",
+    "new": "2025/10/15/toko-genteng-di-cikarang-pilihan-genteng-berkualitas-untuk-hunian-proyek"
+  },
+  {
+    "title": "Wisata Edukasi Rumah Adat, 5 Destinasi yang Harus Dikunjungi!",
+    "file": "database/seeders/Blog.php",
+    "old": "wisata-edukasi-rumah-adat-5-destinasi-yang-harus-dikunjungi",
+    "new": "2025/10/16/wisata-edukasi-rumah-adat-5-destinasi-yang-harus-dikunjungi"
+  },
+  {
+    "title": "Atap Baja Ringan Cikarang: Hubungi Yen Bangunan 081315147952",
+    "file": "database/seeders/Blog.php",
+    "old": "atap-baja-ringan-cikarang-hubungi-yen-bangunan-081315147952",
+    "new": "2025/10/17/atap-baja-ringan-cikarang-hubungi-yen-bangunan-081315147952"
+  },
+  {
+    "title": "Toko Perkakas Tekiro Terdekat di Cikarang: Yen Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-perkakas-tekiro-terdekat-di-cikarang-yen-bangunan",
+    "new": "2025/10/20/toko-perkakas-tekiro-terdekat-di-cikarang-yen-bangunan"
+  },
+  {
+    "title": "Toko Baja Ringan Cikarang: Hubungi Yen Bangunan di 081315147952",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-baja-ringan-cikarang-hubungi-yen-bangunan-di-081315147952",
+    "new": "2025/10/21/toko-baja-ringan-cikarang-hubungi-yen-bangunan-di-081315147952"
+  },
+  {
+    "title": "Jual Spandek Cikarang: Hubungi Yen Bangunan di 081315147952",
+    "file": "database/seeders/Blog.php",
+    "old": "jual-spandek-cikarang-hubungi-yen-bangunan-di-081315147952",
+    "new": "2025/10/22/jual-spandek-cikarang-hubungi-yen-bangunan-di-081315147952"
+  },
+  {
+    "title": "5 Kesalahan Umum Saat Belanja Bahan Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "5-kesalahan-umum-saat-belanja-bahan-bangunan",
+    "new": "2025/10/23/5-kesalahan-umum-saat-belanja-bahan-bangunan"
+  },
+  {
+    "title": "Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952",
+    "new": "2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952"
+  },
+  {
+    "title": "Filosofi Rumah Adat Bali: Desain Tradisional dengan Makna Spiritual yang Mendalam",
+    "file": "database/seeders/Blog.php",
+    "old": "filosofi-rumah-adat-bali-desain-tradisional-dengan-makna-spiritual-yang-mendalam",
+    "new": "2025/10/28/filosofi-rumah-adat-bali-desain-tradisional-dengan-makna-spiritual-yang-mendalam"
+  },
+  {
+    "title": "5 Jenis Besi yang Perlu Anda Ketahui Sebelum Membangun Rumah",
+    "file": "database/seeders/Blog.php",
+    "old": "5-jenis-besi-yang-perlu-anda-ketahui-sebelum-membangun-rumah",
+    "new": "2025/10/29/5-jenis-besi-yang-perlu-anda-ketahui-sebelum-membangun-rumah"
+  },
+  {
+    "title": "Butuh Perlengkapan Safety di Cikarang? Yen Bangunan Solusi Terlengkap!",
+    "file": "database/seeders/Blog.php",
+    "old": "butuh-perlengkapan-safety-di-cikarang-yen-bangunan-solusi-terlengkap",
+    "new": "2025/10/30/butuh-perlengkapan-safety-di-cikarang-yen-bangunan-solusi-terlengkap"
+  },
+  {
+    "title": "Toko Safety Equipment Cikarang: Hubungi Yen Bangunan di 081315147952",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-safety-equipment-cikarang",
+    "new": "2025/10/31/toko-safety-equipment-cikarang"
+  },
+  {
+    "title": "Toko Safety Cikarang Terbaik: Hubungi Yen Bangunan 081315147952",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-safety-cikarang-terbaik-hubungi-yen-bangunan-081315147952",
+    "new": "2025/11/03/toko-safety-cikarang-terbaik-hubungi-yen-bangunan-081315147952"
+  },
+  {
+    "title": "Perbedaan Semen, Mortar, dan Plester: Mana yang Tepat untuk Kebutuhan Anda?",
+    "file": "database/seeders/Blog.php",
+    "old": "perbedaan-semen-mortar-dan-plester-mana-yang-tepat-untuk-kebutuhan-anda",
+    "new": "2025/11/04/perbedaan-semen-mortar-dan-plester-mana-yang-tepat-untuk-kebutuhan-anda"
+  },
+  {
+    "title": "Kalsiboard: Pengertian, Kegunaan, dan Harga Terbaru 2025",
+    "file": "database/seeders/Blog.php",
+    "old": "kalsiboard-pengertian-kegunaan-dan-harga-terbaru-2025",
+    "new": "2025/11/05/kalsiboard-pengertian-kegunaan-dan-harga-terbaru-2025"
+  },
+  {
+    "title": "Supplier Material Proyek Cikarang: Hubungi Yen Bangunan 081315147952",
+    "file": "database/seeders/Blog.php",
+    "old": "supplier-material-proyek-cikarang-hubungi-yen-bangunan-081315147952",
+    "new": "2025/11/06/supplier-material-proyek-cikarang-hubungi-yen-bangunan-081315147952"
+  },
+  {
+    "title": "Toko Bangunan Grosir Cikarang: HEMAT & LENGKAP di Yen Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bangunan-grosir-cikarang-hemat-lengkap-di-yen-bangunan",
+    "new": "2025/11/07/toko-bangunan-grosir-cikarang-hemat-lengkap-di-yen-bangunan"
+  },
+  {
+    "title": "Belanja Keramik Cikarang Murah & Terbaik: Cuma di Yen Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "belanja-keramik-cikarang-murah-terbaik-cuma-di-yen-bangunan",
+    "new": "2025/11/10/belanja-keramik-cikarang-murah-terbaik-cuma-di-yen-bangunan"
+  },
+  {
+    "title": "Panduan Lengkap Ukuran Reng Baja Ringan: Jenis, Fungsi, dan Cara Memilihnya",
+    "file": "database/seeders/Blog.php",
+    "old": "panduan-lengkap-ukuran-reng-baja-ringan-jenis-fungsi-dan-cara-memilihnya",
+    "new": "2025/11/11/panduan-lengkap-ukuran-reng-baja-ringan-jenis-fungsi-dan-cara-memilihnya"
+  },
+  {
+    "title": "Harga Triplek Terbaru 2025: Cara Memilih yang Tepat untuk Proyek Anda",
+    "file": "database/seeders/Blog.php",
+    "old": "harga-triplek-terbaru-2025-cara-memilih-yang-tepat-untuk-proyek-anda",
+    "new": "2025/11/12/harga-triplek-terbaru-2025-cara-memilih-yang-tepat-untuk-proyek-anda"
+  },
+  {
+    "title": "Kenali Pondasi Umpak, Solusi Efisien untuk Bangunan Ringan dan Tahan Lama!",
+    "file": "database/seeders/Blog.php",
+    "old": "kenali-pondasi-umpak-solusi-efisien-untuk-bangunan-ringan-dan-tahan-lama",
+    "new": "2025/11/13/kenali-pondasi-umpak-solusi-efisien-untuk-bangunan-ringan-dan-tahan-lama"
+  },
+  {
+    "title": "Toko Baja Ringan Cikarang Terbaik: Yen Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-baja-ringan-cikarang-terbaik-yen-bangunan",
+    "new": "2025/11/14/toko-baja-ringan-cikarang-terbaik-yen-bangunan"
+  },
+  {
+    "title": "Baja Ringan Harga Terbaru 2025, Pilihan Terbaik untuk Atap Rumah yang Kokoh & Hemat!",
+    "file": "database/seeders/Blog.php",
+    "old": "baja-ringan-harga-terbaru-2025-pilihan-terbaik-untuk-atap-rumah-yang-kokoh-hemat",
+    "new": "2025/11/17/baja-ringan-harga-terbaru-2025-pilihan-terbaik-untuk-atap-rumah-yang-kokoh-hemat"
+  },
+  {
+    "title": "Floor Drain: Penjelasan, Fungsi, dan Tips Memilih yang Tepat",
+    "file": "database/seeders/Blog.php",
+    "old": "floor-drain-penjelasan-fungsi-dan-tips-memilih-yang-tepat",
+    "new": "2025/11/18/floor-drain-penjelasan-fungsi-dan-tips-memilih-yang-tepat"
+  },
+  {
+    "title": "5 Merk Cat Terbaik untuk Hasil Warna yang Tahan Lama & Berkualitas",
+    "file": "database/seeders/Blog.php",
+    "old": "5-merk-cat-terbaik-untuk-hasil-warna-yang-tahan-lama-berkualitas",
+    "new": "2025/11/19/5-merk-cat-terbaik-untuk-hasil-warna-yang-tahan-lama-berkualitas"
+  },
+  {
+    "title": "Lebih Baik Bata Merah atau Hebel? Ini Kata Ahli Bangunan!",
+    "file": "database/seeders/Blog.php",
+    "old": "lebih-baik-bata-merah-atau-hebel-ini-kata-ahli-bangunan",
+    "new": "2025/11/20/lebih-baik-bata-merah-atau-hebel-ini-kata-ahli-bangunan"
+  },
+  {
+    "title": "Keunggulan Genteng Metal Dibanding Genteng Tanah Liat: Mana yang Lebih Unggul?",
+    "file": "database/seeders/Blog.php",
+    "old": "keunggulan-genteng-metal-dibanding-genteng-tanah-liat-mana-yang-lebih-unggul",
+    "new": "2025/11/21/keunggulan-genteng-metal-dibanding-genteng-tanah-liat-mana-yang-lebih-unggul"
+  },
+  {
+    "title": "Gypsum: Penjelasan, Fungsi, dan Kelebihan untuk Hunian Modern",
+    "file": "database/seeders/Blog.php",
+    "old": "gypsum-penjelasan-fungsi-dan-kelebihan-untuk-hunian-modern",
+    "new": "2025/11/24/gypsum-penjelasan-fungsi-dan-kelebihan-untuk-hunian-modern"
+  },
+  {
+    "title": "Apa Itu Bidet dan Cara Kerjanya? Simak Penjelasan Ini!",
+    "file": "database/seeders/Blog.php",
+    "old": "apa-itu-bidet-dan-cara-kerjanya-simak-penjelasan-ini",
+    "new": "2025/11/25/apa-itu-bidet-dan-cara-kerjanya-simak-penjelasan-ini"
+  },
+  {
+    "title": "15 Jenis Baut Baja dan Fungsinya, Panduan Lengkap untuk Proyek Konstruksi",
+    "file": "database/seeders/Blog.php",
+    "old": "15-jenis-baut-baja-dan-fungsinya-panduan-lengkap-untuk-proyek-konstruksi",
+    "new": "2025/11/26/15-jenis-baut-baja-dan-fungsinya-panduan-lengkap-untuk-proyek-konstruksi"
+  },
+  {
+    "title": "10 Referensi Kamar Mandi Minimalis untuk Hunian Modern",
+    "file": "database/seeders/Blog.php",
+    "old": "10-referensi-kamar-mandi-minimalis-untuk-hunian-modern",
+    "new": "2025/11/27/10-referensi-kamar-mandi-minimalis-untuk-hunian-modern"
+  },
+  {
+    "title": "Jasa Kontraktor Rumah Bekasi, Solusi Supplier Bangunan dari Yen Bangunan!",
+    "file": "database/seeders/Blog.php",
+    "old": "jasa-kontraktor-rumah-bekasi-solusi-supplier-bangunan-dari-yen-bangunan",
+    "new": "2025/11/28/jasa-kontraktor-rumah-bekasi-solusi-supplier-bangunan-dari-yen-bangunan"
+  },
+  {
+    "title": "Kelebihan & Kekurangan Pintu Aluminium, Panduan Praktis untuk Pemilik Rumah Baru!",
+    "file": "database/seeders/Blog.php",
+    "old": "kelebihan-kekurangan-pintu-aluminium-panduan-praktis-untuk-pemilik-rumah-baru",
+    "new": "2025/12/01/kelebihan-kekurangan-pintu-aluminium-panduan-praktis-untuk-pemilik-rumah-baru"
+  },
+  {
+    "title": "Cari Toko Baut di Bekasi? Yen Bangunan Paling Lengkap & Siap Kirim",
+    "file": "database/seeders/Blog.php",
+    "old": "cari-toko-baut-di-bekasi-yen-bangunan-paling-lengkap-siap-kirim",
+    "new": "2025/12/02/cari-toko-baut-di-bekasi-yen-bangunan-paling-lengkap-siap-kirim"
+  },
+  {
+    "title": "Toko Bor Bosch Terdekat Cikarang - Yen Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bor-bosch-terdekat-cikarang-yen-bangunan",
+    "new": "2025/12/03/toko-bor-bosch-terdekat-cikarang-yen-bangunan"
+  },
+  {
+    "title": "Toko Bangunan yang Buka Hari Minggu di Cikarang - Yen Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bangunan-yang-buka-hari-minggu-di-cikarang-yen-bangunan",
+    "new": "2025/12/04/toko-bangunan-yang-buka-hari-minggu-di-cikarang-yen-bangunan"
+  },
+  {
+    "title": "Jasa Kontraktor Bangunan Bekasi, Siap Supply Kebutuhan Bahan Bangunan!",
+    "file": "database/seeders/Blog.php",
+    "old": "jasa-kontraktor-bangunan-bekasi",
+    "new": "2025/12/05/jasa-kontraktor-bangunan-bekasi"
+  },
+  {
+    "title": "10 Referensi Dapur Minimalis untuk Hunian Modern di 2026",
+    "file": "database/seeders/Blog.php",
+    "old": "10-referensi-dapur-minimalis-untuk-hunian-modern-di-2026",
+    "new": "2025/12/09/10-referensi-dapur-minimalis-untuk-hunian-modern-di-2026"
+  },
+  {
+    "title": "10 Referensi Rumah Panggung Minimalis Modern untuk Inspirasi Hunian Masa Kini",
+    "file": "database/seeders/Blog.php",
+    "old": "10-referensi-rumah-panggung-minimalis-modern-untuk-inspirasi-hunian-masa-kini",
+    "new": "2025/12/10/10-referensi-rumah-panggung-minimalis-modern-untuk-inspirasi-hunian-masa-kini"
+  },
+  {
+    "title": "Groundbreaking Adalah: Pengertian, Fungsi, dan Kenapa Penting dalam Proyek Konstruksi",
+    "file": "database/seeders/Blog.php",
+    "old": "groundbreaking-adalah-pengertian-fungsi-dan-kenapa-penting-dalam-proyek-konstruksi",
+    "new": "2025/12/11/groundbreaking-adalah-pengertian-fungsi-dan-kenapa-penting-dalam-proyek-konstruksi"
+  },
+  {
+    "title": "Apa itu Scaffolding? Fondasi Keamanan Proyek Konstruksi Modern",
+    "file": "database/seeders/Blog.php",
+    "old": "apa-itu-scaffolding-fondasi-keamanan-proyek-konstruksi-modern",
+    "new": "2025/12/12/apa-itu-scaffolding-fondasi-keamanan-proyek-konstruksi-modern"
+  },
+  {
+    "title": "7 Rekomendasi Cat Waterproof Terbaik untuk Rumah Tahan Bocor & Lembap",
+    "file": "database/seeders/Blog.php",
+    "old": "7-rekomendasi-cat-waterproof-terbaik-untuk-rumah-tahan-bocor-lembap",
+    "new": "2025/12/15/7-rekomendasi-cat-waterproof-terbaik-untuk-rumah-tahan-bocor-lembap"
+  },
+  {
+    "title": "Update Harga Kran Air 2025 Lengkap dengan Rekomendasi Brand Terkenal",
+    "file": "database/seeders/Blog.php",
+    "old": "harga-kran-air",
+    "new": "2025/12/17/harga-kran-air"
+  },
+  {
+    "title": "Fungsi Mur dan Baut dalam Konstruksi serta Tips Memilih yang Berkualitas",
+    "file": "database/seeders/Blog.php",
+    "old": "fungsi-mur-dan-baut-dalam-konstruksi-serta-tips-memilih-yang-berkualitas",
+    "new": "2025/12/17/fungsi-mur-dan-baut-dalam-konstruksi-serta-tips-memilih-yang-berkualitas"
+  },
+  {
+    "title": "Kelebihan dan Kekurangan Gypsum sebagai Material Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "kelebihan-dan-kekurangan-gypsum-sebagai-material-bangunan",
+    "new": "2025/12/18/kelebihan-dan-kekurangan-gypsum-sebagai-material-bangunan"
+  },
+  {
+    "title": "Apa Itu Pondasi Cakar Ayam? Penjelasan, Teknik & Manfaatnya",
+    "file": "database/seeders/Blog.php",
+    "old": "apa-itu-pondasi-cakar-ayam-penjelasan-teknik-manfaatnya",
+    "new": "2025/12/19/apa-itu-pondasi-cakar-ayam-penjelasan-teknik-manfaatnya"
+  },
+  {
+    "title": "Panduan Lengkap Ukuran Reng Baja Ringan untuk Atap Rumah",
+    "file": "database/seeders/Blog.php",
+    "old": "panduan-lengkap-ukuran-reng-baja-ringan-untuk-atap-rumah",
+    "new": "2025/12/22/panduan-lengkap-ukuran-reng-baja-ringan-untuk-atap-rumah"
+  },
+  {
+    "title": "Berapa Biaya Membangun Rumah Minimalis per Meter? Ini Perhitungan Realistisnya",
+    "file": "database/seeders/Blog.php",
+    "old": "berapa-biaya-membangun-rumah-minimalis-per-meter-ini-perhitungan-realistisnya",
+    "new": "2025/12/23/berapa-biaya-membangun-rumah-minimalis-per-meter-ini-perhitungan-realistisnya"
+  },
+  {
+    "title": "Daftar Harga Seng Ter-update 2026 - Yen Bangunan Cikarang",
+    "file": "database/seeders/Blog.php",
+    "old": "daftar-harga-seng-ter-update-2026-yen-bangunan-cikarang",
+    "new": "2025/12/24/daftar-harga-seng-ter-update-2026-yen-bangunan-cikarang"
+  },
+  {
+    "title": "Harga Semen, Batu Bata, dan Pasir Terbaru di Cikarang (Update 2025)",
+    "file": "database/seeders/Blog.php",
+    "old": "harga-semen-batu-bata-dan-pasir-terbaru-di-cikarang-update-2025trashed",
+    "new": "2025/08/05/harga-semen-batu-bata-dan-pasir-terbaru-di-cikarang-update-2025trashed"
+  },
+  {
+    "title": "Jual Alat Konstruksi Terlengkap & Terpercaya - Yen Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "jual-alat-konstruksi-terlengkap-terpercaya-yen-bangunan",
+    "new": "2025/12/27/jual-alat-konstruksi-terlengkap-terpercaya-yen-bangunan"
+  },
+  {
+    "title": "5 Rekomendasi Cat untuk Besi yang Tahan Lama dan Anti Karat | Yen Bangunan",
+    "file": "database/seeders/Blog.php",
+    "old": "5-rekomendasi-cat-untuk-besi-yang-tahan-lama-dan-anti-karat-yen-bangunan",
+    "new": "2025/12/30/5-rekomendasi-cat-untuk-besi-yang-tahan-lama-dan-anti-karat-yen-bangunan"
+  },
+  {
+    "title": "5 Rekomendasi Cat untuk Kayu yang Tahan Lama & Estetik",
+    "file": "database/seeders/Blog.php",
+    "old": "5-rekomendasi-cat-untuk-kayu-yang-tahan-lama-estetik",
+    "new": "2025/12/30/5-rekomendasi-cat-untuk-kayu-yang-tahan-lama-estetik"
+  },
+  {
+    "title": "10 Referensi Rumah Desa Minimalis untuk Hunian Asri dan Fungsional",
+    "file": "database/seeders/Blog.php",
+    "old": "10-referensi-rumah-desa-minimalis-untuk-hunian-asri-dan-fungsional",
+    "new": "2025/12/31/10-referensi-rumah-desa-minimalis-untuk-hunian-asri-dan-fungsional"
+  },
+  {
+    "title": "Toko Bosch di Cikarang? Temukan Alat Bosch Asli di Yen Bangunan dengan Stok Terlengkap",
+    "file": "database/seeders/Blog.php",
+    "old": "toko-bosch-di-cikarang-temukan-alat-bosch-asli-di-yen-bangunan-dengan-stok-terlengkap",
+    "new": "2026/01/05/toko-bosch-di-cikarang-temukan-alat-bosch-asli-di-yen-bangunan-dengan-stok-terlengkap"
+  },
+  {
+    "title": "7 Rekomendasi Produk Cat untuk Atap Anti Bocor & Tahan Lama",
+    "file": "database/seeders/Blog.php",
+    "old": "7-rekomendasi-produk-cat-untuk-atap-anti-bocor-tahan-lama",
+    "new": "2026/01/06/7-rekomendasi-produk-cat-untuk-atap-anti-bocor-tahan-lama"
+  },
+  {
+    "title": "10 Referensi Kitchen Set Minimalis untuk Dapur Modern & Fungsional",
+    "file": "database/seeders/Blog.php",
+    "old": "10-referensi-kitchen-set-minimalis-untuk-dapur-modern-fungsional",
+    "new": "2026/01/07/10-referensi-kitchen-set-minimalis-untuk-dapur-modern-fungsional"
+  },
+  {
+    "title": "Estimasi Biaya Membangun Rumah Minimalis per Meter Persegi + Tips Anggaran",
+    "file": "database/seeders/Blog.php",
+    "old": "estimasi-biaya-membangun-rumah-minimalis-per-meter-persegi-tips-anggaran",
+    "new": "2026/01/08/estimasi-biaya-membangun-rumah-minimalis-per-meter-persegi-tips-anggaran"
+  }
+]

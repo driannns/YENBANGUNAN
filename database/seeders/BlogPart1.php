@@ -76,16 +76,16 @@ class BlogPart1 extends Seeder
                 continue;
             }
 
-            $date = date('Y-m-d', strtotime($p['published_at'] ?? now()));
+            $datePath = date('Y/m/d', strtotime($p['published_at'] ?? now()));
             $slug = $p['slug'] ?? Str::slug($p['title']);
 
-            // remove existing leading date prefix to keep idempotency
-            $slug = preg_replace('/^\d{4}-\d{2}-\d{2}-/', '', $slug);
+            // remove existing leading date prefix to keep idempotency (handles YYYY/MM/DD/... and YYYY-MM-DD-... variants)
+            $slug = preg_replace('/^\d{4}(?:[\/\-]\d{2}){2}[\/\-]?/', '', $slug);
             $slug = Str::slug($slug);
-            $slug = $date.'-'.$slug;
+            $slug = $datePath.'/'.$slug;
 
-            // validate format
-            if (! preg_match('/^\d{4}-\d{2}-\d{2}-[a-z0-9-]+$/', $slug)) {
+            // validate format (expects YYYY/MM/DD/slug)
+            if (! preg_match('/^\d{4}\/\d{2}\/\d{2}\/[a-z0-9-]+$/', $slug)) {
                 throw new \RuntimeException("Invalid slug format: {$slug} for title: {$p['title']}");
             }
 

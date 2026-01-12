@@ -167,7 +167,30 @@
             <h1 class="text-white text-4xl font-bold">Posts</h1>
             <div class="grid grid-cols-1 md:grid-cols-4 mt-4">
                 @foreach ($blogs as $blog)
-                    <a href="{{ route('blog.show', $blog->slug) }}" class="bg-white rounded-lg overflow-hidden shadow-lg m-4 hover:scale-110 hover:shadow-xl transition-all duration-300">
+                    @php
+                        $parts = explode('/', $blog->slug, 4);
+                        // If slug begins with YYYY/MM/DD/... use it, otherwise use published_at/created_at for date
+                        if (!empty($parts[0]) && preg_match('/^\d{4}$/', $parts[0])) {
+                            $year = $parts[0];
+                            $month = $parts[1] ?? '01';
+                            $day = $parts[2] ?? '01';
+                            $slugOnly = $parts[3] ?? $blog->slug;
+                        } else {
+                            $date = $blog->published_at ?? $blog->created_at ?? now();
+                            $carbon = \Carbon\Carbon::parse($date);
+                            $year = $carbon->format('Y');
+                            $month = $carbon->format('m');
+                            $day = $carbon->format('d');
+                            // strip common leading date prefixes from slug to avoid duplicated dates in URL
+                            $slugOnly = preg_replace([
+                                '/^\\d{4}\\/\\d{2}\\/\\d{2}\\//', // 2025/05/11/
+                                '/^\\d{4}-\\d{2}-\\d{2}-/',        // 2025-05-11-
+                                '/^\\d{8}-/'                      // 20250511-
+                            ], '', $blog->slug);
+                            $slugOnly = ltrim($slugOnly, '-\\/');
+                        }
+                    @endphp
+                    <a href="{{ route('blog.show', ['year' => $year, 'month' => $month, 'day' => $day, 'slug' => $slugOnly]) }}" class="bg-white rounded-lg overflow-hidden shadow-lg m-4 hover:scale-110 hover:shadow-xl transition-all duration-300">
                         @if($blog->image)
                         <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" class="w-full h-48 object-cover">
                         @else

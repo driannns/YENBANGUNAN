@@ -105,8 +105,22 @@
                 60% { transform: translateY(-1px); }
             }
         </style>
-        <div class="w-full h-screen grid content-center p-8 text-white" style="background-image: url('/assets/product-background.jpg'); background-size: cover; background-position: center;">
-            <nav class="fixed w-full z-40 top-0 start-0 text-white p-1 font-d-din uppercase">
+        <div class="w-full bg-[#C0392B] text-white py-3 overflow-hidden shadow-lg fixed top-0 left-0 z-50">
+            <div class="flex items-center">
+                <!-- Label with Countdown -->
+                <div class="flex items-center gap-1 bg-white text-red-600 px-4 py-2 font-bold text-sm flex-shrink-0">
+                    <div class="uppercase">Promo</div>
+                    <div id="countdown" class="text-xs font-normal">00D 00H 00M 00S</div>
+                </div>
+                
+                <!-- Scrolling Text Container -->
+                <div class="flex-1 overflow-hidden relative ml-4">
+                    <div id="runningText" class="whitespace-nowrap inline-block" style="position: relative;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="relative w-full h-screen grid content-center p-8 text-white" style="background-image: url('/assets/product-background.jpg'); background-size: cover; background-position: center; margin-top: 3.7rem">
+            <nav class="absolute w-full z-40 top-0 start-0 text-white p-1 font-d-din uppercase">
                 <div class="flex flex-wrap items-center justify-between mx-auto py-1 px-2">
                     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="/assets/logo.png" class="h-5" alt="Yen Bangunan Logo" />
@@ -376,6 +390,68 @@
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
+        <script>
+            const messages = [
+                ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
+                ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
+                ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
+                ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
+                ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
+            ];
+
+            const runningText = document.getElementById('runningText');
+            const countdownElement = document.getElementById('countdown');
+            const targetDate = new Date('2026-01-31T23:59:59').getTime();
+            
+            // Create text
+            const fullText = messages.join(' • ') + ' • ' + messages.join(' • ');
+            runningText.innerHTML = `<span class="inline-block px-4">${fullText}</span>`;
+            
+            let position = 0;
+            const speed = 1;
+            let isPaused = false;
+
+            // Update countdown
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                
+                if (distance < 0) {
+                    countdownElement.textContent = 'PROMO BERAKHIR';
+                    return;
+                }
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                countdownElement.textContent = `${days}D ${hours}H ${minutes}M ${seconds}S`;
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Animate running text
+            function animate() {
+                if (!isPaused) {
+                    position -= speed;
+                    
+                    if (Math.abs(position) >= runningText.scrollWidth / 2) {
+                        position = 0;
+                    }
+                    
+                    runningText.style.transform = `translateX(${position}px)`;
+                }
+                
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            runningText.addEventListener('mouseenter', () => isPaused = true);
+            runningText.addEventListener('mouseleave', () => isPaused = false);
+        </script>
         <script>
             // Carousel 6 JavaScript
             const carousel6 = document.getElementById('carousel6');

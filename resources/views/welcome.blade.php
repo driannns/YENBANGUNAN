@@ -144,7 +144,7 @@
                 60% { transform: translateY(-1px); }
             }
         </style>
-        <div class="w-full bg-[#C0392B] text-white py-3 overflow-hidden shadow-lg">
+        <div class="w-full bg-[#C0392B] text-white py-3 overflow-hidden shadow-lg fixed top-0 left-0 z-50">
             <div class="flex items-center">
                 <!-- Label with Countdown -->
                 <div class="flex items-center gap-1 bg-white text-red-600 px-4 py-2 font-bold text-sm flex-shrink-0">
@@ -158,12 +158,16 @@
                 </div>
             </div>
         </div>
-        <div class="relative mt-13">
+        <div class="relative" style="margin-top: 3.7rem">
             <video autoplay muted loop id="myVideo" class="h-screen w-full object-cover -z-10 brightness-50">
                 <source src="/assets/newvideo-1.mp4" type="video/mp4">
             </video>
             <div class="w-full h-screen grid content-center p-8 text-white absolute top-0 left-0">
-                <nav class="absolute w-full z-40 top-0 start-0 text-white p-1 font-d-din uppercase">
+                <div class="absolute w-full z-40 top-0 start-0">
+                    @include('layouts.navigation')
+                </div>
+
+                <!-- <nav class="absolute w-full z-40 top-0 start-0 text-white p-1 font-d-din uppercase">
                     <div class="flex flex-wrap items-center justify-between mx-auto py-1 px-2">
                         <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
                             <img src="/assets/logo.png" class="h-5" alt="Yen Bangunan Logo" />
@@ -174,6 +178,11 @@
                                 <span class="sr-only">Open user menu</span>
                                 <img class="w-8 h-8 rounded-full" src="/assets/product.jpg" alt="user photo">
                             </button>
+                            @auth
+                            <a href="{{ route('profile.edit') }}" class="w-6">
+                                <img src="{{ asset('assets/user.png') }}" alt="">
+                            </a>
+                            @endauth
 
                             
                             <div class="z-50 bg-white hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="user-dropdown">
@@ -215,12 +224,16 @@
                                 <li>
                                     <a href="/blog" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Blog</a>
                                 </li>
-                                <button class="lg:hidden w-fit bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</button>
-
+                                <div class="flex md:items-center flex-col md:flex-row">
+                                    <button class="w-3">
+                                        <img src="{{ asset('assets/user.png') }}" alt="">
+                                    </button>
+                                    <button class="lg:hidden w-fit bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</button>
+                                </div>
                             </ul>
                         </div>
                     </div>
-                </nav>
+                </nav> -->
                 <div class="transition-opacity opacity-100 duration-750 starting:opacity-0 lg:p-8" data-scroll="fade-in-up">
                     <div class="w-10/12 lg:w-1/2">
                         <h1 class="font-special-gothic text-4xl font-bold">One-Stop Solution Untuk Segala Kebutuhan Anda</h1>
@@ -388,10 +401,9 @@
 
                 </div>
                 <div class="relative max-w-4xl mx-auto hidden lg:block">
-                    
                     <!-- Carousel Wrapper -->
                     <div class="overflow-hidden rounded-lg">
-                        <div id="carousel6" class="flex transition-transform duration-500 ease-in-out">
+                        <div id="carouselBrand" class="flex transition-transform duration-500 ease-in-out">
                             
                             <!-- Slide 1 -->
                             <div class="min-w-full bg-center bg-no-repeat bg-contain" style="background-image: url('/assets/brand-desktop-1.png');">
@@ -415,7 +427,7 @@
                     </div>
 
                     <!-- Previous Button -->
-                    <button id="prevBtn6" 
+                    <button id="prevBtnBrand" 
                             class="invisible absolute left-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -423,7 +435,7 @@
                     </button>
 
                     <!-- Next Button -->
-                    <button id="nextBtn6" 
+                    <button id="nextBtnBrand" 
                             class="invisible absolute right-4 top-1/2 -translate-y-1/2 hover:bg-white text-gray-800 rounded-full p-3 transition-all duration-300 hover:scale-110">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -432,11 +444,10 @@
 
                     <!-- Indicators -->
                     <div class="flex justify-center gap-2 mt-4">
-                        <button class="indicator6 w-3 h-3 rounded-full bg-gray-800 transition-all duration-300" data-index="0"></button>
-                        <button class="indicator6 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="1"></button>
-                        <button class="indicator6 w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="2"></button>
+                        <button class="indicatorBrand w-3 h-3 rounded-full bg-gray-800 transition-all duration-300" data-index="0"></button>
+                        <button class="indicatorBrand w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="1"></button>
+                        <button class="indicatorBrand w-3 h-3 rounded-full bg-gray-400 transition-all duration-300" data-index="2"></button>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -964,6 +975,111 @@
 
             runningText.addEventListener('mouseenter', () => isPaused = true);
             runningText.addEventListener('mouseleave', () => isPaused = false);
+        </script>
+        <script>
+            // Carousel Brand (desktop) JavaScript
+            const carouselBrand = document.getElementById('carouselBrand');
+            const prevBtnBrand = document.getElementById('prevBtnBrand');
+            const nextBtnBrand = document.getElementById('nextBtnBrand');
+            const indicatorsBrand = document.querySelectorAll('.indicatorBrand');
+            
+            let currentIndexBrand = 0;
+            const totalSlidesBrand = 3; // 3 slides
+            let autoPlayIntervalBrand;
+
+            // Function to update carousel position
+            function updateCarouselBrand() {
+                carouselBrand.style.transform = `translateX(-${currentIndexBrand * 100}%)`;
+
+                // Update indicators
+                indicatorsBrand.forEach((indicator, index) => {
+                    if (index === currentIndexBrand) {
+                        indicator.classList.remove('bg-gray-400');
+                        indicator.classList.add('bg-gray-800', 'w-8');
+                    } else {
+                        indicator.classList.remove('bg-gray-800', 'w-8');
+                        indicator.classList.add('bg-gray-400');
+                    }
+                });
+            }
+
+            // Next slide
+            function nextSlideBrand() {
+                currentIndexBrand = (currentIndexBrand + 1) % totalSlidesBrand;
+                updateCarouselBrand();
+            }
+
+            // Previous slide
+            function prevSlideBrand() {
+                currentIndexBrand = (currentIndexBrand - 1 + totalSlidesBrand) % totalSlidesBrand;
+                updateCarouselBrand();
+            }
+
+            // Event listeners
+            nextBtnBrand.addEventListener('click', () => {
+                nextSlideBrand();
+                resetAutoPlayBrand();
+            });
+
+            prevBtnBrand.addEventListener('click', () => {
+                prevSlideBrand();
+                resetAutoPlayBrand();
+            });
+
+            // Indicator click
+            indicatorsBrand.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndexBrand = index;
+                    updateCarouselBrand();
+                    resetAutoPlayBrand();
+                });
+            });
+
+            // Auto play
+            function startAutoPlayBrand() {
+                autoPlayIntervalBrand = setInterval(nextSlideBrand, 3000);
+            }
+
+            function resetAutoPlayBrand() {
+                clearInterval(autoPlayIntervalBrand);
+                startAutoPlayBrand();
+            }
+
+            // Touch/Swipe support
+            let touchStartXBrand = 0;
+            let touchEndXBrand = 0;
+
+            carouselBrand.addEventListener('touchstart', (e) => {
+                touchStartXBrand = e.changedTouches[0].screenX;
+            });
+
+            carouselBrand.addEventListener('touchend', (e) => {
+                touchEndXBrand = e.changedTouches[0].screenX;
+                handleSwipeBrand();
+            });
+
+            function handleSwipeBrand() {
+                if (touchStartXBrand - touchEndXBrand > 50) {
+                    nextSlideBrand();
+                    resetAutoPlayBrand();
+                }
+                if (touchEndXBrand - touchStartXBrand > 50) {
+                    prevSlideBrand();
+                    resetAutoPlayBrand();
+                }
+            }
+
+            // Start autoplay on load
+            startAutoPlayBrand();
+
+            // Pause autoplay on hover
+            carouselBrand.addEventListener('mouseenter', () => {
+                clearInterval(autoPlayIntervalBrand);
+            });
+
+            carouselBrand.addEventListener('mouseleave', () => {
+                startAutoPlayBrand();
+            });
         </script>
         <script>
             // Carousel 6 JavaScript

@@ -234,9 +234,9 @@
                         </div>
                     </div>
                 </nav> -->
-                <div class="transition-opacity opacity-100 duration-750 starting:opacity-0 lg:p-8" data-scroll="fade-in-up">
+                <div class="transition-opacity opacity-100 duration-750 starting:opacity-0 lg:p-8 " data-scroll="fade-in-up">
                     <div class="w-10/12 lg:w-1/2">
-                        <h1 class="font-special-gothic text-4xl font-bold">One-Stop Solution Untuk Segala Kebutuhan Anda</h1>
+                        <h1 class="font-d-din text-4xl font-bold">One-Stop Solution Untuk Segala Kebutuhan Anda</h1>
                         <p class="font-montserrat mt-2 leading-7 text-sm">
                             Yen Bangunan® merupakan toko material bangunan terbesar dan terlengkap di Cikarang. 
                             Kami hadir sebagai solusi untuk kebutuhan proyek dan industri sejak 2008. 

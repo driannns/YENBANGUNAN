@@ -120,64 +120,9 @@
             </div>
         </div>
         <div class="relative w-full h-screen grid content-center p-8 text-white" style="background-image: url('/assets/product-background.jpg'); background-size: cover; background-position: center; margin-top: 3.7rem">
-            <nav class="absolute w-full z-40 top-0 start-0 text-white p-1 font-d-din uppercase">
-                <div class="flex flex-wrap items-center justify-between mx-auto py-1 px-2">
-                    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                        <img src="/assets/logo.png" class="h-5" alt="Yen Bangunan Logo" />
-                    </a>
-                    <div class="z-50 flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <a href="https://wa.me/6282123269622" class="hidden lg:block bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
-                        <button type="button" class="hidden text-sm bg-neutral-primary rounded-full md:me-0 focus:ring-4 focus:ring-neutral-tertiary" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-                            <span class="sr-only">Open user menu</span>
-                            <img class="w-8 h-8 rounded-full" src="/assets/product.jpg" alt="user photo">
-                        </button>
-
-                        
-                        <div class="z-50 bg-white hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="user-dropdown">
-                            <div class="px-4 py-3 text-sm border-b border-default">
-                            <span class="block text-heading font-medium">Joseph McFall</span>
-                            <span class="block text-body truncate">name@flowbite.com</span>
-                            </div>
-                            <ul class="p-2 text-sm text-body font-medium" aria-labelledby="user-menu-button">
-                            <li>
-                                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Settings</a>
-                            </li>
-                            <li>
-                                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Earnings</a>
-                            </li>
-                            <li>
-                                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign out</a>
-                            </li>
-                            </ul>
-                        </div>
-                        <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-user" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
-                        </button>
-                    </div>
-                    <div class="bg-white lg:bg-transparent lg:text-white text-black font-special-gothic items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
-                        <ul class="font-medium text-lg flex flex-col p-4 md:p-0 mt-1 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
-                            <li>
-                                <a href="/" class="block py-2 px-3 bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
-                            </li>
-                            <li>
-                                <a href="/product" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Product</a>
-                            </li>
-                            <li>
-                                <a href="/about-us" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">About Us</a>
-                            </li>
-                            <li>
-                                <a href="/blog" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Blog</a>
-                            </li>
-                            <button class="lg:hidden w-fit bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</button>
-
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <div class="absolute w-full z-40 top-0 start-0">
+                @include('layouts.navigation')
+            </div>
             <div class="transition-opacity opacity-100 duration-750 starting:opacity-0 lg:p-8">
                 <h1 class="text-center font-d-din font-bold text-6xl">PRODUCT</h1>
             </div>

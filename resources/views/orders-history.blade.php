@@ -140,35 +140,20 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex flex-col gap-3">
-            <div class="">
-                <div class="flex items-center gap-4">
-                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
-                        <h1 class="text-lg font-medium">Total Pembelian</h1>
-                        <h1 class="text-3xl mt-1 font-bold">Rp {{ number_format(14520000, 0, ',', '.') }}</h1>
-                    </div>
-                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
-                        <h1 class="text-lg font-medium">Total Point</h1>
-                        <h1 class="text-3xl mt-1 font-bold">{{ number_format(14520, 0, ',', '.') }}</h1>
-                    </div>
+            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg flex items-center justify-between">
+                <div class="">
+                    <h1 class="text-2xl font-semibold">INV/19/01/26/001</h1>
+                    <p class="text-sm text-gray-400">26 January 2019</p>
+                </div>
+                <div class="">
+                    <h1>PO</h1>
+                    <p>--</p>
+                </div>
+                <div class="">
+                    <h1>Total Amount</h1>
+                    <h1 class="text-lg mt-1 font-bold">Rp {{ number_format(14520000, 0, ',', '.') }}</h1>
                 </div>
             </div>
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.update-profile-information-form')
-                </div>
-            </div>
-
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.update-password-form')
-                </div>
-            </div>
-
-            <!-- <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.delete-user-form')
-                </div>
-            </div> -->
         </div>
     </div>
 </x-app-layout>

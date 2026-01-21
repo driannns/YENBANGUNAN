@@ -7,6 +7,7 @@
 
         <title>YEN BANGUNAN - Toko Bangunan Cikarang Terlengkap & Terbesar</title>
         <link rel="icon" type="image/png" href="{{ asset('assets/logo-crop.png') }}"/>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

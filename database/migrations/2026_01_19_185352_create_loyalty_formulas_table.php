@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('loyalty_formulas', function (Blueprint $table) {
             $table->id();
-            $table->string('invoice_number')->unique();
-            $table->string('po_number')->nullable();
-            $table->decimal('total_amount', 15, 2);
-            $table->date('order_date');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->float('coefficient')->default(1.0);
             $table->timestamps();
         });
     }
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('loyalty_formulas');
     }
 };

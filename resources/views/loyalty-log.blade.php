@@ -48,9 +48,9 @@
                                     <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</button>
                                     <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Register</button>
                                 </div>
-                                    @endauth
+                                @endauth
                             </x-slot>
-        
+
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('profile.edit')">
                                     {{ __('Profile') }}
@@ -58,11 +58,16 @@
                                 <x-dropdown-link :href="route('orders-history')">
                                     {{ __('Order History') }}
                                 </x-dropdown-link>
-        
+                                @if(auth()->user()->is_manager)
+                                <x-dropdown-link :href="route('loyalty.log')">
+                                    {{ __('Loyalty Log') }}
+                                </x-dropdown-link>
+                                @endif
+
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-        
+
                                     <x-dropdown-link :href="route('logout')"
                                             onclick="event.preventDefault();
                                                         this.closest('form').submit();">
@@ -139,38 +144,80 @@
     </nav>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex flex-col gap-3">
-            @if(!auth()->user()->is_admin && !auth()->user()->is_manager)
-            <div class="">
-                <div class="flex items-center gap-4">
-                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
-                        <h1 class="text-lg font-medium">Total Pembelian</h1>
-                        <h1 class="text-3xl mt-1 font-bold">Rp {{ number_format(14520000, 0, ',', '.') }}</h1>
-                    </div>
-                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
-                        <h1 class="text-lg font-medium">Total Point</h1>
-                        <h1 class="text-3xl mt-1 font-bold">{{ number_format(14520, 0, ',', '.') }}</h1>
-                    </div>
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-900">Loyalty Log</h2>
                 </div>
-            </div>
-            @endif
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.update-profile-information-form')
-                </div>
-            </div>
 
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.update-password-form')
+                <div class="p-6">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Created Date
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Order
+                                    </th>
+                                    @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Customer
+                                    </th>
+                                    @endif
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Order Amount
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Points Generated
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                @foreach($loyaltyHistories as $history)
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                        {{ $history->created_at->format('d M Y H:i') }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                        <div>
+                                            <div class="font-medium">{{ $history->order->invoice_number }}</div>
+                                            <div class="text-gray-500">{{ $history->order->po_number }}</div>
+                                        </div>
+                                    </td>
+                                    @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                        <div>
+                                            <div class="font-medium">{{ $history->user->name }}</div>
+                                            <div class="text-gray-500">{{ $history->user->NIK }}</div>
+                                        </div>
+                                    </td>
+                                    @endif
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                        Rp {{ number_format($history->order->total_amount, 0, ',', '.') }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-600">
+                                        {{ number_format($history->points_earned, 1) }} points
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+
+                    @if($loyaltyHistories->isEmpty())
+                    <div class="text-center py-8">
+                        <p class="text-gray-500">No loyalty history found.</p>
+                    </div>
+                    @endif
+
+                    <div class="mt-6 flex gap-2">
+                        <a href="{{ route('orders-history') }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Back to Orders</a>
+                        <a href="{{ route('loyalty.formula') }}" class="bg-[#e05534] hover:bg-[#c04424] text-white font-bold py-2 px-4 rounded">View Formula</a>
+                    </div>
                 </div>
             </div>
-
-            <!-- <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.delete-user-form')
-                </div>
-            </div> -->
         </div>
     </div>
 </x-app-layout>

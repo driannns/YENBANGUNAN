@@ -58,6 +58,11 @@
                                 <x-dropdown-link :href="route('orders-history')">
                                     {{ __('Order History') }}
                                 </x-dropdown-link>
+                                @if(auth()->user()->is_manager)
+                                <x-dropdown-link :href="route('loyalty.log')">
+                                    {{ __('Loyalty Log') }}
+                                </x-dropdown-link>
+                                @endif
         
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
@@ -140,20 +145,98 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex flex-col gap-3">
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg flex items-center justify-between">
-                <div class="">
-                    <h1 class="text-2xl font-semibold">INV/19/01/26/001</h1>
-                    <p class="text-sm text-gray-400">26 January 2019</p>
-                </div>
-                <div class="">
-                    <h1>PO</h1>
-                    <p>--</p>
-                </div>
-                <div class="">
-                    <h1>Total Amount</h1>
-                    <h1 class="text-lg mt-1 font-bold">Rp {{ number_format(14520000, 0, ',', '.') }}</h1>
+            <div class="">
+                <div class="flex items-center gap-4">
+                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
+                        <h1 class="text-lg font-medium">Total Pembelian</h1>
+                        <h1 class="text-3xl mt-1 font-bold">Rp {{ number_format($orderAmount, 0, ',', '.') }}</h1>
+                    </div>
+                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
+                        <h1 class="text-lg font-medium">Total Point</h1>
+                        <a href="{{ route('loyalty.formula') }}" class="text-3xl mt-1 font-bold">{{ number_format(14520, 0, ',', '.') }}</a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex mt-4 justify-end w-full gap-2">
+            <a href="{{ route('loyalty.log') }}" class="bg-blue-500 text-white px-4 py-2 rounded-full w-fit">Loyalty Log</a>
+            <a href="{{ route('orders-history.create') }}" class="bg-[#e05534] text-white px-4 py-2 rounded-full w-fit">Create</a>
+        </div>
+        @if(session('success'))
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                    <span class="block sm:inline">{{ session('success') }}</span>
+                </div>
+            </div>
+        @endif
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex flex-col mt-4">
+            @foreach($orders as $order)
+            <div class="p-2 sm:p-4 bg-white shadow sm:rounded-lg">
+                <div class="flex justify-between items-center">
+                    @if(auth()->user()->is_manager && $order->status === 'draft')
+                    <div class="flex gap-2">
+                        <form method="POST" action="{{ route('orders-history.approve', $order) }}" class="inline">
+                            @csrf
+                            <button type="submit" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md text-white font-medium transition-all">
+                                Approve
+                            </button>
+                        </form>
+                        <form method="POST" action="{{ route('orders-history.reject', $order) }}" class="inline">
+                            @csrf
+                            <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md text-white font-medium transition-all" onclick="return confirm('Are you sure you want to reject this order?')">
+                                Reject
+                            </button>
+                        </form>
+                    </div>
+                    @elseif(auth()->user()->is_admin && !auth()->user()->is_manager)
+                    <div class="flex gap-2">
+                        <a href="{{ route('orders-history.edit', $order) }}" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md text-white font-medium transition-all">
+                            Edit
+                        </a>
+                        <form method="POST" action="{{ route('orders-history.destroy', $order) }}" class="inline" onsubmit="return confirm('Are you sure you want to delete this order?')">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md text-white font-medium transition-all">
+                                Void
+                            </button>
+                        </form>
+                    </div>
+                    @else
+                    <div></div>
+                    @endif
+                    <div class="flex items-center gap-4 p-1 rounded-full bg-gray-300">
+                         @if($order->status === 'draft')
+                         <div class="py-1 px-3 bg-yellow-400 rounded-full">Draft</div>
+                         @elseif($order->status === 'confirmed')
+                         <div class="py-1 px-3 bg-green-400 rounded-full">Confirmed</div>
+                         @elseif($order->status === 'rejected')
+                         <div class="py-1 px-3 bg-red-400 rounded-full">Rejected</div>
+                         @endif
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="w-4/12">
+                        <h1 class="text-2xl font-semibold">{{ $order->invoice_number }}</h1>
+                        <p class="text-sm text-gray-400">{{ $order->created_at }}</p>
+                    </div>
+                    @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                    <div class="w-4/12">
+                        <h1 class="text-sm font-bold">Customer Name:</h1>
+                        <p class="font-bold">{{ $order->user->name }}</p>
+                        <p class="text-xs font-medium">{{ $order->user->NIK }}</p>
+                    </div>
+                    @endif
+                    <div class="w-4/12">
+                        <h1 class="text-sm mt-1 font-bold">PO Number</h1>
+                        <p>{{ $order->po_number }}</p>
+                    </div>
+                    <div class="w-4/12 flex flex-col items-end">
+                        <h1>Total Amount</h1>
+                        <h1 class="text-lg mt-1 font-bold">Rp {{ number_format($order->total_amount, 0, ',', '.') }}</h1>
+                    </div>
+                </div>
+            </div>
+            @endforeach
         </div>
     </div>
 </x-app-layout>

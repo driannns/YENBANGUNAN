@@ -58,7 +58,7 @@
                                 <x-dropdown-link :href="route('orders-history')">
                                     {{ __('Order History') }}
                                 </x-dropdown-link>
-                                @if(auth()->user()->is_manager)
+                                @if(auth()->user()->is_manager or auth()->user()->is_admin)
                                 <x-dropdown-link :href="route('loyalty.log')">
                                     {{ __('Loyalty Log') }}
                                 </x-dropdown-link>
@@ -158,9 +158,14 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex mt-4 justify-end w-full gap-2">
-            <a href="{{ route('loyalty.log') }}" class="bg-blue-500 text-white px-4 py-2 rounded-full w-fit">Loyalty Log</a>
+        @
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex items-center mt-4 justify-end w-full gap-2">
+            @if(auth()->user()->is_admin)
             <a href="{{ route('orders-history.create') }}" class="bg-[#e05534] text-white px-4 py-2 rounded-full w-fit">Create</a>
+            @endif
+            @if(auth()->user()->is_manager or auth()->user()->is_admin)
+            <a href="{{ route('loyalty.log') }}" class="bg-blue-500 text-white px-4 py-2 rounded-full w-fit" style="margin-top: 0 !important;">Loyalty Log</a>
+            @endif
         </div>
         @if(session('success'))
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">

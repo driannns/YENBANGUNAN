@@ -22,6 +22,18 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        // Run user seeder
+        $this->call(UserSeeder::class);
+
+        // Run order seeder
+        $this->call(OrderSeeder::class);
+
+        // Run loyalty seeder
+        $this->call(LoyaltySeeder::class);
+
+        // Run loyalty formula seeder
+        $this->call(LoyaltyFormulaSeeder::class);
+
         // Run blog seeders (split into two parts)
         $this->call([Blog::class, BlogPart1::class]);
     }

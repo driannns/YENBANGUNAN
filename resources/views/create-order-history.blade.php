@@ -48,9 +48,9 @@
                                     <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</button>
                                     <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Register</button>
                                 </div>
-                                    @endauth
+                                @endauth
                             </x-slot>
-        
+
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('profile.edit')">
                                     {{ __('Profile') }}
@@ -58,11 +58,16 @@
                                 <x-dropdown-link :href="route('orders-history')">
                                     {{ __('Order History') }}
                                 </x-dropdown-link>
-        
+                                @if(auth()->user()->is_manager)
+                                <x-dropdown-link :href="route('loyalty.log')">
+                                    {{ __('Loyalty Log') }}
+                                </x-dropdown-link>
+                                @endif
+
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-        
+
                                     <x-dropdown-link :href="route('logout')"
                                             onclick="event.preventDefault();
                                                         this.closest('form').submit();">
@@ -139,38 +144,70 @@
     </nav>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex flex-col gap-3">
-            @if(!auth()->user()->is_admin && !auth()->user()->is_manager)
-            <div class="">
-                <div class="flex items-center gap-4">
-                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
-                        <h1 class="text-lg font-medium">Total Pembelian</h1>
-                        <h1 class="text-3xl mt-1 font-bold">Rp {{ number_format(14520000, 0, ',', '.') }}</h1>
-                    </div>
-                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
-                        <h1 class="text-lg font-medium">Total Point</h1>
-                        <h1 class="text-3xl mt-1 font-bold">{{ number_format(14520, 0, ',', '.') }}</h1>
-                    </div>
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-900">Create Order History</h2>
                 </div>
-            </div>
-            @endif
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.update-profile-information-form')
-                </div>
-            </div>
 
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.update-password-form')
-                </div>
-            </div>
+                <form method="POST" action="{{ route('orders-history.store') }}" class="p-6">
+                    @csrf
 
-            <!-- <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    @include('profile.partials.delete-user-form')
-                </div>
-            </div> -->
+                    <div class="mb-4">
+                        <label for="invoice_number" class="block text-sm font-medium text-gray-700">Invoice Number</label>
+                        <input type="text" name="invoice_number" id="invoice_number" value="{{ old('invoice_number') }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+                        @error('invoice_number')
+                            <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="po_number" class="block text-sm font-medium text-gray-700">PO Number</label>
+                        <input type="text" name="po_number" id="po_number" value="{{ old('po_number') }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+                        @error('po_number')
+                            <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="total_amount" class="block text-sm font-medium text-gray-700">Total Amount</label>
+                        <input type="number" step="0.01" name="total_amount" id="total_amount" value="{{ old('total_amount') }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+                        @error('total_amount')
+                            <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="order_date" class="block text-sm font-medium text-gray-700">Order Date</label>
+                        <input type="date" name="order_date" id="order_date" value="{{ old('order_date') }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+                        @error('order_date')
+                            <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    @if(auth()->user()->is_admin && $users)
+                    <div class="mb-4">
+                        <label for="user_id" class="block text-sm font-medium text-gray-700">User</label>
+                        <select name="user_id" id="user_id" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+                            <option value="">Select Customer</option>
+                            @foreach($users as $user)
+                                <option value="{{ $user->id }}" {{ old('user_id') == $user->id ? 'selected' : '' }}>
+                                    {{ $user->NIK }} - {{ $user->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                        @error('user_id')
+                            <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    @endif
+
+                    <div class="flex items-center justify-between">
+                        <a href="{{ route('orders-history') }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancel</a>
+                        <button type="submit" class="bg-[#e05534] hover:bg-[#c04424] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Create Order</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </x-app-layout>

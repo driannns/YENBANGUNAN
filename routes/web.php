@@ -27,6 +27,17 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     // Orders History
     Route::get('/orders-history', [App\Http\Controllers\OrderController::class, 'index'])->name('orders-history');
+    Route::get('/orders-history/create', [App\Http\Controllers\OrderController::class, 'create'])->name('orders-history.create');
+    Route::post('/orders-history', [App\Http\Controllers\OrderController::class, 'store'])->name('orders-history.store');
+    Route::get('/orders-history/{order}/edit', [App\Http\Controllers\OrderController::class, 'edit'])->name('orders-history.edit');
+    Route::put('/orders-history/{order}', [App\Http\Controllers\OrderController::class, 'update'])->name('orders-history.update');
+    Route::delete('/orders-history/{order}', [App\Http\Controllers\OrderController::class, 'destroy'])->name('orders-history.destroy');
+    Route::post('/orders-history/{order}/approve', [App\Http\Controllers\OrderController::class, 'approve'])->name('orders-history.approve');
+    Route::post('/orders-history/{order}/reject', [App\Http\Controllers\OrderController::class, 'reject'])->name('orders-history.reject');
+
+    // Loyalty
+    Route::get('/loyalty-formula', [App\Http\Controllers\LoyaltyController::class, 'formula'])->name('loyalty.formula');
+    Route::get('/loyalty-log', [App\Http\Controllers\LoyaltyController::class, 'log'])->name('loyalty.log');
 
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -44,8 +44,8 @@
                             </button>
                             @else
                             <div class="flex items-center gap-1">
-                                <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</button>
-                                <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Register</button>
+                                <a href="{{ route('login') }}" class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</a>
+                                <a href="{{ route('register') }}" class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Register</a>
                             </div>
                                 @endauth
                         </x-slot>

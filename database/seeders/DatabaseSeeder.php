@@ -28,9 +28,6 @@ class DatabaseSeeder extends Seeder
         // Run order seeder
         $this->call(OrderSeeder::class);
 
-        // Run loyalty seeder
-        $this->call(LoyaltySeeder::class);
-
         // Run loyalty formula seeder
         $this->call(LoyaltyFormulaSeeder::class);
 

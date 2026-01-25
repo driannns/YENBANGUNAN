@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Order;
+use App\Models\LoyaltyHistory;
 
 use Illuminate\Http\Request;
 
@@ -15,13 +16,24 @@ class OrderController extends Controller
             // Admin dapat melihat semua order
             $orders = Order::with('user')->paginate(10);
             $orderAmount = Order::sum('total_amount');
+            $loyaltyPoints = LoyaltyHistory::where(function ($query) {
+                $query->where('expired_at', '>', now())
+                      ->orWhereNull('expired_at');
+            })
+            ->sum('points_earned');
         } else {
             // Customer hanya melihat order miliknya
             $orders = Order::where('user_id', $user->id)->paginate(10);
             $orderAmount = Order::where('user_id', $user->id)->sum('total_amount');
+            $loyaltyPoints = LoyaltyHistory::where('user_id', $user->id)
+                ->where(function ($query) {
+                    $query->where('expired_at', '>', now())
+                          ->orWhereNull('expired_at');
+                })
+                ->sum('points_earned');
         }
 
-        return view('orders-history', compact('orders', 'orderAmount'));
+        return view('orders-history', compact('orders', 'orderAmount', 'loyaltyPoints'));
     }
 
     public function create()

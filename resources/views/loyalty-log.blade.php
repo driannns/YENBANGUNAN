@@ -50,7 +50,7 @@
                                 </div>
                                 @endauth
                             </x-slot>
-
+        
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('profile.edit')">
                                     {{ __('Profile') }}
@@ -58,16 +58,16 @@
                                 <x-dropdown-link :href="route('orders-history')">
                                     {{ __('Order History') }}
                                 </x-dropdown-link>
-                                @if(auth()->user()->is_manager)
+                                @if(auth()->user()->is_manager or auth()->user()->is_admin)
                                 <x-dropdown-link :href="route('loyalty.log')">
                                     {{ __('Loyalty Log') }}
                                 </x-dropdown-link>
                                 @endif
-
+        
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-
+        
                                     <x-dropdown-link :href="route('logout')"
                                             onclick="event.preventDefault();
                                                         this.closest('form').submit();">
@@ -151,6 +151,25 @@
                 </div>
 
                 <div class="p-6">
+                    <!-- Search Form -->
+                    <div class="mb-6">
+                        <form method="GET" action="{{ route('loyalty.log') }}" class="flex gap-4">
+                            <div class="flex-1">
+                                <input type="text" name="search" value="{{ request('search') }}" 
+                                       placeholder="Search by customer name, NIK, invoice number, points, or date (YYYY-MM-DD)" 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                Search
+                            </button>
+                            @if(request('search'))
+                                <a href="{{ route('loyalty.log') }}" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                                    Clear
+                                </a>
+                            @endif
+                        </form>
+                    </div>
+
                     <div class="overflow-x-auto">
                         <table class="min-w-full divide-y divide-gray-200">
                             <thead class="bg-gray-50">

@@ -48,7 +48,7 @@
                                     <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</button>
                                     <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Register</button>
                                 </div>
-                                    @endauth
+                                @endauth
                             </x-slot>
         
                             <x-slot name="content">
@@ -58,6 +58,11 @@
                                 <x-dropdown-link :href="route('orders-history')">
                                     {{ __('Order History') }}
                                 </x-dropdown-link>
+                                @if(auth()->user()->is_manager or auth()->user()->is_admin)
+                                <x-dropdown-link :href="route('loyalty.log')">
+                                    {{ __('Loyalty Log') }}
+                                </x-dropdown-link>
+                                @endif
         
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">

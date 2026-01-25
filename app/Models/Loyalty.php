@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
-class Loyalty extends Model
+class Loyal22ty extends Model
 {
     protected $fillable = [
         'user_id',

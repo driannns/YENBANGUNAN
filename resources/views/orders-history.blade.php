@@ -166,6 +166,28 @@
             <a href="{{ route('loyalty.log') }}" class="bg-blue-500 text-white px-4 py-2 rounded-full w-fit" style="margin-top: 0 !important;">Loyalty Log</a>
             @endif
         </div>
+
+        <!-- Search Form -->
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white shadow sm:rounded-lg p-6 mb-6">
+                <form method="GET" action="{{ route('orders-history') }}" class="flex gap-4">
+                    <div class="flex-1">
+                        <input type="text" name="search" value="{{ request('search') }}" 
+                               placeholder="Search by invoice number, customer name, NIK, PO number, amount, status, or date (YYYY-MM-DD)" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Search
+                    </button>
+                    @if(request('search'))
+                        <a href="{{ route('orders-history') }}" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                            Clear
+                        </a>
+                    @endif
+                </form>
+            </div>
+        </div>
+
         @if(session('success'))
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">

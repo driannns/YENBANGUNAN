@@ -8,13 +8,38 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $user = auth()->user();
 
         if ($user->is_admin) {
             // Admin dapat melihat semua order
-            $orders = Order::with('user')->paginate(10);
+            $query = Order::with('user');
+
+            // Search functionality
+            if ($request->has('search') && !empty($request->search)) {
+                $search = $request->search;
+                $query->where(function ($q) use ($search) {
+                    // Search in invoice number
+                    $q->where('invoice_number', 'like', '%' . $search . '%')
+                    // Search in PO number
+                    ->orWhere('po_number', 'like', '%' . $search . '%')
+                    // Search in total amount
+                    ->orWhere('total_amount', 'like', '%' . $search . '%')
+                    // Search in status
+                    ->orWhere('status', 'like', '%' . $search . '%')
+                    // Search in customer name
+                    ->orWhereHas('user', function ($userQuery) use ($search) {
+                        $userQuery->where('name', 'like', '%' . $search . '%')
+                                 ->orWhere('NIK', 'like', '%' . $search . '%');
+                    })
+                    // Search in created date (format: Y-m-d)
+                    ->orWhereDate('created_at', 'like', '%' . $search . '%')
+                    ->orWhereDate('order_date', 'like', '%' . $search . '%');
+                });
+            }
+
+            $orders = $query->paginate(10)->appends($request->query());
             $orderAmount = Order::sum('total_amount');
             $loyaltyPoints = LoyaltyHistory::where(function ($query) {
                 $query->where('expired_at', '>', now())
@@ -23,7 +48,27 @@ class OrderController extends Controller
             ->sum('points_earned');
         } else {
             // Customer hanya melihat order miliknya
-            $orders = Order::where('user_id', $user->id)->paginate(10);
+            $query = Order::where('user_id', $user->id);
+
+            // Search functionality for customers
+            if ($request->has('search') && !empty($request->search)) {
+                $search = $request->search;
+                $query->where(function ($q) use ($search) {
+                    // Search in invoice number
+                    $q->where('invoice_number', 'like', '%' . $search . '%')
+                    // Search in PO number
+                    ->orWhere('po_number', 'like', '%' . $search . '%')
+                    // Search in total amount
+                    ->orWhere('total_amount', 'like', '%' . $search . '%')
+                    // Search in status
+                    ->orWhere('status', 'like', '%' . $search . '%')
+                    // Search in created date (format: Y-m-d)
+                    ->orWhereDate('created_at', 'like', '%' . $search . '%')
+                    ->orWhereDate('order_date', 'like', '%' . $search . '%');
+                });
+            }
+
+            $orders = $query->paginate(10)->appends($request->query());
             $orderAmount = Order::where('user_id', $user->id)->sum('total_amount');
             $loyaltyPoints = LoyaltyHistory::where('user_id', $user->id)
                 ->where(function ($query) {

@@ -13,11 +13,11 @@ class OrderController extends Controller
 
         if ($user->is_admin) {
             // Admin dapat melihat semua order
-            $orders = Order::with('user')->get();
+            $orders = Order::with('user')->paginate(10);
             $orderAmount = Order::sum('total_amount');
         } else {
             // Customer hanya melihat order miliknya
-            $orders = Order::where('user_id', $user->id)->get();
+            $orders = Order::where('user_id', $user->id)->paginate(10);
             $orderAmount = Order::where('user_id', $user->id)->sum('total_amount');
         }
 
@@ -40,7 +40,7 @@ class OrderController extends Controller
     {
         $request->validate([
             'invoice_number' => 'required|string|max:255',
-            'po_number' => 'required|string|max:255',
+            'po_number' => 'nullable|string|max:255',
             'total_amount' => 'required|numeric|min:0',
             'order_date' => 'required|date',
             'user_id' => 'sometimes|exists:users,id',
@@ -131,7 +131,7 @@ class OrderController extends Controller
 
         $request->validate([
             'invoice_number' => 'required|string|max:255',
-            'po_number' => 'required|string|max:255',
+            'po_number' => 'nullable|string|max:255',
             'total_amount' => 'required|numeric|min:0',
             'order_date' => 'required|date',
             'user_id' => 'required|exists:users,id',
@@ -143,6 +143,7 @@ class OrderController extends Controller
             'total_amount' => $request->total_amount,
             'order_date' => $request->order_date,
             'user_id' => $request->user_id,
+            'status' => 'draft',
         ]);
 
         return redirect()->route('orders-history')->with('success', 'Order updated successfully.');

@@ -134,7 +134,7 @@
 
                             <!-- Navigation Links -->
                             <div class="w-1/2 items-center justify-center hidden space-x-8 sm:-my-px sm:ms-10 sm:flex font-d-din uppercase">
-                                <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                                <x-nav-link :href="route('home')" :active="request()->routeIs('home')" style="margin-right: 0 !important;">
                                     {{ __('Home') }}
                                 </x-nav-link>
                                 <x-nav-link :href="route('product')" :active="request()->routeIs('product')">

@@ -48,7 +48,7 @@
                                     <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</button>
                                     <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Register</button>
                                 </div>
-                                    @endauth
+                                @endauth
                             </x-slot>
         
                             <x-slot name="content">
@@ -158,10 +158,9 @@
                 </div>
             </div>
         </div>
-        @
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex items-center mt-4 justify-end w-full gap-2">
             @if(auth()->user()->is_admin)
-            <a href="{{ route('orders-history.create') }}" class="bg-[#e05534] text-white px-4 py-2 rounded-full w-fit">Create</a>
+            <a href="{{ route('orders-history.create') }}" class="bg-[#e05534] text-white px-4 py-2 rounded-full w-fit mb-0">Create</a>
             @endif
             @if(auth()->user()->is_manager or auth()->user()->is_admin)
             <a href="{{ route('loyalty.log') }}" class="bg-blue-500 text-white px-4 py-2 rounded-full w-fit" style="margin-top: 0 !important;">Loyalty Log</a>
@@ -210,13 +209,11 @@
                     <div></div>
                     @endif
                     <div class="flex items-center gap-4 p-1 rounded-full bg-gray-300">
-                         @if($order->status === 'draft')
-                         <div class="py-1 px-3 bg-yellow-400 rounded-full">Draft</div>
-                         @elseif($order->status === 'confirmed')
-                         <div class="py-1 px-3 bg-green-400 rounded-full">Confirmed</div>
-                         @elseif($order->status === 'rejected')
-                         <div class="py-1 px-3 bg-red-400 rounded-full">Rejected</div>
-                         @endif
+                        <div class="py-1 px-3 rounded-full @if($order->status === 'draft') bg-[#e05534] text-white  @endif">Draft</div>
+                        <div class="py-1 px-3 rounded-full @if($order->status === 'confirmed') bg-[#e05534] text-white  @endif">Confirmed</div>
+                        @if($order->status === 'rejected')
+                        <div class="py-1 px-3 rounded-full @if($order->status === 'rejected') bg-[#e05534] text-white @endif">Rejected</div>
+                        @endif
                     </div>
                 </div>
                 <div class="flex items-center justify-between">
@@ -242,6 +239,11 @@
                 </div>
             </div>
             @endforeach
+
+            <!-- Pagination -->
+            <div class="mt-4">
+                {{ $orders->links() }}
+            </div>
         </div>
     </div>
 </x-app-layout>

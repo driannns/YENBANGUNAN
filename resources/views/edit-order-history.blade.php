@@ -155,7 +155,7 @@
                     @method('PUT')
 
                     <div class="mb-4">
-                        <label for="invoice_number" class="block text-sm font-medium text-gray-700">Invoice Number</label>
+                        <label for="invoice_number" class="block text-sm font-medium text-gray-700">Invoice Number <span class="text-red-500">*</span></label>
                         <input type="text" name="invoice_number" id="invoice_number" value="{{ old('invoice_number', $order->invoice_number) }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
                         @error('invoice_number')
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -164,14 +164,14 @@
 
                     <div class="mb-4">
                         <label for="po_number" class="block text-sm font-medium text-gray-700">PO Number</label>
-                        <input type="text" name="po_number" id="po_number" value="{{ old('po_number', $order->po_number) }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+                        <input type="text" name="po_number" id="po_number" value="{{ old('po_number', $order->po_number) }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                         @error('po_number')
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
 
                     <div class="mb-4">
-                        <label for="total_amount" class="block text-sm font-medium text-gray-700">Total Amount</label>
+                        <label for="total_amount" class="block text-sm font-medium text-gray-700">Total Amount <span class="text-red-500">*</span></label>
                         <input type="number" step="0.01" name="total_amount" id="total_amount" value="{{ old('total_amount', $order->total_amount) }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
                         @error('total_amount')
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -179,7 +179,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <label for="order_date" class="block text-sm font-medium text-gray-700">Order Date</label>
+                        <label for="order_date" class="block text-sm font-medium text-gray-700">Order Date <span class="text-red-500">*</span></label>
                         <input type="date" name="order_date" id="order_date" value="{{ old('order_date', $order->order_date->format('Y-m-d')) }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
                         @error('order_date')
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -187,7 +187,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <label for="user_id" class="block text-sm font-medium text-gray-700">Customer</label>
+                        <label for="user_id" class="block text-sm font-medium text-gray-700">Customer <span class="text-red-500">*</span></label>
                         <select name="user_id" id="user_id" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
                             <option value="">Select Customer</option>
                             @foreach($users as $user)

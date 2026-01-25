@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Order extends Model
 {
@@ -40,10 +41,22 @@ class Order extends Model
         $formula = \App\Models\LoyaltyFormula::first();
         if ($formula) {
             $pointsEarned = $this->total_amount * $formula->coefficient;
+            $now = Carbon::now();
+            $expiredAt = null;
+
+            if ($now->month <= 6) {
+                // Jika sebelum atau sama dengan 31 Juni, expired 30 Juni tahun ini
+                $expiredAt = Carbon::create($now->year, 6, 30);
+            } else {
+                // Jika setelah 30 Juni, expired 31 Desember tahun ini
+                $expiredAt = Carbon::create($now->year, 12, 31);
+            }
+
             \App\Models\LoyaltyHistory::create([
                 'order_id' => $this->id,
                 'user_id' => $this->user_id,
                 'points_earned' => $pointsEarned,
+                'expired_at' => $expiredAt,
             ]);
             return $pointsEarned;
         }

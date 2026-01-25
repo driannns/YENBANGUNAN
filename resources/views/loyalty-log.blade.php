@@ -172,6 +172,9 @@
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Points Generated
                                     </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Expired Date
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
@@ -200,6 +203,9 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-600">
                                         {{ number_format($history->points_earned, 1) }} points
                                     </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        {{ $history->expired_at->format('d M Y') }}
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -211,7 +217,10 @@
                         <p class="text-gray-500">No loyalty history found.</p>
                     </div>
                     @endif
-
+                    <!-- Pagination -->
+                    <div class="mt-4">
+                        {{ $loyaltyHistories->links() }}
+                    </div>
                     <div class="mt-6 flex gap-2">
                         <a href="{{ route('orders-history') }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Back to Orders</a>
                         <a href="{{ route('loyalty.formula') }}" class="bg-[#e05534] hover:bg-[#c04424] text-white font-bold py-2 px-4 rounded">View Formula</a>

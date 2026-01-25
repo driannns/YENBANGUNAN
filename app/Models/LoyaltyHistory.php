@@ -10,6 +10,11 @@ class LoyaltyHistory extends Model
         'order_id',
         'user_id',
         'points_earned',
+        'expired_at',
+    ];
+
+    protected $casts = [
+        'expired_at' => 'datetime',
     ];
 
     public function order()

@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\Order;
+use App\Models\LoyaltyHistory;
 
 class ProfileController extends Controller
 {
@@ -15,9 +17,19 @@ class ProfileController extends Controller
      * Display the user's profile form.
      */
     public function edit(Request $request): View
-    {
+    {   
+        $user = $request->user();
+        $orders = Order::where('user_id', $user->id)->sum('total_amount');
+        $loyaltyPoints = LoyaltyHistory::where('user_id', auth()->user()->id)
+            ->where(function ($query) {
+                $query->where('expired_at', '>', now())
+                      ->orWhereNull('expired_at');
+            })
+            ->sum('points_earned');
         return view('profile.edit', [
             'user' => $request->user(),
+            'totalOrder' => $orders,
+            'loyaltyPoints' => $loyaltyPoints,
         ]);
     }
 

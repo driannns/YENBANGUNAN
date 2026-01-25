@@ -145,11 +145,11 @@
                 <div class="flex items-center gap-4">
                     <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
                         <h1 class="text-lg font-medium">Total Pembelian</h1>
-                        <h1 class="text-3xl mt-1 font-bold">Rp {{ number_format(14520000, 0, ',', '.') }}</h1>
+                        <h1 class="text-3xl mt-1 font-bold">Rp {{ number_format($totalOrder, 0, ',', '.') }}</h1>
                     </div>
                     <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
                         <h1 class="text-lg font-medium">Total Point</h1>
-                        <h1 class="text-3xl mt-1 font-bold">{{ number_format(14520, 0, ',', '.') }}</h1>
+                        <h1 class="text-3xl mt-1 font-bold">{{ number_format($loyaltyPoints, 0, ',', '.') }}</h1>
                     </div>
                 </div>
             </div>

@@ -18,11 +18,11 @@ class LoyaltyController extends Controller
     public function log()
     {
         // Only manager can access loyalty log
-        if (!auth()->user()->is_manager) {
-            abort(403, 'Unauthorized');
-        }
+        // if (!auth()->user()->is_manager) {
+        //     abort(403, 'Unauthorized');
+        // }
 
-        $loyaltyHistories = LoyaltyHistory::with(['order', 'user'])->orderBy('created_at', 'desc')->get();
+        $loyaltyHistories = LoyaltyHistory::with(['order', 'user'])->orderBy('created_at', 'desc')->paginate(10);
 
         return view('loyalty-log', compact('loyaltyHistories'));
     }

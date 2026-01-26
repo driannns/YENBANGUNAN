@@ -158,7 +158,7 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex items-center mt-4 justify-end w-full gap-2">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex items-center mt-4 justify-end w-full gap-2 mb-4">
             @if(auth()->user()->is_admin)
             <a href="{{ route('orders-history.create') }}" class="bg-[#e05534] text-white px-4 py-2 rounded-full w-fit mb-0">Create</a>
             @endif

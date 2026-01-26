@@ -3,16 +3,39 @@
 namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\LoyaltyHistory;
+use Illuminate\Support\Carbon;
 
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
+    private function getFilteredLoyaltyPoints($userId = null)
+    {
+        $now = now();
+        $currentYear = $now->year;
+
+        // Tentukan expired date berdasarkan periode (sesuai dengan generateLoyalty)
+        if ($now->month <= 6) {
+            // Jika bulan <= 6, ambil yang expired 30 Juni tahun ini
+            $expiredDate = Carbon::create($currentYear, 6, 30)->endOfDay();
+        } else {
+            // Jika bulan > 6, ambil yang expired 31 Desember tahun ini
+            $expiredDate = Carbon::create($currentYear, 12, 31)->endOfDay();
+        }
+        $query = LoyaltyHistory::where('expired_at', '<', $expiredDate);
+        $user = auth()->user();
+
+        if (!$user->is_admin AND !$user->is_manager) {
+            $query->where('user_id', $userId);
+        }
+
+        return $query->sum('points_earned');
+    }
     public function index(Request $request)
     {
         $user = auth()->user();
 
-        if ($user->is_admin) {
+        if ($user->is_admin or $user->is_manager) {
             // Admin dapat melihat semua order
             $query = Order::with('user');
 
@@ -41,11 +64,7 @@ class OrderController extends Controller
 
             $orders = $query->paginate(10)->appends($request->query());
             $orderAmount = Order::sum('total_amount');
-            $loyaltyPoints = LoyaltyHistory::where(function ($query) {
-                $query->where('expired_at', '>', now())
-                      ->orWhereNull('expired_at');
-            })
-            ->sum('points_earned');
+            $loyaltyPoints = $this->getFilteredLoyaltyPoints();
         } else {
             // Customer hanya melihat order miliknya
             $query = Order::where('user_id', $user->id);
@@ -70,12 +89,7 @@ class OrderController extends Controller
 
             $orders = $query->paginate(10)->appends($request->query());
             $orderAmount = Order::where('user_id', $user->id)->sum('total_amount');
-            $loyaltyPoints = LoyaltyHistory::where('user_id', $user->id)
-                ->where(function ($query) {
-                    $query->where('expired_at', '>', now())
-                          ->orWhereNull('expired_at');
-                })
-                ->sum('points_earned');
+            $loyaltyPoints = $this->getFilteredLoyaltyPoints($user->id);
         }
 
         return view('orders-history', compact('orders', 'orderAmount', 'loyaltyPoints'));

@@ -190,11 +190,11 @@
                                         </x-nav-link>
                                     </div>
 
-                                    <div class="hidden sm:flex sm:items-center sm:justify-end gap-2 sm:ms-6 w-3/12">
-                                        <a href="https://wa.me/6282123269622" class="w-fit bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
+                                    <div class="hidden sm:flex sm:items-center sm:justify-end gap-2 sm:ms-6 w-4/12">
+                                        <a href="https://wa.me/6282123269622" class="w-9/12 text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
+                                        @auth
                                         <x-dropdown align="right">
                                             <x-slot name="trigger" class="w-fit">
-                                                @auth
                                                 <button class="bg-white px-2 text-gray-500 flex gap-1 items-center justify-between px- py-2 border border-transparent text-sm leading-4 font-medium rounded-md hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                                                     <img class="w-2/12" src="{{asset('assets/user.png')}}" alt="">
                                                     <div class="text-xs">{{ Auth::user()->name }}</div>
@@ -204,13 +204,8 @@
                                                         </svg>
                                                     </div>
                                                 </button>
-                                                @else
-                                                <div class="flex items-center gap-1">
-                                                    <a href="{{ route('login') }}" class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</a>
-                                                </div>
-                                                    @endauth
                                             </x-slot>
-                        
+                                            
                                             <x-slot name="content">
                                                 <x-dropdown-link :href="route('profile.edit')">
                                                     {{ __('Profile') }}
@@ -218,19 +213,24 @@
                                                 <x-dropdown-link :href="route('orders-history')">
                                                     {{ __('Order History') }}
                                                 </x-dropdown-link>
-                        
+                                                
                                                 <!-- Authentication -->
                                                 <form method="POST" action="{{ route('logout') }}">
                                                     @csrf
-                        
+                                                    
                                                     <x-dropdown-link :href="route('logout')"
-                                                            onclick="event.preventDefault();
+                                                    onclick="event.preventDefault();
                                                                         this.closest('form').submit();">
                                                         {{ __('Log Out') }}
                                                     </x-dropdown-link>
                                                 </form>
                                             </x-slot>
                                         </x-dropdown>
+                                        @else
+                                        <div class="flex items-center gap-1">
+                                            <a href="{{ route('login') }}" class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</a>
+                                        </div>
+                                        @endauth
                                     </div>
                                 </div>
 

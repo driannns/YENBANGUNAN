@@ -153,16 +153,21 @@
                 <div class="p-6">
                     <!-- Search Form -->
                     <div class="mb-6">
-                        <form method="GET" action="{{ route('loyalty.log') }}" class="flex gap-4">
-                            <div class="flex-1">
+                        <form method="GET" action="{{ route('loyalty.log') }}" class="flex gap-4 flex-wrap">
+                            <div class="flex-1 min-w-0">
                                 <input type="text" name="search" value="{{ request('search') }}" 
                                        placeholder="Search by customer name, NIK, invoice number, points, or date (YYYY-MM-DD)" 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <input type="text" name="phone_number" value="{{ request('phone_number') }}" 
+                                       placeholder="Search by phone number" 
                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
                             </div>
                             <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                                 Search
                             </button>
-                            @if(request('search'))
+                            @if(request('search') || request('phone_number'))
                                 <a href="{{ route('loyalty.log') }}" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
                                     Clear
                                 </a>
@@ -211,7 +216,7 @@
                                     @if(auth()->user()->is_admin || auth()->user()->is_manager)
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                         <div>
-                                            <div class="font-medium">{{ $history->user->name }}</div>
+                                            <div class="font-medium">{{ $history->user->name }} - {{ $history->user->phone_number }}</div>
                                             <div class="text-gray-500">{{ $history->user->NIK }}</div>
                                         </div>
                                     </td>

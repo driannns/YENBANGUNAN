@@ -44,6 +44,14 @@ class LoyaltyController extends Controller
             });
         }
 
+        // Phone number search
+        if ($request->has('phone_number') && !empty($request->phone_number)) {
+            $phoneNumber = $request->phone_number;
+            $query->whereHas('user', function ($userQuery) use ($phoneNumber) {
+                $userQuery->where('phone_number', 'like', '%' . $phoneNumber . '%');
+            });
+        }
+
         $loyaltyHistories = $query->orderBy('created_at', 'desc')->paginate(10)->appends($request->query());
 
         return view('loyalty-log', compact('loyaltyHistories'));

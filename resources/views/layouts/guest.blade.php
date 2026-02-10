@@ -123,15 +123,21 @@
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
     <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
+        <div class="w-full min-h-screen flex flex-col lg:flex-row sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+            <div class="lg:w-1/2 flex justify-center mb-6 lg:mb-0 bg-center bg-cover bg-no-repeat" style="background-image: url('/assets/home-2.jpeg')">
+                <img src="{{ asset('assets/home-2.jpeg') }}" alt="" class="lg:h-screen invisible">
             </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
+            <div class="w-full lg:w-1/2 mt-6 px-6 py-4 overflow-hidden">
+                <div class="bg-white shadow-md rounded-lg">
+                    <div class="w-full flex items-center mb-1 border-b">
+                        <a href="/register" class="w-1/2 text-center font-semibold py-3">Register</a>
+                        <a href="/login" class="w-1/2 text-center font-semibold py-3">Login</a>
+                    </div>
+                    <div class="p-6">
+                        {{ $slot }}
+                    </div>
+                </div>
             </div>
         </div>
     </body>

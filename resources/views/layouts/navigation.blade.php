@@ -57,6 +57,11 @@
                             <x-dropdown-link :href="route('orders-history')">
                                 {{ __('Order History') }}
                             </x-dropdown-link>
+                            @if(auth()->user()->is_manager)
+                            <x-dropdown-link :href="route('loyalty.log')">
+                                {{ __('Loyalty Log') }}
+                            </x-dropdown-link>
+                            @endif
     
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
@@ -120,6 +125,11 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
+                @if(auth()->user()->is_manager)
+                <x-responsive-nav-link :href="route('loyalty.log')">
+                    {{ __('Loyalty Log') }}
+                </x-responsive-nav-link>
+                @endif
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">

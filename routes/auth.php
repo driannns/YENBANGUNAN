@@ -56,4 +56,9 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
         ->name('logout');
+
+    Route::get('customers/create', [RegisteredUserController::class, 'createCustomer'])
+        ->name('customers.create');
+    Route::post('customers', [RegisteredUserController::class, 'storeCustomer'])
+        ->name('customers.store');
 });

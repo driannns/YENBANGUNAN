@@ -187,9 +187,9 @@
                                 </div>
 
                                 <div class="hidden sm:flex sm:items-center sm:justify-end gap-2 sm:ms-6 w-4/12">
-                                    <a href="https://wa.me/6282123269622" class="w-9/12 text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
+                                    <a href="https://wa.me/6282123269622" class="@auth w-2/3 @else w-1/2 @endauth text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
                                     @auth
-                                    <x-dropdown align="right">
+                                    <x-dropdown align="right" class="">
                                         <x-slot name="trigger" class="w-fit">
                                             <button class="bg-white px-2 text-gray-500 flex gap-1 items-center justify-between px- py-2 border border-transparent text-sm leading-4 font-medium rounded-md hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                                                 <img class="w-2/12" src="{{asset('assets/user.png')}}" alt="">
@@ -208,6 +208,9 @@
                                             </x-dropdown-link>
                                             <x-dropdown-link :href="route('orders-history')">
                                                 {{ __('Order History') }}
+                                            </x-dropdown-link>
+                                            <x-dropdown-link :href="route('loyalty.promotion-program')">
+                                                {{ __('Loyalty Program') }}
                                             </x-dropdown-link>
                                             
                                             <!-- Authentication -->

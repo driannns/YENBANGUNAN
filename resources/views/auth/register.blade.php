@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ ($isManagerCreate ?? false) ? route('customers.store') : route('register') }}">
         @csrf
 
         <!-- Name -->
@@ -9,10 +9,24 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+        <!-- NIK -->
+        <div class="mt-4">
+            <x-input-label for="NIK" :value="__('NIK')" />
+            <x-text-input id="NIK" class="block mt-1 w-full" type="text" name="NIK" :value="old('NIK')" required />
+            <x-input-error :messages="$errors->get('NIK')" class="mt-2" />
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mt-4">
+            <x-input-label for="phone_number" :value="__('Phone Number')" />
+            <x-text-input id="phone_number" class="block mt-1 w-full" type="text" name="phone_number" :value="old('phone_number')" required />
+            <x-input-error :messages="$errors->get('phone_number')" class="mt-2" />
+        </div>
+
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -40,12 +54,14 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
+            @if(!($isManagerCreate ?? false))
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
+            @endif
 
             <x-primary-button class="ms-4">
-                {{ __('Register') }}
+                {{ ($isManagerCreate ?? false) ? __('Create Customer') : __('Register') }}
             </x-primary-button>
         </div>
     </form>

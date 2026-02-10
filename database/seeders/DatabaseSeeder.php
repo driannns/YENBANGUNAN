@@ -31,6 +31,9 @@ class DatabaseSeeder extends Seeder
         // Run loyalty formula seeder
         $this->call(LoyaltyFormulaSeeder::class);
 
+        // Run redeem item seeder
+        $this->call(RedeemItemSeeder::class);
+
         // Run blog seeders (split into two parts)
         $this->call([Blog::class, BlogPart1::class]);
     }

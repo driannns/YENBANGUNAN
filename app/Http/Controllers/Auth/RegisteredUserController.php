@@ -19,7 +19,7 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        return view('auth.register', ['isManagerCreate' => false]);
     }
 
     /**
@@ -31,14 +31,20 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['nullable', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'NIK' => ['required', 'string', 'max:255', 'unique:'.User::class],
+            'phone_number' => ['required', 'string', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'NIK' => $request->NIK,
+            'phone_number' => $request->phone_number,
             'password' => Hash::make($request->password),
+            'is_admin' => false,
+            'is_manager' => false,
         ]);
 
         event(new Registered($user));
@@ -46,5 +52,47 @@ class RegisteredUserController extends Controller
         Auth::login($user);
 
         return redirect(route('dashboard', absolute: false));
+    }
+
+    /**
+     * Display the registration view for manager creating a customer.
+     */
+    public function createCustomer(): View
+    {
+        if (!auth()->user()->is_manager) {
+            abort(403, 'Unauthorized');
+        }
+
+        return view('auth.register', ['isManagerCreate' => true]);
+    }
+
+    /**
+     * Handle manager creating a customer account.
+     */
+    public function storeCustomer(Request $request): RedirectResponse
+    {
+        if (!auth()->user()->is_manager) {
+            abort(403, 'Unauthorized');
+        }
+
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['nullable', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'NIK' => ['required', 'string', 'max:255', 'unique:'.User::class],
+            'phone_number' => ['required', 'string', 'max:255', 'unique:'.User::class],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'NIK' => $request->NIK,
+            'phone_number' => $request->phone_number,
+            'password' => Hash::make($request->password),
+            'is_admin' => false,
+            'is_manager' => false,
+        ]);
+
+        return redirect()->back()->with('success', 'Customer created successfully.');
     }
 }

@@ -57,6 +57,7 @@ class Order extends Model
                 'user_id' => $this->user_id,
                 'points_earned' => $pointsEarned,
                 'expired_at' => $expiredAt,
+                'type' => 'plus_point',
             ]);
             return $pointsEarned;
         }

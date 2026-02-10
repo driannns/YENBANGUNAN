@@ -222,13 +222,49 @@ class OrderController extends Controller
 
     public function destroy(Order $order)
     {
-        // Only admin (not manager) can delete orders
+        // Only admin (not manager) can request void
         if (!auth()->user()->is_admin || auth()->user()->is_manager) {
             abort(403, 'Unauthorized');
         }
 
-        $order->delete();
+        if ($order->status !== 'confirmed') {
+            return redirect()->route('orders-history')->with('error', 'Only confirmed orders can be voided.');
+        }
 
-        return redirect()->route('orders-history')->with('success', 'Order deleted successfully.');
+        $order->update(['status' => 'void_requested']);
+
+        return redirect()->route('orders-history')->with('success', 'Void request submitted for manager approval.');
+    }
+
+    public function voidApprove(Order $order)
+    {
+        // Only manager can approve void
+        if (!auth()->user()->is_manager) {
+            abort(403, 'Unauthorized');
+        }
+
+        if ($order->status !== 'void_requested') {
+            return redirect()->route('orders-history')->with('error', 'Order is not pending void approval.');
+        }
+
+        $order->update(['status' => 'voided']);
+
+        return redirect()->route('orders-history')->with('success', 'Order voided successfully.');
+    }
+
+    public function voidReject(Order $order)
+    {
+        // Only manager can reject void
+        if (!auth()->user()->is_manager) {
+            abort(403, 'Unauthorized');
+        }
+
+        if ($order->status !== 'void_requested') {
+            return redirect()->route('orders-history')->with('error', 'Order is not pending void approval.');
+        }
+
+        $order->update(['status' => 'confirmed']);
+
+        return redirect()->route('orders-history')->with('success', 'Void request rejected.');
     }
 }

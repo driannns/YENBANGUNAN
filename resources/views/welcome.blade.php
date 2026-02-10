@@ -191,9 +191,9 @@
                                     </div>
 
                                     <div class="hidden sm:flex sm:items-center sm:justify-end gap-2 sm:ms-6 w-4/12">
-                                        <a href="https://wa.me/6282123269622" class="w-9/12 text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
+                                        <a href="https://wa.me/6282123269622" class="@auth w-2/3 @else w-1/2 @endauth text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
                                         @auth
-                                        <x-dropdown align="right">
+                                        <x-dropdown align="right" class="">
                                             <x-slot name="trigger" class="w-fit">
                                                 <button class="bg-white px-2 text-gray-500 flex gap-1 items-center justify-between px- py-2 border border-transparent text-sm leading-4 font-medium rounded-md hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                                                     <img class="w-2/12" src="{{asset('assets/user.png')}}" alt="">
@@ -212,6 +212,9 @@
                                                 </x-dropdown-link>
                                                 <x-dropdown-link :href="route('orders-history')">
                                                     {{ __('Order History') }}
+                                                </x-dropdown-link>
+                                                <x-dropdown-link :href="route('loyalty.promotion-program')">
+                                                    {{ __('Loyalty Program') }}
                                                 </x-dropdown-link>
                                                 
                                                 <!-- Authentication -->
@@ -786,38 +789,29 @@
         </div>
 
         <div class="mt-6 w-full px-4">
-            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Galeri Yen Bangunan</h1>
+            <div class="flex items-center justify-between">
+                <h1 class="text-3xl font-extrabold uppercase text-center font-d-din w-full">Galeri Yen Bangunan</h1>
+            </div>
+            <div class="flex items-center justify-center mt-1">
+                <a href="{{ route('gallery') }}" class="uppercase hidden md:inline-flex bg-[#e05534] text-white px-4 py-2 rounded-full text-xs font-bold mx-auto">
+                    Tampilkan Semua Galeri
+                </a>
+            </div>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-                <div style="background-image: url('/assets/galery/galery-2.jpeg');" class="bg-center bg-no-repeat bg-cover">
-                    <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt="">
-                </div>
-                <div style="background-image: url('/assets/galery/galery-3.jpeg');" class="bg-center bg-no-repeat bg-cover">
-                    <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt="">
-                </div>
-                <div style="background-image: url('/assets/galery/galery-4.jpeg');" class="bg-center bg-no-repeat bg-cover">
-                    <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt="">
-                </div>
-                <div style="background-image: url('/assets/galery/galery-5.jpeg');" class="bg-center bg-no-repeat bg-cover">
-                    <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt="">
-                </div>
-                <div style="background-image: url('/assets/galery/galery-6.jpeg');" class="bg-center bg-no-repeat bg-cover">
-                    <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt="">
-                </div>
-                <div style="background-image: url('/assets/galery/galery-7.webp');" class="bg-center bg-no-repeat bg-cover">
-                    <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt="">
-                </div>
-                <!-- <div style="background-image: url('/assets/galery/galery-8.jpeg');" class="bg-center bg-no-repeat bg-cover">
-                    <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt="">
-                </div>
-                <div style="background-image: url('/assets/galery/galery-9.jpeg');" class="bg-center bg-no-repeat bg-cover">
-                    <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt="">
-                </div>
-                <div style="background-image: url('/assets/galery/galery-10.jpeg');" class="bg-center bg-no-repeat bg-cover">
-                    <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt="">
-                </div>
-                <div style="background-image: url('/assets/galery/galery-11.jpeg');" class="bg-center bg-no-repeat bg-cover">
-                    <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt=""> -->
-                </div>
+                @if(!empty($galleryImages))
+                    @foreach($galleryImages as $image)
+                        <div style="background-image: url('{{ $image }}');" class="bg-center bg-no-repeat bg-cover">
+                            <img class="invisible max-w-full rounded-base" src="/assets/galery/galery-3.jpeg" alt="Galeri Yen Bangunan">
+                        </div>
+                    @endforeach
+                @else
+                    <div class="col-span-2 md:col-span-3 text-center text-gray-500">Belum ada foto galeri.</div>
+                @endif
+            </div>
+            <div class="mt-4 flex justify-center md:hidden">
+                <a href="{{ route('gallery') }}" class="bg-[#e05534] text-white px-4 py-2 rounded-full text-xs font-bold">
+                    Galeri Yen Bangunan
+                </a>
             </div>
         </div>
 

@@ -11,6 +11,7 @@ class LoyaltyHistory extends Model
         'user_id',
         'points_earned',
         'expired_at',
+        'type',
     ];
 
     protected $casts = [

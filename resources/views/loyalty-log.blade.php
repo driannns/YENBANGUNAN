@@ -58,7 +58,10 @@
                                 <x-dropdown-link :href="route('orders-history')">
                                     {{ __('Order History') }}
                                 </x-dropdown-link>
-                                @if(auth()->user()->is_manager or auth()->user()->is_admin)
+                                <x-dropdown-link :href="route('loyalty.promotion-program')">
+                                    {{ __('Redeem Points') }}
+                                </x-dropdown-link>
+                                @if(auth()->user()->is_manager)
                                 <x-dropdown-link :href="route('loyalty.log')">
                                     {{ __('Loyalty Log') }}
                                 </x-dropdown-link>
@@ -150,101 +153,254 @@
                     <h2 class="text-2xl font-bold text-gray-900">Loyalty Log</h2>
                 </div>
 
-                <div class="p-6">
-                    <!-- Search Form -->
-                    <div class="mb-6">
-                        <form method="GET" action="{{ route('loyalty.log') }}" class="flex gap-4 flex-wrap">
-                            <div class="flex-1 min-w-0">
-                                <input type="text" name="search" value="{{ request('search') }}" 
-                                       placeholder="Search by customer name, NIK, invoice number, points, or date (YYYY-MM-DD)" 
-                                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <input type="text" name="phone_number" value="{{ request('phone_number') }}" 
-                                       placeholder="Search by phone number" 
-                                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                                Search
-                            </button>
-                            @if(request('search') || request('phone_number'))
-                                <a href="{{ route('loyalty.log') }}" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                                    Clear
-                                </a>
-                            @endif
-                        </form>
+                <div class="p-6" x-data="{ tab: 'generated' }">
+                    <div class="flex items-center gap-2 mb-6">
+                        <button type="button" class="px-4 py-2 rounded-md font-semibold"
+                                @click="tab = 'generated'"
+                                :class="tab === 'generated' ? 'bg-[#e05534] text-white' : 'bg-gray-200 text-gray-700'">
+                            Loyalty Log Generated
+                        </button>
+                        <button type="button" class="px-4 py-2 rounded-md font-semibold"
+                                @click="tab = 'redeem'"
+                                :class="tab === 'redeem' ? 'bg-[#e05534] text-white' : 'bg-gray-200 text-gray-700'">
+                            Loyalty Redeem
+                        </button>
                     </div>
 
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Created Date
-                                    </th>
+                    <div x-show="tab === 'generated'">
+                        <!-- Search Form -->
+                        <div class="mb-6">
+                            <form method="GET" action="{{ route('loyalty.log') }}" class="flex gap-4 flex-wrap">
+                                <div class="flex-1 min-w-0">
+                                    <input type="text" name="search" value="{{ request('search') }}" 
+                                           placeholder="Search by customer name, NIK, invoice number, points, or date (YYYY-MM-DD)" 
+                                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <input type="text" name="phone_number" value="{{ request('phone_number') }}" 
+                                           placeholder="Search by phone number" 
+                                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                    Search
+                                </button>
+                                @if(request('search') || request('phone_number'))
+                                    <a href="{{ route('loyalty.log') }}" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                                        Clear
+                                    </a>
+                                @endif
+                            </form>
+                        </div>
+
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Created Date
+                                        </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Order
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Type
                                     </th>
                                     @if(auth()->user()->is_admin || auth()->user()->is_manager)
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Customer
-                                    </th>
-                                    @endif
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Order Amount
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Points Generated
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Expired Date
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
-                                @foreach($loyaltyHistories as $history)
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                        {{ $history->created_at->format('d M Y H:i') }}
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                        <div>
-                                            <div class="font-medium">{{ $history->order->invoice_number }}</div>
-                                            <div class="text-gray-500">{{ $history->order->po_number }}</div>
-                                        </div>
-                                    </td>
-                                    @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                                        </th>
+                                        @endif
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Order Amount
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Points Generated
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Expired Date
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    @foreach($loyaltyHistories as $history)
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            {{ $history->created_at->format('d M Y H:i') }}
+                                        </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                         <div>
-                                            <div class="font-medium">{{ $history->user->name }} - {{ $history->user->phone_number }}</div>
-                                            <div class="text-gray-500">{{ $history->user->NIK }}</div>
+                                            <div class="font-medium">{{ $history->order->invoice_number ?? '-' }}</div>
+                                            <div class="text-gray-500">{{ $history->order->po_number ?? '-' }}</div>
                                         </div>
                                     </td>
-                                    @endif
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                        Rp {{ number_format($history->order->total_amount, 0, ',', '.') }}
+                                        {{ $history->type === 'redeem' ? 'Redeem' : 'Plus Point' }}
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-600">
-                                        {{ number_format($history->points_earned, 1) }} points
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                        {{ $history->expired_at->format('d M Y') }}
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                        @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            <div>
+                                                <div class="font-medium">{{ $history->user->name }} - {{ $history->user->phone_number }}</div>
+                                                <div class="text-gray-500">{{ $history->user->NIK }}</div>
+                                            </div>
+                                        </td>
+                                        @endif
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                        Rp {{ $history->order ? number_format($history->order->total_amount, 0, ',', '.') : '-' }}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-600">
+                                            {{ number_format($history->points_earned, 1) }} points
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            {{ $history->expired_at->format('d M Y') }}
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+
+                        @if($loyaltyHistories->isEmpty())
+                        <div class="text-center py-8">
+                            <p class="text-gray-500">No loyalty history found.</p>
+                        </div>
+                        @endif
+                        <!-- Pagination -->
+                        <div class="mt-4">
+                            {{ $loyaltyHistories->links() }}
+                        </div>
                     </div>
 
-                    @if($loyaltyHistories->isEmpty())
-                    <div class="text-center py-8">
-                        <p class="text-gray-500">No loyalty history found.</p>
+                    <div x-show="tab === 'redeem'">
+                        @if(auth()->user()->is_manager || auth()->user()->is_admin)
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">Pending Redeem Requests</h3>
+                            @if(isset($redeemRequests) && $redeemRequests->isNotEmpty())
+                                <div class="grid grid-cols-1 gap-4">
+                                    @foreach($redeemRequests as $req)
+                                        <div class="p-4 border rounded-md bg-white flex items-center justify-between">
+                                            <div>
+                                                <div class="font-medium">{{ $req->user->name }} — {{ $req->redeemItem->name }} (x{{ $req->quantity }})</div>
+                                                <div class="text-sm text-gray-500">Points: {{ number_format($req->points_used, 0, ',', '.') }} — Submitted: {{ $req->created_at->format('d M Y H:i') }}</div>
+                                                @php
+                                                    $s = strtolower($req->status);
+                                                    if ($s === 'pending') {
+                                                        $c = 'bg-yellow-100 text-yellow-800';
+                                                    } elseif ($s === 'redeemed') {
+                                                        $c = 'bg-green-100 text-green-800';
+                                                    } elseif ($s === 'rejected') {
+                                                        $c = 'bg-red-100 text-red-800';
+                                                    } elseif ($s === 'cancelled') {
+                                                        $c = 'bg-gray-100 text-gray-800';
+                                                    } else {
+                                                        $c = 'bg-gray-100 text-gray-800';
+                                                    }
+                                                @endphp
+                                                <div class="mt-1"><span class="px-2 py-1 rounded text-sm font-semibold {{ $c }}">{{ ucfirst($req->status) }}</span></div>
+                                            </div>
+                                            <div class="flex items-center gap-2">
+                                                <form method="POST" action="{{ route('loyalty.redeem.approve', $req->id) }}">
+                                                    @csrf
+                                                    <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded-md">Approve</button>
+                                                </form>
+                                                <form method="POST" action="{{ route('loyalty.redeem.reject', $req->id) }}">
+                                                    @csrf
+                                                    <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded-md">Reject</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @else
+                                <p class="text-gray-500">No pending redeem requests.</p>
+                            @endif
+                        </div>
+                        @endif
+
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Submitted Date
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Item
+                                        </th>
+                                        @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Customer
+                                        </th>
+                                        @endif
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Points Used
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Status
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Processed Date
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    @foreach($redeemHistories as $redeem)
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            {{ $redeem->created_at->format('d M Y H:i') }}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            <div>
+                                                <div class="font-medium">{{ $redeem->redeemItem->name ?? 'Item' }}</div>
+                                                <div class="text-gray-500">Qty: {{ $redeem->quantity }}</div>
+                                            </div>
+                                        </td>
+                                        @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            <div>
+                                                <div class="font-medium">{{ $redeem->user->name }} - {{ $redeem->user->phone_number }}</div>
+                                                <div class="text-gray-500">{{ $redeem->user->NIK }}</div>
+                                            </div>
+                                        </td>
+                                        @endif
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            {{ number_format($redeem->points_used, 0, ',', '.') }}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            @php
+                                                $s = strtolower($redeem->status);
+                                                if ($s === 'pending') {
+                                                    $c = 'bg-yellow-100 text-yellow-800';
+                                                } elseif ($s === 'redeemed') {
+                                                    $c = 'bg-green-100 text-green-800';
+                                                } elseif ($s === 'rejected') {
+                                                    $c = 'bg-red-100 text-red-800';
+                                                } elseif ($s === 'cancelled') {
+                                                    $c = 'bg-gray-100 text-gray-800';
+                                                } else {
+                                                    $c = 'bg-gray-100 text-gray-800';
+                                                }
+                                            @endphp
+                                            <span class="px-2 py-1 rounded text-sm font-semibold {{ $c }}">{{ ucfirst($redeem->status) }}</span>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            {{ $redeem->processed_at ? $redeem->processed_at->format('d M Y H:i') : '-' }}
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+
+                        @if($redeemHistories->isEmpty())
+                        <div class="text-center py-8">
+                            <p class="text-gray-500">No redeem history found.</p>
+                        </div>
+                        @endif
+                        <div class="mt-4">
+                            {{ $redeemHistories->links() }}
+                        </div>
                     </div>
-                    @endif
-                    <!-- Pagination -->
-                    <div class="mt-4">
-                        {{ $loyaltyHistories->links() }}
-                    </div>
+
                     <div class="mt-6 flex gap-2">
                         <a href="{{ route('orders-history') }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Back to Orders</a>
                         <a href="{{ route('loyalty.formula') }}" class="bg-[#e05534] hover:bg-[#c04424] text-white font-bold py-2 px-4 rounded">View Formula</a>

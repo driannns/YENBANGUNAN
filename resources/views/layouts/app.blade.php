@@ -129,5 +129,67 @@
                 {{ $slot }}
             </main>
         </div>
+         <script>
+            const messages = [
+                ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
+                ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
+                ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
+                ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
+                ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
+            ];
+
+            const runningText = document.getElementById('runningText');
+            const countdownElement = document.getElementById('countdown');
+            const targetDate = new Date('2026-01-31T23:59:59').getTime();
+            
+            // Create text
+            const fullText = messages.join(' • ') + ' • ' + messages.join(' • ');
+            runningText.innerHTML = `<span class="inline-block px-4">${fullText}</span>`;
+            
+            let position = 0;
+            const speed = 1;
+            let isPaused = false;
+
+            // Update countdown
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                
+                if (distance < 0) {
+                    countdownElement.textContent = 'PROMO BERAKHIR';
+                    return;
+                }
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                countdownElement.textContent = `${days}D ${hours}H ${minutes}M ${seconds}S`;
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Animate running text
+            function animate() {
+                if (!isPaused) {
+                    position -= speed;
+                    
+                    if (Math.abs(position) >= runningText.scrollWidth / 2) {
+                        position = 0;
+                    }
+                    
+                    runningText.style.transform = `translateX(${position}px)`;
+                }
+                
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            runningText.addEventListener('mouseenter', () => isPaused = true);
+            runningText.addEventListener('mouseleave', () => isPaused = false);
+        </script>
     </body>
 </html>

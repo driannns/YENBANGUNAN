@@ -206,6 +206,22 @@
                         <button type="submit" class="bg-[#e05534] hover:bg-[#c04424] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Update Order</button>
                     </div>
                 </form>
+
+                @if($order->status === 'confirmed')
+                <div class="px-6 pb-6">
+                    <form method="POST" action="{{ route('orders-history.destroy', $order) }}" onsubmit="return confirm('Submit void request for this order?')">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            Void Order (Manager Approval)
+                        </button>
+                    </form>
+                </div>
+                @elseif($order->status === 'void_requested')
+                <div class="px-6 pb-6 text-sm text-gray-600">
+                    Void request already submitted and awaiting manager approval.
+                </div>
+                @endif
             </div>
         </div>
     </div>

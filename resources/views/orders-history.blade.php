@@ -13,27 +13,25 @@
 
                     <!-- Navigation Links -->
                     <div class="w-1/2 items-center justify-center hidden space-x-8 sm:-my-px sm:ms-10 sm:flex font-d-din uppercase">
-                        <x-nav-link :href="route('home')" :active="request()->routeIs('home')" style="color: black;">
+                        <x-nav-link :href="route('home')" :active="request()->routeIs('home')" style="margin-right: 0 !important; color: black;">
                             {{ __('Home') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('product')" :active="request()->routeIs('product')" style="color: black;">
+                        <x-nav-link :href="route('product')" :active="request()->routeIs('product')" style="margin-right: 0 !important; color: black;">
                             {{ __('Product') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('about-us')" :active="request()->routeIs('about-us')" style="color: black;">
+                        <x-nav-link :href="route('about-us')" :active="request()->routeIs('about-us')" style="color: black; margin-right: 0 !important;">
                             {{ __('About Us') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('blog')" :active="request()->routeIs('blog')" style="color: black;">
+                        <x-nav-link :href="route('blog')" :active="request()->routeIs('blog')" style="color: black; margin-right: 0 !important;">
                             {{ __('Blog') }}
                         </x-nav-link>
                     </div>
 
-                    <div class="hidden sm:flex sm:items-center gap-2 sm:ms-6 w-3/12">
-                        <div class="w-full">
-                            <button class="w-full bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</button>
-                        </div>
-                        <x-dropdown align="right">
+                    <div class="hidden sm:flex sm:items-center sm:justify-end gap-2 sm:ms-6 w-4/12">
+                        <a href="https://wa.me/6282123269622" class="@auth w-2/3 @else w-1/2 @endauth text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
+                        @auth
+                        <x-dropdown align="right" class="">
                             <x-slot name="trigger" class="w-fit">
-                                @auth
                                 <button class="bg-white px-2 text-gray-500 flex gap-1 items-center justify-between px- py-2 border border-transparent text-sm leading-4 font-medium rounded-md hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                                     <img class="w-2/12" src="{{asset('assets/user.png')}}" alt="">
                                     <div class="text-xs">{{ Auth::user()->name }}</div>
@@ -43,14 +41,8 @@
                                         </svg>
                                     </div>
                                 </button>
-                                @else
-                                <div class="flex items-center gap-1">
-                                    <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</button>
-                                    <button class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Register</button>
-                                </div>
-                                @endauth
                             </x-slot>
-        
+                            
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('profile.edit')">
                                     {{ __('Profile') }}
@@ -58,24 +50,32 @@
                                 <x-dropdown-link :href="route('orders-history')">
                                     {{ __('Order History') }}
                                 </x-dropdown-link>
-                                @if(auth()->user()->is_manager or auth()->user()->is_admin)
+                                <x-dropdown-link :href="route('loyalty.promotion-program')">
+                                    {{ __('Loyalty Program') }}
+                                </x-dropdown-link>
+                                @if(auth()->user()->is_manager)
                                 <x-dropdown-link :href="route('loyalty.log')">
                                     {{ __('Loyalty Log') }}
                                 </x-dropdown-link>
                                 @endif
-        
+                                
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-        
+                                    
                                     <x-dropdown-link :href="route('logout')"
-                                            onclick="event.preventDefault();
+                                    onclick="event.preventDefault();
                                                         this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-dropdown-link>
                                 </form>
                             </x-slot>
                         </x-dropdown>
+                        @else
+                        <div class="flex items-center gap-1">
+                            <a href="{{ route('login') }}" class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</a>
+                        </div>
+                        @endauth
                     </div>
                 </div>
 
@@ -153,7 +153,7 @@
                     </div>
                     <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
                         <h1 class="text-lg font-medium">Total Point</h1>
-                        <a href="{{ route('loyalty.formula') }}" class="text-3xl mt-1 font-bold">{{ number_format($loyaltyPoints, 0, ',', '.') }}</a>
+                        <a href="{{ route('loyalty.promotion-program') }}" class="text-3xl mt-1 font-bold text-white hover:text-gray-200">{{ number_format($loyaltyPoints, 0, ',', '.') }}</a>
                     </div>
                 </div>
             </div>
@@ -214,15 +214,30 @@
                             </button>
                         </form>
                     </div>
+                    @elseif(auth()->user()->is_manager && $order->status === 'void_requested')
+                    <div class="flex gap-2">
+                        <form method="POST" action="{{ route('orders-history.void-approve', $order) }}" class="inline">
+                            @csrf
+                            <button type="submit" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md text-white font-medium transition-all" onclick="return confirm('Approve void for this order?')">
+                                Approve Void
+                            </button>
+                        </form>
+                        <form method="POST" action="{{ route('orders-history.void-reject', $order) }}" class="inline">
+                            @csrf
+                            <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md text-white font-medium transition-all" onclick="return confirm('Reject void request for this order?')">
+                                Reject Void
+                            </button>
+                        </form>
+                    </div>
                     @elseif(auth()->user()->is_admin && !auth()->user()->is_manager)
                     <div class="flex gap-2">
                         <a href="{{ route('orders-history.edit', $order) }}" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md text-white font-medium transition-all">
                             Edit
                         </a>
-                        <form method="POST" action="{{ route('orders-history.destroy', $order) }}" class="inline" onsubmit="return confirm('Are you sure you want to delete this order?')">
+                        <form method="POST" action="{{ route('orders-history.destroy', $order) }}" class="inline" onsubmit="return confirm('Submit void request for this order?')">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md text-white font-medium transition-all">
+                            <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md text-white font-medium transition-all {{ $order->status !== 'confirmed' ? 'opacity-50 cursor-not-allowed' : '' }}" @if($order->status !== 'confirmed') disabled @endif>
                                 Void
                             </button>
                         </form>
@@ -230,13 +245,21 @@
                     @else
                     <div></div>
                     @endif
+                    @if(auth()->user()->is_admin || auth()->user()->is_manager)
                     <div class="flex items-center gap-4 p-1 rounded-full bg-gray-300">
                         <div class="py-1 px-3 rounded-full @if($order->status === 'draft') bg-[#e05534] text-white  @endif">Draft</div>
                         <div class="py-1 px-3 rounded-full @if($order->status === 'confirmed') bg-[#e05534] text-white  @endif">Confirmed</div>
                         @if($order->status === 'rejected')
                         <div class="py-1 px-3 rounded-full @if($order->status === 'rejected') bg-[#e05534] text-white @endif">Rejected</div>
                         @endif
+                        @if($order->status === 'void_requested')
+                        <div class="py-1 px-3 rounded-full @if($order->status === 'void_requested') bg-[#e05534] text-white @endif">Void Requested</div>
+                        @endif
+                        @if($order->status === 'voided')
+                        <div class="py-1 px-3 rounded-full @if($order->status === 'voided') bg-[#e05534] text-white @endif">Voided</div>
+                        @endif
                     </div>
+                    @endif
                 </div>
                 <div class="flex items-center justify-between">
                     <div class="w-4/12">

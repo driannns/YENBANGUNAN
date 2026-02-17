@@ -11,18 +11,10 @@ class OrderController extends Controller
 {
     private function getFilteredLoyaltyPoints($userId = null)
     {
-        $now = now();
-        $currentYear = $now->year;
-
-        // Tentukan expired date berdasarkan periode (sesuai dengan generateLoyalty)
-        if ($now->month <= 6) {
-            // Jika bulan <= 6, ambil yang expired 30 Juni tahun ini
-            $expiredDate = Carbon::create($currentYear, 6, 30)->endOfDay();
-        } else {
-            // Jika bulan > 6, ambil yang expired 31 Desember tahun ini
-            $expiredDate = Carbon::create($currentYear, 12, 31)->endOfDay();
-        }
-        $query = LoyaltyHistory::where('expired_at', '<', $expiredDate);
+        $query = LoyaltyHistory::where(function ($query) {
+                            $query->where('expired_at', '>', now())
+                                ->orWhereNull('expired_at');
+                        });
         $user = auth()->user();
 
         if (!$user->is_admin AND !$user->is_manager) {

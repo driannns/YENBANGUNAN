@@ -20,12 +20,13 @@ class ProfileController extends Controller
     {   
         $user = $request->user();
         $orders = Order::where('user_id', $user->id)->sum('total_amount');
+        
         $loyaltyPoints = LoyaltyHistory::where('user_id', auth()->user()->id)
-            ->where(function ($query) {
-                $query->where('expired_at', '>', now())
-                      ->orWhereNull('expired_at');
-            })
-            ->sum('points_earned');
+                        ->where(function ($query) {
+                                $query->where('expired_at', '>', now())
+                                    ->orWhereNull('expired_at');
+                            })
+                            ->sum('points_earned');
         return view('profile.edit', [
             'user' => $request->user(),
             'totalOrder' => $orders,

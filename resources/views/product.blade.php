@@ -212,6 +212,11 @@
                                             <x-dropdown-link :href="route('loyalty.promotion-program')">
                                                 {{ __('Loyalty Program') }}
                                             </x-dropdown-link>
+                                            @if(auth()->user()->is_manager)
+                                            <x-dropdown-link :href="route('loyalty.log')">
+                                                {{ __('Loyalty Log') }}
+                                            </x-dropdown-link>
+                                            @endif
                                             
                                             <!-- Authentication -->
                                             <form method="POST" action="{{ route('logout') }}">
@@ -505,10 +510,6 @@
             </div>
 
         </footer>
-
-        @if (Route::has('login'))
-            <div class="h-14.5 hidden lg:block"></div>
-        @endif
         <script>
             const messages = [
                 ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',

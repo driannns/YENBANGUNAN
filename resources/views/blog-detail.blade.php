@@ -576,6 +576,11 @@
                                         <x-dropdown-link :href="route('loyalty.promotion-program')">
                                             {{ __('Loyalty Program') }}
                                         </x-dropdown-link>
+                                        @if(auth()->user()->is_manager)
+                                        <x-dropdown-link :href="route('loyalty.log')">
+                                            {{ __('Loyalty Log') }}
+                                        </x-dropdown-link>
+                                        @endif
                                         
                                         <!-- Authentication -->
                                         <form method="POST" action="{{ route('logout') }}">

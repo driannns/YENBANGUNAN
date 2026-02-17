@@ -142,7 +142,7 @@
                 60% { transform: translateY(-1px); }
             }
         </style>
-        <div class="w-full bg-[#C0392B] text-white py-3 overflow-hidden shadow-lg fixed top-0 left-0 z-50">
+        <div class="w-full bg-[#C0392B] text-white py-2 overflow-hidden shadow-lg fixed top-0 left-0 z-50">
             <div class="flex items-center">
                 <!-- Label with Countdown -->
                 <div class="flex items-center gap-1 bg-white text-red-600 px-4 py-2 font-bold text-sm flex-shrink-0">
@@ -151,12 +151,12 @@
                 </div>
                 
                 <!-- Scrolling Text Container -->
-                <div class="flex-1 overflow-hidden relative ml-4">
+                <div class="flex-1 overflow-hidden relative ml-4 text-sm">
                     <div id="runningText" class="whitespace-nowrap inline-block" style="position: relative;"></div>
                 </div>
             </div>
         </div>
-        <div class="w-full z-40 top-0 start-0" style="margin-top: 3.7rem">
+        <div class="w-full z-40 top-0 start-0" style="margin-top: 3.2rem">
             <nav x-data="{ open: false }" class="bg-black text-white">
                 <!-- Primary Navigation Menu -->
                 <div class="mx-auto px-4 sm:px-6 lg:px-8">
@@ -295,7 +295,6 @@
                     @endauth
                 </div>
             </nav>
-
         </div>
         <div class="relative w-full flex flex-col text-white md:flex-row">
             <div style="background-image: url('{{ asset('assets/aboutus-wallpaper.jpg') }}'); height: 80vh;" class="hidden md:block w-full md:w-2/3 bg-right-top bg-cover bg-no-repeat">
@@ -531,7 +530,7 @@
 
             const runningText = document.getElementById('runningText');
             const countdownElement = document.getElementById('countdown');
-            const targetDate = new Date('2026-01-31T23:59:59').getTime();
+            const targetDate = new Date('2026-03-31T23:59:59').getTime();
             
             // Create text
             const fullText = messages.join(' • ') + ' • ' + messages.join(' • ');

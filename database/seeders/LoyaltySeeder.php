@@ -2,12 +2,15 @@
 
 namespace Database\Seeders;
 
-use App\Models\Loyalty;
-use App\Models\User;
+use App\Models\LoyaltyFormula;
+use App\Models\LoyaltyHistory;
 use App\Models\Order;
+use App\Models\RedeemHistory;
+use App\Models\RedeemItem;
+use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Carbon\Carbon;
 
 class LoyaltySeeder extends Seeder
 {
@@ -18,33 +21,93 @@ class LoyaltySeeder extends Seeder
      */
     public function run(): void
     {
-        // Get all users and orders
-        $users = User::all();
-        $orders = Order::all();
+        $customers = User::where('is_admin', false)
+            ->where('is_manager', false)
+            ->get();
 
-        if ($orders->isEmpty()) {
-            return; // No orders to link
-        }
+        $formula = LoyaltyFormula::first();
+        $coefficient = $formula ? $formula->coefficient : 0.1;
+        $redeemItems = RedeemItem::all();
 
-        foreach ($users as $user) {
-            // Generate a random created_at date within the last year
-            $createdAt = now()->subDays(rand(0, 365));
+        foreach ($customers as $customer) {
+            $orders = Order::where('user_id', $customer->id)
+                ->orderBy('order_date')
+                ->get();
 
-            // Calculate expired_at based on the created_at month
-            $expiredAt = $this->calculateExpiredAtForDate($createdAt);
+            if ($orders->isEmpty()) {
+                continue;
+            }
 
-            // Get a random order for this user, or any order if none
-            $userOrders = $orders->where('user_id', $user->id);
-            $order = $userOrders->isNotEmpty() ? $userOrders->random() : $orders->random();
+            $totalPoints = 0;
+            foreach ($orders as $order) {
+                $orderDate = Carbon::parse($order->order_date);
+                $expiredAt = $this->calculateExpiredAtForDate($orderDate);
+                $pointsEarned = round($order->total_amount * $coefficient, 2);
 
-            Loyalty::create([
-                'user_id' => $user->id,
-                'order_id' => $order->id,
-                'points' => rand(0, 1000), // Random points between 0 and 1000
-                'expired_at' => $expiredAt,
-                'created_at' => $createdAt,
-                'updated_at' => $createdAt,
-            ]);
+                LoyaltyHistory::create([
+                    'order_id' => $order->id,
+                    'user_id' => $customer->id,
+                    'points_earned' => $pointsEarned,
+                    'expired_at' => $expiredAt,
+                    'type' => 'plus_point',
+                    'created_at' => $orderDate,
+                    'updated_at' => $orderDate,
+                ]);
+
+                $totalPoints += $pointsEarned;
+            }
+
+            if ($redeemItems->isEmpty()) {
+                continue;
+            }
+
+            $minPoints = $redeemItems->min('points_required');
+            if ($totalPoints < $minPoints) {
+                continue;
+            }
+
+            $redeemCount = rand(1, 2);
+            $baseDate = Carbon::parse($orders->last()->order_date)->addDays(rand(1, 20));
+
+            for ($i = 0; $i < $redeemCount; $i++) {
+                $eligibleItems = $redeemItems->filter(function ($item) use ($totalPoints) {
+                    return $item->points_required <= $totalPoints;
+                });
+
+                if ($eligibleItems->isEmpty()) {
+                    break;
+                }
+
+                $item = $eligibleItems->random();
+                $maxQty = intdiv((int) $totalPoints, (int) $item->points_required);
+                $quantity = rand(1, max(1, min(2, $maxQty)));
+                $pointsUsed = $item->points_required * $quantity;
+                $redeemAt = (clone $baseDate)->addDays($i);
+
+                RedeemHistory::create([
+                    'user_id' => $customer->id,
+                    'redeem_item_id' => $item->id,
+                    'quantity' => $quantity,
+                    'points_used' => $pointsUsed,
+                    'status' => 'redeemed',
+                    'processed_at' => $redeemAt,
+                    'created_at' => $redeemAt,
+                    'updated_at' => $redeemAt,
+                ]);
+
+                $expiredAt = $this->calculateExpiredAtForDate($redeemAt);
+                LoyaltyHistory::create([
+                    'order_id' => null,
+                    'user_id' => $customer->id,
+                    'points_earned' => -1 * $pointsUsed,
+                    'expired_at' => $expiredAt,
+                    'type' => 'redeem',
+                    'created_at' => $redeemAt,
+                    'updated_at' => $redeemAt,
+                ]);
+
+                $totalPoints -= $pointsUsed;
+            }
         }
     }
 

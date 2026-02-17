@@ -122,7 +122,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <body class="relative bg-[#FDFDFC] text-[#1b1b18] flex flex-col min-h-screen items-start">
+    <body class="relative bg-[#0C090A] flex flex-col min-h-screen items-start">
         <a href="https://wa.link/3v66z0" 
         target="_blank"
         class="fixed whatsapp-pulse whatsapp-bounce bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:scale-110 transition-all duration-300 z-50" aria-label="WhatsApp">
@@ -142,7 +142,7 @@
                 60% { transform: translateY(-1px); }
             }
         </style>
-        <div class="w-full bg-[#C0392B] text-white py-3 overflow-hidden shadow-lg fixed top-0 left-0 z-50">
+        <div class="w-full bg-[#C0392B] text-white py-2 overflow-hidden shadow-lg fixed top-0 left-0 z-50">
             <div class="flex items-center">
                 <!-- Label with Countdown -->
                 <div class="flex items-center gap-1 bg-white text-red-600 px-4 py-2 font-bold text-sm flex-shrink-0">
@@ -151,13 +151,13 @@
                 </div>
                 
                 <!-- Scrolling Text Container -->
-                <div class="flex-1 overflow-hidden relative ml-4">
+                <div class="flex-1 overflow-hidden relative ml-4 text-sm">
                     <div id="runningText" class="whitespace-nowrap inline-block" style="position: relative;"></div>
                 </div>
             </div>
         </div>
-        <div class="bg-black">
-            <div class="w-full z-40 start-0" style="margin-top: 3.7rem">
+        <div>
+            <div class="w-full z-40 start-0" style="margin-top: 3.2rem">
                 <nav x-data="{ open: false }" class="bg-transparent text-white">
                     <!-- Primary Navigation Menu -->
                     <div class="mx-auto px-4 sm:px-6 lg:px-8">
@@ -299,7 +299,7 @@
             </div>
             <main class="flex-grow w-full p-10">
                 <h1 class="text-white text-4xl font-bold">Posts</h1>
-                <div class="grid grid-cols-1 md:grid-cols-4 mt-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 mt-4 gap-6">
                     @foreach ($blogs as $blog)
                         @php
                             $parts = explode('/', $blog->slug, 4);
@@ -324,11 +324,11 @@
                                 $slugOnly = ltrim($slugOnly, '-\\/');
                             }
                         @endphp
-                        <a href="{{ route('blog.show', ['year' => $year, 'month' => $month, 'day' => $day, 'slug' => $slugOnly]) }}" class="bg-white rounded-lg overflow-hidden shadow-lg m-4 hover:scale-110 hover:shadow-xl transition-all duration-300">
-                            @if($blog->image)
-                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" class="w-full h-48 object-cover">
+                        <a href="{{ route('blog.show', ['year' => $year, 'month' => $month, 'day' => $day, 'slug' => $slugOnly]) }}" class="text-white overflow-hidden shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300">
+                            @if($blog->image_path)
+                            <img src="{{ asset('assets/' . $blog->image_path) }}" alt="{{ $blog->title }}" class="w-full h-48 object-cover">
                             @else
-                            <img src="{{ asset('/assets/logo-crop.png') }}" alt="{{ $blog->title }}" class="w-full h-48 object-cover">
+                            <img src="{{ asset('/assets/logo-crop.png') }}" alt="{{ $blog->title }}" class="w-full h-48 object-cover invert">
                             @endif
                             <div class="p-4">
                                 <h2 class="text-xl font-bold mb-2">{{ $blog->title }}</h2>
@@ -400,7 +400,7 @@
 
             const runningText = document.getElementById('runningText');
             const countdownElement = document.getElementById('countdown');
-            const targetDate = new Date('2026-01-31T23:59:59').getTime();
+            const targetDate = new Date('2026-03-31T23:59:59').getTime();
             
             // Create text
             const fullText = messages.join(' • ') + ' • ' + messages.join(' • ');

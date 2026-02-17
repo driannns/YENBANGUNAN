@@ -227,8 +227,8 @@ class OrderController extends Controller
             abort(403, 'Unauthorized');
         }
 
-        if ($order->status !== 'confirmed') {
-            return redirect()->route('orders-history')->with('error', 'Only confirmed orders can be voided.');
+        if (!in_array($order->status, ['confirmed', 'draft'], true)) {
+            return redirect()->route('orders-history')->with('error', 'Only confirmed or draft orders can be voided.');
         }
 
         $order->update(['status' => 'void_requested']);

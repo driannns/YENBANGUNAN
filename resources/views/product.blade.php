@@ -142,7 +142,7 @@
                 60% { transform: translateY(-1px); }
             }
         </style>
-        <div class="w-full bg-[#C0392B] text-white py-3 overflow-hidden shadow-lg fixed top-0 left-0 z-50">
+        <div class="w-full bg-[#C0392B] text-white py-2 overflow-hidden shadow-lg fixed top-0 left-0 z-50">
             <div class="flex items-center">
                 <!-- Label with Countdown -->
                 <div class="flex items-center gap-1 bg-white text-red-600 px-4 py-2 font-bold text-sm flex-shrink-0">
@@ -151,12 +151,12 @@
                 </div>
                 
                 <!-- Scrolling Text Container -->
-                <div class="flex-1 overflow-hidden relative ml-4">
+                <div class="flex-1 overflow-hidden relative ml-4 text-sm">
                     <div id="runningText" class="whitespace-nowrap inline-block" style="position: relative;"></div>
                 </div>
             </div>
         </div>
-        <div class="relative w-full h-screen grid content-center p-8 text-white" style="background-image: url('/assets/product-background.jpg'); background-size: cover; background-position: center; margin-top: 3.7rem">
+        <div class="relative w-full h-screen grid content-center p-8 text-white" style="background-image: url('/assets/product-background.jpg'); background-size: cover; background-position: center; margin-top: 3.2rem">
             <div class="absolute w-full z-40 top-0 start-0">
                 <nav x-data="{ open: false }" class="bg-transparent text-white">
                     <!-- Primary Navigation Menu -->
@@ -520,7 +520,7 @@
 
             const runningText = document.getElementById('runningText');
             const countdownElement = document.getElementById('countdown');
-            const targetDate = new Date('2026-01-31T23:59:59').getTime();
+            const targetDate = new Date('2026-03-31T23:59:59').getTime();
             
             // Create text
             const fullText = messages.join(' • ') + ' • ' + messages.join(' • ');

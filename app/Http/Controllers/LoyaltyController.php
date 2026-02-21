@@ -324,7 +324,7 @@ class LoyaltyController extends Controller
             ->where(function ($query) {
                 $query->where('expired_at', '>', now())
                       ->orWhereNull('expired_at');
-        })
+            })
             ->sum('points_earned');
     }
 }

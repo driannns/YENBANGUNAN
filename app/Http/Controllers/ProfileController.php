@@ -23,10 +23,10 @@ class ProfileController extends Controller
         
         $loyaltyPoints = LoyaltyHistory::where('user_id', auth()->user()->id)
                         ->where(function ($query) {
-                                $query->where('expired_at', '>', now())
-                                    ->orWhereNull('expired_at');
-                            })
-                            ->sum('points_earned');
+                            $query->where('expired_at', '>', now())
+                                ->orWhereNull('expired_at');
+                        })
+                        ->sum('points_earned');
         return view('profile.edit', [
             'user' => $request->user(),
             'totalOrder' => $orders,

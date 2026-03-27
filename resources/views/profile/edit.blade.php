@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="hidden sm:flex sm:items-center sm:justify-end gap-2 sm:ms-6 w-4/12">
-                        <a href="https://wa.me/6282123269622" class="@auth w-2/3 @else w-1/2 @endauth text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
+                        <a href="https://wa.me/6282123269622" target="_blank" class="@auth w-2/3 @else w-1/2 @endauth text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
                         @auth
                         <x-dropdown align="right" class="">
                             <x-slot name="trigger" class="w-fit">
@@ -42,7 +42,7 @@
                                     </div>
                                 </button>
                             </x-slot>
-                            
+
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('profile.edit')">
                                     {{ __('Profile') }}
@@ -53,13 +53,13 @@
                                 <x-dropdown-link :href="route('loyalty.promotion-program')">
                                     {{ __('Loyalty Program') }}
                                 </x-dropdown-link>
-                                
+
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    
+
                                     <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                                        onclick="event.preventDefault();
                                                         this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-dropdown-link>
@@ -104,8 +104,8 @@
                     {{ __('Blog') }}
                 </x-responsive-nav-link>
                 <hr>
-                <x-responsive-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
-                    {{ __('Kebutuhan Project') }}
+                <x-responsive-nav-link href="https://wa.me/6282123269622" target="_blank" :active="request()->routeIs('blog')">
+                    {{ __('Kebutuhan Projek') }}
                 </x-responsive-nav-link>
             </div>
 
@@ -127,7 +127,7 @@
                         @csrf
 
                         <x-responsive-nav-link :href="route('logout')"
-                                onclick="event.preventDefault();
+                            onclick="event.preventDefault();
                                             this.closest('form').submit();">
                             {{ __('Log Out') }}
                         </x-responsive-nav-link>

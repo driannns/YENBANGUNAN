@@ -25,6 +25,8 @@ class LoyaltySeeder extends Seeder
             ->where('is_manager', false)
             ->get();
 
+        $minimumLoyaltyPoint = 100000;
+
         $formula = LoyaltyFormula::first();
         $coefficient = $formula ? $formula->coefficient : 0.1;
         $redeemItems = RedeemItem::all();
@@ -34,44 +36,74 @@ class LoyaltySeeder extends Seeder
                 ->orderBy('order_date')
                 ->get();
 
-            if ($orders->isEmpty()) {
-                continue;
+            $totalPoints = 0;
+
+            if ($orders->isNotEmpty()) {
+                foreach ($orders as $order) {
+                    $orderDate = Carbon::parse($order->order_date);
+                    $expiredAt = $this->calculateExpiredAtForDate($orderDate);
+                    $pointsEarned = round($order->total_amount * $coefficient, 2);
+
+                    LoyaltyHistory::create([
+                        'order_id' => $order->id,
+                        'user_id' => $customer->id,
+                        'points_earned' => $pointsEarned,
+                        'expired_at' => $expiredAt,
+                        'type' => 'plus_point',
+                        'created_at' => $orderDate,
+                        'updated_at' => $orderDate,
+                    ]);
+
+                    $totalPoints += $pointsEarned;
+                }
             }
 
-            $totalPoints = 0;
-            foreach ($orders as $order) {
-                $orderDate = Carbon::parse($order->order_date);
-                $expiredAt = $this->calculateExpiredAtForDate($orderDate);
-                $pointsEarned = round($order->total_amount * $coefficient, 2);
+            if ($totalPoints < $minimumLoyaltyPoint) {
+                $additionalPoints = $minimumLoyaltyPoint - $totalPoints;
+                $topUpDate = $orders->isNotEmpty()
+                    ? Carbon::parse($orders->last()->order_date)->addDay()
+                    : now();
 
                 LoyaltyHistory::create([
-                    'order_id' => $order->id,
+                    'order_id' => null,
                     'user_id' => $customer->id,
-                    'points_earned' => $pointsEarned,
-                    'expired_at' => $expiredAt,
+                    'points_earned' => $additionalPoints,
+                    'expired_at' => $this->calculateExpiredAtForDate($topUpDate),
                     'type' => 'plus_point',
-                    'created_at' => $orderDate,
-                    'updated_at' => $orderDate,
+                    'created_at' => $topUpDate,
+                    'updated_at' => $topUpDate,
                 ]);
 
-                $totalPoints += $pointsEarned;
+                $totalPoints += $additionalPoints;
             }
 
             if ($redeemItems->isEmpty()) {
                 continue;
             }
 
+            $availableRedeemPoints = $totalPoints - $minimumLoyaltyPoint;
+            if ($availableRedeemPoints <= 0) {
+                continue;
+            }
+
             $minPoints = $redeemItems->min('points_required');
-            if ($totalPoints < $minPoints) {
+            if ($availableRedeemPoints < $minPoints) {
                 continue;
             }
 
             $redeemCount = rand(1, 2);
-            $baseDate = Carbon::parse($orders->last()->order_date)->addDays(rand(1, 20));
+            $baseDate = $orders->isNotEmpty()
+                ? Carbon::parse($orders->last()->order_date)->addDays(rand(1, 20))
+                : now()->addDays(rand(1, 20));
 
             for ($i = 0; $i < $redeemCount; $i++) {
-                $eligibleItems = $redeemItems->filter(function ($item) use ($totalPoints) {
-                    return $item->points_required <= $totalPoints;
+                $availableRedeemPoints = $totalPoints - $minimumLoyaltyPoint;
+                if ($availableRedeemPoints <= 0) {
+                    break;
+                }
+
+                $eligibleItems = $redeemItems->filter(function ($item) use ($availableRedeemPoints) {
+                    return $item->points_required <= $availableRedeemPoints;
                 });
 
                 if ($eligibleItems->isEmpty()) {
@@ -79,7 +111,7 @@ class LoyaltySeeder extends Seeder
                 }
 
                 $item = $eligibleItems->random();
-                $maxQty = intdiv((int) $totalPoints, (int) $item->points_required);
+                $maxQty = intdiv((int) $availableRedeemPoints, (int) $item->points_required);
                 $quantity = rand(1, max(1, min(2, $maxQty)));
                 $pointsUsed = $item->points_required * $quantity;
                 $redeemAt = (clone $baseDate)->addDays($i);
@@ -116,10 +148,12 @@ class LoyaltySeeder extends Seeder
      */
     private function calculateExpiredAtForDate($date)
     {
+        $targetYear = 2026;
+
         if ($date->month <= 6) {
-            return Carbon::create($date->year, 6, 30);
+            return Carbon::create($targetYear, 6, 1)->endOfMonth();
         } else {
-            return Carbon::create($date->year, 12, 31);
+            return Carbon::create($targetYear, 12, 31);
         }
     }
 }

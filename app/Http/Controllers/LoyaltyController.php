@@ -9,6 +9,7 @@ use App\Models\RedeemHistory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Carbon\Carbon;
 
 class LoyaltyController extends Controller
@@ -36,16 +37,16 @@ class LoyaltyController extends Controller
                 // Search in user name
                 $q->whereHas('user', function ($userQuery) use ($search) {
                     $userQuery->where('name', 'like', '%' . $search . '%')
-                             ->orWhere('NIK', 'like', '%' . $search . '%');
+                        ->orWhere('NIK', 'like', '%' . $search . '%');
                 })
-                // Search in order number
-                ->orWhereHas('order', function ($orderQuery) use ($search) {
-                    $orderQuery->where('invoice_number', 'like', '%' . $search . '%');
-                })
-                // Search in points
-                ->orWhere('points_earned', 'like', '%' . $search . '%')
-                // Search in created date (format: Y-m-d)
-                ->orWhereDate('created_at', 'like', '%' . $search . '%');
+                    // Search in order number
+                    ->orWhereHas('order', function ($orderQuery) use ($search) {
+                        $orderQuery->where('invoice_number', 'like', '%' . $search . '%');
+                    })
+                    // Search in points
+                    ->orWhere('points_earned', 'like', '%' . $search . '%')
+                    // Search in created date (format: Y-m-d)
+                    ->orWhereDate('created_at', 'like', '%' . $search . '%');
             });
         }
 
@@ -81,17 +82,25 @@ class LoyaltyController extends Controller
     //     return view('redeem-points', compact('redeemItems', 'userPoints'));
     // }
 
-    public function promotionProgram(Request $request){
+    public function promotionProgram(Request $request)
+    {
         $loyaltyPoints = LoyaltyHistory::where('user_id', auth()->user()->id)
             ->where(function ($query) {
                 $query->where('expired_at', '>', now())
-                      ->orWhereNull('expired_at');
+                    ->orWhereNull('expired_at');
             })
             ->sum('points_earned');
         $userRedeems = RedeemHistory::with('redeemItem')
             ->where('user_id', auth()->id())
             ->orderBy('created_at', 'desc')
-            ->paginate(10);
+            ->paginate(10, ['*'], 'redeems')
+            ->appends($request->query());
+
+        $loyaltyHistories = LoyaltyHistory::with('order')
+            ->where('user_id', auth()->id())
+            ->orderBy('created_at', 'desc')
+            ->paginate(10, ['*'], 'histories')
+            ->appends($request->query());
 
         $redeemItemsQuery = RedeemItem::query();
         if (!auth()->user()->is_manager) {
@@ -99,7 +108,7 @@ class LoyaltyController extends Controller
         }
         $redeemItems = $redeemItemsQuery->orderBy('created_at', 'desc')->get();
 
-        return view('promotion-program', compact('loyaltyPoints', 'userRedeems', 'redeemItems'));
+        return view('promotion-program', compact('loyaltyPoints', 'userRedeems', 'redeemItems', 'loyaltyHistories'));
     }
 
     public function cancelRedeem(Request $request, $id)
@@ -126,16 +135,19 @@ class LoyaltyController extends Controller
         $request->validate([
             'redeem_item_id' => 'required|exists:redeem_items,id',
             'quantity' => 'required|integer|min:1',
-            ]);
-            
-            $redeemItem = RedeemItem::findOrFail($request->redeem_item_id);
-            $quantity = $request->quantity;
-            $pointsRequired = $redeemItem->points_required * $quantity;
-            $userPoints = $this->getUserCurrentPoints();
-            
-            if ($pointsRequired > $userPoints) {
-                return back()->withErrors(['quantity' => 'Insufficient points. You need ' . $pointsRequired . ' points but only have ' . $userPoints . ' points.']);
-                }
+        ]);
+
+        $redeemItem = RedeemItem::findOrFail($request->redeem_item_id);
+        if (!$redeemItem->is_active || !$redeemItem->is_currently_active) {
+            return back()->withErrors(['quantity' => 'Item ini sudah tidak tersedia (expired atau non-aktif).']);
+        }
+        $quantity = $request->quantity;
+        $pointsRequired = $redeemItem->points_required * $quantity;
+        $userPoints = $this->getUserCurrentPoints();
+
+        if ($pointsRequired > $userPoints) {
+            return back()->withErrors(['quantity' => 'Insufficient points. You need ' . $pointsRequired . ' points but only have ' . $userPoints . ' points.']);
+        }
 
         // Create redeem history
         RedeemHistory::create([
@@ -160,6 +172,7 @@ class LoyaltyController extends Controller
 
         DB::transaction(function () use ($redeem) {
             $redeem->status = 'redeemed';
+            $redeem->redeem_code = $this->generateUniqueRedeemCode();
             $redeem->processed_at = Carbon::now();
             $redeem->save();
 
@@ -216,6 +229,10 @@ class LoyaltyController extends Controller
             'image_url' => 'nullable|url|max:2048',
             'image_file' => 'nullable|mimes:jpg,jpeg,png|max:2048',
             'image_source' => 'required|in:url,file',
+            'start_date' => 'nullable|date',
+            'end_date' => 'nullable|date|after_or_equal:start_date',
+        ], [
+            'end_date.after_or_equal' => 'End date tidak boleh lebih awal dari start date.',
         ]);
 
         if (!empty($data['image_url']) && $request->hasFile('image_file')) {
@@ -242,6 +259,8 @@ class LoyaltyController extends Controller
             'unit' => $data['unit'],
             'is_active' => (bool) ($data['is_active'] ?? false),
             'image_url' => $imageUrl,
+            'start_date' => $data['start_date'] ?? null,
+            'end_date' => $data['end_date'] ?? null,
         ]);
 
         return back()->with('success', 'Redeem item created.');
@@ -262,6 +281,10 @@ class LoyaltyController extends Controller
             'image_url' => 'nullable|url|max:2048',
             'image_file' => 'nullable|mimes:jpg,jpeg,png|max:2048',
             'image_source' => 'required|in:url,file,keep',
+            'start_date' => 'nullable|date',
+            'end_date' => 'nullable|date|after_or_equal:start_date',
+        ], [
+            'end_date.after_or_equal' => 'End date tidak boleh lebih awal dari start date.',
         ]);
 
         if (!empty($data['image_url']) && $request->hasFile('image_file')) {
@@ -293,6 +316,8 @@ class LoyaltyController extends Controller
             'unit' => $data['unit'],
             'is_active' => (bool) ($data['is_active'] ?? false),
             'image_url' => $imageUrl,
+            'start_date' => $data['start_date'] ?? null,
+            'end_date' => $data['end_date'] ?? null,
         ]);
 
         return back()->with('success', 'Redeem item updated.');
@@ -319,12 +344,21 @@ class LoyaltyController extends Controller
         } else {
             $expiredDate = \Carbon\Carbon::create($currentYear, 12, 31)->endOfDay();
         }
-  
+
         return LoyaltyHistory::where('user_id', auth()->user()->id)
             ->where(function ($query) {
                 $query->where('expired_at', '>', now())
-                      ->orWhereNull('expired_at');
+                    ->orWhereNull('expired_at');
             })
             ->sum('points_earned');
+    }
+
+    private function generateUniqueRedeemCode(): string
+    {
+        do {
+            $code = 'RDM-' . strtoupper(Str::random(8));
+        } while (RedeemHistory::where('redeem_code', $code)->exists());
+
+        return $code;
     }
 }

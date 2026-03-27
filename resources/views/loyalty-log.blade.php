@@ -28,9 +28,7 @@
                     </div>
 
                     <div class="hidden sm:flex sm:items-center gap-2 sm:ms-6 w-3/12">
-                        <div class="w-full">
-                            <button class="w-full bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</button>
-                        </div>
+                        <a href="https://wa.me/6282123269622" target="_blank" class="@auth w-2/3 @else w-1/2 @endauth text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
                         <x-dropdown align="right">
                             <x-slot name="trigger" class="w-fit">
                                 @auth
@@ -50,7 +48,7 @@
                                 </div>
                                 @endauth
                             </x-slot>
-        
+
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('profile.edit')">
                                     {{ __('Profile') }}
@@ -66,13 +64,13 @@
                                     {{ __('Loyalty Log') }}
                                 </x-dropdown-link>
                                 @endif
-        
+
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-        
+
                                     <x-dropdown-link :href="route('logout')"
-                                            onclick="event.preventDefault();
+                                        onclick="event.preventDefault();
                                                         this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-dropdown-link>
@@ -112,8 +110,8 @@
                     {{ __('Blog') }}
                 </x-responsive-nav-link>
                 <hr>
-                <x-responsive-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
-                    {{ __('Kebutuhan Project') }}
+                <x-responsive-nav-link href="https://wa.me/6282123269622" target="_blank" :active="request()->routeIs('blog')">
+                    {{ __('Kebutuhan Projek') }}
                 </x-responsive-nav-link>
             </div>
 
@@ -135,7 +133,7 @@
                         @csrf
 
                         <x-responsive-nav-link :href="route('logout')"
-                                onclick="event.preventDefault();
+                            onclick="event.preventDefault();
                                             this.closest('form').submit();">
                             {{ __('Log Out') }}
                         </x-responsive-nav-link>
@@ -156,13 +154,13 @@
                 <div class="p-6" x-data="{ tab: 'generated' }">
                     <div class="flex items-center gap-2 mb-6">
                         <button type="button" class="px-4 py-2 rounded-md font-semibold"
-                                @click="tab = 'generated'"
-                                :class="tab === 'generated' ? 'bg-[#e05534] text-white' : 'bg-gray-200 text-gray-700'">
+                            @click="tab = 'generated'"
+                            :class="tab === 'generated' ? 'bg-[#e05534] text-white' : 'bg-gray-200 text-gray-700'">
                             Loyalty Log Generated
                         </button>
                         <button type="button" class="px-4 py-2 rounded-md font-semibold"
-                                @click="tab = 'redeem'"
-                                :class="tab === 'redeem' ? 'bg-[#e05534] text-white' : 'bg-gray-200 text-gray-700'">
+                            @click="tab = 'redeem'"
+                            :class="tab === 'redeem' ? 'bg-[#e05534] text-white' : 'bg-gray-200 text-gray-700'">
                             Loyalty Redeem
                         </button>
                     </div>
@@ -172,22 +170,22 @@
                         <div class="mb-6">
                             <form method="GET" action="{{ route('loyalty.log') }}" class="flex gap-4 flex-wrap">
                                 <div class="flex-1 min-w-0">
-                                    <input type="text" name="search" value="{{ request('search') }}" 
-                                           placeholder="Search by customer name, NIK, invoice number, points, or date (YYYY-MM-DD)" 
-                                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                    <input type="text" name="search" value="{{ request('search') }}"
+                                        placeholder="Search by customer name, NIK, invoice number, points, or date (YYYY-MM-DD)"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
                                 </div>
                                 <div class="flex-1 min-w-0">
-                                    <input type="text" name="phone_number" value="{{ request('phone_number') }}" 
-                                           placeholder="Search by phone number" 
-                                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                    <input type="text" name="phone_number" value="{{ request('phone_number') }}"
+                                        placeholder="Search by phone number"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
                                 </div>
                                 <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                                     Search
                                 </button>
                                 @if(request('search') || request('phone_number'))
-                                    <a href="{{ route('loyalty.log') }}" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                                        Clear
-                                    </a>
+                                <a href="{{ route('loyalty.log') }}" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                                    Clear
+                                </a>
                                 @endif
                             </form>
                         </div>
@@ -199,15 +197,15 @@
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Created Date
                                         </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Order
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Type
-                                    </th>
-                                    @if(auth()->user()->is_admin || auth()->user()->is_manager)
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Customer
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Order
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Type
+                                        </th>
+                                        @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Customer
                                         </th>
                                         @endif
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -227,15 +225,15 @@
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             {{ $history->created_at->format('d M Y H:i') }}
                                         </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                        <div>
-                                            <div class="font-medium">{{ $history->order->invoice_number ?? '-' }}</div>
-                                            <div class="text-gray-500">{{ $history->order->po_number ?? '-' }}</div>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                        {{ $history->type === 'redeem' ? 'Redeem' : 'Plus Point' }}
-                                    </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            <div>
+                                                <div class="font-medium">{{ $history->order->invoice_number ?? '-' }}</div>
+                                                <div class="text-gray-500">{{ $history->order->po_number ?? '-' }}</div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            {{ $history->type === 'redeem' ? 'Redeem' : 'Plus Point' }}
+                                        </td>
                                         @if(auth()->user()->is_admin || auth()->user()->is_manager)
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             <div>
@@ -245,7 +243,7 @@
                                         </td>
                                         @endif
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                        Rp {{ $history->order ? number_format($history->order->total_amount, 0, ',', '.') : '-' }}
+                                            Rp {{ $history->order ? number_format($history->order->total_amount, 0, ',', '.') : '-' }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-600">
                                             {{ number_format($history->points_earned, 1) }} points
@@ -275,43 +273,43 @@
                         <div class="mb-8">
                             <h3 class="text-xl font-semibold mb-4">Pending Redeem Requests</h3>
                             @if(isset($redeemRequests) && $redeemRequests->isNotEmpty())
-                                <div class="grid grid-cols-1 gap-4">
-                                    @foreach($redeemRequests as $req)
-                                        <div class="p-4 border rounded-md bg-white flex items-center justify-between">
-                                            <div>
-                                                <div class="font-medium">{{ $req->user->name }} — {{ $req->redeemItem->name }} (x{{ $req->quantity }})</div>
-                                                <div class="text-sm text-gray-500">Points: {{ number_format($req->points_used, 0, ',', '.') }} — Submitted: {{ $req->created_at->format('d M Y H:i') }}</div>
-                                                @php
-                                                    $s = strtolower($req->status);
-                                                    if ($s === 'pending') {
-                                                        $c = 'bg-yellow-100 text-yellow-800';
-                                                    } elseif ($s === 'redeemed') {
-                                                        $c = 'bg-green-100 text-green-800';
-                                                    } elseif ($s === 'rejected') {
-                                                        $c = 'bg-red-100 text-red-800';
-                                                    } elseif ($s === 'cancelled') {
-                                                        $c = 'bg-gray-100 text-gray-800';
-                                                    } else {
-                                                        $c = 'bg-gray-100 text-gray-800';
-                                                    }
-                                                @endphp
-                                                <div class="mt-1"><span class="px-2 py-1 rounded text-sm font-semibold {{ $c }}">{{ ucfirst($req->status) }}</span></div>
-                                            </div>
-                                            <div class="flex items-center gap-2">
-                                                <form method="POST" action="{{ route('loyalty.redeem.approve', $req->id) }}">
-                                                    @csrf
-                                                    <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded-md">Approve</button>
-                                                </form>
-                                                <form method="POST" action="{{ route('loyalty.redeem.reject', $req->id) }}">
-                                                    @csrf
-                                                    <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded-md">Reject</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    @endforeach
+                            <div class="grid grid-cols-1 gap-4">
+                                @foreach($redeemRequests as $req)
+                                <div class="p-4 border rounded-md bg-white flex items-center justify-between">
+                                    <div>
+                                        <div class="font-medium">{{ $req->user->name }} — {{ $req->redeemItem->name }} (x{{ $req->quantity }})</div>
+                                        <div class="text-sm text-gray-500">Points: {{ number_format($req->points_used, 0, ',', '.') }} — Submitted: {{ $req->created_at->format('d M Y H:i') }}</div>
+                                        @php
+                                        $s = strtolower($req->status);
+                                        if ($s === 'pending') {
+                                        $c = 'bg-yellow-100 text-yellow-800';
+                                        } elseif ($s === 'redeemed') {
+                                        $c = 'bg-green-100 text-green-800';
+                                        } elseif ($s === 'rejected') {
+                                        $c = 'bg-red-100 text-red-800';
+                                        } elseif ($s === 'cancelled') {
+                                        $c = 'bg-gray-100 text-gray-800';
+                                        } else {
+                                        $c = 'bg-gray-100 text-gray-800';
+                                        }
+                                        @endphp
+                                        <div class="mt-1"><span class="px-2 py-1 rounded text-sm font-semibold {{ $c }}">{{ ucfirst($req->status) }}</span></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <form method="POST" action="{{ route('loyalty.redeem.approve', $req->id) }}">
+                                            @csrf
+                                            <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded-md">Approve</button>
+                                        </form>
+                                        <form method="POST" action="{{ route('loyalty.redeem.reject', $req->id) }}">
+                                            @csrf
+                                            <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded-md">Reject</button>
+                                        </form>
+                                    </div>
                                 </div>
+                                @endforeach
+                            </div>
                             @else
-                                <p class="text-gray-500">No pending redeem requests.</p>
+                            <p class="text-gray-500">No pending redeem requests.</p>
                             @endif
                         </div>
                         @endif
@@ -336,6 +334,9 @@
                                         </th>
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Status
+                                        </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Unique Code
                                         </th>
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Processed Date
@@ -367,20 +368,23 @@
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                             @php
-                                                $s = strtolower($redeem->status);
-                                                if ($s === 'pending') {
-                                                    $c = 'bg-yellow-100 text-yellow-800';
-                                                } elseif ($s === 'redeemed') {
-                                                    $c = 'bg-green-100 text-green-800';
-                                                } elseif ($s === 'rejected') {
-                                                    $c = 'bg-red-100 text-red-800';
-                                                } elseif ($s === 'cancelled') {
-                                                    $c = 'bg-gray-100 text-gray-800';
-                                                } else {
-                                                    $c = 'bg-gray-100 text-gray-800';
-                                                }
+                                            $s = strtolower($redeem->status);
+                                            if ($s === 'pending') {
+                                            $c = 'bg-yellow-100 text-yellow-800';
+                                            } elseif ($s === 'redeemed') {
+                                            $c = 'bg-green-100 text-green-800';
+                                            } elseif ($s === 'rejected') {
+                                            $c = 'bg-red-100 text-red-800';
+                                            } elseif ($s === 'cancelled') {
+                                            $c = 'bg-gray-100 text-gray-800';
+                                            } else {
+                                            $c = 'bg-gray-100 text-gray-800';
+                                            }
                                             @endphp
                                             <span class="px-2 py-1 rounded text-sm font-semibold {{ $c }}">{{ ucfirst($redeem->status) }}</span>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            {{ $redeem->redeem_code ?? '-' }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             {{ $redeem->processed_at ? $redeem->processed_at->format('d M Y H:i') : '-' }}

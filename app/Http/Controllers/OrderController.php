@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Order;
 use App\Models\LoyaltyHistory;
 use Illuminate\Support\Carbon;
@@ -12,12 +13,12 @@ class OrderController extends Controller
     private function getFilteredLoyaltyPoints($userId = null)
     {
         $query = LoyaltyHistory::where(function ($query) {
-                            $query->where('expired_at', '>', now())
-                                ->orWhereNull('expired_at');
-                        });
+            $query->where('expired_at', '>', now())
+                ->orWhereNull('expired_at');
+        });
         $user = auth()->user();
 
-        if (!$user->is_admin AND !$user->is_manager) {
+        if (!$user->is_admin and !$user->is_manager) {
             $query->where('user_id', $userId);
         }
 
@@ -37,26 +38,32 @@ class OrderController extends Controller
                 $query->where(function ($q) use ($search) {
                     // Search in invoice number
                     $q->where('invoice_number', 'like', '%' . $search . '%')
-                    // Search in PO number
-                    ->orWhere('po_number', 'like', '%' . $search . '%')
-                    // Search in total amount
-                    ->orWhere('total_amount', 'like', '%' . $search . '%')
-                    // Search in status
-                    ->orWhere('status', 'like', '%' . $search . '%')
-                    // Search in customer name
-                    ->orWhereHas('user', function ($userQuery) use ($search) {
-                        $userQuery->where('name', 'like', '%' . $search . '%')
-                                 ->orWhere('NIK', 'like', '%' . $search . '%');
-                    })
-                    // Search in created date (format: Y-m-d)
-                    ->orWhereDate('created_at', 'like', '%' . $search . '%')
-                    ->orWhereDate('order_date', 'like', '%' . $search . '%');
+                        // Search in PO number
+                        ->orWhere('po_number', 'like', '%' . $search . '%')
+                        // Search in total amount
+                        ->orWhere('total_amount', 'like', '%' . $search . '%')
+                        // Search in status
+                        ->orWhere('status', 'like', '%' . $search . '%')
+                        // Search in customer name
+                        ->orWhereHas('user', function ($userQuery) use ($search) {
+                            $userQuery->where('name', 'like', '%' . $search . '%')
+                                ->orWhere('NIK', 'like', '%' . $search . '%');
+                        })
+                        // Search in created date (format: Y-m-d)
+                        ->orWhereDate('created_at', 'like', '%' . $search . '%')
+                        ->orWhereDate('order_date', 'like', '%' . $search . '%');
                 });
             }
 
             $orders = $query->paginate(10)->appends($request->query());
             $orderAmount = Order::sum('total_amount');
             $loyaltyPoints = $this->getFilteredLoyaltyPoints();
+
+            // For admin create modal: list of non-admin, non-manager users
+            $users = [];
+            if ($user->is_admin) {
+                $users = \App\Models\User::where('is_admin', false)->where('is_manager', false)->get();
+            }
         } else {
             // Customer hanya melihat order miliknya
             $query = Order::where('user_id', $user->id);
@@ -67,24 +74,26 @@ class OrderController extends Controller
                 $query->where(function ($q) use ($search) {
                     // Search in invoice number
                     $q->where('invoice_number', 'like', '%' . $search . '%')
-                    // Search in PO number
-                    ->orWhere('po_number', 'like', '%' . $search . '%')
-                    // Search in total amount
-                    ->orWhere('total_amount', 'like', '%' . $search . '%')
-                    // Search in status
-                    ->orWhere('status', 'like', '%' . $search . '%')
-                    // Search in created date (format: Y-m-d)
-                    ->orWhereDate('created_at', 'like', '%' . $search . '%')
-                    ->orWhereDate('order_date', 'like', '%' . $search . '%');
+                        // Search in PO number
+                        ->orWhere('po_number', 'like', '%' . $search . '%')
+                        // Search in total amount
+                        ->orWhere('total_amount', 'like', '%' . $search . '%')
+                        // Search in status
+                        ->orWhere('status', 'like', '%' . $search . '%')
+                        // Search in created date (format: Y-m-d)
+                        ->orWhereDate('created_at', 'like', '%' . $search . '%')
+                        ->orWhereDate('order_date', 'like', '%' . $search . '%');
                 });
             }
 
             $orders = $query->paginate(10)->appends($request->query());
             $orderAmount = Order::where('user_id', $user->id)->sum('total_amount');
             $loyaltyPoints = $this->getFilteredLoyaltyPoints($user->id);
+
+            $users = [];
         }
 
-        return view('orders-history', compact('orders', 'orderAmount', 'loyaltyPoints'));
+        return view('orders-history', compact('orders', 'orderAmount', 'loyaltyPoints', 'users'));
     }
 
     public function create()
@@ -107,6 +116,7 @@ class OrderController extends Controller
             'total_amount' => 'required|numeric|min:0',
             'order_date' => 'required|date',
             'user_id' => 'sometimes|exists:users,id',
+            'description' => 'nullable|string',
         ]);
 
         $userId = auth()->id();
@@ -126,6 +136,7 @@ class OrderController extends Controller
             'order_date' => $request->order_date,
             'user_id' => $userId,
             'status' => $status,
+            'description' => $request->description,
         ]);
 
         // Generate loyalty only for confirmed orders
@@ -187,26 +198,23 @@ class OrderController extends Controller
 
     public function update(Request $request, Order $order)
     {
-        // Only admin (not manager) can update orders
-        if (!auth()->user()->is_admin || auth()->user()->is_manager) {
+        // Only admin or manager can update orders
+        if (!auth()->user()->is_admin && !auth()->user()->is_manager) {
             abort(403, 'Unauthorized');
         }
 
         $request->validate([
-            'invoice_number' => 'required|string|max:255',
             'po_number' => 'nullable|string|max:255',
             'total_amount' => 'required|numeric|min:0',
             'order_date' => 'required|date',
-            'user_id' => 'required|exists:users,id',
+            'description' => 'nullable|string',
         ]);
 
         $order->update([
-            'invoice_number' => $request->invoice_number,
             'po_number' => $request->po_number,
             'total_amount' => $request->total_amount,
             'order_date' => $request->order_date,
-            'user_id' => $request->user_id,
-            'status' => 'draft',
+            'description' => $request->description,
         ]);
 
         return redirect()->route('orders-history')->with('success', 'Order updated successfully.');

@@ -12,6 +12,7 @@ class RedeemHistory extends Model
         'quantity',
         'points_used',
         'status',
+        'redeem_code',
         'notes',
         'processed_at',
     ];

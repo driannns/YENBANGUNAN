@@ -1,21 +1,35 @@
 <x-app-layout>
-    <a href="https://wa.link/3v66z0" 
-    target="_blank"
-    class="fixed whatsapp-pulse whatsapp-bounce bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:scale-110 transition-all duration-300 z-50" aria-label="WhatsApp">
+    <a href="https://wa.link/3v66z0"
+        target="_blank"
+        class="fixed whatsapp-pulse whatsapp-bounce bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:scale-110 transition-all duration-300 z-50" aria-label="WhatsApp">
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
         </svg>
     </a>
     <style>
         /* Bouncing animation for WhatsApp floating button */
         .whatsapp-bounce {
-            animation: whatsappBounce 2s cubic-bezier(.28,.84,.42,1) infinite;
+            animation: whatsappBounce 2s cubic-bezier(.28, .84, .42, 1) infinite;
             transform-origin: center;
         }
+
         @keyframes whatsappBounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-20px); }
-            60% { transform: translateY(-1px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-1px);
+            }
         }
     </style>
     <div class="w-full bg-[#C0392B] text-white py-3 overflow-hidden shadow-lg fixed top-0 left-0 z-50">
@@ -25,18 +39,18 @@
                 <div class="uppercase">Promo</div>
                 <div id="countdown" class="text-xs font-normal">00D 00H 00M 00S</div>
             </div>
-            
+
             <!-- Scrolling Text Container -->
             <div class="flex-1 overflow-hidden relative ml-4">
                 <div id="runningText" class="whitespace-nowrap inline-block" style="position: relative;"></div>
             </div>
         </div>
     </div>
-        
+
     <div class="w-full z-40 top-0 start-0" style="margin-top: 3.7rem">
         <nav x-data="{ open: false }" class="bg-black text-white">
             <!-- Primary Navigation Menu -->
-                <div class="mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-16">
                     <div class="flex justify-between">
                         <!-- Logo -->
@@ -77,7 +91,7 @@
                                         </div>
                                     </button>
                                 </x-slot>
-                                
+
                                 <x-slot name="content">
                                     <x-dropdown-link :href="route('profile.edit')">
                                         {{ __('Profile') }}
@@ -93,13 +107,13 @@
                                         {{ __('Loyalty Log') }}
                                     </x-dropdown-link>
                                     @endif
-                                    
+
                                     <!-- Authentication -->
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
-                                        
+
                                         <x-dropdown-link :href="route('logout')"
-                                        onclick="event.preventDefault();
+                                            onclick="event.preventDefault();
                                                             this.closest('form').submit();">
                                             {{ __('Log Out') }}
                                         </x-dropdown-link>
@@ -144,8 +158,8 @@
                         {{ __('Blog') }}
                     </x-responsive-nav-link>
                     <hr>
-                    <x-responsive-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
-                        {{ __('Kebutuhan Project') }}
+                    <x-responsive-nav-link href="https://wa.me/6282123269622" target="_blank" :active="request()->routeIs('blog')">
+                        {{ __('Kebutuhan Projek') }}
                     </x-responsive-nav-link>
                 </div>
 
@@ -167,7 +181,7 @@
                             @csrf
 
                             <x-responsive-nav-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                                onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-responsive-nav-link>
@@ -179,40 +193,83 @@
         </nav>
     </div>
 
-    <!-- Redeem Points Section (merged from redeem-points.blade.php) -->
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <div class="flex justify-between items-center">
-                        <h2 class="text-2xl font-bold text-gray-900">Redeem Points</h2>
-                        <div class="text-right">
-                            <p class="text-sm text-gray-600">Your Current Points</p>
-                            <p class="text-2xl font-bold text-green-600">{{ number_format($loyaltyPoints ?? 0, 0, ',', '.') }}</p>
-                        </div>
-                    </div>
+    <!-- Redeem Points Hero -->
+    <div class="bg-slate-900 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-orange-300">Loyalty Program</p>
+                    <h1 class="mt-1 text-3xl sm:text-4xl font-extrabold text-white drop-shadow-sm">Redeem Points</h1>
+                    <p class="mt-2 text-sm sm:text-base text-slate-200 max-w-xl">
+                        Kumpulkan poin dari setiap transaksi, lalu tukarkan dengan berbagai produk pilihan di bawah ini.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-orange-500 to-[#e05534] rounded-2xl px-6 py-4 flex flex-col items-start sm:items-end shadow-lg">
+                    <p class="text-xs uppercase tracking-wide text-orange-100">Your Current Points</p>
+                    <p class="mt-1 text-3xl font-extrabold text-white">
+                        {{ number_format($loyaltyPoints ?? 0, 0, ',', '.') }}
+                    </p>
+                    <p class="mt-1 text-xs text-orange-100">Gunakan poin sebelum periode promo berakhir.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Promotion Program Section -->
-    <div class="container mx-auto px-4 py-8">
-        <div class="flex items-center justify-between mb-6">
-            <h1 class="text-2xl font-extrabold">Produk yang Bisa Ditukar dengan Loyalty Points</h1>
-            @if(auth()->user()->is_manager)
-            <button
-                type="button"
-                onclick="openModal('createRedeemItemModal','createRedeemItemContent')"
-                class="bg-[#e05534] text-white px-4 py-2 rounded-full text-xs font-bold">
-                Create
-            </button>
+
+    <!-- Tabs Wrapper: Promotion Program / Your Redeem Request -->
+    <div x-data="{ tab: 'promotion' }">
+        <div class="container mx-auto px-4 pt-6 space-y-3">
+            @if($errors->has('end_date'))
+            <div
+                x-data="{ show: true }"
+                x-init="setTimeout(() => show = false, 3000)"
+                x-show="show"
+                x-transition.opacity
+                class="rounded-md bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
+                {{ $errors->first('end_date') }}
+            </div>
             @endif
+            <div class="flex flex-wrap gap-2">
+                <button type="button" class="px-4 py-2 rounded-md text-sm font-semibold"
+                    @click="tab = 'promotion'"
+                    :class="tab === 'promotion' ? 'bg-[#e05534] text-white' : 'bg-gray-200 text-gray-700'">
+                    Promotion Program
+                </button>
+                @if(!auth()->user()->is_admin && !auth()->user()->is_manager)
+                <button type="button" class="px-4 py-2 rounded-md text-sm font-semibold"
+                    @click="tab = 'redeem'"
+                    :class="tab === 'redeem' ? 'bg-[#e05534] text-white' : 'bg-gray-200 text-gray-700'">
+                    Your Redeem Request
+                </button>
+                <button type="button" class="px-4 py-2 rounded-md text-sm font-semibold"
+                    @click="tab = 'history'"
+                    :class="tab === 'history' ? 'bg-[#e05534] text-white' : 'bg-gray-200 text-gray-700'">
+                    Loyalty Log
+                </button>
+                @endif
+            </div>
         </div>
 
-        @if(isset($redeemItems) && $redeemItems->isNotEmpty())
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            @foreach($redeemItems as $item)
-            @php
+        <!-- Promotion Program Section -->
+        <div class="container mx-auto px-4 py-8" x-show="tab === 'promotion'" x-cloak>
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900">Produk yang Bisa Ditukar</h2>
+                    <p class="text-sm text-gray-500">Pilih produk, cek periode berlaku, lalu tukarkan poinmu.</p>
+                </div>
+                @if(auth()->user()->is_manager)
+                <button
+                    type="button"
+                    onclick="openModal('createRedeemItemModal','createRedeemItemContent')"
+                    class="self-start sm:self-auto bg-white border border-[#e05534] text-[#e05534] px-4 py-2 rounded-full text-xs font-bold shadow-sm hover:bg-[#e05534] hover:text-white transition">
+                    + Create Item
+                </button>
+                @endif
+            </div>
+
+            @if(isset($redeemItems) && $redeemItems->isNotEmpty())
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                @foreach($redeemItems as $item)
+                @php
                 $modalId = 'modal-' . $item->id;
                 $contentId = 'modalContent-' . $item->id;
                 $qtyId = 'qty-' . $item->id;
@@ -221,229 +278,307 @@
                 $editContentId = 'editRedeemItemContent-' . $item->id;
                 $deleteModalId = 'deleteRedeemItemModal-' . $item->id;
                 $deleteContentId = 'deleteRedeemItemContent-' . $item->id;
-            @endphp
 
-            <div class="bg-white border rounded-lg shadow-sm p-4 flex flex-col relative">
-                <div class="h-40 bg-gray-100 rounded-md mb-4 flex items-center justify-center">
-                    @if($item->image_url)
-                        <img src="{{ $item->image_url }}" alt="{{ $item->name }}" class="max-h-36 object-contain"/>
-                    @else
+                $statusLabel = $item->status_label ?? 'Active';
+                $isCurrentlyActive = $item->is_currently_active ?? true;
+                $isRedeemable = $item->is_active && $isCurrentlyActive;
+
+                $statusClass = match ($statusLabel) {
+                'Active' => 'bg-green-100 text-green-800',
+                'Expired' => 'bg-red-100 text-red-800',
+                'Inactive' => 'bg-gray-100 text-gray-800',
+                default => 'bg-gray-100 text-gray-800',
+                };
+
+                $start = $item->start_date;
+                $end = $item->end_date;
+
+                if ($start && $end) {
+                // Keduanya diisi: tunjukkan dari kapan sampai kapan
+                $periodLabel = 'Berlaku ' . $start->format('d M Y') . ' - ' . $end->format('d M Y');
+                } elseif ($start && !$end) {
+                // Hanya start date: mulai kapan, tanpa batas akhir
+                $periodLabel = 'Berlaku mulai ' . $start->format('d M Y') . ' (tanpa batas akhir)';
+                } elseif (!$start && $end) {
+                // Hanya end date: berakhir kapan
+                $periodLabel = 'Berlaku hingga ' . $end->format('d M Y');
+                } else {
+                // Tidak ada periode khusus
+                $periodLabel = 'Berlaku tanpa batas waktu';
+                }
+                @endphp
+
+                <div class="bg-white border rounded-lg shadow-sm p-4 flex flex-col relative">
+                    <div class="h-40 bg-gray-100 rounded-md mb-4 flex items-center justify-center">
+                        @if($item->image_url)
+                        <img src="{{ $item->image_url }}" alt="{{ $item->name }}" class="max-h-36 object-contain" />
+                        @else
                         <div class="text-gray-500 text-sm">Redeem Item</div>
-                    @endif
-                </div>
-
-                <div class="flex-1">
-                    <h2 class="font-semibold text-lg">{{ $item->name }}</h2>
-                    <p class="text-sm text-gray-500 mt-2">
-                        {{ $item->description ?? 'Tukarkan poin sekarang.' }}
-                    </p>
-                </div>
-
-                <div class="mt-4 flex items-center justify-between">
-                    <div class="text-sm text-gray-700 font-bold">
-                        {{ number_format($item->points_required) }} Points
-                    </div>
-
-                    <div class="flex items-center gap-2">
-                        @if(auth()->user()->is_manager)
-                        <button type="button" onclick="openModal('{{ $editModalId }}','{{ $editContentId }}')" class="text-blue-600 hover:text-blue-800" aria-label="Edit">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/>
-                            </svg>
-                        </button>
-                        <button type="button" onclick="openModal('{{ $deleteModalId }}','{{ $deleteContentId }}')" class="text-red-600 hover:text-red-800" aria-label="Delete">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M8 6V4h8v2m-1 0v14a2 2 0 01-2 2H9a2 2 0 01-2-2V6h10z"/>
-                            </svg>
-                        </button>
                         @endif
-                        <button
-                            type="button"
-                            onclick="openModal('{{ $modalId }}','{{ $contentId }}')"
-                            class="bg-[#e05534] text-white px-4 py-2 rounded-full text-xs font-bold">
-                            Tukar
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MODAL -->
-            <div id="{{ $modalId }}"
-                class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm">
-
-                <form action="{{ route('loyalty.redeem.process') }}" method="post" id="{{ $contentId }}"
-                    class="bg-white w-full max-w-md mx-4 rounded-2xl shadow-xl
-                        transform scale-95 opacity-0 transition-all duration-300">
-                    @csrf
-
-                    <!-- Header -->
-                    <div class="flex justify-between items-center px-6 py-4 border-b">
-                        <h2 class="font-semibold text-lg">
-                            Redeem {{ $item->name }}
-                        </h2>
-                        <button onclick="closeModal('{{ $modalId }}','{{ $contentId }}')">✕</button>
+                        <span class="absolute top-3 left-3 px-2 py-1 rounded-full text-xs font-semibold {{ $statusClass }}">
+                            {{ $statusLabel }}
+                        </span>
                     </div>
 
-                    <!-- Body -->
-                    <div class="px-6 py-4 space-y-4">
-                        <input type="hidden" name="redeem_item_id" value="{{ $item->id }}">
-                        <div class="flex justify-center">
-                            @if($item->image_url)
-                                <img src="{{ $item->image_url }}" class="h-32 object-contain rounded-md bg-gray-100 p-2">
+                    <div class="flex-1">
+                        <h2 class="font-semibold text-lg">{{ $item->name }}</h2>
+                        <p class="text-sm text-gray-500 mt-2">
+                            {{ $item->description ?? 'Tukarkan poin sekarang.' }}
+                        </p>
+                        <p class="text-xs text-gray-500 mt-1">{{ $periodLabel }}</p>
+                    </div>
+
+                    <div class="mt-4 flex items-center justify-between">
+                        <div class="text-xs text-gray-700">
+                            <span class="font-semibold text-gray-900">{{ number_format($item->points_required) }} Poin</span>
+                            <span class="ml-1">/ {{ $item->unit ?? 'pcs' }}</span>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            @if(auth()->user()->is_manager)
+                            <button type="button" onclick="openModal('{{ $editModalId }}','{{ $editContentId }}')" class="text-blue-600 hover:text-blue-800" aria-label="Edit">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4 12.5-12.5z" />
+                                </svg>
+                            </button>
+                            <button type="button" onclick="openModal('{{ $deleteModalId }}','{{ $deleteContentId }}')" class="text-red-600 hover:text-red-800" aria-label="Delete">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M8 6V4h8v2m-1 0v14a2 2 0 01-2 2H9a2 2 0 01-2-2V6h10z" />
+                                </svg>
+                            </button>
+                            @endif
+                            @if($isRedeemable)
+                            <button
+                                type="button"
+                                onclick="openModal('{{ $modalId }}','{{ $contentId }}')"
+                                class="bg-[#e05534] text-white px-4 py-2 rounded-full text-xs font-bold">
+                                Tukar
+                            </button>
                             @else
-                                <div class="h-32 w-full rounded-md bg-gray-100 flex items-center justify-center text-gray-500 text-sm">No Image</div>
+                            <button
+                                type="button"
+                                class="bg-gray-200 text-gray-500 px-4 py-2 rounded-full text-xs font-semibold cursor-not-allowed"
+                                disabled>
+                                {{ $statusLabel === 'Expired' ? 'Expired' : 'Tidak Tersedia' }}
+                            </button>
                             @endif
                         </div>
-                        <!-- Qty -->
-                        <div>
-                            <label class="text-sm font-medium text-gray-700">Jumlah (Qty)</label>
-                            <input
-                                id="{{ $qtyId }}"
-                                name="quantity"
-                                type="number"
-                                min="1"
-                                value="1"
-                                oninput="calculatePoint({{ $item->points_required }}, '{{ $qtyId }}', '{{ $totalPointId }}')"
-                                class="w-full mt-1 border rounded-lg px-3 py-2 focus:ring focus:ring-orange-200">
+                    </div>
+                </div>
+
+                <!-- MODAL -->
+                <div id="{{ $modalId }}"
+                    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm">
+
+                    <form action="{{ route('loyalty.redeem.process') }}" method="post" id="{{ $contentId }}"
+                        class="bg-white w-full max-w-md mx-4 rounded-2xl shadow-xl
+                        transform scale-95 opacity-0 transition-all duration-300">
+                        @csrf
+
+                        <!-- Header -->
+                        <div class="flex justify-between items-center px-6 py-4 border-b">
+                            <h2 class="font-semibold text-lg">
+                                Redeem {{ $item->name }}
+                            </h2>
+                            <button onclick="closeModal('{{ $modalId }}','{{ $contentId }}')">✕</button>
                         </div>
 
-                        <!-- Total Point -->
-                        <div class="bg-gray-50 rounded-lg p-3 flex justify-between text-sm">
-                            <span>Total Point</span>
-                            <span class="font-bold text-orange-600">
-                                <span id="{{ $totalPointId }}">
-                                    {{ number_format($item->points_required) }}
-                                </span> Points
-                            </span>
-                        </div>
-                    </div>
+                        <!-- Body -->
+                        <div class="px-6 py-4 space-y-4">
+                            <input type="hidden" name="redeem_item_id" value="{{ $item->id }}">
+                            <div class="flex justify-center">
+                                @if($item->image_url)
+                                <img src="{{ $item->image_url }}" class="h-32 object-contain rounded-md bg-gray-100 p-2">
+                                @else
+                                <div class="h-32 w-full rounded-md bg-gray-100 flex items-center justify-center text-gray-500 text-sm">No Image</div>
+                                @endif
+                            </div>
+                            <!-- Qty -->
+                            <div>
+                                <label class="text-sm font-medium text-gray-700">Jumlah (Qty)</label>
+                                <input
+                                    id="{{ $qtyId }}"
+                                    name="quantity"
+                                    type="number"
+                                    min="1"
+                                    value="1"
+                                    oninput="calculatePoint({{ $item->points_required }}, '{{ $qtyId }}', '{{ $totalPointId }}')"
+                                    class="w-full mt-1 border rounded-lg px-3 py-2 focus:ring focus:ring-orange-200">
+                            </div>
 
-                    <!-- Footer -->
-                    <div class="flex justify-end gap-2 px-6 py-4 border-t">
-                        <button
-                            onclick="closeModal('{{ $modalId }}','{{ $contentId }}')"
-                            class="px-4 py-2 border rounded-lg">
-                            Batal
-                        </button>
-                        <button
-                            class="px-4 py-2 bg-[#e05534] text-white rounded-lg">
-                            Redeem
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            @if(auth()->user()->is_manager)
-            <!-- EDIT MODAL -->
-            <div id="{{ $editModalId }}"
-                class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm">
-                <form method="POST" action="{{ route('redeem-items.update', $item) }}" id="{{ $editContentId }}" enctype="multipart/form-data"
-                    class="bg-white w-full max-w-md mx-4 rounded-2xl shadow-xl transform scale-95 opacity-0 transition-all duration-300">
-                    @csrf
-                    @method('PUT')
-                    <div class="flex justify-between items-center px-6 py-4 border-b">
-                        <h2 class="font-semibold text-lg">Edit Redeem Item</h2>
-                        <button type="button" onclick="closeModal('{{ $editModalId }}','{{ $editContentId }}')">✕</button>
-                    </div>
-                    <div class="px-6 py-4 space-y-4">
-                        <div class="flex justify-center">
-                            <img id="editImagePreview-{{ $item->id }}" src="{{ $item->image_url ?? '' }}" class="h-32 object-contain rounded-md bg-gray-100 p-2 {{ $item->image_url ? '' : 'hidden' }}">
-                            <div id="editImagePlaceholder-{{ $item->id }}" class="h-32 w-full rounded-md bg-gray-100 flex items-center justify-center text-gray-500 text-sm {{ $item->image_url ? 'hidden' : '' }}">No Image</div>
+                            <!-- Total Point -->
+                            <div class="bg-gray-50 rounded-lg p-3 flex justify-between text-sm">
+                                <span>Total Point</span>
+                                <span class="font-bold text-orange-600">
+                                    <span id="{{ $totalPointId }}">
+                                        {{ number_format($item->points_required) }}
+                                    </span> Points
+                                </span>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-4">
-                            <label class="flex items-center gap-2 text-sm text-gray-700">
-                                <input type="radio" name="image_source" value="keep" checked
+
+                        <!-- Footer -->
+                        <div class="flex justify-end gap-2 px-6 py-4 border-t">
+                            <button
+                                onclick="closeModal('{{ $modalId }}','{{ $contentId }}')"
+                                class="px-4 py-2 border rounded-lg">
+                                Batal
+                            </button>
+                            <button
+                                class="px-4 py-2 bg-[#e05534] text-white rounded-lg">
+                                Redeem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                @if(auth()->user()->is_manager)
+                <!-- EDIT MODAL -->
+                <div id="{{ $editModalId }}"
+                    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm">
+                    <form method="POST" action="{{ route('redeem-items.update', $item) }}" id="{{ $editContentId }}" enctype="multipart/form-data"
+                        class="bg-white w-full max-w-md mx-4 rounded-2xl shadow-xl transform scale-95 opacity-0 transition-all duration-300">
+                        @csrf
+                        @method('PUT')
+                        <div class="flex justify-between items-center px-6 py-4 border-b">
+                            <h2 class="font-semibold text-lg">Edit Redeem Item</h2>
+                            <button type="button" onclick="closeModal('{{ $editModalId }}','{{ $editContentId }}')">✕</button>
+                        </div>
+                        <div class="px-6 py-4 space-y-4">
+                            <div class="flex justify-center">
+                                <img id="editImagePreview-{{ $item->id }}" src="{{ $item->image_url ?? '' }}" class="h-32 object-contain rounded-md bg-gray-100 p-2 {{ $item->image_url ? '' : 'hidden' }}">
+                                <div id="editImagePlaceholder-{{ $item->id }}" class="h-32 w-full rounded-md bg-gray-100 flex items-center justify-center text-gray-500 text-sm {{ $item->image_url ? 'hidden' : '' }}">No Image</div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <label class="flex items-center gap-2 text-sm text-gray-700">
+                                    <input type="radio" name="image_source" value="keep" checked
                                         onchange="setImageSource('edit-{{ $item->id }}','keep','{{ $editContentId }}')">
-                                Keep
-                            </label>
-                            <label class="flex items-center gap-2 text-sm text-gray-700">
-                                <input type="radio" name="image_source" value="url"
+                                    Keep
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-700">
+                                    <input type="radio" name="image_source" value="url"
                                         onchange="setImageSource('edit-{{ $item->id }}','url','{{ $editContentId }}')">
-                                URL
-                            </label>
-                            <label class="flex items-center gap-2 text-sm text-gray-700">
-                                <input type="radio" name="image_source" value="file"
+                                    URL
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-700">
+                                    <input type="radio" name="image_source" value="file"
                                         onchange="setImageSource('edit-{{ $item->id }}','file','{{ $editContentId }}')">
-                                File
-                            </label>
-                        </div>
-                        <div>
-                            <label class="text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" name="name" value="{{ $item->name }}" class="w-full mt-1 border rounded-lg px-3 py-2" required>
-                        </div>
-                        <div id="edit-{{ $item->id }}-url" class="hidden">
-                            <label class="text-sm font-medium text-gray-700">Image URL</label>
-                            <input type="text" name="image_url" value="{{ $item->image_url }}" class="w-full mt-1 border rounded-lg px-3 py-2"
+                                    File
+                                </label>
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium text-gray-700">Name</label>
+                                <input type="text" name="name" value="{{ $item->name }}" class="w-full mt-1 border rounded-lg px-3 py-2" required>
+                            </div>
+                            <div id="edit-{{ $item->id }}-url" class="hidden">
+                                <label class="text-sm font-medium text-gray-700">Image URL</label>
+                                <input type="text" name="image_url" value="{{ $item->image_url }}" class="w-full mt-1 border rounded-lg px-3 py-2"
                                     oninput="setImageSource('edit-{{ $item->id }}','url','{{ $editContentId }}'); updateImagePreviewUrl(this.value,'editImagePreview-{{ $item->id }}','editImagePlaceholder-{{ $item->id }}')">
-                        </div>
-                        <div id="edit-{{ $item->id }}-file" class="hidden">
-                            <label class="text-sm font-medium text-gray-700">Image File</label>
-                            <input type="file" name="image_file" accept=".jpg,.jpeg,.png,image/jpeg,image/png" class="w-full mt-1 border rounded-lg px-3 py-2"
+                            </div>
+                            <div id="edit-{{ $item->id }}-file" class="hidden">
+                                <label class="text-sm font-medium text-gray-700">Image File</label>
+                                <input type="file" name="image_file" accept=".jpg,.jpeg,.png,image/jpeg,image/png" class="w-full mt-1 border rounded-lg px-3 py-2"
                                     onchange="setImageSource('edit-{{ $item->id }}','file','{{ $editContentId }}'); updateImagePreviewFile(this,'editImagePreview-{{ $item->id }}','editImagePlaceholder-{{ $item->id }}')">
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium text-gray-700">Description</label>
+                                <input type="text" name="description" value="{{ $item->description }}" class="w-full mt-1 border rounded-lg px-3 py-2">
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium text-gray-700">Points Required</label>
+                                <input type="number" name="points_required" min="1" value="{{ $item->points_required }}" class="w-full mt-1 border rounded-lg px-3 py-2" required>
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium text-gray-700">Unit</label>
+                                <input type="text" name="unit" value="{{ $item->unit }}" class="w-full mt-1 border rounded-lg px-3 py-2" required>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="text-sm font-medium text-gray-700">Start Date (Opsional)</label>
+                                    <input type="date" name="start_date" value="{{ old('start_date', $item->start_date ? $item->start_date->format('Y-m-d') : '') }}" class="w-full mt-1 border rounded-lg px-3 py-2 @error('start_date') border-red-500 @enderror">
+                                    @error('start_date')
+                                    <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <div>
+                                    <label class="text-sm font-medium text-gray-700">End Date (Opsional)</label>
+                                    <input type="date" name="end_date" value="{{ old('end_date', $item->end_date ? $item->end_date->format('Y-m-d') : '') }}" class="w-full mt-1 border rounded-lg px-3 py-2 @error('end_date') border-red-500 @enderror">
+                                    @error('end_date')
+                                    <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input type="hidden" name="is_active" value="0">
+                                <input type="checkbox" name="is_active" value="1" class="rounded" {{ $item->is_active ? 'checked' : '' }}>
+                                <span class="text-sm text-gray-600">Active</span>
+                            </div>
                         </div>
-                        <div>
-                            <label class="text-sm font-medium text-gray-700">Description</label>
-                            <input type="text" name="description" value="{{ $item->description }}" class="w-full mt-1 border rounded-lg px-3 py-2">
+                        <div class="flex justify-end gap-2 px-6 py-4 border-t">
+                            <button type="button" onclick="closeModal('{{ $editModalId }}','{{ $editContentId }}')" class="px-4 py-2 border rounded-lg">Batal</button>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">Save</button>
                         </div>
-                        <div>
-                            <label class="text-sm font-medium text-gray-700">Points Required</label>
-                            <input type="number" name="points_required" min="1" value="{{ $item->points_required }}" class="w-full mt-1 border rounded-lg px-3 py-2" required>
-                        </div>
-                        <div>
-                            <label class="text-sm font-medium text-gray-700">Unit</label>
-                            <input type="text" name="unit" value="{{ $item->unit }}" class="w-full mt-1 border rounded-lg px-3 py-2" required>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <input type="hidden" name="is_active" value="0">
-                            <input type="checkbox" name="is_active" value="1" class="rounded" {{ $item->is_active ? 'checked' : '' }}>
-                            <span class="text-sm text-gray-600">Active</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-end gap-2 px-6 py-4 border-t">
-                        <button type="button" onclick="closeModal('{{ $editModalId }}','{{ $editContentId }}')" class="px-4 py-2 border rounded-lg">Batal</button>
-                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">Save</button>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
 
-            <!-- DELETE MODAL -->
-            <div id="{{ $deleteModalId }}"
-                class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm">
-                <form method="POST" action="{{ route('redeem-items.destroy', $item) }}" id="{{ $deleteContentId }}"
-                    class="bg-white w-full max-w-md mx-4 rounded-2xl shadow-xl transform scale-95 opacity-0 transition-all duration-300">
-                    @csrf
-                    @method('DELETE')
-                    <div class="flex justify-between items-center px-6 py-4 border-b">
-                        <h2 class="font-semibold text-lg text-red-600">Delete Redeem Item</h2>
-                        <button type="button" onclick="closeModal('{{ $deleteModalId }}','{{ $deleteContentId }}')">✕</button>
-                    </div>
-                    <div class="px-6 py-4 space-y-2">
-                        <p>Yakin mau delete item ini?</p>
-                        <p class="text-sm text-gray-600">{{ $item->name }}</p>
-                    </div>
-                    <div class="flex justify-end gap-2 px-6 py-4 border-t">
-                        <button type="button" onclick="closeModal('{{ $deleteModalId }}','{{ $deleteContentId }}')" class="px-4 py-2 border rounded-lg">Batal</button>
-                        <button class="px-4 py-2 bg-red-600 text-white rounded-lg">Delete</button>
-                    </div>
-                </form>
+                <!-- DELETE MODAL -->
+                <div id="{{ $deleteModalId }}"
+                    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm">
+                    <form method="POST" action="{{ route('redeem-items.destroy', $item) }}" id="{{ $deleteContentId }}"
+                        class="bg-white w-full max-w-md mx-4 rounded-2xl shadow-xl transform scale-95 opacity-0 transition-all duration-300">
+                        @csrf
+                        @method('DELETE')
+                        <div class="flex justify-between items-center px-6 py-4 border-b">
+                            <h2 class="font-semibold text-lg text-red-600">Delete Redeem Item</h2>
+                            <button type="button" onclick="closeModal('{{ $deleteModalId }}','{{ $deleteContentId }}')">✕</button>
+                        </div>
+                        <div class="px-6 py-4 space-y-2">
+                            <p>Yakin mau delete item ini?</p>
+                            <p class="text-sm text-gray-600">{{ $item->name }}</p>
+                        </div>
+                        <div class="flex justify-end gap-2 px-6 py-4 border-t">
+                            <button type="button" onclick="closeModal('{{ $deleteModalId }}','{{ $deleteContentId }}')" class="px-4 py-2 border rounded-lg">Batal</button>
+                            <button class="px-4 py-2 bg-red-600 text-white rounded-lg">Delete</button>
+                        </div>
+                    </form>
+                </div>
+                @endif
+                @endforeach
             </div>
-            @endif
-            @endforeach
-        </div>
-        @else
+            @else
             <p class="text-gray-500">No redeem items available.</p>
-        @endif
-    </div>
-    <!-- Hidden cancel form (will be submitted by modal confirm) -->
-    <form id="cancelForm" method="POST" style="display:none;">
-        @csrf
-    </form>
-    <!-- User Redeem Requests -->
-    <div class="container mx-auto px-4 py-6">
-        <h3 class="text-xl font-semibold mb-4">Your Redeem Requests</h3>
-        @if(isset($userRedeems) && $userRedeems->isNotEmpty())
-        <div class="grid grid-cols-1 gap-4">
-            @foreach($userRedeems as $r)
+            @endif
+        </div>
+
+        <!-- Hidden cancel form (will be submitted by modal confirm) -->
+        <form id="cancelForm" method="POST" style="display:none;">
+            @csrf
+        </form>
+
+        <!-- Cancel confirmation modal -->
+        <div id="confirmModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm">
+            <div class="bg-white w-full max-w-sm mx-4 rounded-2xl shadow-xl">
+                <div class="flex justify-between items-center px-6 py-4 border-b">
+                    <h2 class="font-semibold text-lg">Cancel Redeem Request</h2>
+                    <button type="button" id="closeCancelModalBtn">✕</button>
+                </div>
+                <div class="px-6 py-4 text-sm text-gray-700">
+                    Yakin mau cancel permintaan redeem ini?
+                </div>
+                <div class="flex justify-end gap-2 px-6 py-4 border-t">
+                    <button type="button" id="closeCancelModalBtn" class="px-4 py-2 border rounded-lg">Batal</button>
+                    <button type="button" id="confirmCancelBtn" class="px-4 py-2 bg-red-600 text-white rounded-lg">Ya, Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        @if(!auth()->user()->is_admin && !auth()->user()->is_manager)
+        <!-- User Redeem Requests (Customer View Only) -->
+        <div class="container mx-auto px-4 py-6" x-show="tab === 'redeem'" x-cloak>
+            <h3 class="text-xl font-semibold mb-4">Your Redeem Requests</h3>
+            @if(isset($userRedeems) && $userRedeems->isNotEmpty())
+            <div class="grid grid-cols-1 gap-4">
+                @foreach($userRedeems as $r)
                 <div class="p-4 border rounded-md bg-white flex items-center justify-between">
                     <div>
                         <div class="font-medium">
@@ -456,44 +591,100 @@
                         <div class="text-sm mt-1">
                             Status:
                             @php
-                                $status = strtolower($r->status);
-                                $badgeClass = match ($status) {
-                                    'pending' => 'bg-yellow-100 text-yellow-800',
-                                    'redeemed' => 'bg-green-100 text-green-800',
-                                    'rejected' => 'bg-red-100 text-red-800',
-                                    'cancelled' => 'bg-gray-100 text-gray-800',
-                                    default => 'bg-gray-100 text-gray-800',
-                                };
+                            $status = strtolower($r->status);
+                            $badgeClass = match ($status) {
+                            'pending' => 'bg-yellow-100 text-yellow-800',
+                            'redeemed' => 'bg-green-100 text-green-800',
+                            'rejected' => 'bg-red-100 text-red-800',
+                            'cancelled' => 'bg-gray-100 text-gray-800',
+                            default => 'bg-gray-100 text-gray-800',
+                            };
                             @endphp
                             <span class="px-2 py-1 rounded text-sm font-semibold {{ $badgeClass }}">
                                 {{ ucfirst($r->status) }}
                             </span>
                         </div>
+                        <div class="text-sm text-gray-500 mt-1">
+                            Code: {{ $r->redeem_code ?? '-' }}
+                        </div>
                     </div>
 
                     <div class="flex items-center gap-2">
                         @if($r->status === 'pending')
-                            <button
-                                type="button"
-                                class="px-4 py-2 bg-red-600 text-white rounded-md open-cancel-modal"
-                                data-action="{{ route('loyalty.redeem.cancel', $r->id) }}">
-                                Cancel
-                            </button>
+                        <button
+                            type="button"
+                            class="px-4 py-2 bg-red-600 text-white rounded-md open-cancel-modal"
+                            data-action="{{ route('loyalty.redeem.cancel', $r->id) }}">
+                            Cancel
+                        </button>
                         @endif
                     </div>
                 </div>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
 
-        {{-- Pagination --}}
-        <div class="mt-6">
-            {{ $userRedeems->links('vendor.pagination.light') }}
-        </div>
-    @else
-        <p class="text-gray-500">You have no redeem requests.</p>
-    @endif
+            {{-- Pagination --}}
+            <div class="mt-6">
+                {{ $userRedeems->links('vendor.pagination.light') }}
+            </div>
+            @else
+            <p class="text-gray-500">You have no redeem requests.</p>
+            @endif
 
-    </div>
+        </div>
+        <!-- User Loyalty History (Customer View Only) -->
+        <div class="container mx-auto px-4 py-6" x-show="tab === 'history'" x-cloak>
+            <h3 class="text-xl font-semibold mb-4">Loyalty Log</h3>
+            @if(isset($loyaltyHistories) && $loyaltyHistories->isNotEmpty())
+            <div class="overflow-x-auto bg-white border rounded-md">
+                <table class="min-w-full text-sm">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-4 py-2 text-left font-medium text-gray-700">Tanggal</th>
+                            <th class="px-4 py-2 text-left font-medium text-gray-700">Tipe</th>
+                            <th class="px-4 py-2 text-right font-medium text-gray-700">Poin</th>
+                            <th class="px-4 py-2 text-left font-medium text-gray-700">Expired</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        @foreach($loyaltyHistories as $history)
+                        <tr>
+                            <td class="px-4 py-2 text-gray-700">
+                                {{ $history->created_at?->format('d M Y H:i') ?? '-' }}
+                            </td>
+                            <td class="px-4 py-2 text-gray-700">
+                                @if($history->type === 'order' && $history->order)
+                                Order #{{ $history->order->invoice_number ?? $history->order_id }}
+                                @elseif($history->type === 'redeem')
+                                Redeem Points
+                                @elseif($history->type === 'plus_point')
+                                Plus Points
+                                @else
+                                {{ ucfirst($history->type ?? 'transaksi') }}
+                                @endif
+                            </td>
+                            <td class="px-4 py-2 text-right font-semibold {{ $history->points_earned >= 0 ? 'text-green-600' : 'text-red-600' }}">
+                                {{ $history->points_earned >= 0 ? '+' : '' }}{{ number_format($history->points_earned, 0, ',', '.') }}
+                            </td>
+                            <td class="px-4 py-2 text-gray-700">
+                                {{ $history->expired_at?->format('d M Y') ?? '-' }}
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-6">
+                {{ $loyaltyHistories->links('vendor.pagination.light') }}
+            </div>
+            @else
+            <p class="text-gray-500">Belum ada riwayat poin.</p>
+            @endif
+        </div>
+        @endif
+
+    </div> <!-- end tabs wrapper -->
 
     @if(auth()->user()->is_manager)
     <!-- CREATE MODAL -->
@@ -514,12 +705,12 @@
                 <div class="flex items-center gap-4">
                     <label class="flex items-center gap-2 text-sm text-gray-700">
                         <input type="radio" name="image_source" value="url" checked
-                                onchange="setImageSource('create','url','createRedeemItemContent')">
+                            onchange="setImageSource('create','url','createRedeemItemContent')">
                         URL
                     </label>
                     <label class="flex items-center gap-2 text-sm text-gray-700">
                         <input type="radio" name="image_source" value="file"
-                                onchange="setImageSource('create','file','createRedeemItemContent')">
+                            onchange="setImageSource('create','file','createRedeemItemContent')">
                         File
                     </label>
                 </div>
@@ -530,12 +721,12 @@
                 <div id="create-url">
                     <label class="text-sm font-medium text-gray-700">Image URL</label>
                     <input type="text" name="image_url" class="w-full mt-1 border rounded-lg px-3 py-2"
-                            oninput="setImageSource('create','url','createRedeemItemContent'); updateImagePreviewUrl(this.value,'createImagePreview','createImagePlaceholder')">
+                        oninput="setImageSource('create','url','createRedeemItemContent'); updateImagePreviewUrl(this.value,'createImagePreview','createImagePlaceholder')">
                 </div>
                 <div id="create-file" class="hidden">
                     <label class="text-sm font-medium text-gray-700">Image File</label>
                     <input type="file" name="image_file" accept=".jpg,.jpeg,.png,image/jpeg,image/png" class="w-full mt-1 border rounded-lg px-3 py-2"
-                            onchange="setImageSource('create','file','createRedeemItemContent'); updateImagePreviewFile(this,'createImagePreview','createImagePlaceholder')">
+                        onchange="setImageSource('create','file','createRedeemItemContent'); updateImagePreviewFile(this,'createImagePreview','createImagePlaceholder')">
                 </div>
                 <div>
                     <label class="text-sm font-medium text-gray-700">Description</label>
@@ -548,6 +739,22 @@
                 <div>
                     <label class="text-sm font-medium text-gray-700">Unit</label>
                     <input type="text" name="unit" value="pcs" class="w-full mt-1 border rounded-lg px-3 py-2" required>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-sm font-medium text-gray-700">Start Date (Opsional)</label>
+                        <input type="date" name="start_date" value="{{ old('start_date') }}" class="w-full mt-1 border rounded-lg px-3 py-2 @error('start_date') border-red-500 @enderror">
+                        @error('start_date')
+                        <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div>
+                        <label class="text-sm font-medium text-gray-700">End Date (Opsional)</label>
+                        <input type="date" name="end_date" value="{{ old('end_date') }}" class="w-full mt-1 border rounded-lg px-3 py-2 @error('end_date') border-red-500 @enderror">
+                        @error('end_date')
+                        <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
                 </div>
                 <div class="flex items-center gap-2">
                     <input type="checkbox" name="is_active" value="1" class="rounded" checked>
@@ -632,8 +839,8 @@
             modal.classList.add('flex');
 
             setTimeout(() => {
-                content.classList.remove('scale-95','opacity-0');
-                content.classList.add('scale-100','opacity-100');
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
             }, 10);
         }
 
@@ -642,7 +849,7 @@
             const content = document.getElementById(contentId);
 
             if (!modal || !content) return;
-            content.classList.add('scale-95','opacity-0');
+            content.classList.add('scale-95', 'opacity-0');
 
             setTimeout(() => {
                 modal.classList.add('hidden');
@@ -718,25 +925,6 @@
         }
     </script>
     <script>
-        // Update total points when quantity changes (if redeemItems present)
-        document.addEventListener('DOMContentLoaded', function() {
-            @if(isset($redeemItems))
-                @foreach($redeemItems as $item)
-                const quantityInput{{ $item->id }} = document.getElementById('quantity_{{ $item->id }}');
-                const totalPoints{{ $item->id }} = document.getElementById('total_points_{{ $item->id }}');
-
-                if (quantityInput{{ $item->id }}) {
-                    quantityInput{{ $item->id }}.addEventListener('input', function() {
-                        const quantity = parseInt(this.value) || 1;
-                        const pointsPerUnit = {{ $item->points_required }};
-                        const total = quantity * pointsPerUnit;
-                        totalPoints{{ $item->id }}.textContent = total.toLocaleString();
-                    });
-                }
-                @endforeach
-            @endif
-        });
-
         // Cancel confirmation modal
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('confirmModal');

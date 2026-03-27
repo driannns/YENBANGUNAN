@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="hidden sm:flex sm:items-center sm:justify-end gap-2 sm:ms-6 w-4/12">
-                        <a href="https://wa.me/6282123269622" class="@auth w-2/3 @else w-1/2 @endauth text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
+                        <a href="https://wa.me/6282123269622" target="_blank" class="@auth w-2/3 @else w-1/2 @endauth text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
                         @auth
                         <x-dropdown align="right" class="">
                             <x-slot name="trigger" class="w-fit">
@@ -42,7 +42,7 @@
                                     </div>
                                 </button>
                             </x-slot>
-                            
+
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('profile.edit')">
                                     {{ __('Profile') }}
@@ -58,13 +58,13 @@
                                     {{ __('Loyalty Log') }}
                                 </x-dropdown-link>
                                 @endif
-                                
+
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    
+
                                     <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                                        onclick="event.preventDefault();
                                                         this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-dropdown-link>
@@ -109,8 +109,8 @@
                     {{ __('Blog') }}
                 </x-responsive-nav-link>
                 <hr>
-                <x-responsive-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
-                    {{ __('Kebutuhan Project') }}
+                <x-responsive-nav-link href="https://wa.me/6282123269622" target="_blank" :active="request()->routeIs('blog')">
+                    {{ __('Kebutuhan Projek') }}
                 </x-responsive-nav-link>
             </div>
 
@@ -132,7 +132,7 @@
                         @csrf
 
                         <x-responsive-nav-link :href="route('logout')"
-                                onclick="event.preventDefault();
+                            onclick="event.preventDefault();
                                             this.closest('form').submit();">
                             {{ __('Log Out') }}
                         </x-responsive-nav-link>
@@ -143,145 +143,363 @@
         </div>
     </nav>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex flex-col gap-3">
+    <div x-data="{ openCreate: false }" class="py-10">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-3 flex flex-col gap-2">
             <div class="">
-                <div class="flex items-center gap-4">
-                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
-                        <h1 class="text-lg font-medium">Total Pembelian</h1>
-                        <h1 class="text-3xl mt-1 font-bold">Rp {{ number_format($orderAmount, 0, ',', '.') }}</h1>
+                <div class="flex items-center gap-3">
+                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white px-4 py-3 font-d-din hover:scale-105 transition-transform cursor-pointer">
+                        <h1 class="text-base sm:text-lg font-medium">Total Pembelian</h1>
+                        <h1 class="text-2xl sm:text-3xl mt-1 font-bold">Rp {{ number_format($orderAmount, 0, ',', '.') }}</h1>
                     </div>
-                    <div class="w-full bg-[#e05534] shadow sm:rounded-lg text-white p-4 font-d-din hover:scale-105 transition-transform cursor-pointer">
-                        <h1 class="text-lg font-medium">Total Point</h1>
-                        <a href="{{ route('loyalty.promotion-program') }}" class="text-3xl mt-1 font-bold text-white hover:text-gray-200">{{ number_format($loyaltyPoints, 0, ',', '.') }}</a>
-                    </div>
+                    <a href="{{ route('loyalty.promotion-program') }}" class="w-full bg-[#e05534] shadow sm:rounded-lg text-white px-4 py-3 font-d-din hover:scale-105 transition-transform cursor-pointer">
+                        <h1 class="text-base sm:text-lg font-medium">Total Point</h1>
+                        <h1 class="text-2xl sm:text-3xl mt-1 font-bold text-white hover:text-gray-200">{{ number_format($loyaltyPoints, 0, ',', '.') }}</h1>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex items-center mt-4 justify-end w-full gap-2 mb-4">
-            @if(auth()->user()->is_admin)
-            <a href="{{ route('orders-history.create') }}" class="bg-[#e05534] text-white px-4 py-2 rounded-full w-fit mb-0">Create</a>
-            @endif
-            @if(auth()->user()->is_manager or auth()->user()->is_admin)
-            <a href="{{ route('loyalty.log') }}" class="bg-blue-500 text-white px-4 py-2 rounded-full w-fit" style="margin-top: 0 !important;">Loyalty Log</a>
-            @endif
-        </div>
 
-        <!-- Search Form -->
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white shadow sm:rounded-lg p-6 mb-6">
-                <form method="GET" action="{{ route('orders-history') }}" class="flex gap-4">
-                    <div class="flex-1">
-                        <input type="text" name="search" value="{{ request('search') }}" 
-                               placeholder="Search by invoice number, customer name, NIK, PO number, amount, status, or date (YYYY-MM-DD)" 
-                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+        <!-- Search & Filters -->
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-4">
+            <div class="bg-white shadow sm:rounded-lg p-4 sm:p-5 mb-3">
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+                    <div>
+                        <h2 class="text-base sm:text-lg font-semibold text-gray-800">Riwayat Pesanan</h2>
+                        <p class="text-xs sm:text-sm text-gray-500">Menampilkan {{ $orders->count() }} dari {{ $orders->total() }} pesanan.</p>
                     </div>
-                    <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Search
-                    </button>
-                    @if(request('search'))
-                        <a href="{{ route('orders-history') }}" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                            Clear
+                    <div class="flex flex-col sm:items-end gap-2">
+                        @if(request('search'))
+                        <span class="inline-flex items-center rounded-full bg-orange-50 px-3 py-1 text-xs font-medium text-[#e05534]">
+                            Pencarian: "{{ request('search') }}"
+                        </span>
+                        @endif
+
+                        @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                        <div class="flex gap-2 justify-end">
+                            @if(auth()->user()->is_admin)
+                            <button type="button" @click="openCreate = true" class="bg-[#e05534] text-white px-3 py-1.5 rounded-full text-xs font-semibold">Create</button>
+                            @endif
+                            <a href="{{ route('loyalty.log') }}" class="bg-blue-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold">Loyalty Log</a>
+                        </div>
+                        @endif
+                    </div>
+                </div>
+
+                <form method="GET" action="{{ route('orders-history') }}" class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                    <div class="flex-1">
+                        <input type="text" name="search" value="{{ request('search') }}"
+                            placeholder="Cari invoice, nama customer, NIK, PO, jumlah, status, atau tanggal (YYYY-MM-DD)"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#e05534] focus:border-[#e05534] text-sm">
+                    </div>
+                    <div class="flex gap-2 justify-end">
+                        <button type="submit" class="px-5 py-2 bg-[#e05534] text-white rounded-full text-xs font-semibold tracking-wide hover:bg-[#c04424] focus:outline-none focus:ring-2 focus:ring-[#e05534] focus:ring-offset-2">
+                            Cari Pesanan
+                        </button>
+                        @if(request('search'))
+                        <a href="{{ route('orders-history') }}" class="px-5 py-2 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold tracking-wide hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">
+                            Bersihkan
                         </a>
-                    @endif
+                        @endif
+                    </div>
                 </form>
             </div>
         </div>
 
         @if(session('success'))
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
-                    <span class="block sm:inline">{{ session('success') }}</span>
-                </div>
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                <span class="block sm:inline">{{ session('success') }}</span>
             </div>
+        </div>
         @endif
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex flex-col mt-4">
+
+        {{-- Create Order Modal (Admin only) --}}
+        @if(auth()->user()->is_admin)
+        <div x-cloak x-show="openCreate" class="fixed inset-0 z-40 flex items-center justify-center bg-black/40">
+            <div @click.stop class="bg-white rounded-xl shadow-lg w-full max-w-lg p-5">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-800">Create Order</h3>
+                    <button type="button" class="text-gray-400 hover:text-gray-600" @click="openCreate = false">
+                        <span class="sr-only">Close</span>
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <form method="POST" action="{{ route('orders-history.store') }}" class="space-y-4">
+                    @csrf
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-500 mb-1">Invoice Number <span class="text-red-500">*</span></label>
+                        <input type="text" name="invoice_number" value="{{ old('invoice_number') }}" class="w-full px-3 py-2 rounded-md border border-gray-200 text-sm focus:ring-[#e05534] focus:border-[#e05534]" required>
+                        @error('invoice_number')
+                        <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-500 mb-1">PO Number</label>
+                            <input type="text" name="po_number" value="{{ old('po_number') }}" class="w-full px-3 py-2 rounded-md border border-gray-200 text-sm focus:ring-[#e05534] focus:border-[#e05534]">
+                            @error('po_number')
+                            <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-500 mb-1">Total Amount <span class="text-red-500">*</span></label>
+                            <input type="number" step="0.01" name="total_amount" value="{{ old('total_amount') }}" class="w-full px-3 py-2 rounded-md border border-gray-200 text-sm focus:ring-[#e05534] focus:border-[#e05534]" required>
+                            @error('total_amount')
+                            <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-500 mb-1">Order Date <span class="text-red-500">*</span></label>
+                            <input type="date" name="order_date" value="{{ old('order_date') }}" class="w-full px-3 py-2 rounded-md border border-gray-200 text-sm focus:ring-[#e05534] focus:border-[#e05534]" required>
+                            @error('order_date')
+                            <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
+
+                    @if(!empty($users))
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-500 mb-1">Customer <span class="text-red-500">*</span></label>
+                        <select name="user_id" class="w-full px-3 py-2 rounded-md border border-gray-200 text-sm focus:ring-[#e05534] focus:border-[#e05534]" required>
+                            <option value="">Pilih Customer</option>
+                            @foreach($users as $u)
+                            <option value="{{ $u->id }}" @selected(old('user_id')==$u->id)>{{ $u->NIK }} - {{ $u->name }}</option>
+                            @endforeach
+                        </select>
+                        @error('user_id')
+                        <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    @endif
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-500 mb-1">Remarks</label>
+                        <textarea name="description" rows="2" class="w-full px-3 py-2 rounded-md border border-gray-200 text-sm focus:ring-[#e05534] focus:border-[#e05534]" placeholder="Catatan tambahan (opsional)">{{ old('description') }}</textarea>
+                        @error('description')
+                        <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="flex justify-between items-center pt-2 border-t border-gray-100 mt-2">
+                        <button type="button" class="text-xs font-medium text-gray-500 hover:text-gray-700" @click="openCreate = false">Batal</button>
+                        <button type="submit" class="px-3 py-1.5 rounded-full bg-[#e05534] text-white text-xs font-semibold">Create Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        @endif
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3 flex flex-col items-center mt-4">
             @foreach($orders as $order)
-            <div class="p-2 sm:p-4 bg-white shadow sm:rounded-lg">
-                <div class="flex justify-between items-center">
-                    @if(auth()->user()->is_manager && $order->status === 'draft')
-                    <div class="flex gap-2">
-                        <form method="POST" action="{{ route('orders-history.approve', $order) }}" class="inline">
-                            @csrf
-                            <button type="submit" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md text-white font-medium transition-all">
-                                Approve
+            @php
+            $status = $order->status;
+            $statusLabel = [
+            'draft' => 'Draft - Menunggu Persetujuan',
+            'confirmed' => 'Confirmed',
+            'rejected' => 'Rejected',
+            'void_requested' => 'Void Requested',
+            'voided' => 'Voided',
+            ][$status] ?? ucfirst($status);
+
+            $statusClasses = match($status) {
+            'confirmed' => 'bg-emerald-50 text-emerald-700 border border-emerald-200',
+            'rejected' => 'bg-red-50 text-red-700 border border-red-200',
+            'void_requested' => 'bg-amber-50 text-amber-700 border border-amber-200',
+            'voided' => 'bg-gray-50 text-gray-700 border border-gray-200',
+            default => 'bg-orange-50 text-orange-700 border border-orange-200',
+            };
+
+            $displayDate = $order->order_date
+            ? \Carbon\Carbon::parse($order->order_date)
+            : $order->created_at;
+            @endphp
+
+            <div x-data="{ openEdit: false }" class="w-full max-w-4xl p-2 sm:p-3 bg-white shadow-sm sm:rounded-xl border-l-4 @if($status === 'confirmed') border-l-emerald-500 @elseif($status === 'rejected') border-l-red-500 @elseif($status === 'draft') border-l-[#e05534] @elseif($status === 'void_requested') border-l-amber-500 @elseif($status === 'voided') border-l-gray-500 @else border-l-gray-300 @endif">
+                @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                {{-- Admin / Manager view --}}
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-start gap-2">
+                        <div class="flex gap-2 w-48">
+                            @if(auth()->user()->is_manager)
+                            <button type="button" @click="openEdit = true" class="bg-blue-500 hover:bg-blue-600 px-3 py-1.5 rounded-md text-white text-xs font-medium transition-all whitespace-nowrap">
+                                Edit
                             </button>
-                        </form>
-                        <form method="POST" action="{{ route('orders-history.reject', $order) }}" class="inline">
-                            @csrf
-                            <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md text-white font-medium transition-all" onclick="return confirm('Are you sure you want to reject this order?')">
-                                Reject
+                            @if($order->status === 'draft')
+                            <form method="POST" action="{{ route('orders-history.approve', $order) }}" class="inline">
+                                @csrf
+                                <button type="submit" class="bg-green-500 hover:bg-green-600 px-3 py-1.5 rounded-md text-white text-xs font-medium transition-all whitespace-nowrap">
+                                    Approve
+                                </button>
+                            </form>
+                            <form method="POST" action="{{ route('orders-history.reject', $order) }}" class="inline">
+                                @csrf
+                                <button type="submit" class="bg-red-500 hover:bg-red-600 px-3 py-1.5 rounded-md text-white text-xs font-medium transition-all whitespace-nowrap" onclick="return confirm('Are you sure you want to reject this order?')">
+                                    Reject
+                                </button>
+                            </form>
+                            @elseif($order->status === 'void_requested')
+                            <form method="POST" action="{{ route('orders-history.void-approve', $order) }}" class="inline">
+                                @csrf
+                                <button type="submit" class="bg-green-500 hover:bg-green-600 px-3 py-1.5 rounded-md text-white text-xs font-medium transition-all whitespace-nowrap" onclick="return confirm('Approve void for this order?')">
+                                    Approve Void
+                                </button>
+                            </form>
+                            <form method="POST" action="{{ route('orders-history.void-reject', $order) }}" class="inline">
+                                @csrf
+                                <button type="submit" class="bg-red-500 hover:bg-red-600 px-3 py-1.5 rounded-md text-white text-xs font-medium transition-all whitespace-nowrap" onclick="return confirm('Reject void request for this order?')">
+                                    Reject Void
+                                </button>
+                            </form>
+                            @endif
+                            @elseif(auth()->user()->is_admin && !auth()->user()->is_manager)
+                            <button type="button" @click="openEdit = true" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md text-white font-medium transition-all whitespace-nowrap">
+                                Edit
                             </button>
-                        </form>
+                            <form method="POST" action="{{ route('orders-history.destroy', $order) }}" class="inline" onsubmit="return confirm('Submit void request for this order?')">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md text-white font-medium transition-all {{ $order->status !== 'confirmed' ? 'opacity-50 cursor-not-allowed' : '' }}" @if($order->status !== 'confirmed') disabled @endif>
+                                    Void
+                                </button>
+                            </form>
+                            @endif
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-right">
+                                <h1 class="text-base sm:text-lg font-semibold text-gray-900">{{ $order->invoice_number }}</h1>
+                                <p class="text-[11px] text-gray-400">Tanggal Order: {{ $displayDate->format('d M Y') }}</p>
+                                <div class="mt-1 inline-flex items-center gap-2">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold {{ $statusClasses }}">
+                                        {{ $statusLabel }}
+                                    </span>
+                                    @if($order->status === 'confirmed')
+                                    <span class="inline-flex items-center text-[11px] font-semibold text-emerald-600">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1"></span>
+                                        Mendapatkan Loyalty Points
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <!-- Edit Order Wizard Modal (Admin & Manager) -->
+                            @if(auth()->user()->is_admin || auth()->user()->is_manager)
+                            <div x-cloak x-show="openEdit" class="fixed inset-0 z-40 flex items-center justify-center bg-black/40">
+                                <div @click.stop class="bg-white rounded-xl shadow-lg w-full max-w-lg p-5">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <h3 class="text-base sm:text-lg font-semibold text-gray-800">Edit Order {{ $order->invoice_number }}</h3>
+                                        <button type="button" class="text-gray-400 hover:text-gray-600" @click="openEdit = false">
+                                            <span class="sr-only">Close</span>
+                                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <form method="POST" action="{{ route('orders-history.update', $order) }}" class="space-y-4">
+                                        @csrf
+                                        @method('PUT')
+
+                                        <div class="space-y-3">
+                                            <div>
+                                                <label class="block text-xs font-semibold text-gray-500 mb-1">Invoice</label>
+                                                <input type="text" value="{{ $order->invoice_number }}" disabled class="w-full px-3 py-2 rounded-md border border-gray-200 bg-gray-50 text-sm">
+                                            </div>
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                                <div>
+                                                    <label class="block text-xs font-semibold text-gray-500 mb-1">PO Number</label>
+                                                    <input type="text" name="po_number" value="{{ $order->po_number }}" class="w-full px-3 py-2 rounded-md border border-gray-200 text-sm focus:ring-[#e05534] focus:border-[#e05534]">
+                                                </div>
+                                                <div>
+                                                    <label class="block text-xs font-semibold text-gray-500 mb-1">Total Amount</label>
+                                                    <input type="number" step="0.01" name="total_amount" value="{{ $order->total_amount }}" class="w-full px-3 py-2 rounded-md border border-gray-200 text-sm focus:ring-[#e05534] focus:border-[#e05534]">
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                                <div>
+                                                    <label class="block text-xs font-semibold text-gray-500 mb-1">Tanggal Order</label>
+                                                    <input type="date" name="order_date" value="{{ optional($order->order_date)->format('Y-m-d') }}" class="w-full px-3 py-2 rounded-md border border-gray-200 text-sm focus:ring-[#e05534] focus:border-[#e05534]">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label class="block text-xs font-semibold text-gray-500 mb-1">Remarks</label>
+                                                <textarea name="description" rows="2" class="w-full px-3 py-2 rounded-md border border-gray-200 text-sm focus:ring-[#e05534] focus:border-[#e05534]" placeholder="Catatan tambahan (opsional)">{{ old('description', $order->description) }}</textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex justify-between items-center pt-2 border-t border-gray-100 mt-2">
+                                            <button type="button" class="text-xs font-medium text-gray-500 hover:text-gray-700" @click="openEdit = false">Batal</button>
+                                            <button type="submit" class="px-3 py-1.5 rounded-full bg-[#e05534] text-white text-xs font-semibold">Simpan</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            @endif
+                        </div>
                     </div>
-                    @elseif(auth()->user()->is_manager && $order->status === 'void_requested')
-                    <div class="flex gap-2">
-                        <form method="POST" action="{{ route('orders-history.void-approve', $order) }}" class="inline">
-                            @csrf
-                            <button type="submit" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md text-white font-medium transition-all" onclick="return confirm('Approve void for this order?')">
-                                Approve Void
-                            </button>
-                        </form>
-                        <form method="POST" action="{{ route('orders-history.void-reject', $order) }}" class="inline">
-                            @csrf
-                            <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md text-white font-medium transition-all" onclick="return confirm('Reject void request for this order?')">
-                                Reject Void
-                            </button>
-                        </form>
+
+                    <div class="mt-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1.5 items-start text-sm text-gray-700">
+                        <div>
+                            <h2 class="text-xs font-semibold text-gray-500 tracking-wide">Customer</h2>
+                            <p class="font-semibold">{{ $order->user->name }}</p>
+                            <p class="text-[11px] text-gray-500">NIK: {{ $order->user->NIK }}</p>
+                        </div>
+                        <div>
+                            <h2 class="text-xs font-semibold text-gray-500 tracking-wide">PO Number</h2>
+                            <p class="font-medium">{{ $order->po_number ?: '-' }}</p>
+                        </div>
+                        <div class="text-right">
+                            <h2 class="text-xs font-semibold text-gray-500 tracking-wide">Total Amount</h2>
+                            <p class="font-semibold">Rp {{ number_format($order->total_amount, 0, ',', '.') }}</p>
+                        </div>
                     </div>
-                    @elseif(auth()->user()->is_admin && !auth()->user()->is_manager)
-                    <div class="flex gap-2">
-                        <a href="{{ route('orders-history.edit', $order) }}" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md text-white font-medium transition-all">
-                            Edit
-                        </a>
-                        <form method="POST" action="{{ route('orders-history.destroy', $order) }}" class="inline" onsubmit="return confirm('Submit void request for this order?')">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md text-white font-medium transition-all {{ $order->status !== 'confirmed' ? 'opacity-50 cursor-not-allowed' : '' }}" @if($order->status !== 'confirmed') disabled @endif>
-                                Void
-                            </button>
-                        </form>
-                    </div>
-                    @else
-                    <div></div>
-                    @endif
-                    @if(auth()->user()->is_admin || auth()->user()->is_manager)
-                    <div class="flex items-center gap-4 p-1 rounded-full bg-gray-300">
-                        <div class="py-1 px-3 rounded-full @if($order->status === 'draft') bg-[#e05534] text-white  @endif">Draft</div>
-                        <div class="py-1 px-3 rounded-full @if($order->status === 'confirmed') bg-[#e05534] text-white  @endif">Confirmed</div>
-                        @if($order->status === 'rejected')
-                        <div class="py-1 px-3 rounded-full @if($order->status === 'rejected') bg-[#e05534] text-white @endif">Rejected</div>
-                        @endif
-                        @if($order->status === 'void_requested')
-                        <div class="py-1 px-3 rounded-full @if($order->status === 'void_requested') bg-[#e05534] text-white @endif">Void Requested</div>
-                        @endif
-                        @if($order->status === 'voided')
-                        <div class="py-1 px-3 rounded-full @if($order->status === 'voided') bg-[#e05534] text-white @endif">Voided</div>
-                        @endif
-                    </div>
-                    @endif
+                    <p class="mt-2 text-[11px] text-gray-500">Remarks: <span class="font-medium">{{ $order->description ?: '--' }}</span></p>
                 </div>
-                <div class="flex items-center justify-between">
-                    <div class="w-4/12">
-                        <h1 class="text-2xl font-semibold">{{ $order->invoice_number }}</h1>
-                        <p class="text-sm text-gray-400">{{ $order->created_at }}</p>
+                @else
+                {{-- Customer view --}}
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <h1 class="text-base sm:text-lg font-semibold text-gray-900">{{ $order->invoice_number }}</h1>
+                            <p class="text-[11px] text-gray-400">Tanggal Order: {{ $displayDate->format('d M Y') }}</p>
+                            <div class="mt-1 inline-flex items-center gap-2">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold {{ $statusClasses }}">
+                                    {{ $statusLabel }}
+                                </span>
+                                @if($order->status === 'confirmed')
+                                <span class="inline-flex items-center text-[11px] font-semibold text-emerald-600">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1"></span>
+                                    Mendapatkan Loyalty Points
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <h2 class="text-xs font-semibold text-gray-500 tracking-wide">Total Amount</h2>
+                            <p class="text-sm font-semibold">Rp {{ number_format($order->total_amount, 0, ',', '.') }}</p>
+                        </div>
                     </div>
-                    @if(auth()->user()->is_admin || auth()->user()->is_manager)
-                    <div class="w-4/12">
-                        <h1 class="text-sm font-bold">Customer Name:</h1>
-                        <p class="font-bold">{{ $order->user->name }}</p>
-                        <p class="text-xs font-medium">{{ $order->user->NIK }}</p>
+
+                    <div class="mt-1 grid grid-cols-1 sm:grid-cols-2 gap-1.5 items-start text-sm text-gray-700">
+                        <div>
+                            <h2 class="text-xs font-semibold text-gray-500 tracking-wide">Customer</h2>
+                            <p class="font-semibold">{{ $order->user->name }}</p>
+                            <p class="text-[11px] text-gray-500">NIK: {{ $order->user->NIK }}</p>
+                        </div>
+                        <div>
+                            <h2 class="text-xs font-semibold text-gray-500 tracking-wide">PO Number</h2>
+                            <p class="font-medium">{{ $order->po_number ?: '-' }}</p>
+                        </div>
                     </div>
-                    @endif
-                    <div class="w-4/12">
-                        <h1 class="text-sm mt-1 font-bold">PO Number</h1>
-                        <p>{{ $order->po_number }}</p>
-                    </div>
-                    <div class="w-4/12 flex flex-col items-end">
-                        <h1>Total Amount</h1>
-                        <h1 class="text-lg mt-1 font-bold">Rp {{ number_format($order->total_amount, 0, ',', '.') }}</h1>
-                    </div>
+                    <p class="mt-2 text-[11px] text-gray-500">Remarks: <span class="font-medium">{{ $order->description ?: '--' }}</span></p>
                 </div>
+                @endif
             </div>
             @endforeach
 

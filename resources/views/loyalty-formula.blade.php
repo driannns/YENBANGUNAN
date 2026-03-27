@@ -28,9 +28,7 @@
                     </div>
 
                     <div class="hidden sm:flex sm:items-center gap-2 sm:ms-6 w-3/12">
-                        <div class="w-full">
-                            <button class="w-full bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</button>
-                        </div>
+                        <a href="https://wa.me/6282123269622" target="_blank" class="@auth w-2/3 @else w-1/2 @endauth text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
                         <x-dropdown align="right">
                             <x-slot name="trigger" class="w-fit">
                                 @auth
@@ -69,7 +67,7 @@
                                     @csrf
 
                                     <x-dropdown-link :href="route('logout')"
-                                            onclick="event.preventDefault();
+                                        onclick="event.preventDefault();
                                                         this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-dropdown-link>
@@ -107,8 +105,8 @@
                     {{ __('Blog') }}
                 </x-responsive-nav-link>
                 <hr>
-                <x-responsive-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
-                    {{ __('Kebutuhan Project') }}
+                <x-responsive-nav-link href="https://wa.me/6282123269622" target="_blank" :active="request()->routeIs('blog')">
+                    {{ __('Kebutuhan Projek') }}
                 </x-responsive-nav-link>
             </div>
 
@@ -130,7 +128,7 @@
                         @csrf
 
                         <x-responsive-nav-link :href="route('logout')"
-                                onclick="event.preventDefault();
+                            onclick="event.preventDefault();
                                             this.closest('form').submit();">
                             {{ __('Log Out') }}
                         </x-responsive-nav-link>
@@ -150,10 +148,10 @@
 
                 <div class="p-6">
                     @if($formula)
-                        <p class="text-lg">The loyalty formula is: <strong>1 : {{ $formula->coefficient }}</strong></p>
-                        <p class="text-sm text-gray-600 mt-2">This means for every 1 unit of currency spent, you earn {{ $formula->coefficient }} loyalty points.</p>
+                    <p class="text-lg">The loyalty formula is: <strong>1 : {{ $formula->coefficient }}</strong></p>
+                    <p class="text-sm text-gray-600 mt-2">This means for every 1 unit of currency spent, you earn {{ $formula->coefficient }} loyalty points.</p>
                     @else
-                        <p class="text-lg text-red-600">No loyalty formula found.</p>
+                    <p class="text-lg text-red-600">No loyalty formula found.</p>
                     @endif
 
                     <div class="mt-4 flex gap-2">

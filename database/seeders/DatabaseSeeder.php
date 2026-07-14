@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
         // Run loyalty + redeem history seeder
         $this->call(LoyaltySeeder::class);
 
-        // Run blog seeders (split into two parts)
-        $this->call([Blog::class, BlogPart2::class]);
+        // Run blog seeders (Blog dispatches every generated BlogPart*)
+        $this->call(Blog::class);
     }
 }

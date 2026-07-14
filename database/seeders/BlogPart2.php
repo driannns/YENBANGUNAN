@@ -5,787 +5,19 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * Generated from the WordPress export (andrian064.wordpress.com.2026-07-13.000.xml).
+ * Part 2 of 10. Do not edit by hand — regenerate instead.
+ */
 class BlogPart2 extends Seeder
 {
     public function run(): void
     {
         $posts = [
             [
-                'title' => 'Distributor Bahan Bangunan Cikarang - Pilihan Lengkap untuk Proyek Anda',
-                'slug' => '2025/10/07/distributor-bahan-bangunan-cikarang-pilihan-lengkap-untuk-proyek-anda',
-                'content' => '<p><img class="alignnone size-full wp-image-2396" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/distributor-bahan-bangunan-cikarang-pilihan-lengkap-untuk-proyek-anda.jpg" alt="Distributor Bahan Bangunan Cikarang" width="950" height="550" /></p>
-<p>Dalam dunia konstruksi, waktu dan kualitas adalah dua hal yang tidak bisa ditawar. Apakah Anda seorang kontraktor, pemilik proyek, atau hanya ingin renovasi rumah, menemukan <strong>distributor bangunan Cikarang</strong> yang benar-benar terpercaya adalah langkah awal menuju hasil terbaik. Dan di sinilah <strong>Yen Bangunan Cikarang</strong> hadir sebagai solusi lengkap untuk semua kebutuhan material Anda.</p>
-<p><strong><span dir="auto">[Baca juga: </span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal/"><span dir="auto">Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!</span></a></span><span dir="auto">]</span></strong></p>
-
-<h2>Yen Bangunan: Distributor dan Supplier Bangunan Terpercaya di Cikarang</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-<p>Sejak berdiri lebih dari 15 tahun lalu, <strong>Yen Bangunan</strong> telah menjadi salah satu <strong>supplier bangunan Cikarang</strong> paling dikenal karena kelengkapan produk dan pelayanan yang profesional. Bukan hanya menyediakan bahan bangunan, tapi juga membantu pelanggan menemukan produk dengan kualitas terbaik sesuai kebutuhan proyek mereka, dari skala kecil hingga besar.</p>
-<p>Yen Bangunan menawarkan berbagai material mulai dari semen, cat, baja ringan, keramik, hingga perlengkapan listrik dan pipa air. Semua tersedia dalam satu tempat, sehingga Anda tak perlu berpindah-pindah toko untuk melengkapi daftar belanja proyek.</p>
-
-<h2>Kelebihan Yen Bangunan Dibanding Toko Lain</h2>
-<p>Yang membuat <strong>toko material bangunan Cikarang</strong> ini menonjol bukan hanya produknya yang lengkap, tapi juga layanan yang memudahkan pelanggan. Beberapa keunggulan utamanya antara lain:</p>
-
-<ul>
- 	<li>
-<p><strong>Harga kompetitif dan transparan.</strong> Pelanggan bisa berbelanja dengan tenang tanpa khawatir ada biaya tersembunyi.</p>
-</li>
- 	<li>
-<p><strong>Kualitas produk terjamin.</strong> Yen Bangunan hanya bekerja sama dengan merek dan produsen terpercaya yang sudah terbukti di industri.</p>
-</li>
- 	<li>
-<p><strong>Layanan pengantaran gratis.</strong> Untuk wilayah Cikarang dan sekitarnya, pelanggan bisa menikmati layanan <em>free delivery</em>—hemat waktu, tenaga, dan biaya transportasi.</p>
-</li>
- 	<li>
-<p><strong>Tim profesional dan responsif.</strong> Staf toko siap membantu memberikan rekomendasi material sesuai kebutuhan proyek Anda.</p>
-</li>
-</ul>
-<a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a>
-<h2>Solusi Tepat untuk Setiap Jenis Proyek</h2>
-<p>Apapun jenis proyek Anda—dari pembangunan rumah pribadi, ruko, hingga proyek skala besar—Yen Bangunan punya semua yang Anda butuhkan. Banyak pelanggan mengandalkan toko ini karena efisiensi waktu dan kualitas yang konsisten. Dengan dukungan stok lengkap dan sistem pelayanan yang cepat, proyek Anda bisa berjalan tanpa hambatan karena kekurangan material.</p>
-<p>Selain itu, Yen Bangunan juga rutin memperbarui katalog produknya mengikuti tren dan kebutuhan pasar, memastikan pelanggan selalu mendapatkan pilihan terbaik dan terbaru di industri bahan bangunan.</p>
-
-<h2>Penutup: Bangun Proyek Anda dengan Partner yang Tepat</h2>
-<p>Memilih distributor bangunan bukan sekadar soal harga, tapi juga soal kepercayaan dan kualitas layanan. Dengan pengalaman panjang, produk lengkap, dan komitmen melayani pelanggan dengan sepenuh hati, <span style="text-decoration: underline"><a href="https://yenbangunan.com/">Yen Bangunan Cikarang</a></span> pantas menjadi pilihan utama Anda dalam setiap proyek konstruksi.</p>
-<p>Bangun proyek Anda dengan tenang, karena di Yen Bangunan, semua kebutuhan material sudah tersedia dengan kualitas dan pelayanan terbaik.</p>',
-                'image_path' => '/blog/distributor-bahan-bangunan-cikarang-pilihan-lengkap-untuk-proyek-anda.jpg',
-                'published_at' => '2025-10-07 17:39:12',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Distributor Tekiro Cikarang - Solusi Kebutuhan Alat Teknik',
-                'slug' => '2025/10/09/distributor-tekiro-cikarang-solusi-kebutuhan-alat-teknik',
-                'content' => '<p><img class="alignnone size-full wp-image-2405" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/distributor-tekiro-cikarang-solusi-kebutuhan-alat-teknik.jpg" alt="Distributor Tekiro" width="950" height="550" /></p>
-<p>Dalam proyek bangunan maupun industri, keandalan alat sangat penting. Salah satu brand yang sering dicari adalah <strong>Tekiro</strong>, khususnya ketika Anda membutuhkan distributor Tekiro Cikarang. Artikel ini akan mengulas peran Yen Bangunan Cikarang sebagai tempat yang layak dipercayai jika Anda ingin produk Tekiro lengkap dan layanan profesional.</p>
-<p><strong><span dir="auto">[Baca juga: </span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal/"><span dir="auto">Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!</span></a></span><span dir="auto">]</span></strong></p>
-
-<h2>Kenali Yen Bangunan Cikarang</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-<p>Sejak berdiri tahun 2008, PT Yen Sejahtera, yang beroperasi sebagai <strong><span style="text-decoration: underline"><a href="https://yenbangunan.com/">Yen Bangunan Cikarang</a></span>,</strong> telah berkembang menjadi toko bangunan besar dan supplier material industri &amp; proyek. Berlokasi strategis di Lippo Cikarang, Sukadami, Cikarang Selatan, Bekasi.</p>
-<p>Yen Bangunan menawarkan:</p>
-
-<ul>
- 	<li>
-<p>Lebih dari <strong>5.000 SKU</strong> produk: mulai bahan struktural seperti semen, besi beton, baja ringan, hingga finishing seperti cat dan keramik.</p>
-</li>
- 	<li>
-<p>Pelayanan grosir &amp; eceran, cocok baik untuk kontraktor besar maupun renovasi rumah kecil.</p>
-</li>
- 	<li>
-<p>Gratis ongkir di area Cikarang dan sekitarnya; layanan pengiriman cepat dengan armada sendiri.</p>
-</li>
-</ul>
-<h2>Apakah Yen Bangunan Distributor Resmi Produk Tekiro?</h2>
-<p>Hingga saat ini, belum ada konfirmasi publik dari sumber resmi bahwa Yen Bangunan adalah distributor <strong>resmi Tekiro</strong> di Cikarang. Namun, ada beberapa poin penting:</p>
-
-<ul>
- 	<li>
-<p>Tekiro sendiri menyebutkan bahwa sangat penting membeli produk dari <strong>distributor resmi</strong> agar keaslian dan garansi produk terjaga.</p>
-</li>
- 	<li>
-<p>Yen Bangunan sebagai toko besar dan terpercaya di Cikarang menawarkan berbagai merk perkakas &amp; alat tukang, dan kemungkinan memiliki produk Tekiro di katalog mereka, mengingat ciri khas mereka yang menyediakan alat industri &amp; bengkel.</p>
-</li>
-</ul>
-<p>Jadi, meskipun belum ada bukti publik bahwa Yen Bangunan adalah distributor resmi Tekiro, reputasi dan kapasitasnya membuatnya sangat layak untuk dicek jika Anda mencari produk Tekiro.</p>
-
-<h2>Tips Memastikan Anda Mendapat Produk Tekiro Asli</h2>
-<p>Agar investasi Anda dalam produk Tekiro tidak sia-sia, berikut beberapa tips sebelum membeli:</p>
-
-<ol>
- 	<li>
-<p><strong>Minta Sertifikasi atau Bukti Distributor Resmi</strong><br />Tanyakan apakah toko memiliki dokumen atau bukti bahwa mereka bekerja sama langsung dengan Altama (pemilik brand).</p>
-</li>
- 	<li>
-<p><strong>Periksa Fisik Produk</strong><br />Kemasan, label, nomor seri, garansi - cocokkan dengan standar Tekiro resmi. Tekiro sendiri menyediakan panduan bagaimana membedakan produk asli dan tidak.</p>
-</li>
- 	<li>
-<p><strong>Review dari Pelanggan Lokal</strong><br />Cari testimoni dari kontraktor atau teknisi di Cikarang yang pernah membeli Tekiro di Yen Bangunan; pengalaman mereka bisa jadi indikasi banyaknya produk asli yang tersedia.</p>
-</li>
- 	<li>
-<p><strong>Tanyakan Kebijakan Retur &amp; Garansi</strong><br />Distributor resmi manapun biasanya menyediakan kebijakan pengembalian dan garansi jika ada kekurangan atau kesalahan produk.</p>
-</li>
-</ol>
-<a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a>',
-                'image_path' => '/blog/distributor-tekiro-cikarang-solusi-kebutuhan-alat-teknik.jpg',
-                'published_at' => '2025-10-09 16:56:48',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Harga Batu Alam Terbaru 2025: Jenis, Ukuran, dan Tips Beli Paling Lengkap!',
-                'slug' => '2025/10/10/harga-batu-alam-terbaru-2025-jenis-ukuran-dan-tips-beli-paling-lengkap',
-                'content' => '<img class="alignnone size-full wp-image-2409" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/harga-batu-alam-terbaru-2025-jenis-ukuran-dan-tips-beli-paling-lengkap.jpg" alt="Harga Batu Alam " width="950" height="550" />
-<h2>Faktor Penentu Harga yang Wajib Anda Tahu</h2>
-Agar tidak sekadar bergantung tabel harga, perhatikan faktor-faktor ini:
-<ol>
- 	<li><strong>Ukuran &amp; ketebalan</strong> – Semakin besar potongan dan semakin tebal, harga bisa melonjak signifikan.</li>
- 	<li><strong>Jenis finishing</strong> – Poles, honed, alur memberi sentuhan visual, tapi biaya produksi lebih tinggi.</li>
- 	<li><strong>Asal batu &amp; transportasi</strong> – Batu dari daerah jauh akan menyerap ongkos kirim.</li>
- 	<li><strong>Thumb-up brand / toko terpercaya</strong> – Diskon, garansi, dan layanan purna jual akan memengaruhi “nilai” harga.</li>
- 	<li><strong>Volume pembelian</strong> – Biasanya toko memberi harga khusus untuk pembelian dalam jumlah besar.</li>
-</ol>
-<h2>Kenapa Beli Batu Alam di Yen Bangunan Cikarang?</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-
-Kalau kamu tinggal di area Cikarang atau sekitarnya, <span style="text-decoration: underline"><a href="https://yenbangunan.com/">Yen Bangunan Cikarang</a></span> bisa jadi pilihan paling praktis untuk cari batu alam berkualitas. Berdiri sejak <strong>2008</strong>, toko ini dikenal sebagai <strong>supermarket bahan bangunan terlengkap di Cikarang,</strong> dari semen, cat, keramik, hingga berbagai jenis <strong>batu alam lokal dan impor</strong>.
-
-Selain lengkap, keunggulan Yen Bangunan ada di <strong>transparansi harga dan layanan pengiriman gratis</strong> untuk area tertentu. Jadi kamu nggak perlu khawatir soal ongkos kirim atau stok yang kosong mendadak. Tim mereka juga cukup responsif kalau kamu butuh rekomendasi jenis batu yang cocok untuk dinding, taman, atau fasad rumah.
-
-Beberapa alasan kenapa banyak konsumen dan kontraktor langganan di Yen Bangunan antara lain:
-<ul>
- 	<li><strong>Harga kompetitif</strong> dan selalu update mengikuti pasar 2025.</li>
- 	<li><strong>Layanan ramah dan profesional</strong>, cocok untuk konsumen awam maupun pekerja proyek.</li>
- 	<li><strong>Kualitas produk terjamin</strong>, langsung dari supplier terpercaya.</li>
- 	<li><strong>Kemudahan transaksi</strong>, baik online maupun langsung ke toko.</li>
-</ul>
-Kalau kamu ingin lihat langsung koleksi atau tanya stok <strong>batu alam terbaru 2025</strong>, kamu bisa datang langsung ke <strong>Yen Bangunan Cikarang</strong> atau hubungi admin toko mereka. Dengan begitu, kamu bisa memastikan harga yang kamu bayar benar-benar sepadan dengan kualitasnya.',
-                'image_path' => '/blog/harga-batu-alam-terbaru-2025-jenis-ukuran-dan-tips-beli-paling-lengkap.jpg',
-                'published_at' => '2025-10-10 18:00:47',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => '5 Merek Talang Air Terbaik di Toko Bangunan',
-                'slug' => '2025/10/10/5-merek-talang-air-terbaik-di-toko-bangunan',
-                'content' => '<h3><img class="alignnone size-full wp-image-2416" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/5-merek-talang-air-terbaik-di-toko-bangunan.jpg" alt="Merek Talang Air" width="950" height="550" /></h3>
-<p>Dalam urusan renovasi rumah, talang air sering jadi hal kecil yang justru paling penting. Fungsinya sederhana, menyalurkan air hujan agar tidak merusak dinding dan pondasi. Tapi memilih <strong>merek talang air terbaik</strong> bukan sekadar soal harga murah; ini soal ketahanan, kemudahan pemasangan, dan kualitas bahan. Nah, berikut rekomendasi <strong>5 merek talang air paling laris dan terpercaya</strong> yang bisa kamu temukan di <strong>Yen Bangunan Cikarang</strong>.</p>
-<p><strong><span dir="auto">[Baca juga: </span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal/"><span dir="auto">Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!</span></a></span><span dir="auto">]</span></strong></p>
-
-<h2>5 Merek Talang Air Terbaik</h2>
-<h3>1. <strong>PVC Rucika</strong></h3>
-<p>Talang air Rucika sudah terkenal di kalangan kontraktor maupun pemilik rumah. Bahannya terbuat dari PVC berkualitas tinggi yang tahan panas dan anti-karat.<br /><em>Kisaran harga:</em> Rp40.000 – Rp90.000 per meter.</p>
-
-<h3>2. <strong>Wavin</strong></h3>
-<p>Kalau kamu cari talang yang kuat dan tahan cuaca ekstrem, Wavin bisa jadi pilihan. Desainnya rapi, cocok buat tampilan rumah modern.<br /><em>Kisaran harga:</em> Rp60.000 – Rp120.000 per meter.</p>
-
-<h3>3. <strong>DuraFlow</strong></h3>
-<p>DuraFlow unggul di sisi fleksibilitas dan daya tahan. Banyak digunakan di area industri maupun perumahan karena aliran airnya lancar dan jarang mampet.<br /><em>Kisaran harga:</em> Rp50.000 – Rp100.000 per meter.</p>
-
-<h3>4. <strong>Talon</strong></h3>
-<p>Talon dikenal karena sistem sambungannya yang presisi dan anti-rembes. Desainnya juga estetik, cocok untuk kamu yang peduli detail tampilan rumah.<br /><em>Kisaran harga:</em> Rp45.000 – Rp85.000 per meter.</p>
-
-<h3>5. <strong>Pralon</strong></h3>
-<p>Sebagai merek senior di dunia perpipaan, Pralon juga punya lini talang air yang tahan lama dan mudah dipasang.<br /><em>Kisaran harga:</em> Rp55.000 – Rp110.000 per meter.</p>
-
-<h2>Tempat Beli Talang Air Terpercaya di Cikarang</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-<p>Semua merek di atas bisa kamu temukan di <strong>Yen Bangunan Cikarang</strong>, supermarket bahan bangunan terlengkap dengan reputasi lebih dari 15 tahun. Selain lengkap, harga di Yen Bangunan juga kompetitif dengan layanan <strong>free delivery</strong> untuk area sekitar Cikarang.</p>
-<p>Jadi, sebelum musim hujan datang, pastikan kamu sudah memilih <strong>merek talang air terbaik</strong> sesuai kebutuhan. Belanja di tempat terpercaya seperti <strong>Yen Bangunan</strong> bikin renovasi rumah jadi lebih tenang dan hemat waktu.</p>
-<p><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a></p>',
-                'image_path' => '/blog/5-merek-talang-air-terbaik-di-toko-bangunan.jpg',
-                'published_at' => '2025-10-10 22:54:50',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Jual Pasir Cikarang: List Harga & Panduan dari Yen Bangunan Cikarang',
-                'slug' => '2025/10/13/jual-pasir-cikarang-list-harga-panduan-dari-yen-bangunan-cikarang',
-                'content' => '<img class="alignnone size-full wp-image-2422" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/jual-pasir-cikarang-list-harga-panduan-dari-yen-bangunan-cikarang.jpg" alt="Jual Pasir Cikarang List Harga &amp; Panduan dari Yen Bangunan Cikarang" width="950" height="550" />
-
-Pasir adalah salah satu bahan paling penting dalam konstruksi, mulai dari plester, cor beton, hingga fondasi rumah. Jika Anda sedang cari <strong>harga pasir Cikarang</strong>, atau ingin <strong>beli pasir Cikarang</strong> dari supplier yang terpercaya, artikel ini membantu Anda membuat keputusan yang tepat.
-
-<strong><span dir="auto">[Baca juga: </span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal/"><span dir="auto">Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!</span></a></span><span dir="auto">]</span></strong>
-<h2>Supplier Pasir Cikarang: Fokus ke Yen Bangunan Cikarang</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-
-Jika Anda mempertimbangkan <strong>supplier pasir Cikarang</strong>, Yen Bangunan adalah salah satu pilihan yang patut diperhitungkan. Berikut keunggulan mereka berdasarkan informasi yang terkini:
-<ul>
- 	<li><strong>Stok lengkap &amp; siap kirim</strong>, bukan hanya pasir tapi juga besi, semen, serta material finishing.</li>
- 	<li>Melayani <strong>grosir maupun eceran</strong>, cocok untuk proyek besar maupun renovasi rumah kecil.</li>
- 	<li>Harga relatif bersaing karena jaringan distribusi yang kuat.</li>
- 	<li>Layanan tambahan: konsultasi kebutuhan material, free delivery dalam area Cikarang, request order jika jenis material khusus diperlukan.</li>
-</ul>
-<h2>Tips Agar Mendapat Harga Pasir Terbaik</h2>
-<ol>
- 	<li><strong>Tentukan jenis pasir yang dibutuhkan</strong> (pasir cuci, pasir hitam halus, pasir cor, dll). Kualitas berbeda → harga berbeda.</li>
- 	<li><strong>Perhitungkan volume</strong>: Semakin besar volume, biasanya harga per kubik atau per truk bisa lebih rendah.</li>
- 	<li><strong>Perhatikan biaya kirim</strong>: Beberapa supplier seperti Yen Bangunan menyediakan free delivery dalam area tertentu. Pastikan Anda menanyakan ini agar tidak ada tambahan tak terduga.</li>
- 	<li><strong>Bandingkan beberapa supplier</strong>: Meski Yen Bangunan terkenal, tetap cek beberapa penawaran agar Anda yakin mendapatkan harga &amp; kualitas terbaik.</li>
- 	<li><strong>Pastikan pasir sesuai spesifikasi proyek</strong>: Drainase, cor beton, plesteran semua butuh pasir dengan karakteristik berbeda — air, kandungan lumpur, butiran, dll.</li>
-</ol>
-<h2>Kesimpulan</h2>
-<ul>
- 	<li>Jika Anda ingin <strong>beli pasir Cikarang</strong>, harga tergantung jenis pasir dan volume. Misalnya, pasir cuci mungkin sekitar <strong>Rp 1,2–1,4 juta per truk (6-7 m³)</strong>, sedangkan pasir tronton untuk kebutuhan besar bisa jauh lebih tinggi.</li>
- 	<li>Supplier pasir Cikarang seperti <strong>Yen Bangunan</strong> menawarkan banyak manfaat: stok lengkap, harga bersaing, layanan konsultasi, dan pengiriman gratis di beberapa wilayah Cikarang.</li>
- 	<li>Agar mendapatkan deal terbaik, selalu bandingkan spesifikasi, volume, dan biaya pengiriman—dan jangan ragu untuk memanfaatkan layanan supplier lokal yang terpercaya.</li>
-</ul>',
-                'image_path' => '/blog/jual-pasir-cikarang-list-harga-panduan-dari-yen-bangunan-cikarang.jpg',
-                'published_at' => '2025-10-13 18:01:15',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Jual Baja Cikarang: Pusat Baja Konstruksi Lengkap & Terpercaya',
-                'slug' => '2025/10/14/jual-baja-cikarang-pusat-baja-konstruksi-lengkap-terpercaya',
-                'content' => '<p><img class="alignnone size-full wp-image-2428" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/jual-baja-cikarang-pusat-baja-konstruksi-lengkap-terpercaya.jpg" alt="Jual Baja Cikarang Pusat Baja Konstruksi Lengkap &amp; Terpercaya" width="950" height="550" /></p>
-
-<h2>Yen Bangunan Cikarang: Pusat Baja Konstruksi Lengkap dan Terpercaya</h2>
-<p>Dalam dunia konstruksi, kualitas material adalah fondasi dari hasil akhir yang kuat dan tahan lama. Karena itu, mencari <strong>toko baja Cikarang</strong> yang terpercaya bukan sekadar soal harga, tapi juga soal kualitas, pelayanan, dan ketersediaan produk. Di sinilah <strong>Yen Bangunan Cikarang</strong> hadir sebagai solusi lengkap untuk kebutuhan <strong>baja konstruksi dan besi bangunan</strong> di kawasan industri yang terus berkembang ini.</p>
-<p>Sebagai <strong>supplier baja Cikarang</strong> yang sudah berpengalaman, Yen Bangunan menyediakan berbagai jenis baja seperti <strong>WF beam, H-beam, besi kanal C, UNP, plat strip, hingga hollow galvanis</strong>. Semua produk dipilih dari pabrikan terpercaya dan memenuhi standar konstruksi nasional, sehingga cocok digunakan untuk proyek perumahan, gedung komersial, hingga pabrik skala besar.</p>
-<p><strong><span dir="auto">[Baca juga: </span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal/"><span dir="auto">Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!</span></a></span><span dir="auto">]</span></strong></p>
-
-<h2>Kenapa Harus Beli Baja di Yen Bangunan Cikarang?</h2>
-<p><strong>1. Kualitas Terjamin, Harga Kompetitif</strong><br />Yen Bangunan tidak sekadar menjual baja, tapi memastikan setiap batang besi yang keluar dari gudang memenuhi standar mutu tinggi. Dengan jaringan supplier luas dan sistem distribusi efisien, pelanggan bisa mendapatkan <strong>harga baja Cikarang</strong> yang tetap bersaing tanpa kompromi terhadap kualitas.</p>
-<p><strong>2. Stok Lengkap untuk Semua Kebutuhan Proyek</strong><br />Mulai dari <strong>baja WF dan H-beam untuk struktur utama</strong>, hingga <strong>besi hollow dan plat strip</strong> untuk kebutuhan finishing — semua tersedia dalam berbagai ukuran dan ketebalan. Hal ini memudahkan kontraktor maupun pemilik proyek untuk membeli material dalam satu tempat, tanpa harus repot mencari ke beberapa toko berbeda.</p>
-<p><strong>3. Layanan Cepat &amp; Free Delivery Area Cikarang</strong><br />Salah satu keunggulan Yen Bangunan adalah <strong>layanan pengiriman gratis untuk wilayah Cikarang dan sekitarnya</strong>. Tim logistik berpengalaman siap memastikan material sampai tepat waktu, sehingga proyek bisa berjalan tanpa hambatan.</p>
-
-<h2>Partner Terbaik untuk Proyek Anda</h2>
-<p>Dengan pengalaman lebih dari 15 tahun di industri bahan bangunan, Yen Bangunan telah menjadi pilihan utama banyak kontraktor, arsitek, dan developer di Cikarang. Dukungan tenaga penjual profesional, sistem pembelian yang mudah, dan after sales service yang responsif menjadikan toko ini bukan sekadar tempat jual baja, tapi <strong>partner konstruksi yang bisa diandalkan</strong>.</p>
-<p>Jika Anda sedang mencari <strong>baja Cikarang</strong> dengan kualitas unggul, pelayanan cepat, dan harga kompetitif, <a href="https://yenbangunan.com/"><strong>Yen Bangunan Cikarang</strong></a> adalah jawabannya.</p>
-<p><strong>Hubungi Yen Bangunan Cikarang sekarang</strong> untuk konsultasi kebutuhan proyek atau dapatkan penawaran harga terbaik hari ini.</p>
-<p><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a></p>',
-                'image_path' => '/blog/jual-baja-cikarang-pusat-baja-konstruksi-lengkap-terpercaya.jpg',
-                'published_at' => '2025-10-14 18:08:27',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Toko Genteng di Cikarang: Pilihan Genteng Berkualitas untuk Hunian & Proyek',
-                'slug' => '2025/10/15/toko-genteng-di-cikarang-pilihan-genteng-berkualitas-untuk-hunian-proyek',
-                'content' => '<p><img class="alignnone size-full wp-image-2436" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/toko-genteng-di-cikarang-pilihan-genteng-berkualitas-untuk-hunian-proyek.jpg" alt="Toko Genteng di Cikarang" width="950" height="550" /></p>
-<p>Membangun atau merenovasi rumah di Cikarang tentu menghadirkan banyak pertimbangan. Salah satu elemen penting agar hunian nyaman dan tahan lama adalah <strong>genteng</strong>. Mulai dari genteng tanah liat klasik, genteng beton modern, hingga genteng metal yang ringan, setiap jenis punya karakteristik daya tahan, estetika, dan harga sendiri.</p>
-<p>Jika Anda sedang mencari <em>toko genteng di Cikarang</em>, artikel ini akan membantu Anda menemukan opsi terbaik dan mempertimbangkan aspek-aspek penting sebelum membeli.</p>
-<p><strong><span dir="auto">[Baca juga: </span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal/"><span dir="auto">Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!</span></a></span><span dir="auto">]</span></strong></p>
-
-<h2>Mengapa Memilih Toko Genteng Terpercaya?</h2>
-<p>Saat mencari <strong>jual genteng Cikarang</strong>, kualitas dan layanan toko tidak bisa diabaikan. Toko yang memiliki reputasi baik biasanya memberikan:</p>
-
-<ul>
- 	<li>
-<p><strong>Stok yang lengkap dan update</strong> - agar proyek Anda tidak tertunda</p>
-</li>
- 	<li>
-<p><strong>Konsultasi teknis gratis</strong> - supaya jenis genteng sesuai kondisi atap dan iklim</p>
-</li>
- 	<li>
-<p><strong>Harga transparan &amp; bersaing</strong> - agar Anda tahu bahwa harga genteng Cikarang yang Anda dapat adalah wajar</p>
-</li>
- 	<li>
-<p><strong>Layanan pengiriman lokal</strong> - mengurangi risiko rusak dan mempermudah logistik</p>
-</li>
-</ul>
-<p>Salah satu nama yang menonjol di kawasan Cikarang adalah <strong>Yen Bangunan Cikarang</strong>. Sejak 2008, mereka dikenal sebagai toko material bangunan terbesar &amp; terlengkap di Cikarang yang juga melayani produk atap dan genteng. Yen Bangunan menawarkan layanan free delivery ke area Cikarang dan kerap menjadi rujukan bagi pemilik rumah maupun kontraktor.</p>
-
-<h2>Ragam Jenis Genteng dan Tips Memilih</h2>
-<p>Berikut gambaran singkat jenis genteng dan faktor yang perlu diperhatikan:</p>
-
-<div class="_tableContainer_1rjym_1">
-<div class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse">
-<table class="w-fit min-w-(--thread-content-width)">
-<thead>
-<tr>
-<th>Jenis Genteng</th>
-<th>Keunggulan</th>
-<th>Catatan Harga &amp; Ketahanan</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Genteng Tanah Liat / Keramik</strong></td>
-<td>Tampilan klasik, adem, cocok gaya tradisional atau nuansa alam</td>
-<td>Umumnya lebih mahal dan rentan pecah jika instalasi tidak rapi</td>
-</tr>
-<tr>
-<td><strong>Genteng Beton (press / flat / gelombang)</strong></td>
-<td>Kuat, tahan cuaca, cocok banyak tipe atap</td>
-<td>Harga per lembar cukup stabil di Cikarang dan banyak stok lokal</td>
-</tr>
-<tr>
-<td><strong>Genteng Metal / Metal Pasir</strong></td>
-<td>Ringan, instalasi cepat, tahan karat &amp; lumut (jika finishing bagus)</td>
-<td>Harga genteng metal pasir di Cikarang berkisar di rentang Rp 30.000–Rp 60.000/lembar tergantung ketebalan &amp; merek</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Contoh nyata: Yen Bangunan secara aktif mempromosikan rangkaian genteng metal terbaik di 2025. Disitu bisa Anda bandingkan merek seperti Sakura Roof, Rainbow Roof, Multiroof, dan lainnya.</p>
-
-<h3>Tips Memilih Berdasarkan Lokasi &amp; Iklim</h3>
-<ul>
- 	<li>
-<p>Jika rumah Anda di area rawan hujan deras atau angin - fokuslah ke genteng beton atau metal dengan kualitas tinggi (lapisan anti karat/garansi warna).</p>
-</li>
- 	<li>
-<p>Untuk rumah bertema tropis dan estetika alami - genteng tanah liat dengan glasir bisa jadi pilihan bagus.</p>
-</li>
- 	<li>
-<p>Pastikan sambungan &amp; sistem pembuangan air hujan (talang, reng) dirancang dengan baik agar genteng tidak mudah bocor.</p>
-</li>
-</ul>
-<h2>Rekomendasi Toko Genteng di Cikarang &amp; Sekitarnya</h2>
-<h3>Siapa Yen Bangunan Cikarang?</h3>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-<p>Yen Bangunan (PT Yen Sejahtera) berdiri sejak 2008 dan berkantor pusat di Lippo Cikarang, Sukadami, Cikarang Selatan. Dengan slogan <em>“one stop solution”</em> untuk kebutuhan material, mereka fokus melayani kontraktor, pabrik, hingga pembeli retail lokal. Jam operasionalnya dari 07.30 hingga 20.00 setiap hari. Lokasinya strategis di Jl. Raya Cikarang, Cibarusah No. 33, memudahkan akses dari sebagian besar wilayah Cikarang.</p>
-<p>Sebagai <strong>supplier baja Cikarang</strong>, Yen Bangunan membanggakan katalog lebih dari ribuan SKU produk bangunan, termasuk baja struktural, besi beton, hingga peralatan finishing. Mereka juga menawarkan layanan free delivery di area Cikarang dan sistem <em>request order</em> jika stok tertentu belum tersedia.</p>
-<p><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a></p>',
-                'image_path' => '/blog/toko-genteng-di-cikarang-pilihan-genteng-berkualitas-untuk-hunian-proyek.jpg',
-                'published_at' => '2025-10-15 18:40:59',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Wisata Edukasi Rumah Adat, 5 Destinasi yang Harus Dikunjungi!',
-                'slug' => '2025/10/16/wisata-edukasi-rumah-adat-5-destinasi-yang-harus-dikunjungi',
-                'content' => '<p><img class="alignnone size-full wp-image-2441" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/wisata-edukasi-rumah-adat-5-destinasi-yang-harus-dikunjungi.jpg" alt="Edukasi Rumah Adat" width="950" height="550" /></p>
-<p>Indonesia tak hanya kaya akan alam dan kuliner, tapi juga menyimpan ribuan warisan budaya, salah satunya rumah adat. Menjelajahi <strong>wisata rumah adat</strong> bukan sekadar jalan-jalan, tapi juga belajar mengenal jati diri bangsa lewat arsitektur tradisional yang sarat makna. Dari Sabang sampai Merauke, setiap rumah adat punya filosofi unik yang merefleksikan kehidupan masyarakatnya.</p>
-<p>Berikut lima destinasi <strong>wisata edukasi rumah adat</strong> di Indonesia yang wajib kamu kunjungi untuk memahami keindahan dan kebijaksanaan arsitektur Nusantara.</p>
-<p><strong><span dir="auto">[Baca juga: </span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal/"><span dir="auto">Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!</span></a></span><span dir="auto">]</span></strong></p>
-
-<h2>1. Taman Mini Indonesia Indah (Jakarta)</h2>
-<img class="alignnone wp-image-2443 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/banner-4.jpg" alt="wisata rumah adat" width="1024" height="561" />
-<p>Kalau ingin “keliling Indonesia” dalam sehari, TMII adalah tempat terbaik. Di sini terdapat anjungan dari 33 provinsi yang menampilkan bentuk rumah adat, busana, dan kesenian khas daerah. Setiap rumah dibangun menyerupai aslinya—mulai dari Rumah Gadang hingga Tongkonan Toraja.<br />Kamu bisa mempelajari struktur bangunan, makna ornamen, hingga filosofi yang terkandung dalam setiap ukiran. Cocok banget untuk pelajar, keluarga, atau siapa pun yang ingin belajar budaya Indonesia secara visual dan interaktif.</p>
-
-<h2>2. Desa Adat Wae Rebo (Flores, NTT)</h2>
-<img class="alignnone wp-image-2444 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/1200px-wae_rebo_di_pagi_hari.jpg" alt="wisata rumah adat" width="1024" height="677" />
-<p>Terletak di pegunungan Flores, Desa Wae Rebo dikenal dengan rumah tradisional berbentuk kerucut yang disebut <em>Mbaru Niang</em>. Selain keindahan alamnya yang memukau, kamu bisa belajar langsung dari masyarakat lokal tentang bagaimana rumah adat dibangun menggunakan bahan alami seperti bambu, ijuk, dan kayu.<br />Wae Rebo bukan sekadar destinasi, tapi juga simbol pelestarian arsitektur tradisional di tengah modernisasi.</p>
-
-<h2>3. Kampung Naga (Tasikmalaya, Jawa Barat)</h2>
-<img class="alignnone wp-image-2445" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/view_of_naga_village.jpg" alt="wisata rumah adat" width="1061" height="796" />
-<p>Kampung Naga menjadi contoh nyata bagaimana masyarakat menjaga kearifan lokal dalam kehidupan sehari-hari. Rumah-rumah di sini dibangun tanpa paku dan berdiri rapi mengikuti kontur tanah.<br />Wisatawan bisa belajar bagaimana filosofi keseimbangan antara manusia, alam, dan Sang Pencipta tercermin dalam desain arsitektur dan tata ruang kampung ini.</p>
-
-<h2>4. Desa Adat Bena (Ngada, NTT)</h2>
-<img class="alignnone wp-image-2446 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/kampung-bena-merupakan-sebuah-perkampungan-megalitikum-yang-terletak-di-kabupaten-ngada-ntt.jpg" alt="wisata rumah adat" width="1013" height="570" />
-<p>Rumah adat Bena berdiri megah di atas bukit dengan susunan melingkar yang melambangkan kesatuan masyarakat. Setiap rumah memiliki simbol spiritual yang kuat, termasuk batu megalitik yang digunakan untuk upacara adat.<br />Selain menikmati panorama pegunungan, pengunjung dapat memahami makna setiap struktur dan bahan yang digunakan—sebuah pelajaran nyata tentang kearifan lokal dan teknik bangunan tradisional.</p>
-
-<h2>5. Desa Adat Penglipuran (Bali)</h2>
-<img class="alignnone wp-image-2447 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/lingkungan-desa-penglipuran.jpg" alt="wisata rumah adat" width="1024" height="683" />
-<p>Desa ini dikenal sebagai salah satu desa terbersih di dunia, tapi daya tarik utamanya justru ada pada konsep arsitektur rumah adat yang seragam dan selaras dengan alam.<br />Setiap bangunan diatur dengan prinsip “Tri Mandala,” yang membagi ruang berdasarkan tingkat kesucian. Penglipuran mengajarkan kita bahwa rumah bukan sekadar tempat tinggal, tapi juga cermin filosofi hidup masyarakatnya.</p>
-
-<h2>Belajar Nilai dari Rumah Adat</h2>
-<p>Wisata rumah adat bukan sekadar perjalanan visual, tapi juga pengalaman spiritual. Setiap rumah memiliki filosofi tentang kebersamaan, kerja keras, dan rasa hormat terhadap alam. Di era modern, nilai-nilai ini justru relevan untuk kita jaga dan aplikasikan dalam kehidupan sehari-hari.</p>
-
-<h2>Dari Rumah Adat ke Rumah Impian</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-<p>Menariknya, banyak prinsip desain tradisional Indonesia bisa jadi inspirasi untuk membangun rumah modern yang ramah lingkungan dan fungsional. Misalnya, penggunaan material alami, ventilasi silang, atau desain yang menyatu dengan alam. Prinsip-prinsip ini sejalan dengan visi <strong>Yen Bangunan Cikarang</strong> dalam menyediakan bahan bangunan berkualitas yang mendukung hunian nyaman, kuat, dan berkarakter.</p>
-<p><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a></p>',
-                'image_path' => '/blog/wisata-edukasi-rumah-adat-5-destinasi-yang-harus-dikunjungi.jpg',
-                'published_at' => '2025-10-16 15:42:29',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Atap Baja Ringan Cikarang: Hubungi Yen Bangunan 081315147952',
-                'slug' => '2025/10/17/atap-baja-ringan-cikarang-hubungi-yen-bangunan-081315147952',
-                'content' => '<h3><img class="alignnone size-full wp-image-2453" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/atap-baja-ringan-cikarang-hubungi-yen-bangunan-081315147952.jpg" alt="Atap Baja Ringan Cikarang " width="950" height="550" /></h3>
-<h2>Atap Baja Ringan: Pilihan Tepat untuk Bangunan Modern</h2>
-<p>Dalam dunia konstruksi modern, <strong>atap baja ringan</strong> sudah bukan hal baru lagi. Material ini kini jadi pilihan utama banyak kontraktor dan pemilik rumah di <strong>Cikarang</strong>, terutama karena daya tahannya yang luar biasa dan instalasinya yang cepat. Dibandingkan kayu atau baja konvensional, baja ringan lebih efisien, awet, dan minim perawatan.</p>
-<p>Bayangkan Anda membangun rumah atau ruko, tentu ingin struktur atap yang kuat tapi tetap ringan agar fondasi tidak terbebani. Nah, di sinilah <strong>atap baja ringan Cikarang</strong> jadi solusi ideal, tangguh terhadap cuaca ekstrem, tidak mudah berkarat, dan tahan rayap.</p>
-<p><strong><span dir="auto">[Baca juga: </span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal/"><span dir="auto">Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!</span></a></span><span dir="auto">]</span></strong></p>
-
-<h2>Manfaat Utama Atap Baja Ringan</h2>
-<img class="alignnone size-full wp-image-2455" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/atap-baja-ringan.jpg" alt="atap-baja-ringan" width="700" height="393" />
-<ol>
- 	<li>
-<p><strong>Tahan Lama &amp; Anti Karat</strong><br />Baja ringan diproses dengan lapisan galvanis yang membuatnya tahan terhadap karat, cuaca lembap, dan hujan tropis khas Indonesia. Cocok untuk wilayah seperti Cikarang yang memiliki intensitas panas tinggi.</p>
-</li>
- 	<li>
-<p><strong>Struktur Kuat tapi Ringan</strong><br />Bobotnya yang ringan memudahkan proses pemasangan dan mengurangi beban struktur bangunan. Meski ringan, daya tahannya luar biasa—mampu menopang genteng metal, spandek, hingga panel surya.</p>
-</li>
- 	<li>
-<p><strong>Instalasi Cepat &amp; Rapi</strong><br />Tukang tidak perlu waktu lama untuk merakitnya. Sistem baut dan sambungan presisi membuat hasil akhir terlihat rapi dan kokoh, menghemat waktu pembangunan hingga 30%.</p>
-</li>
- 	<li>
-<p><strong>Ramah Lingkungan &amp; Ekonomis</strong><br />Baja ringan bisa didaur ulang dan tidak membutuhkan banyak bahan tambahan seperti kayu. Biaya perawatannya juga rendah, menjadikannya solusi ekonomis jangka panjang.</p>
-</li>
-</ol>
-<h2>Jenis-Jenis Atap Baja Ringan yang Umum Digunakan</h2>
-<p>Ada beberapa jenis <strong>baja ringan</strong> yang bisa disesuaikan dengan kebutuhan proyek:</p>
-
-<ul>
- 	<li>
-<p><strong>Canal (C):</strong> Digunakan untuk rangka utama atap, kuat menopang beban besar.</p>
-</li>
- 	<li>
-<p><strong>Reng (U):</strong> Sebagai penopang genteng atau spandek, ringan dan fleksibel.</p>
-</li>
- 	<li>
-<p><strong>Truss:</strong> Rangka atap utama dengan struktur segitiga, ideal untuk bangunan besar.</p>
-</li>
-</ul>
-<p>Pemilihan jenis yang tepat akan menentukan ketahanan dan tampilan akhir atap Anda.</p>
-
-<h2>Di Mana Tempat Terbaik Jual Atap Baja Ringan di Cikarang?</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-<p>Kalau Anda sedang mencari <strong>toko jual atap baja ringan di Cikarang</strong> dengan kualitas terpercaya dan harga bersaing, <span style="text-decoration: underline"><a href="https://yenbangunan.com/"><strong>Yen Bangunan Cikarang</strong></a></span> adalah jawabannya.<br />Sejak berdiri pada 2008, Yen Bangunan sudah dikenal sebagai supermarket bahan bangunan terbesar dan terlengkap di kawasan Cikarang. Mereka menyediakan berbagai pilihan atap baja ringan dari brand ternama, lengkap dengan layanan <strong>konsultasi gratis dan pengiriman gratis (free delivery)</strong> untuk area sekitar.</p>
-<p>Dengan reputasi yang solid dan stok yang lengkap, belanja di Yen Bangunan bukan cuma soal produk, tapi juga <strong>rasa aman dan kepastian kualitas.</strong></p>
-<p><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a></p>',
-                'image_path' => '/blog/atap-baja-ringan-cikarang-hubungi-yen-bangunan-081315147952.jpg',
-                'published_at' => '2025-10-17 15:18:23',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Toko Perkakas Tekiro Terdekat di Cikarang: Yen Bangunan',
-                'slug' => '2025/10/20/toko-perkakas-tekiro-terdekat-di-cikarang-yen-bangunan',
-                'content' => '<p><img class="alignnone size-full wp-image-2459" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/toko-perkakas-tekiro-terdekat-di-cikarang-yen-bangunan.jpg" alt="Toko Perkakas Tekiro Terdekat di Cikarang" width="950" height="550" /></p>
-<p>Kalau kamu sedang mencari <strong>toko perkakas Tekiro terdekat di Cikarang</strong>, kemungkinan besar kamu sedang butuh alat yang <strong>tahan lama, presisi, dan bisa diandalkan</strong>. Entah untuk bengkel, proyek rumah, atau kebutuhan industri, kualitas perkakas jelas berpengaruh pada hasil kerja.</p>
-<p>Nah, di Cikarang sendiri, salah satu toko yang paling direkomendasikan adalah <strong>Yen Bangunan, </strong>pusat bahan bangunan dan perkakas lengkap yang sudah dipercaya lebih dari 15 tahun.</p>
-<p><strong><span dir="auto">[Baca juga: </span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal/"><span dir="auto">Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!</span></a></span><span dir="auto">]</span></strong></p>
-
-<h2>Kenapa Pilih Tekiro?</h2>
-<p><strong>Tekiro</strong> dikenal dengan kualitasnya yang kuat dan presisi tinggi. Brand ini sudah jadi pilihan utama para teknisi, mekanik, hingga tukang bangunan karena:</p>
-
-<ul>
- 	<li>
-<p><strong>Material kokoh dan anti karat</strong>, awet digunakan bertahun-tahun.</p>
-</li>
- 	<li>
-<p><strong>Varian produk lengkap</strong>, mulai dari kunci pas, obeng, tang, hingga peralatan otomotif.</p>
-</li>
- 	<li>
-<p><strong>Harga kompetitif</strong>, kualitas tinggi tanpa bikin kantong bolong.</p>
-</li>
-</ul>
-<p>Maka nggak heran kalau banyak orang cari <strong>toko perkakas Tekiro terdekat</strong> supaya bisa langsung beli tanpa ribet.</p>
-
-<h2>Yen Bangunan: Solusi Lengkap untuk Perkakas Tekiro</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-<p>Di <span style="text-decoration: underline"><a href="https://yenbangunan.com/">Yen Bangunan Cikarang</a></span>, kamu bisa menemukan <strong>berbagai seri perkakas Tekiro original</strong>. Semua produk dijamin <strong>barang resmi dan bergaransi</strong>, bukan barang KW yang cepat rusak. Stoknya pun selalu update, jadi kamu nggak perlu khawatir kehabisan.</p>
-<p>Beberapa keunggulan berbelanja di Yen Bangunan antara lain:</p>
-
-<ul>
- 	<li>
-<p><strong>Stok lengkap</strong>: dari perkakas tangan, set kunci, sampai alat otomotif berat.</p>
-</li>
- 	<li>
-<p><strong>Free delivery area Cikarang dan sekitarnya</strong> – praktis tanpa keluar rumah.</p>
-</li>
- 	<li>
-<p><strong>Konsultasi langsung</strong> dengan staf berpengalaman yang siap bantu pilih produk sesuai kebutuhan.</p>
-</li>
- 	<li>
-<p><strong>Harga transparan dan kompetitif</strong>, cocok untuk profesional maupun pemula.</p>
-</li>
-</ul>
-<p>Jadi kalau kamu sedang cari <strong>toko perkakas Tekiro terdekat di Cikarang</strong>, <strong>Yen Bangunan</strong> bisa jadi pilihan paling aman dan efisien.</p>
-
-<h3>Tips Sebelum Membeli Perkakas Tekiro</h3>
-<p>Sebelum datang ke toko, ada baiknya kamu tahu kebutuhanmu secara spesifik. Misalnya:</p>
-
-<ul>
- 	<li>
-<p>Apakah kamu butuh untuk pekerjaan berat atau sekadar hobi rumahan?</p>
-</li>
- 	<li>
-<p>Apakah kamu lebih sering kerja di rumah, bengkel, atau proyek lapangan?</p>
-</li>
-</ul>
-<p>Dengan tahu jawabannya, kamu bisa memilih produk Tekiro yang paling cocok, tanpa buang waktu dan uang.</p>
-
-<h2>Penutup</h2>
-<p>Perkakas bukan sekadar alat kerja, tapi investasi jangka panjang. Dengan memilih <strong>Tekiro original dari Yen Bangunan</strong>, kamu memastikan setiap pekerjaan berjalan lancar, efisien, dan hasilnya maksimal.</p>
-<p>Jadi, kalau kamu butuh <strong>toko perkakas Tekiro terdekat di Cikarang</strong>, langsung saja kunjungi <strong>Yen Bangunan</strong>. Temukan beragam produk berkualitas dengan layanan terbaik yang bikin kamu nggak mau belanja di tempat lain.</p>
-<p><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a></p>',
-                'image_path' => '/blog/toko-perkakas-tekiro-terdekat-di-cikarang-yen-bangunan.jpg',
-                'published_at' => '2025-10-20 17:31:59',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Toko Baja Ringan Cikarang: Hubungi Yen Bangunan di 081315147952',
-                'slug' => '2025/10/21/toko-baja-ringan-cikarang-hubungi-yen-bangunan-di-081315147952',
-                'content' => '<p><img class="alignnone size-full wp-image-2464" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/toko-baja-ringan-cikarang-hubungi-yen-bangunan-di-081315147952.jpg" alt="Toko Baja Ringan Cikarang " width="950" height="550" /></p>
-<p>Ketika membangun atau merenovasi rumah, memilih bahan yang tepat bukan cuma soal harga, tapi soal ketahanan dan keamanan. Salah satu material yang kini paling banyak digunakan adalah <strong>baja ringan</strong>. Di Cikarang, <strong>Yen Bangunan</strong> jadi salah satu toko yang paling dipercaya untuk menyediakan baja ringan berkualitas, baik untuk kebutuhan atap, rangka, maupun struktur tambahan bangunan.</p>
-<p>Sebagai <strong>toko baja ringan di Cikarang</strong> yang sudah berpengalaman lebih dari 15 tahun, Yen Bangunan memahami betul kebutuhan para kontraktor, developer, dan pemilik rumah. Produk yang tersedia bukan hanya kuat dan presisi, tapi juga sudah memenuhi standar nasional, jadi Anda nggak perlu khawatir soal kualitas dan daya tahannya.</p>
-<p><strong><span dir="auto">[Baca juga: </span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/06/beli-bahan-bangunan-di-cikarang-ini-dia-toko-terpercaya-pilihan-warga-lokal/"><span dir="auto">Beli Bahan Bangunan di Cikarang? Ini dia Toko Terpercaya Pilihan Warga Lokal!</span></a></span><span dir="auto">]</span></strong></p>
-
-<h3>Keunggulan Baja Ringan di Yen Bangunan Cikarang</h3>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-<ol>
- 	<li>
-<p><strong>Kualitas Terjamin</strong><br />Baja ringan yang dijual di Yen Bangunan dipilih dari brand terpercaya dengan sertifikasi mutu. Cocok untuk proyek rumah tinggal hingga bangunan komersial.</p>
-</li>
- 	<li>
-<p><strong>Harga Kompetitif dan Transparan</strong><br />Semua harga di Yen Bangunan selalu diupdate mengikuti pasar terbaru, tapi tetap kompetitif. Anda bisa konsultasi langsung untuk menyesuaikan dengan kebutuhan proyek Anda.</p>
-</li>
- 	<li>
-<p><strong>Layanan Profesional &amp; Ramah</strong><br />Tim Yen Bangunan nggak cuma jualan produk, tapi juga bantu memberikan solusi. Baik Anda kontraktor berpengalaman atau pemilik rumah yang baru mulai renovasi, semua bisa dibantu dengan pendekatan yang mudah dipahami.</p>
-</li>
- 	<li>
-<p><strong>Free Delivery Area Cikarang &amp; Sekitarnya</strong><br />Salah satu keunggulan yang bikin banyak pelanggan balik lagi ke Yen Bangunan adalah <strong>layanan antar gratis</strong> ke area Cikarang. Jadi Anda bisa hemat waktu dan tenaga.</p>
-</li>
-</ol>
-<h3>Tips Memilih Toko Baja Ringan yang Tepat</h3>
-<p>Sebelum membeli, pastikan toko pilihan Anda:</p>
-
-<ul>
- 	<li>
-<p>Menjual produk dengan <strong>standar mutu SNI</strong></p>
-</li>
- 	<li>
-<p>Memberikan <strong>layanan konsultasi yang terbuka dan jujur</strong></p>
-</li>
- 	<li>
-<p>Punya <strong>stok lengkap</strong> dan sistem pembayaran transparan</p>
-</li>
- 	<li>
-<p>Menyediakan <strong>layanan pengiriman cepat dan aman</strong></p>
-</li>
-</ul>
-<p>Semua kriteria itu bisa Anda temukan di <strong>Yen Bangunan Cikarang</strong>. Dengan reputasi yang solid dan review pelanggan yang positif, Yen Bangunan bukan sekadar toko bangunan biasa, tapi partner proyek yang bisa Anda andalkan.</p>
-
-<h3>Hubungi Yen Bangunan Sekarang</h3>
-<p>Untuk informasi harga baja ringan terbaru, konsultasi kebutuhan material, atau penawaran proyek skala besar, Anda bisa langsung menghubungi tim Yen Bangunan melalui:<br />📍 <strong>Alamat:</strong> Jl. Raya Cikarang – Cibarusah No. 88, Cikarang<br />🌐 <strong>Website:</strong> <a class="decorated-link" href="https://yenbangunan.com" target="_new" rel="noopener">yenbangunan.com</a></p>
-<p>Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat. <strong>Yen Bangunan, Toko Baja Ringan Cikarang terpercaya untuk semua kebutuhan bangunan Anda.</strong></p>
-<p><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a></p>',
-                'image_path' => '/blog/toko-baja-ringan-cikarang-hubungi-yen-bangunan-di-081315147952.jpg',
-                'published_at' => '2025-10-21 16:29:17',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Jual Spandek Cikarang: Hubungi Yen Bangunan di 081315147952',
-                'slug' => '2025/10/22/jual-spandek-cikarang-hubungi-yen-bangunan-di-081315147952',
-                'content' => '<p><img class="alignnone wp-image-2469 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/jual-atap-spandek-cikarang-hubungi-yen-bangunan-di-081315147952.jpg" alt="Jual Spandek cikarang" width="950" height="550" /></p>
-<p>Sedang cari <strong>jual atap spandek di Cikarang</strong> yang terpercaya? Di <span style="text-decoration: underline"><a href="https://yenbangunan.com/"><strong>Yen Bangunan</strong></a></span>, kamu bisa dapat produk berkualitas, harga kompetitif, dan layanan antar cepat langsung ke lokasi proyek.</p>
-
-<h2>Kenapa Pilih Atap Spandek?</h2>
-<p>Atap spandek jadi pilihan populer karena:</p>
-
-<ul>
- 	<li>
-<p><strong>Tahan lama &amp; anti karat</strong>, cocok untuk cuaca tropis.</p>
-</li>
- 	<li>
-<p><strong>Ringan dan mudah dipasang</strong>, efisien untuk proyek besar maupun kecil.</p>
-</li>
- 	<li>
-<p><strong>Warna beragam</strong>, tampilan modern &amp; rapi.</p>
-</li>
- 	<li>
-<p><strong>Perawatan minim</strong>, hemat biaya jangka panjang.</p>
-</li>
-</ul>
-<h2>Keunggulan Belanja di Yen Bangunan Cikarang</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-<p>Yen Bangunan sudah dipercaya lebih dari 15 tahun sebagai <strong>toko bangunan terlengkap di Cikarang</strong>. Kami menyediakan berbagai jenis <strong>atap spandek polos, pasir, hingga zincalume</strong> dengan keunggulan:</p>
-
-<ul>
- 	<li>
-<p>Harga langsung dari distributor.</p>
-</li>
- 	<li>
-<p><strong>Free delivery area Cikarang &amp; sekitarnya.</strong></p>
-</li>
- 	<li>
-<p><strong>Tim profesional</strong> siap bantu pilih ukuran &amp; jenis spandek terbaik.</p>
-</li>
- 	<li>
-<p><strong>Konsultasi cepat via WhatsApp:</strong> <strong>081315147952</strong>.</p>
-</li>
-</ul>
-<h2>Tips Singkat Sebelum Membeli</h2>
-<ol>
- 	<li>
-<p>Perhatikan <strong>ketebalan</strong> untuk daya tahan lebih kuat.</p>
-</li>
- 	<li>
-<p>Pilih <strong>warna &amp; coating</strong> anti karat.</p>
-</li>
- 	<li>
-<p>Sesuaikan <strong>jenis permukaan</strong> — spandek pasir cocok untuk rumah agar lebih sejuk dan kedap suara.</p>
-</li>
-</ol>
-<h3>Hubungi Yen Bangunan Sekarang</h3>
-Untuk informasi harga baja ringan terbaru, konsultasi kebutuhan material, atau penawaran proyek skala besar, Anda bisa langsung menghubungi tim Yen Bangunan melalui:
-📍 <strong>Alamat:</strong> Jl. Raya Cikarang – Cibarusah No. 88, Cikarang
-🌐 <strong>Website:</strong> <a class="decorated-link" href="https://yenbangunan.com/" target="_new" rel="noopener">yenbangunan.com</a>
-
-Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat. <strong>Yen Bangunan, Toko Baja Ringan Cikarang terpercaya untuk semua kebutuhan bangunan Anda.</strong>
-<p><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a></p>',
-                'image_path' => '/blog/jual-atap-spandek-cikarang-hubungi-yen-bangunan-di-081315147952.jpg',
-                'published_at' => '2025-10-22 18:01:30',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => '5 Kesalahan Umum Saat Belanja Bahan Bangunan',
-                'slug' => '2025/10/23/5-kesalahan-umum-saat-belanja-bahan-bangunan',
-                'content' => '<img class="alignnone size-full wp-image-2479" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/5-kesalahan-umum-saat-belanja-bahan-bangunan.jpg" alt="" width="950" height="550" />
-
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Belanja bahan bangunan kelihatannya sepele, namun kenyataannya menyita banyak orang yang kehilangan waktu, uang, dan tenaga. Salah pilih toko, salah hitung kebutuhan, hingga tertipu kualitas bisa bikin proyek mandek di tengah jalan.</span></span></span></span>
-
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yuk, pelajari lima </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">kesalahan belanja bahan bangunan</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> yang paling sering terjadi dan cara menghindarinya agar pembangunan rumah atau remasi Anda berjalan lancar.</span></span></span></span>
-
-<strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Baca juga:</span></span></span></span></strong>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></span></span></span></a></span>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/01/toko-besi-cikarang-pusat-besi-baja-lengkap-untuk-proyek-konstruksi/"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Toko Besi Cikarang – Pusat Besi &amp; Baja Lengkap untuk Proyek Konstruksi</span></span></span></span></a></span>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></span></span></span></a></span>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">1. Tidak Membuat Rencana dan Daftar Kebutuhan</span></span></span></span></h2>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Banyak orang langsung ke toko tanpa tahu apa saja yang dibutuhkan. Akibatnya, bahan yang dibeli bisa berlebih atau malah kurang. Sebelum berbelanja, buatlah daftar detail: jenis bahan, ukuran, jumlah, dan prioritas pembelian. Dengan begitu, Anda bisa menghemat waktu sekaligus menekan biaya yang tidak perlu.</span></span></span></span>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">2. Hanya Fokus pada Harga Termurah</span></span></span></span></h2>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Harga murah memang menggiurkan, tapi bahan bangunan murah belum tentu efisien. Misalnya, cat dinding murah bisa cepat pudar atau semen kualitas rendah bisa membuat struktur cepat retak. Lebih baik pilih produk dengan kualitas terjamin dan garansi yang jelas. Di </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan Cikarang</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> , setiap produk sudah melalui kurasi kualitas, jadi Anda tidak perlu khawatir soal keaslian dan ketahanan.</span></span></span></span>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">3. Tidak mempertimbangkan Cuaca dan Lokasi Proyek</span></span></span></span></h2>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Kondisi lingkungan sering diabaikan saat memilih bahan. Padahal, bahan yang cocok untuk daerah lembap belum tentu ideal untuk wilayah panas. Misalnya, genteng logam berlapis pasir bisa lebih tahan terhadap suhu tinggi, sedangkan cat eksterior khusus anti jamur cocok untuk area lembap. Memahami kondisi proyek bisa membantu Anda memilih bahan yang lebih awet dan hemat biaya perawatan.</span></span></span></span>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">4. Beli dari Toko yang Tidak Terpercaya</span></span></span></span></h2>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Kesalahan klasik berikutnya: asal beli di toko yang tidak punya reputasi jelas. Selain risiko barang palsu, layanan purna jual pun sering tidak memuaskan. Pilih toko yang memiliki </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">stok lengkap, layanan konsultasi, dan jaminan pengiriman cepat</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> seperti </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan Cikarang</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> , yang sudah dipercaya lebih dari 15 tahun melayani proyek kecil hingga besar di Cikarang dan sekitarnya.</span></span></span></span>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">5. Tidak Memperhatikan Biaya Pengiriman</span></span></span></span></h2>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Banyak yang lupa menghitung ongkos kirim, padahal biaya ini bisa cukup besar, terutama jika bahan dibeli dalam jumlah banyak. Pilih toko yang menawarkan </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">layanan pengiriman gratis atau fleksibel</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> agar total biaya tetap efisien. Yen Bangunan Cikarang menyediakan </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">pengiriman gratis</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> untuk area tertentu, membantu pelanggan berhemat tanpa mengorbankan kenyamanan.</span></span></span></span>
-
-<a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20admin%20Yen%20Bangunan%2C%20saya%20datang%20dari%20website.%20Saya%20ingin%20menanyakan%20informasi%20mengenai%20stok%20dan%20harga%20produk."><img class="wp-image-2002" src="https://yenbangunan.com/wp-content/uploads/2025/09/banner-homepage-wa-1.png" alt="" width="2400" height="529" /></a>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Penutup: Belanja Pintar, Bangun Lebih Efisien</span></span></span></span></h2>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Membangun atau merenovasi rumah adalah investasi jangka panjang. Hindari lima kesalahan di atas agar waktu dan dana Anda tidak terbuang percuma. Pastikan Anda berbelanja di tempat yang tepat, dengan produk berkualitas dan pelayanan profesional.</span></span></span></span>
-
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Jika Anda berdomisili di Cikarang dan sedang mencari </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">toko bahan bangunan lengkap dan terpercaya</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> , </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan Cikarang</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> siap membantu dari perencanaan hingga pengiriman.</span></span></span></span>',
-                'image_path' => '/blog/5-kesalahan-umum-saat-belanja-bahan-bangunan.jpg',
-                'published_at' => '2025-10-23 18:37:48',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952',
-                'slug' => '2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952',
-                'content' => '<h2><img class="alignnone size-full wp-image-2488" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952.jpg" alt="Toko Besi Cikarang" width="950" height="550" /></h2>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan, Toko Besi Cikarang Terbaik untuk Semua Skala Proyek</span></span></h2>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Kalau kamu sedang mencari </span></span><em><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">toko besi Cikarang</span></span></em><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> yang benar-benar bisa diandalkan, nama </span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> hampir pasti muncul di daftar teratas. Bukan tanpa alasan—sejak berdiri lebih dari 15 tahun yang lalu, Yen Bangunan Cikarang dikenal sebagai pusat bahan bangunan dan besi yang lengkap, berkualitas, dan selalu update dengan kebutuhan pasar konstruksi modern.</span></span>
-
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Mulai dari proyek rumah tinggal sampai pembangunan skala besar, semua bisa menemukan kebutuhan material terbaik di satu tempat. Di sini, pelanggan tidak hanya membeli barang, tapi juga dapat </span></span><em><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">menghargai</span></span></em><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> berupa pelayanan yang cepat, ramah, dan profesional.</span></span>
-
-<strong><span dir="auto"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Baca juga:</span></span></span></strong>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></span></span></a></span>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/18/toko-alat-teknik-cikarang-yen-bangunan-cikarang/"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Toko Alat Teknik Cikarang – Yen Bangunan Cikarang</span></span></a></span>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></span></span></a></span>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Produk Besi Lengkap dan Terjamin Kualitasnya</span></span></h2>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Kualitas besi menjadi fondasi dari setiap bangunan yang kuat dan tahan lama. Di </span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan Cikarang</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> , kamu bisa menemukan berbagai jenis besi seperti:</span></span>
-<ul>
- 	<li><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Besi beton polos dan ulir</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> untuk kebutuhan struktur bangunan</span></span></li>
- 	<li><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Besi hollow dan UNP</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> untuk rangka dan konstruksi ringan</span></span></li>
- 	<li><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Plat besi, wiremesh, dan pipa galvanis</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> untuk kebutuhan industri maupun proyek custom</span></span></li>
-</ul>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Semua produk yang dipilih dari pabrikan terpercaya dan melewati proses pengecekan ketat agar mutu tetap terjamin. Harga pun kompetitif, cocok untuk kontraktor, teknisi, maupun pemilik rumah yang ingin membangun tanpa kompromi pada kualitas.</span></span>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pelayanan Profesional &amp; Pengiriman Cepat</span></span></h2>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Keunggulan lain yang membuat Yen Bangunan tetap dipercaya banyak pelanggan adalah </span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">layanan pengiriman gratis di area Cikarang dan sekitarnya</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> . Tim logistik mereka sudah berpengalaman, memastikan pesanan tiba tepat waktu tanpa repot.</span></span>
-
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Selain itu, staf toko yang berpengalaman siap membantu memberi rekomendasi sesuai kebutuhan proyek—mulai dari jenis besi terbaik hingga perkiraan jumlah yang dibutuhkan. Semua ini membuat pengalaman berbelanja di Yen Bangunan terasa lebih mudah, praktis, dan efisien.</span></span>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Mengapa Harus Yen Bangunan Cikarang?</span></span></h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-
-✅<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Produk lengkap &amp; berkualitas tinggi </span></span>
-✅<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Harga bersaing dan transparan </span></span>
-✅<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Layanan cepat dengan pengiriman gratis </span></span>
-✅<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Tim profesional dan ramah </span></span>
-✅<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Reputasi terpercaya selama lebih dari 15 tahun</span></span>
-
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Bagi banyak pelanggan, memilih </span></span><span style="text-decoration: underline"><a href="https://yenbangunan.com/"><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan</span></span></strong></a></span><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> bukan hanya soal beli besi, tapi juga soal mendapatkan ketenangan dalam menjalankan proyek. Karena ketika bahan kuat, bangunannya pun lebih kokoh.</span></span>
-<h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Penutup</span></span></h2>
-<span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Jika kamu sedang mencari </span></span><em><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">toko besi Cikarang</span></span></em><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> yang terpercaya dan siap mendukung proyek dari awal sampai selesai, </span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan Cikarang</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> adalah jawabannya. Dengan kombinasi produk unggulan, pelayanan profesional, dan reputasi yang terbukti, Yen Bangunan layak disebut sebagai toko besi terbaik di Cikarang.</span></span>',
-                'image_path' => '/blog/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952.jpg',
-                'published_at' => '2025-10-27 18:10:01',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Filosofi Rumah Adat Bali: Desain Tradisional dengan Makna Spiritual yang Mendalam',
-                'slug' => '2025/10/28/filosofi-rumah-adat-bali-desain-tradisional-dengan-makna-spiritual-yang-mendalam',
-                'content' => '<h3><img class="alignnone size-full wp-image-2495" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/filosofi-rumah-adat-bali-desain-tradisional-dengan-makna-spiritual-yang-mendalam.jpg" alt="Rumah Adat Bali" width="950" height="550" /></h3>
-<p>Ketika berbicara tentang <strong>rumah adat Bali</strong>, banyak orang langsung membayangkan gerbang megah, ukiran detail, dan aroma dupa yang menenangkan. Namun, di balik keindahan visualnya, setiap elemen rumah adat Bali sesungguhnya memiliki makna spiritual yang dalam, bukan sekadar estetika, tapi filosofi hidup yang berpadu dengan alam dan keyakinan.</p>
-<p>Masyarakat Bali meyakini bahwa rumah bukan hanya tempat tinggal, melainkan ruang sakral yang menghubungkan manusia dengan Sang Pencipta dan alam semesta. Karena itu, tata letak rumah adat Bali selalu mengikuti konsep <strong>Tri Mandala</strong> (pembagian ruang) dan <strong>Tri Hita Karana</strong> (tiga sumber kebahagiaan): hubungan harmonis antara manusia, alam, dan Tuhan.</p>
-<strong><span dir="auto">Baca juga:</span></strong>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/18/toko-alat-teknik-cikarang-yen-bangunan-cikarang/"><span dir="auto">Toko Alat Teknik Cikarang – Yen Bangunan Cikarang</span></a></span>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
-<h2>Filosofi dalam Setiap Detail Desain</h2>
-<p>Setiap bagian rumah adat Bali dirancang dengan perhitungan matang. Bagian paling suci, <strong>Utama Mandala</strong>, biasanya ditempati oleh pura keluarga. Di tengah ada <strong>Madya Mandala</strong>, tempat aktivitas sehari-hari berlangsung, dan di luar terdapat <strong>Nista Mandala</strong>, area yang berhubungan langsung dengan dunia luar.<br />Struktur ini bukan sekadar aturan arsitektur, tapi bentuk penghormatan pada keseimbangan spiritual.</p>
-<p>Bahan bangunannya pun dipilih dengan cermat. Batu alam, kayu jati, hingga genteng tanah liat digunakan bukan hanya karena kuat, tapi karena dipercaya memiliki energi alami yang mampu menjaga keharmonisan rumah. Dalam konteks modern, konsep ini tetap bisa diterapkan, misalnya dengan menggunakan <strong>bahan bangunan alami dan ramah lingkungan</strong> seperti yang tersedia di <em>Yen Bangunan Cikarang</em>, toko bahan bangunan terpercaya di wilayah Cikarang.</p>
-
-<h2>Makna Spiritualitas di Tengah Modernisasi</h2>
-<p>Menariknya, nilai-nilai rumah adat Bali tetap relevan hingga kini. Banyak arsitek modern yang mengadaptasi konsep Tri Hita Karana dalam desain rumah masa kini, mengutamakan sirkulasi udara, pencahayaan alami, serta keterhubungan antara ruang pribadi dan ruang terbuka hijau.</p>
-<p>Pendekatan ini bukan hanya memperindah tampilan rumah, tapi juga memberikan keseimbangan batin bagi penghuninya. Di tengah hiruk-pikuk kota, memiliki rumah dengan sentuhan nilai spiritual seperti ini bisa menjadi cara sederhana untuk tetap merasa “terhubung”, baik dengan diri sendiri maupun alam sekitar.</p>
-
-<h2>Kesimpulan</h2>
-<p><strong>Rumah adat Bali</strong> adalah contoh nyata bahwa arsitektur bisa menjadi medium spiritual. Setiap pilar, ukiran, dan susunan ruang memiliki pesan tentang keseimbangan dan rasa hormat terhadap kehidupan.<br />Dan jika Anda ingin membangun hunian yang tetap membawa semangat harmoni seperti rumah adat Bali, pastikan memilih bahan bangunan yang berkualitas dan bernilai jangka panjang, seperti yang tersedia di <strong>Yen Bangunan Cikarang</strong>, mitra terpercaya untuk segala kebutuhan konstruksi Anda.</p>',
-                'image_path' => '/blog/filosofi-rumah-adat-bali-desain-tradisional-dengan-makna-spiritual-yang-mendalam.jpg',
-                'published_at' => '2025-10-28 17:34:44',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => '5 Jenis Besi yang Perlu Anda Ketahui Sebelum Membangun Rumah',
-                'slug' => '2025/10/29/5-jenis-besi-yang-perlu-anda-ketahui-sebelum-membangun-rumah',
-                'content' => '<p><img class="alignnone size-full wp-image-2500" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/jenis-jenis-besi-yang-perlu-anda-ketahui-sebelum-membangun-rumah.jpg" alt="Jenis-Jenis Besi " width="950" height="550" /></p>
-<p>Dalam dunia konstruksi, besi adalah salah satu material utama yang menentukan kekuatan dan daya tahan bangunan. Namun, tahukah Anda kalau setiap <strong>jenis besi</strong> punya fungsi dan karakteristik berbeda? Memilih jenis besi yang tepat bisa membuat struktur bangunan lebih kokoh, efisien, dan tahan lama. Yuk, kenali beberapa jenis besi yang umum digunakan, agar Anda tidak salah pilih saat belanja di <strong>Toko Besi Bangunan Cikarang – Yen Bangunan Cikarang</strong>.</p>
-<p><strong>Baca juga: <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</a></span></strong></p>
-
-<h2>1. Besi Beton (Besi Tulangan)</h2>
-<img class="alignnone  wp-image-2505" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/pengertian-fungsi-dan-jenis-besi-beton.jpg" alt="" width="839" height="629" />
-<p>Besi beton adalah jenis besi yang paling sering digunakan untuk memperkuat struktur beton, terutama pada kolom dan balok bangunan. Ada dua jenis utama: <strong>besi polos (plain bar)</strong> dan <strong>besi ulir (deformed bar)</strong>.</p>
-
-<ul>
- 	<li>
-<p><strong>Besi polos</strong> cocok untuk proyek ringan karena mudah dibentuk.</p>
-</li>
- 	<li>
-<p><strong>Besi ulir</strong>, dengan tekstur bergerigi, memiliki daya cengkeram kuat pada beton sehingga lebih stabil untuk proyek besar.</p>
-</li>
-</ul>
-<p>Jika Anda sedang membangun rumah dua lantai atau proyek komersial, kombinasi keduanya sering jadi pilihan ideal.</p>
-
-<h2>2. Besi Hollow</h2>
-<img class="alignnone size-full wp-image-2506" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/besi-hollow.jpeg" alt="besi-hollow" width="834" height="469" />
-<p>Besi hollow terkenal karena tampilannya yang modern dan serbaguna. Biasanya digunakan untuk <strong>kanopi, pagar, railing, hingga rangka plafon</strong>. Jenisnya pun beragam, mulai dari <strong>hollow galvanis</strong>, <strong>hollow galvanum</strong>, hingga <strong>hollow stainless</strong>.<br />Kelebihannya adalah ringan, anti karat, dan mudah dipasang. Untuk area outdoor seperti pagar atau kanopi, pilih hollow galvanis agar lebih tahan terhadap cuaca ekstrem.</p>
-
-<h2>3. Besi Siku</h2>
-<img class="alignnone  wp-image-2504" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/besi-siku.jpg" alt="" width="775" height="430" />
-<p>Sesuai namanya, besi ini berbentuk huruf “L” atau siku. Umumnya digunakan untuk membuat <strong>rangka pintu, rak, meja, hingga struktur menara</strong>. Besi siku punya daya tahan tinggi dan mudah dibentuk sesuai kebutuhan.<br />Jika Anda ingin membuat furnitur custom atau rak besi yang kuat namun tetap estetik, besi siku bisa jadi pilihan tepat.</p>
-
-<h2>4. Besi WF (Wide Flange)</h2>
-<img class="alignnone  wp-image-2503" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/news-l-12237e6a-924e-49aa-b83d-37b0ea3e00c7.jpeg" alt="" width="750" height="422" />
-<p>Besi WF sering disebut juga sebagai <strong>baja profil H</strong>. Jenis besi ini digunakan untuk <strong>struktur utama bangunan besar seperti gudang, jembatan, atau gedung bertingkat</strong>. Daya tahannya sangat tinggi dan bisa menahan beban berat tanpa mudah melengkung.<br />Untuk proyek besar di wilayah Cikarang, banyak kontraktor profesional mempercayakan kebutuhan baja profil WF mereka ke <strong>Yen Bangunan Cikarang</strong>, yang menyediakan berbagai ukuran lengkap dan siap kirim.</p>
-
-<h2>5. Besi Plat</h2>
-<img class="alignnone wp-image-2502" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/plat-kapal-1024x577-1.jpg" alt="besi plat" width="796" height="449" />
-<p>Besi plat digunakan untuk kebutuhan <strong>permukaan datar</strong>, seperti lantai kendaraan, tangki, atau komponen mesin. Ada <strong>plat hitam</strong>, <strong>plat bordes</strong>, hingga <strong>plat strip</strong>, masing-masing dengan fungsi berbeda. Plat bordes misalnya, populer karena permukaannya berpola sehingga tidak licin.</p>
-
-<h3>Tips Memilih Jenis Besi yang Tepat</h3>
-<ul>
- 	<li>
-<p><strong>Sesuaikan dengan kebutuhan struktur.</strong> Untuk pondasi dan kolom, pilih besi beton. Untuk rangka ringan, gunakan hollow.</p>
-</li>
- 	<li>
-<p><strong>Perhatikan ketebalan dan kualitas.</strong> Jangan tergiur harga murah tanpa melihat standar SNI.</p>
-</li>
- 	<li>
-<p><strong>Beli di toko terpercaya.</strong> Seperti <strong>Yen Bangunan Cikarang</strong>, yang dikenal lengkap, terpercaya, dan siap bantu Anda menentukan jenis besi sesuai kebutuhan proyek.</p>
-</li>
-</ul>
-<h2>Kesimpulan:</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
-<p>Memahami berbagai <strong>jenis besi</strong> membantu Anda membuat keputusan yang lebih bijak dalam pembangunan. Dari besi beton hingga WF, setiap jenis punya peran penting untuk menciptakan bangunan yang kuat dan aman. Jadi, sebelum mulai proyek Anda, pastikan membeli bahan berkualitas hanya di <strong>Toko Besi Bangunan Cikarang – <span style="text-decoration: underline"><a href="https://yenbangunan.com/">Yen Bangunan Cikarang</a></span></strong>.</p>',
-                'image_path' => '/blog/jenis-jenis-besi-yang-perlu-anda-ketahui-sebelum-membangun-rumah.jpg',
-                'published_at' => '2025-10-29 21:16:24',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
                 'title' => 'Butuh Perlengkapan Safety di Cikarang? Yen Bangunan Solusi Terlengkap!',
                 'slug' => '2025/10/30/butuh-perlengkapan-safety-di-cikarang-yen-bangunan-solusi-terlengkap',
-                'content' => '<h2><img class="alignnone size-full wp-image-2515" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/butuh-perlengkapan-safety-di-cikarang-yen-bangunan-solusi-terlengkap.jpg" alt="toko safety cikarang" width="950" height="550" /></h2>
+                'content' => '<h2><img class="alignnone size-full wp-image-2515" src="/assets/blog/butuh-perlengkapan-safety-di-cikarang-yen-bangunan-solusi-terlengkap.jpg" alt="toko safety cikarang" width="950" height="550" /></h2>
 <h2>Cari Toko Safety Cikarang? Yen Bangunan Solusinya!</h2>
 <p>Kebutuhan safety gear di area industri seperti Cikarang sangat tinggi. Namun, banyak yang belum sadar bahwa perlengkapan keamanan bukan sekadar “alat pelindung,” tapi <em>investasi keselamatan</em>. Helm proyek yang kuat, sepatu safety dengan bahan anti-slip, hingga rompi reflektif berstandar SNI, semuanya punya peran penting mencegah kecelakaan kerja.</p>
 <p><span style="text-decoration: underline"><a href="https://yenbangunan.com/"><strong>Yen Bangunan Cikarang</strong></a></span> hadir menjawab kebutuhan itu. Toko ini bukan hanya menjual perlengkapan safety, tapi juga membantu Anda memilih produk yang <em>benar-benar sesuai</em> dengan kebutuhan lapangan, baik untuk pekerja proyek, teknisi, hingga kontraktor.</p>
@@ -797,7 +29,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>Produk Safety yang Tersedia di Yen Bangunan Cikarang</h2>
-<img class="alignnone wp-image-2512 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/sepatu-boot.jpg" alt="toko safety cikarang" width="1024" height="576" />
+<img class="alignnone wp-image-2512 size-full" src="/assets/blog/sepatu-boot.jpg" alt="toko safety cikarang" width="1024" height="576" />
 <p>Sebagai <strong>toko safety Cikarang</strong> yang lengkap, Yen Bangunan menyediakan berbagai perlengkapan penting, antara lain:</p>
 
 <ul>
@@ -820,7 +52,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 <p>Produk-produk ini berasal dari brand terpercaya yang sudah terbukti kualitasnya, sehingga Anda tidak perlu khawatir soal daya tahan maupun keamanan.</p>
 
 <h2>Keunggulan Belanja di Yen Bangunan Cikarang</h2>
-<img class="alignnone wp-image-2380 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="toko safety cikarang" width="500" height="700" />
+<img class="alignnone wp-image-2380 size-full" src="/assets/blog/yen-toko.jpg" alt="toko safety cikarang" width="500" height="700" />
 <p>Bukan hanya soal kelengkapan, tapi juga <em>pelayanan dan kepercayaan</em>. Berikut beberapa alasan kenapa banyak pelanggan memilih Yen Bangunan sebagai mitra kebutuhan proyek mereka:</p>
 
 <ul>
@@ -851,7 +83,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
             [
                 'title' => 'Toko Safety Equipment Cikarang: Hubungi Yen Bangunan di 081315147952',
                 'slug' => '2025/10/31/toko-safety-equipment-cikarang',
-                'content' => '<img class="alignnone size-full wp-image-2388" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/toko-consumable-material-cikarang-untuk-industri-proyek-yen-bangunan.jpg" alt="Toko Bahan Habis Pakai Cikarang" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2388" src="/assets/blog/toko-consumable-material-cikarang-untuk-industri-proyek-yen-bangunan.jpg" alt="Toko Bahan Habis Pakai Cikarang" width="950" height="550" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Keselamatan kerja bukan sekedar kewajiban, tapi bentuk tanggung jawab pada diri sendiri dan tim. Di tengah pesatnya pembangunan industri di Cikarang, kebutuhan akan </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">peralatan keselamatan berkualitas</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> semakin penting. Dari helm proyek, sepatu safety, hingga sarung tangan anti slip, semua alat itu jadi “tameng” utama bagi para pekerja lapangan.</span></span></span></span>
 
@@ -865,7 +97,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></span></span></span></span></a></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Kenapa Harus di Yen Bangunan Cikarang?</span></span></span></span></h2>
-<img class="alignnone size-full wp-image-2512" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/sepatu-boot.jpg" alt="" width="1024" height="576" /> <img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2512" src="/assets/blog/sepatu-boot.jpg" alt="" width="1024" height="576" /> <img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 
 <strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">1. Produk Lengkap &amp; Original </span></span></span></span></strong>
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan</span></span></span></span></a></span><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> menyediakan berbagai </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">perlengkapan safety kerja</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> mulai dari helm proyek, rompi reflektif, sepatu boot, masker industri, kacamata pelindung, hingga alat pemadam kebakaran mini. Semua produk berasal dari brand resmi yang sudah teruji kualitasnya, bukan barang imitasi yang cepat rusak.</span></span></span></span>
@@ -881,7 +113,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Memilih produk dari </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">toko peralatan keselamatan terpercaya di Cikarang</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> seperti Yen Bangunan berarti Anda sedang berinvestasi pada waktu keselamatan dan efisiensi.</span></span></span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Cara Belanja di Yen Bangunan</span></span></span></span></h2>
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Anda bisa langsung datang ke </span></span></span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">toko Yen Bangunan di Cikarang</span></span></span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> , atau hubungi tim sales melalui WhatsApp untuk konsultasi dan pemesanan. Pengiriman cepat ke seluruh area Cikarang dan sekitarnya memudahkan Anda memenuhi kebutuhan keselamatan proyek tanpa hambatan.</span></span></span></span>',
-                'image_path' => '/blog/toko-baja-ringan-cikarang-hubungi-yen-bangunan-di-081315147952.jpg',
+                'image_path' => '/blog/toko-consumable-material-cikarang-untuk-industri-proyek-yen-bangunan.jpg',
                 'published_at' => '2025-10-31 14:59:27',
                 'author_id' => 1,
                 'created_at' => now(),
@@ -890,7 +122,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
             [
                 'title' => 'Toko Safety Cikarang Terbaik: Hubungi Yen Bangunan 081315147952',
                 'slug' => '2025/11/03/toko-safety-cikarang-terbaik-hubungi-yen-bangunan-081315147952',
-                'content' => '<img class="alignnone size-full wp-image-2515" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/butuh-perlengkapan-safety-di-cikarang-yen-bangunan-solusi-terlengkap.jpg" alt="toko safety cikarang" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2515" src="/assets/blog/butuh-perlengkapan-safety-di-cikarang-yen-bangunan-solusi-terlengkap.jpg" alt="toko safety cikarang" width="950" height="550" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Keselamatan kerja bukan sekadar formalitas, ini investasi jangka panjang. Baik Anda kontraktor, teknisi, atau pemilik usaha, perlengkapan keselamatan adalah perlindungan utama dari risiko kerja. Nah, kalau Anda sedang mencari </span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">toko safety di Cikarang</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> yang lengkap dan terpercaya, </span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan Cikarang</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> bisa jadi pilihan terbaik.</span></span>
 
@@ -914,9 +146,9 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 </ul>
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Setiap produk yang dipilih dari merek terpercaya, memastikan kualitas dan kenyamanan tetap seimbang.</span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Kenapa Harus di Yen Bangunan Cikarang?</span></span></h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 
-<img class="alignnone size-full wp-image-2512" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/sepatu-boot.jpg" alt="" width="1024" height="576" />
+<img class="alignnone size-full wp-image-2512" src="/assets/blog/sepatu-boot.jpg" alt="" width="1024" height="576" />
 <ol>
  	<li><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Produk Terjamin Asli dan Berkualitas</span></span></strong>
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> Semua perlengkapan safety di Yen Bangunan sudah sesuai standar keselamatan kerja dan lolos uji kualitas. Anda tidak perlu khawatir soal barang tiruan atau kualitas abal-abal.</span></span></li>
@@ -932,8 +164,8 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Datang langsung ke toko atau hubungi Yen Bangunan Cikarang untuk konsultasi dan pemesanan perlengkapan safety terbaik sesuai kebutuhan Anda.</span></span>
 
-<a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F"><strong><img class="emoji" role="img" src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/1f449.svg" alt="👉" /><span style="text-decoration: underline">KONSULTASI LEBIH DULU DENGAN KAMI</span><img class="emoji" role="img" src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/1f448.svg" alt="👈" /></strong></a>',
-                'image_path' => '/blog/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952.jpg',
+<a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F"><strong><img class="emoji" role="img" src="/assets/blog/1f449.svg" alt="👉" /><span style="text-decoration: underline">KONSULTASI LEBIH DULU DENGAN KAMI</span><img class="emoji" role="img" src="/assets/blog/1f448.svg" alt="👈" /></strong></a>',
+                'image_path' => '/blog/butuh-perlengkapan-safety-di-cikarang-yen-bangunan-solusi-terlengkap.jpg',
                 'published_at' => '2025-11-03 17:56:06',
                 'author_id' => 1,
                 'created_at' => now(),
@@ -942,7 +174,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
             [
                 'title' => 'Perbedaan Semen, Mortar, dan Plester: Mana yang Tepat untuk Kebutuhan Anda?',
                 'slug' => '2025/11/04/perbedaan-semen-mortar-dan-plester-mana-yang-tepat-untuk-kebutuhan-anda',
-                'content' => '<p><img class="alignnone size-full wp-image-2530" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/perbedaan-semen-mortar-dan-plester-mana-yang-tepat-untuk-kebutuhan-anda.jpg" alt="Perbedaan Semen, Mortar, dan Plester" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2530" src="/assets/blog/perbedaan-semen-mortar-dan-plester-mana-yang-tepat-untuk-kebutuhan-anda.jpg" alt="Perbedaan Semen, Mortar, dan Plester" width="950" height="550" /></p>
 <p>Saat membangun atau merenovasi rumah, banyak orang masih menganggap <strong>semen, mortar, dan plester</strong> itu sama. Padahal, ketiganya punya fungsi dan karakteristik berbeda yang bisa menentukan kualitas hasil akhir bangunan Anda. Yuk, kita bahas perbedaannya secara sederhana tapi detail, biar nggak salah pilih bahan di proyek berikutnya.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
 
@@ -1014,7 +246,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 <p>Masing-masing punya keunggulan sendiri, tergantung kebutuhan proyek Anda.<br />Kuncinya adalah <strong>menyesuaikan bahan dengan fungsi</strong>, bukan sekadar harga atau kebiasaan tukang.</p>
 
 <h2>Dapatkan Produk Bangunan Terbaik di Yen Bangunan Cikarang</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <p>Kalau Anda berada di area Cikarang dan butuh bahan bangunan berkualitas, <span style="text-decoration: underline"><a href="https://yenbangunan.com/"><strong>Yen Bangunan Cikarang</strong></a></span> siap membantu. Tersedia berbagai pilihan <strong>semen, mortar, dan plester dari merek terpercaya</strong>, dengan layanan <strong>free delivery</strong> untuk wilayah sekitar.</p>
 <p>Berkonsultasilah dengan tim profesional kami agar Anda bisa memilih bahan yang paling sesuai untuk proyek Anda, dari pondasi hingga finishing.</p>',
                 'image_path' => '/blog/perbedaan-semen-mortar-dan-plester-mana-yang-tepat-untuk-kebutuhan-anda.jpg',
@@ -1026,7 +258,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
             [
                 'title' => 'Kalsiboard: Pengertian, Kegunaan, dan Harga Terbaru 2025',
                 'slug' => '2025/11/05/kalsiboard-pengertian-kegunaan-dan-harga-terbaru-2025',
-                'content' => '<p><img class="alignnone size-full wp-image-2536" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/kalsiboard-pengertian-kegunaan-dan-harga-terbaru-2025.jpg" alt="Kalsiboard" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2536" src="/assets/blog/kalsiboard-pengertian-kegunaan-dan-harga-terbaru-2025.jpg" alt="Kalsiboard" width="950" height="550" /></p>
 
 <h2>Kalsiboard: Solusi Dinding dan Plafon Modern yang Tahan Lama</h2>
 <p>Dalam dunia konstruksi modern, <strong>kalsiboard</strong> kini jadi salah satu material yang paling sering dicari, baik oleh kontraktor maupun pemilik rumah. Dari tampilannya yang rapi hingga ketahanannya terhadap cuaca, kalsiboard menawarkan banyak keunggulan dibanding bahan konvensional seperti triplek atau gypsum.</p>
@@ -1122,7 +354,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 <p>Harga bisa berbeda tergantung merek dan lokasi pembelian. Untuk hasil maksimal, pastikan kamu membeli di toko yang menyediakan produk <strong>bergaransi keaslian dan kualitas material terbaik</strong>, seperti <strong>Yen Bangunan</strong>.</p>
 
 <h2>Pilih Kalsiboard Berkualitas di Yen Bangunan</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <p>Sebagai <strong>toko bangunan terpercaya di Cikarang</strong>, <span style="text-decoration: underline"><a href="https://yenbangunan.com/"><strong>Yen Bangunan</strong></a></span> menyediakan berbagai kebutuhan material, mulai dari semen, baja ringan, hingga kalsiboard dari merek ternama.</p>
 <p>Kamu bisa konsultasi langsung dengan tim kami untuk menyesuaikan <strong>ketebalan dan tipe kalsiboard</strong> sesuai kebutuhan proyek: apakah untuk plafon, dinding partisi, atau area basah.</p>
 <p>Dengan layanan <strong>harga kompetitif, pengiriman cepat, dan free delivery area Cikarang</strong>, kamu nggak perlu repot lagi mencari toko bahan bangunan yang bisa dipercaya.</p>
@@ -1136,7 +368,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
             [
                 'title' => 'Supplier Material Proyek Cikarang: Hubungi Yen Bangunan 081315147952',
                 'slug' => '2025/11/06/supplier-material-proyek-cikarang-hubungi-yen-bangunan-081315147952',
-                'content' => '<p><img class="alignnone size-full wp-image-2542" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/supplier-material-proyek-cikarang-hubungi-yen-bangunan-081315147952.jpg" alt="Supplier Material Proyek Cikarang" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2542" src="/assets/blog/supplier-material-proyek-cikarang-hubungi-yen-bangunan-081315147952.jpg" alt="Supplier Material Proyek Cikarang" width="950" height="550" /></p>
 <p>Dalam dunia konstruksi, kualitas material adalah pondasi utama keberhasilan proyek. Salah memilih supplier bisa berujung pada keterlambatan, pembengkakan biaya, atau hasil bangunan yang tidak tahan lama. Karena itu, menemukan <strong>supplier material proyek Cikarang</strong> yang benar-benar bisa diandalkan jadi langkah penting, dan di sinilah <strong>Yen Bangunan Cikarang</strong> hadir sebagai solusi lengkap.</p>
 <p>Yen Bangunan bukan hanya sekadar toko bangunan biasa. Dengan pengalaman melayani berbagai proyek, dari rumah pribadi, ruko, hingga proyek skala besar, mereka memahami kebutuhan pelanggan dengan detail. Fokusnya bukan hanya menjual, tapi membantu setiap proyek berjalan lebih efisien, tepat waktu, dan hemat biaya.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -1147,7 +379,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>Kenapa Harus Yen Bangunan Cikarang?</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <ol>
  	<li>
 <p><strong>Stok Lengkap, Siap Kirim</strong><br />Tak perlu buang waktu cari ke sana-sini. Dari semen, besi, pasir, bata ringan, hingga bahan finishing seperti cat dan keramik — semua tersedia di satu tempat. Yen Bangunan juga dikenal punya sistem <strong>free delivery untuk area Cikarang dan sekitarnya</strong>, jadi material bisa langsung dikirim ke lokasi proyek tanpa repot.</p>
@@ -1163,7 +395,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 </li>
 </ol>
 <h2>Supplier Material Proyek Cikarang yang Dipercaya Banyak Kontraktor</h2>
-<img class="alignnone size-full wp-image-2335" src="https://andrian064.wordpress.com/wp-content/uploads/2025/09/group-46-1.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2334" src="https://andrian064.wordpress.com/wp-content/uploads/2025/09/group-45-1.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2333" src="https://andrian064.wordpress.com/wp-content/uploads/2025/09/group-44-1.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2332" src="https://andrian064.wordpress.com/wp-content/uploads/2025/09/group-43-1.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2331" src="https://andrian064.wordpress.com/wp-content/uploads/2025/09/group-42-1.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2330" src="https://andrian064.wordpress.com/wp-content/uploads/2025/09/group-41-1.png" alt="" width="934" height="584" />
+<img class="alignnone size-full wp-image-2335" src="/assets/blog/group-46-1.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2334" src="/assets/blog/group-45-1.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2333" src="/assets/blog/group-44-1.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2332" src="/assets/blog/group-43-1.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2331" src="/assets/blog/group-42-1.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2330" src="/assets/blog/group-41-1.png" alt="" width="934" height="584" />
 <p>Cikarang dikenal sebagai kawasan industri dan hunian yang terus berkembang. Permintaan material bangunan di wilayah ini sangat tinggi, dari proyek perumahan, pabrik, hingga infrastruktur pendukung. Dengan reputasi yang stabil dan pelayanan yang konsisten, <span style="text-decoration: underline"><a href="https://yenbangunan.com/"><strong>Yen Bangunan Cikarang</strong></a></span> kini menjadi salah satu <strong>supplier material proyek terlengkap dan paling direkomendasikan di Cikarang</strong>.</p>
 <p>Mereka bukan hanya menyediakan material, tapi juga memberikan saran teknis sesuai kebutuhan lapangan, sebuah nilai tambah yang jarang dimiliki supplier lain.</p>
 <p><span style="text-decoration: underline"><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F">HUBUNGI KAMI UNTUK KONSULTASI</a></span></p>
@@ -1177,51 +409,9 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Toko Bangunan Grosir Cikarang: HEMAT & LENGKAP di Yen Bangunan',
-                'slug' => '2025/11/07/toko-bangunan-grosir-cikarang-hemat-lengkap-di-yen-bangunan',
-                'content' => '<h2><img class="alignnone size-full wp-image-2548" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/toko-bangunan-grosir-cikarang-hemat-lengkap-di-yen-bangunan.jpg" alt="Toko Bangunan Grosir Cikarang" width="950" height="550" /></h2>
-<h2>Yen Bangunan Cikarang: Pilihan Tepat untuk Belanja Material Grosir</h2>
-<p>Dalam dunia konstruksi, pemilihan <em>supplier</em> material bangunan yang tepat bisa menentukan lancar tidaknya proyek. Bagi Anda yang mencari <strong>toko bangunan grosir di Cikarang</strong>, <strong>Yen Bangunan</strong> adalah pilihan yang sudah terbukti jadi andalan kontraktor, pemilik proyek kecil, maupun masyarakat umum yang ingin bangun atau renovasi rumah dengan harga efisien.</p>
-<p>Yen Bangunan Cikarang dikenal karena <strong>stok produk yang lengkap, harga grosir bersaing, dan pelayanan cepat</strong>. Dengan sistem pembelian grosir, pelanggan bisa mendapatkan harga jauh lebih hemat tanpa mengorbankan kualitas produk.</p>
-<strong><span dir="auto">Baca juga:</span></strong>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
-
-<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
-<h2>Kenapa Harus Pilih Yen Bangunan Cikarang?</h2>
-<ol>
- 	<li>
-<p><strong>Harga Grosir yang Transparan dan Kompetitif</strong><br />Yen Bangunan menerapkan sistem harga yang terbuka. Artinya, Anda bisa langsung membandingkan harga material dari berbagai brand tanpa harus menebak-nebak. Cocok bagi pelaku proyek yang butuh efisiensi biaya tanpa kompromi kualitas.</p>
-</li>
- 	<li>
-<p><strong>Stok Lengkap dari Brand Terpercaya</strong><br />Dari semen, cat, besi, pipa, keramik, hingga alat pertukangan — semuanya tersedia di satu tempat. Produk dari brand ternama seperti Nippon Paint, Semen Tiga Roda, dan Dulux tersedia dalam jumlah besar, siap dikirim ke lokasi proyek Anda.</p>
-</li>
- 	<li>
-<p><strong>Layanan Pengiriman Cepat dan Gratis Area Tertentu</strong><br />Yen Bangunan Cikarang juga menyediakan <strong>free delivery</strong> untuk area tertentu di Cikarang dan sekitarnya. Jadi, Anda tak perlu repot angkut barang berat — cukup pesan, bayar, dan tunggu material datang dengan aman.</p>
-</li>
- 	<li>
-<p><strong>Pelayanan Profesional dan Ramah</strong><br />Tim Yen Bangunan bukan sekadar menjual produk, tapi juga siap memberikan rekomendasi sesuai kebutuhan proyek Anda. Dari pemilihan material hingga estimasi kebutuhan, semua bisa dikonsultasikan dengan mudah.</p>
-</li>
-</ol>
-<h2>Belanja Grosir Jadi Lebih Efisien dan Aman</h2>
-<p>Dalam tren belanja bahan bangunan tahun 2025, banyak pelaku proyek beralih ke sistem <strong>pembelian grosir berbasis kepercayaan dan transparansi harga</strong>. Yen Bangunan memanfaatkan tren ini dengan memperkuat sistem layanan pelanggan dan memastikan setiap transaksi berjalan cepat, aman, dan bisa dipantau.</p>
-<p>Selain itu, bagi Anda pemilik usaha kecil di bidang kontraktor atau renovasi, kerja sama dengan <strong>toko bangunan grosir Cikarang seperti Yen Bangunan</strong> bisa jadi strategi cerdas untuk meningkatkan margin keuntungan tanpa menurunkan standar kualitas.</p>
-<p><span style="text-decoration: underline"><strong><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F">HUBUNGI KAMI UNTUK KONSULTASI</a></strong></span></p>
-
-<h2>Kesimpulan</h2>
-<p>Kalau Anda sedang mencari <strong>toko bangunan grosir Cikarang</strong> yang benar-benar bisa diandalkan dari segi harga, kelengkapan, dan pelayanan, <strong>Yen Bangunan Cikarang</strong> adalah jawabannya.<br />Mulai dari kebutuhan proyek besar hingga renovasi rumah pribadi, semua bisa terpenuhi di satu tempat, cepat, efisien, dan terpercaya.</p>',
-                'image_path' => '/blog/toko-bangunan-grosir-cikarang-hemat-lengkap-di-yen-bangunan.jpg',
-                'published_at' => '2025-11-07 17:31:32',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Belanja Keramik Cikarang Murah & Terbaik: Cuma di Yen Bangunan',
+                'title' => 'Belanja Keramik Cikarang Murah &amp; Terbaik: Cuma di Yen Bangunan',
                 'slug' => '2025/11/10/belanja-keramik-cikarang-murah-terbaik-cuma-di-yen-bangunan',
-                'content' => '<p><img class="alignnone size-full wp-image-2554" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/belanja-keramik-cikarang-murah-terbaik-cuma-di-yen-bangunan.jpg" alt="Belanja Keramik Cikarang" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2554" src="/assets/blog/belanja-keramik-cikarang-murah-terbaik-cuma-di-yen-bangunan.jpg" alt="Belanja Keramik Cikarang" width="950" height="550" /></p>
 <p>Buat kamu yang lagi renovasi rumah atau baru bangun hunian di area Cikarang, satu hal yang nggak bisa dilewatkan adalah <strong>pemilihan keramik</strong>. Mulai dari lantai, dapur, hingga kamar mandi, keramik bukan cuma soal fungsi, tapi juga gaya dan kenyamanan. Nah, kalau kamu sedang mencari tempat <strong>belanja keramik Cikarang</strong> yang lengkap, terjangkau, dan terpercaya, <strong>Yen Bangunan Cikarang</strong> bisa jadi destinasi utama yang wajib kamu kunjungi.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
 
@@ -1231,7 +421,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>Kenapa Harus Pilih Yen Bangunan Cikarang?</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <p>Di tengah banyaknya toko bangunan di Cikarang, <span style="text-decoration: underline"><a href="https://yenbangunan.com/">Yen Bangunan</a></span> menonjol karena kombinasi <strong>kualitas produk, harga bersaing, dan pelayanan profesional</strong>. Kamu bisa menemukan berbagai jenis keramik mulai dari <strong>keramik lantai glossy, matte, motif kayu, hingga keramik dinding minimalis</strong>.<br />Selain itu, semua produk yang dijual di sini sudah dikurasi dari brand terpercaya, jadi kamu nggak perlu khawatir soal kualitas atau ketahanan.</p>
 <p>Yang paling menarik, Yen Bangunan juga sering kasih <strong>promo dan diskon menarik</strong> untuk pembelian dalam jumlah besar. Buat kontraktor, arsitek, atau pemilik proyek, ini jelas jadi keuntungan besar.</p>
 
@@ -1267,7 +457,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
             [
                 'title' => 'Panduan Lengkap Ukuran Reng Baja Ringan: Jenis, Fungsi, dan Cara Memilihnya',
                 'slug' => '2025/11/11/panduan-lengkap-ukuran-reng-baja-ringan-jenis-fungsi-dan-cara-memilihnya',
-                'content' => '<p><img class="alignnone size-full wp-image-2562" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/panduan-lengkap-ukuran-reng-baja-ringan-jenis-fungsi-dan-cara-memilihnya.jpg" alt="Ukuran Reng Baja Ringan " width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2562" src="/assets/blog/panduan-lengkap-ukuran-reng-baja-ringan-jenis-fungsi-dan-cara-memilihnya.jpg" alt="Ukuran Reng Baja Ringan " width="950" height="550" /></p>
 <p>Saat Anda tengah merencanakan atap baru, baik untuk rumah tinggal, renovasi, atau proyek kecil, memahami ukuran dan spesifikasi dari reng baja ringan menjadi hal dasar yang tidak boleh diabaikan. Di sini kami dari <strong><span class="hover:entity-accent entity-underline inline cursor-pointer align-baseline"><span class="whitespace-normal">Yen Bangunan Cikarang</span></span></strong> akan membagikan panduan ringkas namun padat mengenai <em>ukuran reng baja ringan</em> agar instalasi berjalan lancar, pekerjaan cepat, dan hasil terlaksana dengan aman.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
 
@@ -1328,9 +518,9 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
 </li>
 </ul>
 <h2>Kenapa Pilih Yen Bangunan Cikarang?</h2>
-<img class="alignnone size-full wp-image-2566" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/yen-bangunan-cikarang-1.jpg" alt="" width="950" height="550" />
+<img class="alignnone size-full wp-image-2566" src="/assets/blog/yen-bangunan-cikarang-1.jpg" alt="" width="950" height="550" />
 <p>Di Yen Bangunan Cikarang kami memahami bahwa ukuran dan spesifikasi material atap bukan sekadar angka di katalog, tetapi bagian penting dari kepercayaan Anda dalam hasil bangunan yang aman, rapi, dan bebas masalah. Kami menyediakan berbagai ukuran reng baja ringan, membantu Anda memilih yang sesuai, serta memberikan layanan konsultasi ringan sebelum membeli.</p>',
-                'image_path' => '/blog/panduan-lengkap-ukuran-reng-baja-ringan-jenis-fungsi-dan-cara-memilihnya.jpg',
+                'image_path' => '/blog/yen-bangunan-cikarang.jpg',
                 'published_at' => '2025-11-11 18:05:55',
                 'author_id' => 1,
                 'created_at' => now(),
@@ -1339,7 +529,7 @@ Bangun proyek Anda dengan material terbaik, layanan cepat, dan harga bersahabat.
             [
                 'title' => 'Harga Triplek Terbaru 2025: Cara Memilih yang Tepat untuk Proyek Anda',
                 'slug' => '2025/11/12/harga-triplek-terbaru-2025-cara-memilih-yang-tepat-untuk-proyek-anda',
-                'content' => '<img class="alignnone size-full wp-image-2589" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/harga-triplek-terbaru-2025-cara-memilih-yang-tepat-untuk-proyek-anda.jpg" alt="Harga Triplek" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2589" src="/assets/blog/harga-triplek-terbaru-2025-cara-memilih-yang-tepat-untuk-proyek-anda.jpg" alt="Harga Triplek" width="950" height="550" />
 
 Triplek atau plywood adalah salah satu material paling populer untuk kebutuhan furnitur, interior, maupun konstruksi ringan. Meski terlihat serupa, <strong>harga triplek</strong> bisa sangat bervariasi tergantung jenis, ketebalan, dan kualitasnya. Maka dari itu, penting buat kamu memahami perbedaan dasarnya sebelum membeli, apalagi jika proyek kamu butuh hasil yang rapi dan tahan lama.
 
@@ -1367,7 +557,7 @@ Kalau kamu ingin hasil terbaik untuk furnitur atau interior, pastikan hal-hal be
  	<li>Beli di toko terpercaya yang bisa menjamin <strong>stok original dan konsisten kualitasnya.</strong></li>
 </ul>
 <h2><strong>Beli Triplek Terbaik di Yen Bangunan Cikarang</strong></h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 
 Kalau kamu berdomisili di area Cikarang atau sekitarnya, <strong>Yen Bangunan Cikarang</strong> bisa jadi pilihan terbaik untuk kebutuhan triplek dan bahan bangunan lainnya.
 Selain menawarkan <strong>harga triplek yang kompetitif</strong>, toko ini juga menyediakan berbagai ukuran dan jenis lengkap, mulai dari triplek standar hingga multipleks premium untuk kebutuhan proyek besar maupun kecil.
@@ -1386,7 +576,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Kenali Pondasi Umpak, Solusi Efisien untuk Bangunan Ringan dan Tahan Lama!',
                 'slug' => '2025/11/13/kenali-pondasi-umpak-solusi-efisien-untuk-bangunan-ringan-dan-tahan-lama',
-                'content' => '<p><img class="alignnone size-full wp-image-2606" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/kenali-pondasi-umpak-solusi-efisien-untuk-bangunan-ringan-dan-tahan-lama.jpg" alt="Pondasi Umpak" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2606" src="/assets/blog/kenali-pondasi-umpak-solusi-efisien-untuk-bangunan-ringan-dan-tahan-lama.jpg" alt="Pondasi Umpak" width="950" height="550" /></p>
 
 <h2>Apa Itu Pondasi Umpak dan Mengapa Penting?</h2>
 <p>Ketika bicara soal kekuatan bangunan, kebanyakan orang langsung terpikir bata, semen, atau atap. Padahal, rahasia utama ketahanan sebuah rumah justru terletak di bagian yang jarang terlihat: <strong>pondasi umpak</strong>.</p>
@@ -1418,7 +608,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 <p>Jika kamu berencana membangun rumah atau gazebo dengan sistem pondasi umpak, <strong>pastikan material bangunan yang kamu pilih benar-benar berkualitas</strong>. Hindari material yang mudah retak atau berpori karena dapat mempercepat kerusakan struktur di kemudian hari.</p>
 
 <h2>Temukan Material Pondasi Terbaik di Yen Bangunan Cikarang</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <p>Untuk kamu yang berdomisili di sekitar Cikarang dan sedang mencari bahan bangunan berkualitas, <strong>Yen Bangunan Cikarang</strong> bisa jadi pilihan terbaik. Tersedia berbagai kebutuhan konstruksi mulai dari batu kali, semen, hingga perlengkapan pondasi umpak dengan harga kompetitif dan pelayanan profesional.</p>
 <p>Tim Yen Bangunan juga siap membantu kamu menemukan material yang sesuai dengan kebutuhan proyek, baik untuk rumah pribadi, kontrakan, maupun gazebo minimalis. Dengan dukungan produk berkualitas dan pelayanan terpercaya, kamu bisa membangun pondasi yang bukan hanya kuat, tapi juga tahan lama.</p>
 <p><span style="text-decoration: underline"><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F"><strong>KONSULTASI LEBIH DULU DENGAN KAMI</strong></a></span></p>
@@ -1434,7 +624,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Toko Baja Ringan Cikarang Terbaik: Yen Bangunan',
                 'slug' => '2025/11/14/toko-baja-ringan-cikarang-terbaik-yen-bangunan',
-                'content' => '<p><img class="alignnone size-full wp-image-2611" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/toko-baja-ringan-cikarang-terbaik-yen-bangunan.jpg" alt="Baja Ringan Cikarang" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2611" src="/assets/blog/toko-baja-ringan-cikarang-terbaik-yen-bangunan.jpg" alt="Baja Ringan Cikarang" width="950" height="550" /></p>
 <p>Memilih <strong>baja ringan Cikarang</strong> untuk proyek atap atau renovasi rumah memang gampang-gampang susah. Banyak pilihan, banyak harga, tapi tidak semuanya memiliki kualitas yang konsisten. Apalagi untuk area seperti Cikarang yang pertumbuhan perumahannya pesat, kebutuhan struktur atap yang kuat dan tahan cuaca jadi prioritas.</p>
 <p>Artikel ini dibuat untuk Anda yang sedang merencanakan pembangunan atau renovasi dan ingin mendapatkan baja ringan yang pas—baik dari sisi kualitas maupun harga—tanpa ribet dan tanpa salah pilih.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -1459,7 +649,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 <p>Baja ringan itu panjang, berat, dan perlu pengiriman aman. Pilih supplier yang punya armada sendiri atau layanan yang rapi supaya barang sampai tanpa penyok.</p>
 
 <h2>Kenapa Banyak Kontraktor Pilih Yen Bangunan Cikarang?</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <p>Sebagai salah satu toko bangunan lengkap di Cikarang, <span style="text-decoration: underline"><a href="https://yenbangunan.com/"><strong>Yen Bangunan Cikarang</strong></a></span> menyediakan berbagai pilihan baja ringan dengan kualitas yang sudah lolos standar proyek perumahan maupun komersial.</p>
 <p>Keunggulan yang banyak dicari pelanggan:</p>
 
@@ -1492,9 +682,9 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Baja Ringan Harga Terbaru 2025, Pilihan Terbaik untuk Atap Rumah yang Kokoh & Hemat!',
+                'title' => 'Baja Ringan Harga Terbaru 2025, Pilihan Terbaik untuk Atap Rumah yang Kokoh &amp; Hemat!',
                 'slug' => '2025/11/17/baja-ringan-harga-terbaru-2025-pilihan-terbaik-untuk-atap-rumah-yang-kokoh-hemat',
-                'content' => '<img class="alignnone size-full wp-image-2627" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/baja-ringan-harga-terbaru-2025-pilihan-terbaik-untuk-atap-rumah-yang-kokoh-hemat.jpg" alt="Baja Ringan Harga" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2627" src="/assets/blog/baja-ringan-harga-terbaru-2025-pilihan-terbaik-untuk-atap-rumah-yang-kokoh-hemat.jpg" alt="Baja Ringan Harga" width="950" height="550" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Ketika membangun rumah atau merenovasi atap, satu hal yang selalu muncul adalah: </span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">berapa sih harga baja ringan terbaru?</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> Wajar, karena material ini bukan hanya soal kuat atau tahan lama, tapi juga soal efisiensi biaya. Pada tahun 2025, tren kebutuhan konstruksi semakin meningkat sehingga banyak orang mulai membandingkan </span></span><strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">baja ringan harga</span></span></strong><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> , kualitas, hingga pemasoknya.</span></span>
 
@@ -1551,7 +741,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Floor Drain: Penjelasan, Fungsi, dan Tips Memilih yang Tepat',
                 'slug' => '2025/11/18/floor-drain-penjelasan-fungsi-dan-tips-memilih-yang-tepat',
-                'content' => '<p><img class="alignnone size-full wp-image-2634" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/floor-drain-penjelasan-fungsi-dan-tips-memilih-yang-tepat.jpg" alt="Floor Drain " width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2634" src="/assets/blog/floor-drain-penjelasan-fungsi-dan-tips-memilih-yang-tepat.jpg" alt="Floor Drain " width="950" height="550" /></p>
 <p>Jika Anda sedang renovasi kamar mandi atau membangun rumah baru, <strong>floor drain</strong> adalah salah satu komponen kecil yang sering dianggap sepele, padahal perannya besar. Tanpa floor drain yang tepat, aliran air bisa tersumbat, bau tak sedap muncul, bahkan risiko banjir kecil di area basah meningkat. Artikel ini akan membantu Anda memahami apa itu floor drain, fungsinya, dan bagaimana memilih produk yang benar-benar awet untuk jangka panjang.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
 
@@ -1596,7 +786,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 
 <h3>5. Gunakan Produk dari Toko yang Kredibel</h3>
 <p>Kualitas floor drain berbeda-beda. Karena itu, selalu pilih dari toko yang bisa dipercaya. Di <strong>Yen Bangunan</strong>, Anda bisa menemukan berbagai floor drain dengan material kokoh, fitur anti-bau, dan standar kualitas yang konsisten.</p>
-<p><img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" /></p>
+<p><img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" /></p>
 <p>Dengan memahami fungsi dan cara memilih floor drain yang tepat, Anda tidak hanya mendapatkan kamar mandi yang nyaman, tetapi juga bebas bau dan minim risiko masalah plumbing. Untuk produk berkualitas, pastikan Anda cek pilihan lengkap dari <strong>Yen Bangunan</strong>.</p>
 <p><span style="text-decoration: underline"><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F"><strong>KONSULTASI LEBIH DULU DENGAN KAMI</strong></a></span></p>',
                 'image_path' => '/blog/floor-drain-penjelasan-fungsi-dan-tips-memilih-yang-tepat.jpg',
@@ -1606,9 +796,9 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
                 'updated_at' => now(),
             ],
             [
-                'title' => '5 Merk Cat Terbaik untuk Hasil Warna yang Tahan Lama & Berkualitas',
+                'title' => '5 Merk Cat Terbaik untuk Hasil Warna yang Tahan Lama &amp; Berkualitas',
                 'slug' => '2025/11/19/5-merk-cat-terbaik-untuk-hasil-warna-yang-tahan-lama-berkualitas',
-                'content' => '<p><img class="alignnone wp-image-2640 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/5-merk-cat-terbaik-untuk-hasil-warna-yang-tahan-lama-berkualitas.jpg" alt="Merk Cat " width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone wp-image-2640 size-full" src="/assets/blog/5-merk-cat-terbaik-untuk-hasil-warna-yang-tahan-lama-berkualitas.jpg" alt="Merk Cat " width="950" height="550" /></p>
 <p>Memilih <strong>merk cat terbaik</strong> itu ibarat memilih fondasi mood di rumah Anda. Warnanya harus pas, daya tahannya kuat, dan aplikasinya tidak bikin repot. Di 2025, tren cat tembok bukan hanya soal warna cantik, tapi juga kualitas lapisan, kesehatan ruangan, dan efisiensi biaya. Karena itu, memilih merk cat nggak bisa asal murah; harus berdasarkan kebutuhan dan hasil yang ingin dicapai.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
 
@@ -1660,7 +850,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 
 <h2>Beli Cat Terbaik di Yen Bangunan</h2>
 <p>Sebagai toko bangunan terpercaya, <span style="text-decoration: underline"><a href="https://yenbangunan.com/">Yen Bangunan</a></span> menyediakan berbagai merk cat premium dengan stok lengkap, warna akurat, dan harga kompetitif. Anda juga bisa berkonsultasi langsung soal pemilihan cat sesuai kebutuhan rumah atau proyek Anda.</p>
-<p><img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" /></p>
+<p><img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" /></p>
 
 <h2>Kesimpulan</h2>
 <p>"Merk cat terbaik" itu relatif, tergantung kebutuhan Anda. Dulux dan Jotun cocok untuk Anda yang ingin hasil premium dan tahan lama. Avitex dan Catylac pas untuk efisiensi. Nippon adalah pilihan aman untuk keluarga dan ruangan aktif. Dengan memahami karakter masing-masing merk, Anda akan mendapatkan hasil warna yang tidak hanya indah, tapi juga awet dan minim perawatan.</p>',
@@ -1673,7 +863,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Lebih Baik Bata Merah atau Hebel? Ini Kata Ahli Bangunan!',
                 'slug' => '2025/11/20/lebih-baik-bata-merah-atau-hebel-ini-kata-ahli-bangunan',
-                'content' => '<p><img class="alignnone size-full wp-image-2645" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/lebih-baik-bata-merah-atau-hebel-ini-kata-ahli-bangunan.jpg" alt="Bata Merah atau Hebel " width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2645" src="/assets/blog/lebih-baik-bata-merah-atau-hebel-ini-kata-ahli-bangunan.jpg" alt="Bata Merah atau Hebel " width="950" height="550" /></p>
 <p>Ketika merencanakan pembangunan rumah atau renovasi, pertanyaan <em>“lebih baik bata merah atau hebel?”</em> hampir selalu muncul. Keduanya sama-sama populer di Indonesia, namun kebutuhan setiap proyek bisa berbeda. Di lapangan, tukang dan kontraktor punya pengalaman yang cukup panjang untuk melihat kelebihan dan risiko dari masing-masing material. Yuk kita bahas dari perspektif yang lebih realistis dan praktis, versi para ahli bangunan.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
 
@@ -1705,7 +895,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 <p>Bagi pemilik proyek rumahan, ada baiknya Anda berdiskusi dengan kontraktor dan menyesuaikan dengan tujuan jangka panjang. Pemilihan material dinding adalah keputusan yang memengaruhi kenyamanan rumah selama puluhan tahun.</p>
 
 <h2><strong>Rekomendasi dari Yen Bangunan</strong></h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <p>Jika Anda masih bingung menentukan pilihan, tim Yen Bangunan siap membantu memberikan konsultasi ringan dan rekomendasi produk dinding yang paling cocok untuk proyek Anda, baik bata merah maupun hebel berkualitas.</p>
 <p>Dengan stok lengkap, harga terkontrol, dan pengalaman melayani berbagai jenis proyek kecil hingga besar, Yen Bangunan bisa menjadi partner terpercaya dalam pembangunan hunian Anda.</p>
 <p><span style="text-decoration: underline"><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F"><strong>KONSULTASI LEBIH DULU DENGAN KAMI</strong></a></span></p>',
@@ -1718,7 +908,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Keunggulan Genteng Metal Dibanding Genteng Tanah Liat: Mana yang Lebih Unggul?',
                 'slug' => '2025/11/21/keunggulan-genteng-metal-dibanding-genteng-tanah-liat-mana-yang-lebih-unggul',
-                'content' => '<p><img class="alignnone size-full wp-image-2653" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/keunggulan-genteng-metal-dibanding-genteng-tanah-liat-mana-yang-lebih-unggul.jpg" alt="Genteng Metal" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2653" src="/assets/blog/keunggulan-genteng-metal-dibanding-genteng-tanah-liat-mana-yang-lebih-unggul.jpg" alt="Genteng Metal" width="950" height="550" /></p>
 <p>Saat memilih material atap, banyak orang masih bingung antara genteng metal dan genteng tanah liat. Keduanya memang populer, tetapi kebutuhan rumah modern saat ini menuntut material yang lebih tahan lama, praktis, dan efisien. Di sinilah genteng metal mulai jadi pilihan utama.</p>
 <p>Artikel ini membahas secara ringkas dan padat keunggulan genteng metal dibanding genteng tanah liat agar Anda bisa menentukan pilihan terbaik untuk rumah maupun proyek bangunan Anda.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -1744,7 +934,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 <p>Tren rumah masa kini mengarah ke desain minimalis dan modern. Genteng metal punya varian warna dan profil yang terlihat lebih rapi serta konsisten.<br />Genteng tanah liat memberikan kesan klasik, tetapi kadang tampilannya tidak seragam karena warna dan bentuknya bisa berbeda antar-batch.</p>
 
 <h1>Kenapa Pilih Genteng Metal di Yen Bangunan?</h1>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <p>Yen Bangunan menyediakan pilihan genteng metal berkualitas dengan lapisan anti-karat dan finishing premium yang cocok untuk rumah tinggal, ruko, hingga proyek skala besar. Selain itu, tim kami siap membantu Anda menentukan spesifikasi yang paling sesuai dengan kebutuhan dan anggaran.</p>
 <p>Jika Anda mengutamakan kepraktisan, daya tahan, dan tampilan modern, genteng metal jelas memberikan nilai lebih dibanding genteng tanah liat.</p>',
                 'image_path' => '/blog/keunggulan-genteng-metal-dibanding-genteng-tanah-liat-mana-yang-lebih-unggul.jpg',
@@ -1756,7 +946,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Gypsum: Penjelasan, Fungsi, dan Kelebihan untuk Hunian Modern',
                 'slug' => '2025/11/24/gypsum-penjelasan-fungsi-dan-kelebihan-untuk-hunian-modern',
-                'content' => '<p><img class="alignnone size-full wp-image-2658" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/gypsum-penjelasan-fungsi-dan-kelebihan-untuk-hunian-modern.jpg" alt="Gypsum" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2658" src="/assets/blog/gypsum-penjelasan-fungsi-dan-kelebihan-untuk-hunian-modern.jpg" alt="Gypsum" width="950" height="550" /></p>
 <p>Gypsum sudah menjadi salah satu material bangunan yang paling banyak dipakai untuk kebutuhan interior rumah maupun proyek komersial. Dari plafon, dinding partisi, hingga finishing ruang, gypsum dikenal karena tampilannya yang rapi, ringan, dan mudah dibentuk. Di era pembangunan modern yang semakin menuntut efisiensi, material ini semakin naik daun — termasuk di banyak proyek pelanggan <em>Yen Bangunan</em>.</p>
 <p>Artikel ini akan membahas apa itu gypsum, fungsi utamanya, serta kelebihan yang membuatnya jadi pilihan favorit banyak kontraktor dan pemilik rumah.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -1800,7 +990,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 <p>Jika terjadi kerusakan kecil seperti retak atau goresan, gypsum mudah diperbaiki tanpa harus membongkar seluruh bagian.</p>
 
 <h2>Mengapa Harus Beli Gypsum di Yen Bangunan?</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <p>Yen Bangunan menyediakan rangkaian gypsum berkualitas tinggi untuk berbagai kebutuhan, mulai dari plafon standar hingga proyek desain interior yang lebih kompleks. Kualitasnya stabil, harganya bersaing, dan cocok untuk kontraktor maupun pemilik rumah yang ingin hasil maksimal dengan anggaran efisien.</p>
 <p><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F"><strong><span style="text-decoration: underline">KONSULTASI LEBIH DULU DENGAN KAMI</span></strong></a></p>',
                 'image_path' => '/blog/gypsum-penjelasan-fungsi-dan-kelebihan-untuk-hunian-modern.jpg',
@@ -1812,7 +1002,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Apa Itu Bidet dan Cara Kerjanya? Simak Penjelasan Ini!',
                 'slug' => '2025/11/25/apa-itu-bidet-dan-cara-kerjanya-simak-penjelasan-ini',
-                'content' => '<p><img class="alignnone size-full wp-image-2664" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/apa-itu-bidet-dan-cara-kerjanya-simak-penjelasan-ini.jpg" alt="Apa Itu Bidet " width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2664" src="/assets/blog/apa-itu-bidet-dan-cara-kerjanya-simak-penjelasan-ini.jpg" alt="Apa Itu Bidet " width="950" height="550" /></p>
 <p>Secara sederhana, <strong>bidet adalah perangkat pembersih berbasis air</strong> yang dipasang di toilet atau sebagai unit terpisah. Ketika digunakan, air akan mengalir dengan tekanan tertentu untuk membersihkan area sensitif secara lembut.</p>
 <p>Ada dua jenis bidet yang paling umum:</p>
 
@@ -1878,7 +1068,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => '15 Jenis Baut Baja dan Fungsinya, Panduan Lengkap untuk Proyek Konstruksi',
                 'slug' => '2025/11/26/15-jenis-baut-baja-dan-fungsinya-panduan-lengkap-untuk-proyek-konstruksi',
-                'content' => '<p><img class="alignnone size-full wp-image-2668" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/15-jenis-baut-baja-dan-fungsinya-panduan-lengkap-untuk-proyek-konstruksi.jpg" alt="Baut Baja" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2668" src="/assets/blog/15-jenis-baut-baja-dan-fungsinya-panduan-lengkap-untuk-proyek-konstruksi.jpg" alt="Baut Baja" width="950" height="550" /></p>
 <p>Dalam dunia konstruksi, penggunaan baut baja bukan sekadar memilih pengikat yang kuat, tetapi memilih komponen yang benar-benar sesuai dengan struktur, beban, dan kondisi lingkungannya. Setiap jenis baut memiliki bentuk, kekuatan, dan fungsi yang berbeda. Untuk Anda yang sedang membangun rumah, membuat rangka baja ringan, atau mengerjakan instalasi mekanikal, memahami jenis baut sejak awal akan membuat pekerjaan lebih aman dan efisien.</p>
 <p>Artikel ini merangkum berbagai jenis baut baja yang paling umum dan fungsinya, berdasarkan standar industri yang digunakan kontraktor dan teknisi profesional.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -1963,7 +1153,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => '10 Referensi Kamar Mandi Minimalis untuk Hunian Modern',
                 'slug' => '2025/11/27/10-referensi-kamar-mandi-minimalis-untuk-hunian-modern',
-                'content' => '<img class="alignnone size-full wp-image-2684" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/10-referensi-kamar-mandi-minimalis-untuk-hunian-modern.jpg" alt="Kamar Mandi Minimalis" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2684" src="/assets/blog/10-referensi-kamar-mandi-minimalis-untuk-hunian-modern.jpg" alt="Kamar Mandi Minimalis" width="950" height="550" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Mendesain kamar mandi minimalis bukan sekadar membuat ruangan kecil terlihat lega, tapi juga menciptakan ruang yang bersih, nyaman, dan punya karakter. Berikut 10 referensi ide kamar mandi minimalis yang bisa jadi inspirasi kamu, terutama jika kamu sedang membangun atau membangun rumah baru bersama Yen Bangunan.</span></span>
 
@@ -1975,48 +1165,48 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></span></span></a></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">1. Palet warna netral untuk kesan luas &amp; bersih</span></span></h2>
-<img class="alignnone size-full" src="https://bumisempajacity.co.id/wp-content/uploads/2021/11/Rekomendasi-Pilihan-Warna-Kamar-Mandi-Minimalis-Terbaik.jpg" width="533" height="800" />
+<img class="alignnone size-full" src="/assets/blog/Rekomendasi-Pilihan-Warna-Kamar-Mandi-Minimalis-Terbaik.jpg" width="533" height="800" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Warna netral seperti putih, krem, atau abu-abu muda mampu memberi kesan ruang kamar mandi lebih luas dan bersih. Kombinasi ini juga fleksibel untuk dipadukan dengan berbagai perlengkapan dari Yen Bangunan — dari keramik, wastafel, hingga aksesorinya.</span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">2. Monokrom dengan hitam-putih: modern dan elegan</span></span></h2>
-<img class="alignnone " src="https://awsimages.detik.net.id/community/media/visual/2022/11/15/desain-kamar-mandi-9.jpeg?w=565" width="730" height="859" />
+<img class="alignnone " src="/assets/blog/desain-kamar-mandi-9.jpeg" width="730" height="859" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Gaya monokrom, hitam dan putih, bisa memberi kesan modern, rapi, dan canggih. Contohnya: dinding putih glossy + lantai hitam matte, atau dinding hitam aksen + lantai putih.</span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">3. Sentuhan kayu atau material natural untuk kehangatan</span></span></h2>
-<img class="alignnone size-full" src="https://www.wadjakaryadunia.com/wp-content/uploads/2023/05/kamar-mandi-mungil.webp" width="791" height="488" />
+<img class="alignnone size-full" src="/assets/blog/kamar-mandi-mungil.webp" width="791" height="488" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Untuk nuansa yang lebih hangat dan nyaman, tambahkan elemen kayu, misalnya rak kayu, kabinet, atau detail kayu pada wastafel. Sentuhan kayu membuat kamar mandi terasa lebih “manusiawi” dibandingkan jika terlalu dingin dan klinis.</span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">4. Cermin besar &amp; pencahayaan cerah untuk ilusi ruang</span></span></h2>
-<img class="alignnone " src="https://cdn0-production-images-kly.akamaized.net/yv4VfTVluwxd2w8VJ_acrgg29-4=/1280x720/smart/filters:quality(75):strip_icc()/kly-media-production/medias/5198948/original/087545500_1745562097-ChatGPT_Image_25_Apr_2025__13.20.35.jpg" width="1088" height="612" />
+<img class="alignnone " src="/assets/blog/087545500_1745562097-ChatGPT_Image_25_Apr_2025__13.20.35.jpg" width="1088" height="612" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Cermin besar, tanpa bingkai berlebihan, membantu memantulkan cahaya dan memberi ilusi ruang yang lebih luas. Jika memungkinkan, maksimalisasi cahaya alami atau gunakan lampu dengan tone hangat agar kamar mandi terasa bersih namun tetap nyaman.</span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">5. Rak dinding / penyimpanan tersembunyi untuk ruang rapi</span></span></h2>
-<img class="alignnone " src="https://asset.kompas.com/crops/6bsjo9rhGOvZMNQDHv8SZy0aP6I=/0x0:1000x667/1200x800/data/photo/2023/07/17/64b5023d8079b.jpg" width="1061" height="707" />
+<img class="alignnone " src="/assets/blog/64b5023d8079b.jpg" width="1061" height="707" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Kunci minimalis bukan hanya estetika, tapi fungsi. Gunakan rak dinding, kabinet kecil di bawah wastafel, atau penyimpanan tersembunyi agar perlengkapan mandi tak berserakan. </span></span>
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Dengan demikian, kamar mandi terasa lega dan tetap nyaman digunakan — cocok untuk perumahan kecil atau apartemen.</span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">6. Kombinasi tekstur - keramik polos + motif / aksen</span></span></h2>
-<img class="alignnone size-full" src="https://www.99.co/id/panduan/wp-content/uploads/2023/05/26145855/2-2.jpg" width="1080" height="1350" />
+<img class="alignnone size-full" src="/assets/blog/kamar-mandi-2-2-99co.jpg" width="1080" height="1350" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Mengombinasikan keramik polos dengan keramik bermotif atau tekstur (misalnya marmer, batu alam, atau motif kayu) dapat memberi karakter tanpa merusak kesan minimalis.  </span></span>
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Ini berguna untuk membuat kamar mandi terasa lebih estetis dan personal.</span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">7. Gaya “alami &amp; tropis” - tanaman hias dan bahan alami</span></span></h2>
-<img class="alignnone " src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img,w_750,h_450/https://kubikel.com/wp-content/uploads/2023/08/Menggunakan-tanaman-hias-sebagai-ornamen-di-kamar-mandi.jpg" width="1032" height="619" />
+<img class="alignnone " src="/assets/blog/Menggunakan-tanaman-hias-sebagai-ornamen-di-kamar-mandi.jpg" width="1032" height="619" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Menambahkan tanaman kecil (yang tahan lembap), aksen kayu, atau bahan alami bisa membuat kamar mandi terasa segar dan nyaman, seperti spa di rumah.  </span></span>
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Style ini cocok untuk hunian di Indonesia, memberikan kesan adem dan dekat dengan alam.</span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">8. Gaya industrial atau minimalis modern - untuk kesan urban &amp; chic</span></span></h2>
-<img class="alignnone size-full" src="https://shila.co.id/wp-content/uploads/2024/03/10-Desain-Kamar-Mandi-Sederhana-Industrial.webp" width="564" height="564" />
+<img class="alignnone size-full" src="/assets/blog/10-Desain-Kamar-Mandi-Sederhana-Industrial.webp" width="564" height="564" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Jika kamu suka tampilan edgy dan modern, gaya industrial bisa jadi pilihan: dinding semen mengekspos atau batu alam, aksen logam hitam, pipa terbuka atau lampu gantung minimalis.  </span></span>
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Perpaduan ini cocok untuk perumahan perkotaan atau apartemen kecil.</span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">9. Shower + sekat kaca transparan - ideal untuk kamar mandi kecil</span></span></h2>
-<img class="alignnone size-full" src="https://events.rumah123.com/wp-content/uploads/sites/38/2025/07/22143239/partisi-kamar-mandi-akrilik.jpg" width="1080" height="1350" />
+<img class="alignnone size-full" src="/assets/blog/partisi-kamar-mandi-akrilik.jpg" width="1080" height="1350" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Jika ruang terbatas, menggunakan shower daripada bathtub serta sekat kaca transparan membantu menjaga ruang tetap lega dan mudah dibersihkan. </span></span>
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pilihan ini juga cocok sebagai desain minimalis yang fungsional.</span></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">10. Dekorasi sederhana - aksesori minimal, handuk, sabun, tanpa dekorasi berlebihan</span></span></h2>
-<img class="alignnone size-full" src="https://vo.propnex.id:88/kcfinder/upload/images/cover-km.jpg" width="750" height="853" />
+<img class="alignnone size-full" src="/assets/blog/cover-km.jpg" width="750" height="853" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Minimalis bukan berarti kosong, cukup dekorasi sederhana dan fungsional: handuk polos, dispenser sabun minimalis, aksesoris dengan warna netral. </span></span>
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Hindari dekorasi berlebihan, fokus pada kebersihan, keteraturan, dan kenyamanan sehari-hari.</span></span>
@@ -2031,7 +1221,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Jasa Kontraktor Rumah Bekasi, Solusi Supplier Bangunan dari Yen Bangunan!',
                 'slug' => '2025/11/28/jasa-kontraktor-rumah-bekasi-solusi-supplier-bangunan-dari-yen-bangunan',
-                'content' => '<p><img class="alignnone wp-image-2692 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/11/jasa-kontraktor-rumah-bekasi-solusi-supplier-bangunan-dari-yen-bangunan.jpg" alt="Jasa Kontraktor Rumah Bekasi" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone wp-image-2692 size-full" src="/assets/blog/jasa-kontraktor-rumah-bekasi-solusi-supplier-bangunan-dari-yen-bangunan.jpg" alt="Jasa Kontraktor Rumah Bekasi" width="950" height="550" /></p>
 <p>Membangun atau merenovasi rumah di Bekasi sering kali terasa melelahkan, mulai dari mencari kontraktor yang benar-benar bisa dipercaya hingga memastikan material yang digunakan berkualitas. Di tengah banyaknya pilihan, satu hal tetap pasti: proyek yang rapi berawal dari kontraktor yang profesional dan supplier yang tepat.</p>
 <p>Di sinilah Yen Bangunan hadir sebagai solusi untuk kebutuhan material berkualitas, sekaligus memberikan rekomendasi terbaik bagi Anda yang sedang mencari jasa kontraktor rumah Bekasi yang terpercaya.</p>
 
@@ -2056,7 +1246,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 <p>Dan karena kebutuhan material selalu menjadi aspek paling krusial, bekerja dengan kontraktor yang berkolaborasi dengan supplier tepercaya seperti Yen Bangunan dapat membuat proses jauh lebih efisien.</p>
 
 <h2>Peran Yen Bangunan Sebagai Supplier yang Mendukung Proyek Anda</h2>
-<img class="alignnone size-full wp-image-2301" src="https://andrian064.wordpress.com/wp-content/uploads/2025/09/group-46.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2299" src="https://andrian064.wordpress.com/wp-content/uploads/2025/09/group-44.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2297" src="https://andrian064.wordpress.com/wp-content/uploads/2025/09/group-42.png" alt="" width="934" height="584" />
+<img class="alignnone size-full wp-image-2301" src="/assets/blog/group-46.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2299" src="/assets/blog/group-44.png" alt="" width="934" height="584" /> <img class="alignnone size-full wp-image-2297" src="/assets/blog/group-42.png" alt="" width="934" height="584" />
 <p>Sebagai toko bangunan yang berfokus pada kualitas dan kepercayaan, Yen Bangunan menyediakan berbagai material mulai dari semen, pasir, cat, keramik, peralatan proyek, hingga perlengkapan finishing. Ketersediaan produk lengkap memudahkan kontraktor bekerja lebih cepat tanpa terhambat kekurangan stok.</p>
 <p>Beberapa keunggulan yang membuat banyak kontraktor di Bekasi mempercayai Yen Bangunan:</p>
 
@@ -2101,9 +1291,9 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Kelebihan & Kekurangan Pintu Aluminium, Panduan Praktis untuk Pemilik Rumah Baru!',
+                'title' => 'Kelebihan &amp; Kekurangan Pintu Aluminium, Panduan Praktis untuk Pemilik Rumah Baru!',
                 'slug' => '2025/12/01/kelebihan-kekurangan-pintu-aluminium-panduan-praktis-untuk-pemilik-rumah-baru',
-                'content' => '<p><img class="alignnone size-full wp-image-2698" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/kelebihan-kekurangan-pintu-aluminium-panduan-praktis-untuk-pemilik-rumah-baru.jpg" alt="" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2698" src="/assets/blog/kelebihan-kekurangan-pintu-aluminium-panduan-praktis-untuk-pemilik-rumah-baru.jpg" alt="" width="950" height="550" /></p>
 <p>Pintu aluminium semakin populer, bukan hanya karena tampilannya modern, tapi juga karena perawatannya yang relatif mudah. Namun, seperti material lain, ada plus-minus yang perlu dipahami supaya pilihan Anda benar-benar tepat.</p>
 <p>Artikel ini membantu Anda menilai apakah pintu aluminium cocok untuk rumah atau proyek Anda, dengan perspektif yang lebih manusiawi, realistis, dan edukatif.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -2146,9 +1336,9 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Cari Toko Baut di Bekasi? Yen Bangunan Paling Lengkap & Siap Kirim',
+                'title' => 'Cari Toko Baut di Bekasi? Yen Bangunan Paling Lengkap &amp; Siap Kirim',
                 'slug' => '2025/12/02/cari-toko-baut-di-bekasi-yen-bangunan-paling-lengkap-siap-kirim',
-                'content' => '<p><img class="alignnone size-full wp-image-2703" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/cari-toko-baut-di-bekasi-yen-bangunan-paling-lengkap-siap-kirim.jpg" alt="toko Baut di Bekasi" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2703" src="/assets/blog/cari-toko-baut-di-bekasi-yen-bangunan-paling-lengkap-siap-kirim.jpg" alt="toko Baut di Bekasi" width="950" height="550" /></p>
 <p>Mencari toko baut Bekasi yang lengkap, cepat, dan harganya bersahabat? Di tengah banyaknya kebutuhan konstruksi dan perbaikan rumah, memilih toko yang tepat memang bisa jadi tantangan. Tapi kalau kamu butuh tempat yang stoknya aman, kualitas terjamin, dan pelayanannya rapi, Yen Bangunan adalah pilihan yang paling masuk akal.</p>
 <p>Sebagai distributor bahan bangunan dan perlengkapan teknik, kami paham bahwa baut bukan hanya “komponen kecil”, tapi bagian penting yang menentukan keamanan dan kekuatan suatu instalasi. Itulah sebabnya kami memastikan setiap produk yang masuk ke rak sudah lulus standar kualitas, mulai dari baut kecil untuk kebutuhan rumahan hingga baut industri yang lebih spesifik.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -2204,7 +1394,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Toko Bor Bosch Terdekat Cikarang - Yen Bangunan',
                 'slug' => '2025/12/03/toko-bor-bosch-terdekat-cikarang-yen-bangunan',
-                'content' => '<p><img class="alignnone size-full wp-image-2716" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/toko-bor-bosch-terdekat-cikarang-yen-bangunan.webp" alt="Toko Bor Bosch Terdekat Cikarang " width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2716" src="/assets/blog/toko-bor-bosch-terdekat-cikarang-yen-bangunan.webp" alt="Toko Bor Bosch Terdekat Cikarang " width="950" height="550" /></p>
 <p>Memilih bor listrik yang tepat sering jadi penentu apakah pekerjaan proyek berjalan mulus atau malah terhambat. Untuk Anda yang tinggal atau bekerja di area Cikarang, mencari toko bor Bosch terdekat yang lengkap, terpercaya, dan ready stok tentu jadi prioritas. Di sinilah Yen Bangunan hadir sebagai solusi—bukan hanya menjual alat, tapi membantu Anda menemukan produk yang benar-benar sesuai kebutuhan.</p>
 <p>Bosch sudah lama dikenal sebagai salah satu brand power tools paling stabil untuk ketahanan, presisi, dan performa. Mulai dari bor tangan ringan untuk kebutuhan rumah sampai bor profesional untuk proyek konstruksi, semua bisa Anda temukan di satu tempat: Yen Bangunan, toko bor Bosch terdekat di Cikarang yang selalu update stok.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -2252,7 +1442,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 <p>Setiap produk bisa kami bantu jelaskan perbedaan fungsi dan kegunaannya, sehingga Anda tidak salah pilih saat membeli.</p>
 
 <h2>Cara Menemukan Toko Bor Bosch Terdekat Cikarang</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <p>Anda bisa datang langsung ke toko, atau menghubungi kami terlebih dahulu untuk memastikan stok tetap tersedia. Ini membuat proses belanja lebih cepat dan efisien, pas dengan ritme kerja pelanggan Cikarang yang serba cepat.</p>
 
 <h2>Kesimpulan</h2>
@@ -2266,7 +1456,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Toko Bangunan yang Buka Hari Minggu di Cikarang - Yen Bangunan',
                 'slug' => '2025/12/04/toko-bangunan-yang-buka-hari-minggu-di-cikarang-yen-bangunan',
-                'content' => '<p><img class="alignnone size-full wp-image-2703" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/cari-toko-baut-di-bekasi-yen-bangunan-paling-lengkap-siap-kirim.jpg" alt="toko Baut di Bekasi" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2703" src="/assets/blog/cari-toko-baut-di-bekasi-yen-bangunan-paling-lengkap-siap-kirim.jpg" alt="toko Baut di Bekasi" width="950" height="550" /></p>
 <p>Ketika sedang mengerjakan renovasi rumah atau proyek kecil, sering kali kebutuhan material muncul tiba-tiba, bahkan di hari Minggu. Di Cikarang, hal ini cukup umum terjadi, terutama bagi pemilik rumah, kontraktor kecil, hingga pekerja proyek yang hanya punya waktu luang di akhir pekan. Karena itu, menemukan toko bangunan yang buka hari Minggu jadi hal penting agar pekerjaan tidak mandek.</p>
 <p>Di sinilah Yen Bangunan hadir sebagai solusi. Dengan jam operasional yang fleksibel dan stok material yang lengkap, Anda bisa belanja kebutuhan proyek kapan pun tanpa khawatir menunggu hari kerja.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -2294,7 +1484,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 
 <h2>Penutup: Pilihan Tepat untuk Belanja Material Saat Weekend</h2>
 <p>Jika Anda sedang mencari toko bangunan yang buka hari Minggu di Cikarang, Yen Bangunan adalah pilihan paling praktis dan terpercaya. Mulai dari stok lengkap, layanan ramah, pengiriman cepat, hingga harga kompetitif, semua dirancang agar pelanggan bisa menjalankan proyek tanpa hambatan.</p>',
-                'image_path' => null,
+                'image_path' => '/blog/cari-toko-baut-di-bekasi-yen-bangunan-paling-lengkap-siap-kirim.jpg',
                 'published_at' => '2025-12-04 16:43:28',
                 'author_id' => 1,
                 'created_at' => now(),
@@ -2303,7 +1493,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => 'Jasa Kontraktor Bangunan Bekasi, Siap Supply Kebutuhan Bahan Bangunan!',
                 'slug' => '2025/12/05/jasa-kontraktor-bangunan-bekasi',
-                'content' => '<img class="alignnone size-full wp-image-2748" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/jasa-kontraktor-bangunan-bekasi-yang-didukung-supplier-bahan-bangunan-terlengkap-yen-bangunan.jpg" alt="Jasa Kontraktor Bangunan Bekasi" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2748" src="/assets/blog/jasa-kontraktor-bangunan-bekasi-yang-didukung-supplier-bahan-bangunan-terlengkap-yen-bangunan.jpg" alt="Jasa Kontraktor Bangunan Bekasi" width="950" height="550" />
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Di Bekasi, banyak proyek rekonstruksi maupun pembangunan terhambat bukan karena tukangnya kurang ahli, tetapi karena pasokan material yang tidak stabil. Semen habis, pasir telat datang, harga material berubah, atau kualitas barang tidak sesuai. Semua itu membuat pekerjaan menjadi lambat dan biaya jadi membengkak.</span></span>
 
@@ -2319,7 +1509,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></span></span></a></span>
 <h2><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan: Supplier Bahan Bangunan yang Bikin Proyek Lancar Tanpa Delay</span></span></h2>
-[caption id="attachment_1220" align="alignnone" width="1024"]<img class="size-full wp-image-1220" src="https://andrian064.wordpress.com/wp-content/uploads/2025/06/img_2855-e1759414419113.jpg" alt="Yen bangunan" width="1024" height="1408" /> <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen bangunan</span></span>[/caption]
+[caption id="attachment_1220" align="alignnone" width="1024"]<img class="size-full wp-image-1220" src="/assets/blog/img_2855-e1759414419113.jpg" alt="Yen bangunan" width="1024" height="1408" /> <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen bangunan</span></span>[/caption]
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Kami memahami satu hal penting: proyek yang baik tidak hanya ditentukan oleh kualitas tenaga kerja, tetapi juga oleh kelancaran pasokan material. Oleh karena itu, fokus utama kami adalah memastikan setiap kebutuhan bangunan Anda terpenuhi tepat waktu dan sesuai spesifikasi.</span></span>
 <h3><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">1. Stok Lengkap &amp; Siap Kirim Kapan Saja</span></span></h3>
@@ -2343,7 +1533,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Apa pun jenis proyek Anda, bangun baru, rekonstruksi, atau persiapan kontraktor, Yen Bangunan siap menjadi tulang punggung pasokan material Anda. Dengan dukungan layanan yang cepat dan stok yang terjaga, Anda tidak perlu lagi khawatir kehabisan material di tengah pekerjaan.</span></span>
 
 <span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Bangunan yang kuat selalu berawal dari material yang tepat, dan itulah yang kami pastikan untuk Anda setiap hari.</span></span>',
-                'image_path' => null,
+                'image_path' => '/blog/jasa-kontraktor-bangunan-bekasi-yang-didukung-supplier-bahan-bangunan-terlengkap-yen-bangunan.jpg',
                 'published_at' => '2025-12-05 15:14:23',
                 'author_id' => 1,
                 'created_at' => now(),
@@ -2352,7 +1542,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => '10 Referensi Dapur Minimalis untuk Hunian Modern di 2026',
                 'slug' => '2025/12/09/10-referensi-dapur-minimalis-untuk-hunian-modern-di-2026',
-                'content' => '<p><img class="alignnone size-full wp-image-2759" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/10-referensi-dapur-minimalis-untuk-hunian-modern.jpg" alt="Dapur Minimalis" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2759" src="/assets/blog/10-referensi-dapur-minimalis-untuk-hunian-modern.jpg" alt="Dapur Minimalis" width="950" height="550" /></p>
 <p>Saat ini dapur tidak lagi sekadar tempat memasak, melainkan ruang hidup, berkumpul, dan berekspresi. Bagi Anda yang mencari ide segar, berikut 10 referensi desain “dapur minimalis” tahun 2025, ideal untuk rumah di kota dan cocok dengan produk dari <strong>Yen Bangunan</strong>.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
 
@@ -2362,7 +1552,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>1. Dapur Terbuka (Open-Concept Kitchen)</h2>
-<img class="" src="https://events.rumah123.com/wp-content/uploads/sites/38/2023/01/12152139/Desain-Dapur-Terbuka-dengan-Taman-dan-Kolam.jpg" width="920" height="768" />
+<img class="" src="/assets/blog/Desain-Dapur-Terbuka-dengan-Taman-dan-Kolam.jpg" width="920" height="768" />
 <p>Konsep dapur terbuka yang menyatu dengan ruang makan atau ruang keluarga makin populer, karena menciptakan kesan ruang lebih luas dan interaksi keluarga lebih cair. Dengan kitchen set modular dari Yen Bangunan, Anda bisa mendapatkan dapur yang rapi sekaligus fleksibel tanpa memakan banyak area.</p>
 
 <h2>2. Palet Monokrom - Hitam, Putih, Abu-abu</h2>
@@ -2370,15 +1560,15 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 <p>Warna netral seperti hitam, putih, atau abu-abu memberi kesan modern, bersih, dan timeless. Palet ini cocok jika Anda ingin dapur elegan tanpa dekorasi berlebihan. <br />Padukan dengan kabinet matte atau finishing lembut dari Yen Bangunan agar dapur tampak bersih dan profesional.</p>
 
 <h2>3. Sentuhan Kayu Natural (Gaya Hangat &amp; Scandinavian)</h2>
-<img class="" src="https://events.rumah123.com/wp-content/uploads/sites/38/2025/01/03164802/Dapur-Sederhana-dari-Kayu.jpg" width="933" height="622" />
+<img class="" src="/assets/blog/Dapur-Sederhana-dari-Kayu.jpg" width="933" height="622" />
 <p>Jika monokrom terasa terlalu dingin, palet dengan kayu natural bisa membawa suasana hangat dan nyaman. Warna kayu muda atau netral membuat dapur tetap terasa luas. Dengan material kayu atau veneer dari line produk Yen Bangunan, Anda bisa menghadirkan nuansa natural tanpa meninggalkan kesan minimalis.</p>
 
 <h2>4. Rak Terbuka atau Floating Shelves</h2>
-<img class="alignnone " src="https://media.dekoruma.com/article/2024/12/08164821/Dapur-Mungil-dengan-Rak-Terbuka.jpg?resize=800%2C541&amp;ssl=1" width="926" height="626" />
+<img class="alignnone " src="/assets/blog/Dapur-Mungil-dengan-Rak-Terbuka.jpg" width="926" height="626" />
 <p>Rak mengambang atau rak terbuka bisa membuat dapur terasa ringan dan airy, cocok untuk dapur kecil. Namun, pastikan hanya menyimpan peralatan penting agar tetap rapi.  Model rak dari Yen Bangunan dengan finishing sederhana akan sangat mendukung konsep ini.</p>
 
 <h2>5. Konsep Modular &amp; Penyimpanan Tersembunyi</h2>
-<img class="alignnone " src="https://cdn1-production-images-kly.akamaized.net/xSGhYzXZjdMRIz43n_f4DJ90JPA=/1280x720/smart/filters:quality(75):strip_icc()/kly-media-production/medias/5422957/original/047624300_1764049333-Model_Dapur_Minimalis_Lahan_Sempit.jpg" width="906" height="510" />
+<img class="alignnone " src="/assets/blog/047624300_1764049333-Model_Dapur_Minimalis_Lahan_Sempit.jpg" width="906" height="510" />
 <p>Desain modular dan penyimpanan tersembunyi memberi keleluasaan optimasi ruang, ideal untuk dapur kecil. Semua peralatan bisa dirapikan tanpa terlihat berantakan. Dengan modul kabinet dari Yen Bangunan, dapur Anda bisa tetap terlihat rapi sambil menyimpan banyak barang.</p>
 
 <h2>6. Kombinasi Material - Kayu, Batu, dan Finishing Matte</h2>
@@ -2386,23 +1576,23 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
 <p>Memadukan material seperti kayu, batu, dan finishing matte membuat dapur terasa modern sekaligus hangat. Kombinasi ini cocok jika Anda ingin dapur minimalis yang terasa elegan dan natural.</p>
 
 <h2>7. Gaya “Hidden Kitchen” - Tersembunyi namun Fungsional</h2>
-<img class="alignnone " src="https://cdn1-production-images-kly.akamaized.net/bmAu9CcZSMrTtzJm-7D4P25Q5WM=/500x500/smart/filters:quality(75):strip_icc()/kly-media-production/medias/5358681/original/082262900_1758610312-xcaadwcc.jpg" width="763" height="763" />
+<img class="alignnone " src="/assets/blog/082262900_1758610312-xcaadwcc.jpg" width="763" height="763" />
 <p>Tren “dapur tersembunyi” atau “invisible kitchen” makin diminati: kabinet dan peralatan terintegrasi dengan dinding atau desain minimal untuk meminimalkan clutter. Dengan produk kabinet dari Yen Bangunan yang rata dan simpel, dapur bisa tampak lebih bersih dan bergaya minimalis.</p>
 
 <h2>8. Gaya Industrial Minimalis - Tegas dan Modern</h2>
-<img src="https://events.rumah123.com/wp-content/uploads/sites/38/2024/10/13095810/8.-Kitchen-Set-Industrial-di-Area-Terbatas.jpg" />
+<img src="/assets/blog/8.-Kitchen-Set-Industrial-di-Area-Terbatas.jpg" />
 <p>Bagi yang suka kesan maskulin atau kota besar, gaya industrial minimalis, dengan elemen logam, beton, atau warna gelap, bisa jadi pilihan. Meskipun maskulin, tetap menjaga kesan rapi dan modern.  Perpaduan kabinet minimalis dari Yen Bangunan dengan aksen metal atau concrete-look bisa memperkuat gaya ini.</p>
 
 <h2>9. Gaya “Japandi” - Minimalis Hangat ala Skandinavia + Jepang</h2>
-<img src="https://media-public.dekoruma.com/article/2025/03/b51a27e8aba19f332f11c0d7db1c7913-1541722301-1518786316325.jpg" />
+<img src="/assets/blog/b51a27e8aba19f332f11c0d7db1c7913-1541722301-1518786316325.jpg" />
 <p>Gaya yang memadukan fungsionalitas Skandinavia dan kehangatan desain Jepang ini cocok untuk yang ingin dapur minimalis, tenang, dan natural. Palet kalem, material alami, dan desain sederhana adalah kuncinya.</p>
 
 <h2>10. Dapur Compact &amp; Praktis untuk Rumah Kecil</h2>
-<img class="" src="https://www.lamudi.co.id/journal/wp-content/uploads/2024/01/kitchen-set-mini-bar-dapur-kecil-2.jpg" width="642" height="657" />
+<img class="" src="/assets/blog/kitchen-set-mini-bar-dapur-kecil-2.jpg" width="642" height="657" />
 <p>Untuk rumah atau apartemen kecil, desain dapur minimalis compact, dengan area efisien, kabinet modul kecil, layout lurus atau U-shape, bisa membuat dapur tetap nyaman dan fungsional. Yen Bangunan menawarkan sejumlah solusi modular yang cocok untuk kebutuhan ini.</p>
 
 <h2>Kenapa Memilih Produk dari Yen Bangunan</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <p>Dengan menggunakan produk kitchen set, kabinet, atau modul penyimpanan dari Yen Bangunan, Anda bisa merancang dapur minimalis sesuai 10 referensi di atas. Material dan finishing yang mereka tawarkan memudahkan untuk menghasilkan dapur yang fungsional, rapi, dan estetis, tanpa harus mengorbankan ruang maupun gaya.</p>
 
 <h2>Kesimpulan</h2>
@@ -2417,7 +1607,7 @@ Harga triplek memang beragam, tapi dengan sedikit riset dan pemahaman dasar, kam
             [
                 'title' => '10 Referensi Rumah Panggung Minimalis Modern untuk Inspirasi Hunian Masa Kini',
                 'slug' => '2025/12/10/10-referensi-rumah-panggung-minimalis-modern-untuk-inspirasi-hunian-masa-kini',
-                'content' => '<img class="alignnone wp-image-2769 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/10-referensi-rumah-panggung-minimalis-modern-untuk-inspirasi-hunian-masa-kini-1.jpg" alt="Rumah Panggung Minimalis " width="950" height="550" />
+                'content' => '<img class="alignnone wp-image-2769 size-full" src="/assets/blog/10-referensi-rumah-panggung-minimalis-modern-untuk-inspirasi-hunian-masa-kini-1.jpg" alt="Rumah Panggung Minimalis " width="950" height="550" />
 
 Jika dulu rumah panggung identik dengan desain tradisional, kini konsep tersebut berevolusi menjadi rumah panggung minimalis modern yang lebih efisien, stylish, dan ramah lingkungan. Struktur rumah yang ditopang tiang tak hanya cocok untuk wilayah rawan banjir, tapi juga memberi tampilan arsitektur yang lebih ringan dan elegan. Berikut 10 referensi terbaik yang bisa jadi titik awal Anda sebelum membangun hunian impian bersama <em>Yen Bangunan</em>.
 
@@ -2429,11 +1619,11 @@ Jika dulu rumah panggung identik dengan desain tradisional, kini konsep tersebut
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>1. Rumah Panggung Minimalis dengan Tiang Baja Ekspos</h2>
-<img src="https://events.rumah123.com/news-content/img/2021/09/21123205/Kelebihan-Rumah-Panggung.jpg" />
+<img src="/assets/blog/Kelebihan-Rumah-Panggung.jpg" />
 
 Kombinasi tiang baja dan dinding warna netral menciptakan kesan industrial modern. Cocok untuk lahan kecil hingga menengah dan hemat perawatan.
 <h2><strong>2. Rumah Panggung Fasad Kayu Modern</strong></h2>
-<img class="alignnone " src="https://shila.co.id/wp-content/uploads/2025/02/Rumah-Panggung-Minimalis-Minimalist-Zen-Box.webp" width="803" height="602" />
+<img class="alignnone " src="/assets/blog/Rumah-Panggung-Minimalis-Minimalist-Zen-Box.webp" width="803" height="602" />
 
 Menggunakan papan kayu horizontal dengan finishing doff. Tampak hangat, bersih, dan tetap modern. Ideal untuk daerah hijau atau berdekatan dengan alam.
 <h2><strong>3. Desain Compact 6×8 Meter</strong></h2>
@@ -2441,37 +1631,37 @@ Menggunakan papan kayu horizontal dengan finishing doff. Tampak hangat, bersih, 
 
 Rumah panggung kecil tetap bisa tampak lega dengan layout open-space. Desain ini populer pada 2025 untuk keluarga muda yang mengutamakan efisiensi.
 <h2><strong>4. Rumah Panggung Minimalis Tropis</strong></h2>
-<img class="alignnone " src="https://shila.co.id/wp-content/uploads/2025/02/Rumah-Panggung-Minimalis-Rumah-Panggung-Tropis.webp" width="792" height="495" />
+<img class="alignnone " src="/assets/blog/Rumah-Panggung-Minimalis-Rumah-Panggung-Tropis.webp" width="792" height="495" />
 
 Menggunakan ventilasi besar, atap miring, dan material bangunan yang tahan cuaca. Sangat cocok untuk iklim Indonesia yang panas dan lembap.
 <h2><strong>5. Rumah Panggung Modern Berbahan Beton</strong></h2>
-<img class="" src="https://blkp.co.id/uploads/blkp/2305154OnM07dRx39zpHEPaLbskijUNVIBgA1holG8vt5y2CrwTWJuKQqZcYX6eDSm.jpg" width="789" height="526" />
+<img class="" src="/assets/blog/2305154OnM07dRx39zpHEPaLbskijUNVIBgA1holG8vt5y2CrwTWJuKQqZcYX6eDSm.jpg" width="789" height="526" />
 
 Tidak semua rumah panggung harus berbahan kayu. Tiang beton memberikan tampilan kokoh namun tetap minimalis. Cocok untuk daerah berkontur.
 <h2><strong>6. Rumah Panggung Minimalis dengan Balkon Lebar</strong></h2>
-<img class="" src="https://events.rumah123.com/wp-content/uploads/sites/38/2021/09/19183028/rumah-panggung-minimalis-modern.jpg" width="788" height="525" />
+<img class="" src="/assets/blog/rumah-panggung-minimalis-modern.jpg" width="788" height="525" />
 
 Konsep elevated balcony sedang tren. Selain memperluas ruang, balkon besi-fiber ringan memberikan sentuhan modern yang elegan.
 <h2><strong>7. Model Rumah Panggung Scandinavian</strong></h2>
-<img src="https://www.99.co/id/panduan/wp-content/uploads/2025/03/26135024/rumah-panggung-modern-scandinavian-Addison-Ow.jpg" />
+<img src="/assets/blog/rumah-panggung-modern-scandinavian-Addison-Ow.jpg" />
 
 Mengutamakan warna putih, abu, dan aksen kayu pucat. Clean, airy, dan sangat instagramable. Banyak diminati keluarga muda.
 <h2><strong>8. Rumah Panggung Kontemporer dengan Kaca Besar</strong></h2>
-<img class="alignnone " src="https://veratainterior.com/wp-content/uploads/2025/04/Rumah-panggung-minimalis-kaca.webp" width="792" height="475" />
+<img class="alignnone " src="/assets/blog/Rumah-panggung-minimalis-kaca.webp" width="792" height="475" />
 
 Memaksimalkan pencahayaan alami dan membuat ruang terasa dua kali lebih luas. Rekomendasi: gunakan kaca low-e agar hemat energi.
 <h2><strong>9. Rumah Panggung Minimalis di Atas Lahan Sempit</strong></h2>
-<img class="alignnone size-full" src="https://awsimages.detik.net.id/community/media/visual/2024/10/02/rumah-panggung-estetik_11.jpeg?w=600&amp;q=90" width="600" height="600" />
+<img class="alignnone size-full" src="/assets/blog/rumah-panggung-estetik_11.jpeg" width="600" height="600" />
 
 Bangun dengan sistem modular panggung sehingga fondasi lebih efisien. Desain ini sangat ramah budget dan cepat dibangun.
 <h2><strong>10. Rumah Panggung Modern Dua Lantai</strong></h2>
-<img class="" src="https://sendokkayu.com/wp-content/uploads/2023/10/rumah-kayu-panggung-3-e1696419842578.jpg" width="667" height="365" />
+<img class="" src="/assets/blog/rumah-kayu-panggung-3-e1696419842578.jpg" width="667" height="365" />
 
 Cocok untuk keluarga besar. Struktur panggung memungkinkan pembuatan lantai dua dengan risiko getaran lebih rendah bila menggunakan material rangka yang tepat.
 <h2><strong>Kenapa Rumah Panggung Minimalis Jadi Trend 2025?</strong></h2>
 Tren desain 2025 menekankan efisiensi energi, adaptasi lahan, dan struktur yang fleksibel. Rumah panggung menjawab semuanya: ventilasi alami lebih baik, biaya fondasi lebih hemat, dan tampilan tidak ketinggalan zaman.
 <h2><strong>Bangun Rumah Panggung Modern dengan Material dari Yen Bangunan</strong></h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 
 Untuk menciptakan rumah panggung yang kokoh dan tahan lama, pastikan menggunakan material yang tepat mulai dari tiang, rangka, papan, hingga kaca. Yen Bangunan menghadirkan pilihan material bangunan yang lengkap dan tepercaya untuk mewujudkan desain rumah panggung minimalis modern sesuai budget dan kebutuhan Anda.',
                 'image_path' => '/blog/10-referensi-rumah-panggung-minimalis-modern-untuk-inspirasi-hunian-masa-kini-1.jpg',
@@ -2483,7 +1673,7 @@ Untuk menciptakan rumah panggung yang kokoh dan tahan lama, pastikan menggunakan
             [
                 'title' => 'Groundbreaking Adalah: Pengertian, Fungsi, dan Kenapa Penting dalam Proyek Konstruksi',
                 'slug' => '2025/12/11/groundbreaking-adalah-pengertian-fungsi-dan-kenapa-penting-dalam-proyek-konstruksi',
-                'content' => '<p><img class="alignnone size-full wp-image-2775" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/groundbreaking-adalah-pengertian-fungsi-dan-kenapa-penting-dalam-proyek-konstruksi.jpg" alt="Groundbreaking Adalah " width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2775" src="/assets/blog/groundbreaking-adalah-pengertian-fungsi-dan-kenapa-penting-dalam-proyek-konstruksi.jpg" alt="Groundbreaking Adalah " width="950" height="550" /></p>
 <p>Dalam dunia konstruksi, <em>groundbreaking</em> adalah salah satu istilah yang sering muncul ketika sebuah proyek besar diumumkan. Banyak orang menganggapnya sekadar seremoni simbolis, padahal fase ini punya makna strategis bagi keberhasilan pembangunan. Bagi kamu yang sedang merencanakan proyek rumah, ruko, ataupun bangunan komersial, memahami apa itu groundbreaking akan membantu kamu melihat gambaran besar sebelum masuk ke tahap eksekusi.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
 
@@ -2541,7 +1731,7 @@ Untuk menciptakan rumah panggung yang kokoh dan tahan lama, pastikan menggunakan
             [
                 'title' => 'Apa itu Scaffolding? Fondasi Keamanan Proyek Konstruksi Modern',
                 'slug' => '2025/12/12/apa-itu-scaffolding-fondasi-keamanan-proyek-konstruksi-modern',
-                'content' => '<p><img class="alignnone size-full wp-image-2780" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/apa-itu-scaffolding-fondasi-keamanan-proyek-konstruksi-modern.jpg" alt="Scaffolding" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2780" src="/assets/blog/apa-itu-scaffolding-fondasi-keamanan-proyek-konstruksi-modern.jpg" alt="Scaffolding" width="950" height="550" /></p>
 <p>Scaffolding bukan sekadar rangka besi yang berdiri di sisi bangunan. Ia adalah “nyawa” keamanan sebuah proyek. Mulai dari pekerjaan pengecatan, pemasangan dinding, hingga konstruksi bertingkat, semuanya membutuhkan struktur kerja yang stabil dan tepercaya. Di Indonesia, kebutuhan akan scaffolding terus meningkat seiring tumbuhnya proyek residensial, ruko, hingga pabrik. Bagi pemilik proyek maupun kontraktor kecil-menengah, memahami cara memilih scaffolding yang tepat adalah investasi besar terhadap keselamatan dan efisiensi kerja.</p>
 <p>Di sinilah Yen Bangunan hadir sebagai partner yang dapat diandalkan, menyediakan scaffolding berkualitas untuk berbagai kebutuhan proyek.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -2573,15 +1763,15 @@ Untuk menciptakan rumah panggung yang kokoh dan tahan lama, pastikan menggunakan
 
 <h2>Jenis-Jenis Scaffolding yang Umum Digunakan</h2>
 <h3>1. Scaffolding Frame (Main Frame Scaffold)</h3>
-<img src="https://news.indotrading.com/wp-content/uploads/2021/04/scaffolding-frame.jpg" />
+<img src="/assets/blog/scaffolding-frame.jpg" />
 <p>Scaffolding frame adalah tipe paling umum digunakan di proyek rumah, ruko, dan bangunan medium-scale. Mudah dipasang, kokoh, dan fleksibel.</p>
 
 <h3>2. Scaffolding Ring Lock</h3>
-<img src="https://www.totalcontec.com/wp-content/uploads/2018/02/ringlock-node.jpeg" />
+<img src="/assets/blog/ringlock-node.jpeg" />
 <p>Lebih modern dan kuat, cocok untuk bangunan bertingkat atau proyek industri. Sistem pengunciannya membuat struktur lebih stabil.</p>
 
 <h3>3. Scaffolding Mobile (Mobile Scaffold)</h3>
-<img class="" src="https://dynaton.co.nz/wp-content/uploads/2023/08/1.3X2.0.png" width="523" height="523" />
+<img class="" src="/assets/blog/1.3X2.0.png" width="523" height="523" />
 <p>Dilengkapi roda sehingga mudah dipindahkan. Efektif untuk pekerjaan interior seperti pemasangan lampu atau pengecatan high-ceiling.</p>
 <p>Masing-masing jenis memiliki kebutuhan dan keunggulan yang berbeda. Karena itu, pemilihan tidak bisa asal pilih, harus disesuaikan dengan skala dan jenis pekerjaan.</p>
 
@@ -2625,9 +1815,9 @@ Untuk menciptakan rumah panggung yang kokoh dan tahan lama, pastikan menggunakan
                 'updated_at' => now(),
             ],
             [
-                'title' => '7 Rekomendasi Cat Waterproof Terbaik untuk Rumah Tahan Bocor & Lembap',
+                'title' => '7 Rekomendasi Cat Waterproof Terbaik untuk Rumah Tahan Bocor &amp; Lembap',
                 'slug' => '2025/12/15/7-rekomendasi-cat-waterproof-terbaik-untuk-rumah-tahan-bocor-lembap',
-                'content' => '<p><img class="alignnone size-full wp-image-2786" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/7-rekomendasi-cat-waterproof-terbaik-untuk-rumah-tahan-bocor-lembap.jpg" alt="Cat Waterproof " width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2786" src="/assets/blog/7-rekomendasi-cat-waterproof-terbaik-untuk-rumah-tahan-bocor-lembap.jpg" alt="Cat Waterproof " width="950" height="550" /></p>
 <p>Artikel ini disusun untuk Anda pemilik rumah, renovator pemula, hingga kontraktor kecil yang ingin memilih <strong>cat waterproof terbaik</strong>. Sebagai referensi, Anda juga bisa menemukan berbagai produk ini di <span style="text-decoration: underline"><a href="https://yenbangunan.com/">Yen Bangunan</a></span>, toko bahan bangunan yang menyediakan pilihan cat waterproof terpercaya.</p>
 
 <h2>Kenapa Cat Waterproof Itu Penting?</h2>
@@ -2698,7 +1888,7 @@ Untuk menciptakan rumah panggung yang kokoh dan tahan lama, pastikan menggunakan
             [
                 'title' => 'Update Harga Kran Air 2025 Lengkap dengan Rekomendasi Brand Terkenal',
                 'slug' => '2025/12/17/harga-kran-air',
-                'content' => '<img class="alignnone size-full wp-image-2800" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/update-harga-kran-air-2025-lengkap-dengan-rekomendasi-brand-terkenal.jpg" alt="Harga Kran Air " width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2800" src="/assets/blog/update-harga-kran-air-2025-lengkap-dengan-rekomendasi-brand-terkenal.jpg" alt="Harga Kran Air " width="950" height="550" />
 
 Saat merencanakan renovasi rumah atau beli perlengkapan baru, salah satu item yang sering terlupakan adalah harga kran air. Walau terkesan kecil dan sederhana, kran air punya peran penting dalam kenyamanan harian, dari cuci tangan hingga cuci piring maupun instalasi teknis di kamar mandi. Artikel ini bantu Anda memahami kisaran harga kran air terbaru serta tips memilih sesuai kebutuhan.
 
@@ -2737,7 +1927,7 @@ Memilih kran air bukan sekadar lihat harga saja. Meski harga kran air di pasaran
             [
                 'title' => 'Fungsi Mur dan Baut dalam Konstruksi serta Tips Memilih yang Berkualitas',
                 'slug' => '2025/12/17/fungsi-mur-dan-baut-dalam-konstruksi-serta-tips-memilih-yang-berkualitas',
-                'content' => '<img class="alignnone size-full wp-image-2803" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/fungsi-mur-dan-baut-dalam-konstruksi-serta-tips-memilih-yang-berkualitas.jpg" alt="" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2803" src="/assets/blog/fungsi-mur-dan-baut-dalam-konstruksi-serta-tips-memilih-yang-berkualitas.jpg" alt="" width="950" height="550" />
 
 Dalam dunia konstruksi dan perbaikan bangunan, mur dan baut sering dianggap sepele. Ukurannya kecil, harganya relatif terjangkau, dan mudah ditemukan. Namun, kesalahan memilih mur dan baut bisa berdampak besar pada kekuatan, keamanan, bahkan umur bangunan atau proyek yang Anda kerjakan.
 
@@ -2792,7 +1982,7 @@ Selain ketersediaan produk, Yen Bangunan juga mengutamakan kemudahan konsultasi,
             [
                 'title' => 'Kelebihan dan Kekurangan Gypsum sebagai Material Bangunan',
                 'slug' => '2025/12/18/kelebihan-dan-kekurangan-gypsum-sebagai-material-bangunan',
-                'content' => '<img class="alignnone size-full wp-image-2809" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/kelebihan-dan-kekurangan-gypsum-sebagai-material-bangunan.jpg" alt="Kelebihan dan Kekurangan Gypsum" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2809" src="/assets/blog/kelebihan-dan-kekurangan-gypsum-sebagai-material-bangunan.jpg" alt="Kelebihan dan Kekurangan Gypsum" width="950" height="550" />
 
 Gypsum adalah salah satu material bangunan yang paling sering digunakan, terutama untuk kebutuhan interior seperti plafon dan dinding partisi. Popularitasnya bukan tanpa alasan—material ini dikenal praktis, rapi, dan relatif ekonomis. Namun, sebelum memutuskan menggunakan gypsum, penting untuk memahami kelebihan dan kekurangannya secara objektif agar sesuai dengan kebutuhan bangunan Anda.
 
@@ -2806,7 +1996,7 @@ Artikel ini akan membahas gypsum dari sudut pandang fungsional dan pengalaman la
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>Apa Itu Gypsum dan Mengapa Banyak Digunakan?</h2>
-<img class="alignnone " src="https://events.rumah123.com/news-content/img/2020/01/04203731/GettyImages-487103972.jpg" width="839" height="577" />
+<img class="alignnone " src="/assets/blog/GettyImages-487103972.jpg" width="839" height="577" />
 
 Gypsum merupakan material berbasis kalsium sulfat yang diproses menjadi papan (gypsum board). Dalam dunia konstruksi modern, gypsum banyak dipilih karena kemudahan pemasangan dan hasil akhir yang bersih. Di toko material seperti <strong>Yen Bangunan</strong>, gypsum menjadi salah satu produk favorit karena fleksibel digunakan untuk berbagai konsep interior, dari rumah minimalis hingga bangunan komersial.
 <h2>Kelebihan Gypsum sebagai Material Bangunan</h2>
@@ -2834,9 +2024,9 @@ Gypsum sangat ideal untuk Anda yang mengutamakan kecepatan, estetika, dan efisie
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Apa Itu Pondasi Cakar Ayam? Penjelasan, Teknik & Manfaatnya',
+                'title' => 'Apa Itu Pondasi Cakar Ayam? Penjelasan, Teknik &amp; Manfaatnya',
                 'slug' => '2025/12/19/apa-itu-pondasi-cakar-ayam-penjelasan-teknik-manfaatnya',
-                'content' => '<p><img class="alignnone size-full wp-image-2815" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/apa-itu-pondasi-cakar-ayam-penjelasan-teknik-manfaatnya.jpg" alt="Pondasi Cakar Ayam" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2815" src="/assets/blog/apa-itu-pondasi-cakar-ayam-penjelasan-teknik-manfaatnya.jpg" alt="Pondasi Cakar Ayam" width="950" height="550" /></p>
 <p>Saat merencanakan bangunan yang aman dan tahan lama, salah satu elemen paling penting adalah pondasi. Untuk kondisi tanah yang menantang, seperti tanah lunak atau berawa, pilihan solusi konvensional terkadang kurang memadai. Di sinilah <em>pondasi cakar ayam</em> menjadi jawaban, sebuah inovasi teknik struktural yang sudah teruji sejak puluhan tahun lalu.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
 
@@ -2847,11 +2037,11 @@ Gypsum sangat ideal untuk Anda yang mengutamakan kecepatan, estetika, dan efisie
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>Definisi dan Sejarah Singkat</h2>
 <p>Pondasi cakar ayam adalah sistem pondasi yang terdiri dari <em>pelat beton bertulang</em> yang disokong oleh sejumlah <em>pipa beton</em> yang dipasang tegak lurus ke dalam tanah. Bentuknya yang menyebar menyerupai cakar ayam ini memberikan daya cengkeram kuat pada tanah di bawahnya, maka dari itu istilah “cakar ayam” dipilih untuk menyebutnya.</p>
-<p><img class="alignnone size-full" src="https://ambadar.com/storage/2021/09/WhatsApp-Image-2021-09-20-at-10.17.09.jpeg" width="816" height="600" /></p>
+<p><img class="alignnone size-full" src="/assets/blog/WhatsApp-Image-2021-09-20-at-10.17.09.jpeg" width="816" height="600" /></p>
 <p>Metode ini pertama kali dikembangkan oleh Prof. Dr. Ir. Sedijatmo pada awal 1960-an sebagai solusi konstruksi pada tanah rawa di kawasan Ancol, Jakarta. Sejak itu, teknik ini telah meluas dipakai, baik di Indonesia maupun di berbagai negara lain, karena efektivitasnya dalam menghadapi kondisi tanah lunak.</p>
 
 <h2>Bagaimana Pondasi Cakar Ayam Bekerja</h2>
-<img class="alignnone " src="https://storage.googleapis.com/jm-content/img/pondasi_cakar_ayam_8709fc4d4c/pondasi_cakar_ayam_8709fc4d4c.png" width="862" height="646" />
+<img class="alignnone " src="/assets/blog/pondasi_cakar_ayam_8709fc4d4c.png" width="862" height="646" />
 <p>Berbeda dengan pondasi konvensional yang menyalurkan beban langsung ke dalam tanah keras, pondasi cakar ayam mendistribusikan beban bangunan melalui <em>pelat beton</em> ke <em>pipa-pipa beton</em> yang bertindak sebagai “cakar”. Pipa-pipa ini, yang tertanam di bawah pelat, bekerja secara monolit (menjadi satu kesatuan struktural) sehingga menciptakan area penopang beban yang lebih luas dan stabil.</p>
 <p>Mekanisme ini sangat membantu jika struktur tanah tidak cukup kuat atau memiliki kecenderungan penurunan tidak merata (<em>differential settlement</em>), karena pipa-pipa beton tersebut “mencengkeram” tanah lebih dalam dan merata.</p>
 
@@ -2899,7 +2089,7 @@ Gypsum sangat ideal untuk Anda yang mengutamakan kecepatan, estetika, dan efisie
             [
                 'title' => 'Panduan Lengkap Ukuran Reng Baja Ringan untuk Atap Rumah',
                 'slug' => '2025/12/22/panduan-lengkap-ukuran-reng-baja-ringan-untuk-atap-rumah',
-                'content' => '<img class="alignnone size-full wp-image-2819" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/panduan-lengkap-ukuran-reng-baja-ringan-untuk-atap-rumah.jpg" alt="ukuran reng baja ringan" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2819" src="/assets/blog/panduan-lengkap-ukuran-reng-baja-ringan-untuk-atap-rumah.jpg" alt="ukuran reng baja ringan" width="950" height="550" />
 
 Saat Anda merencanakan rangka atap dengan baja ringan, satu komponen yang tak boleh terlewat adalah ukuran reng baja ringan. Reng adalah profil kecil yang berfungsi sebagai tempat meletakkan dan menyangga genteng atau penutup atap agar kuat dan stabil. Artikel ini membahas ukuran umum, pertimbangan pemilihan, dan bagaimana menentukan pilihan terbaik untuk proyek Anda, disajikan dengan gaya semi-formal namun tetap mudah dipahami.
 
@@ -2972,7 +2162,7 @@ Memahami ukuran reng baja ringan adalah langkah penting sebelum memulai pemasang
             [
                 'title' => 'Berapa Biaya Membangun Rumah Minimalis per Meter? Ini Perhitungan Realistisnya',
                 'slug' => '2025/12/23/berapa-biaya-membangun-rumah-minimalis-per-meter-ini-perhitungan-realistisnya',
-                'content' => '<img class="alignnone size-full wp-image-2824" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/berapa-biaya-membangun-rumah-minimalis-per-meter-ini-perhitungan-realistisnya.jpg" alt="Biaya Membangun Rumah Minimalis per Meter" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2824" src="/assets/blog/berapa-biaya-membangun-rumah-minimalis-per-meter-ini-perhitungan-realistisnya.jpg" alt="Biaya Membangun Rumah Minimalis per Meter" width="950" height="550" />
 <h2><strong>Biaya Membangun Rumah Minimalis per Meter: Gambaran Umum</strong></h2>
 Pertanyaan <em>“berapa biaya membangun rumah minimalis per meter?”</em> hampir selalu muncul di awal perencanaan rumah. Wajar, karena rumah minimalis dipilih bukan hanya karena estetikanya, tetapi juga karena dianggap lebih efisien secara biaya.
 
@@ -3039,7 +2229,7 @@ Jika Anda sedang merencanakan pembangunan rumah, pastikan bekerja sama dengan pe
             [
                 'title' => 'Daftar Harga Seng Ter-update 2026 - Yen Bangunan Cikarang',
                 'slug' => '2025/12/24/daftar-harga-seng-ter-update-2026-yen-bangunan-cikarang',
-                'content' => '<img class="alignnone size-full wp-image-2832" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/daftar-harga-seng-ter-update-2026-yen-bangunan-cikarang.jpg" alt="Harga Seng" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2832" src="/assets/blog/daftar-harga-seng-ter-update-2026-yen-bangunan-cikarang.jpg" alt="Harga Seng" width="950" height="550" />
 
 Kalau kamu sedang merencanakan proyek bangunan, renovasi rumah, atau tender konstruksi, mengetahui harga seng terbaru adalah hal yang sangat penting supaya anggaran tidak bocor. Seng termasuk bahan bangunan yang laris dipakai untuk atap, talang, dan elemen struktural ringan sebab harga terjangkau dan pemasangannya praktis, tapi harga bisa berubah sepanjang waktu tergantung pasokan dan permintaan.
 
@@ -3082,137 +2272,9 @@ Kunjungi <strong>Yen Bangunan</strong> sekarang juga untuk cek <strong>harga sen
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Harga Semen, Batu Bata, dan Pasir Terbaru di Cikarang (Update 2025)',
-                'slug' => '2025/08/05/harga-semen-batu-bata-dan-pasir-terbaru-di-cikarang-update-2025trashed',
-                'content' => '<img class="alignnone wp-image-1476 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/08/harga-semen-batu-bata-dan-pasir-terbaru-di-cikarang-update-2025-1.webp" alt="Harga Semen, Batu Bata, dan Pasir Terbaru di Cikarang (Update 2025)" width="950" height="550" />
-
-<span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Bangunan yang kuat dan hemat dimulai dari bahan yang tepat, khususnya semen, batu bata, dan pasir. Di Cikarang, pusat industri dan perumahan berkembang, harga bahan bangunan bisa fluktuatif. Artikel komparatif ini membantu Anda membandingkan </span></span></span></span><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">harga bahan bangunan Cikarang</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> terbaru di tahun 2025 dari beberapa toko dan supplier lokal, dengan fokus pada </span></span></span></span><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan Cikarang</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> .</span></span></span></span></span>
-
-<span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Sebagai penulis konten berpengalaman, saya ingin menyampaikan informasi secara edukatif dan membangun kepercayaan. Ini bukan sekadar menyebutkan harga: ini panduan cerdas bagi Anda yang ingin berinvestasi bahan bangunan yang tepat dan efisien.</span></span></span></span></span>
-
-<strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">[Baca juga:  </span></span></span></span><span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/07/29/toko-bangunan-grosir-cikarang-pilihan-tepat-untuk-proyek-developer/"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Toko Bangunan Grosir Proyek Cikarang, Pilihan Tepat untuk Pengembang!</span></span></span></span></a> </span><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> ]</span></span></span></span></strong>
-<h2><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Harga Semen di Cikarang: Perbandingan Real-Time</span></span></span></span></h2>
-<img class="alignnone wp-image-1471 " src="https://andrian064.wordpress.com/wp-content/uploads/2025/08/semen-memiliki-jenis-dan-fungsinya-masing-masing.webp" alt="harga semen" width="854" height="568" />
-
-<span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Semen tetap menjadi primadona di setiap konstruksi. Harga di toko lokal menunjukkan variasi berikut:</span></span></span></span></span>
-<ul>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan Cikarang</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> menawarkan semen merek ternama seperti Tiga Roda, Gresik, Holcim dengan harga kompetitif dan sering diskon untuk pembelian volume besar.</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Toko lokal lain di Cikarang menyediakan semen Tiga Roda ukuran 40 kg sekitar Rp 59.000–60.000, dan semen merek lain mulai Rp 102.000 per sak plester atau granit.</span></span></span></span></span></li>
-</ul>
-<span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Sebagai referensi kasar:</span></span></span></span></span>
-<ul>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Semen Tiga Roda (50 kg)</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> : Rp 64.000–67.000–68.000</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Semen Gresik / Holcim (50 kg)</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> : sekitar Rp 65.000–69.000 </span></span></span></span></span>
-<span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pembelian dalam jumlah banyak di Yen Bangunan sering mendapat harga final lebih rendah, terutama dengan ongkos kirim gratis untuk wilayah Cikarang.</span></span></span></span></span></li>
-</ul>
-<h4><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F"><strong>👉<span style="text-decoration: underline">KONSULTASI LEBIH DULU DENGAN KAMI</span>👈</strong></a></h4>
-<h2><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Harga Batu Bata di Cikarang: Versus Bata Merah, Batako &amp; Hebel</span></span></span></span></h2>
-<img class="alignnone wp-image-1472 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/08/85713d2da53e99d39dfd3e192d83793f.webp" alt="harga batu bata" width="1090" height="808" />
-
-<span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Bata merah lokal masih dominan, namun batako dan bata hebel mulai mendapat tempat karena efisiensi dan kecepatan pemasangan:</span></span></span></span></span>
-
-<span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Situs yang mengulas harga bata merah kecil di wilayah Cikarang mencatat kisaran Rp 650 per buah untuk bata ukuran kecil. </span></span></span></span></span><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Bila dihitung dalam jumlah ribuan:</span></span></span></span></span>
-<ul>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Bata merah biasa</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> sekitar Rp 650–820 per buah (≈ Rp 650.000–820.000 per 1.000 pcs).</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Batako press bisa berada di kisaran Rp 850.000–950.000 per 1.000 pcs tergantung kualitas.</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Hebel</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> (bata ringan SNI) tersedia lengkap di Yen Bangunan dengan stok siap dan konsultasi teknis untuk ukurannya. </span></span></span></span></span> <span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Biasanya harga berkisar Rp 490.000 per m³ (estimasi internal toko lain), tapi di Yen Bangunan Anda bisa meminta estimasi harga kubikasi sesuai kebutuhan proyek. Hebel menghasilkan efisiensi pekerjaan dan lebih ringan bagi struktur pondasi.</span></span></span></span></span></li>
-</ul>
-<h4><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F"><strong>👉<span style="text-decoration: underline">KONSULTASI LEBIH DULU DENGAN KAMI</span>👈</strong></a></h4>
-<h2><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Harga Pasir Cikarang: Jenis dan Estimasi Volume Proyek</span></span></span></span></h2>
-<img class="alignnone wp-image-1473 size-full" src="https://andrian064.wordpress.com/wp-content/uploads/2025/08/1.jpg" alt="harga pasir cikarang" width="606" height="343" />
-
-<span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pasir Cikarang terkenal baik kualitasnya untuk konstruksi. Berikut kisaran harga aktual:</span></span></span></span></span>
-<ul>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Toko Margi Jaya di Cikarang menjual pasir kijang ~Rp 250.000 (sekitar truk engkel), pasir engkel Rp 1.100.000, pasir tronton Rp 5.500.000 per truk.</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Sementara pemasok lain menawarkan pasir cuci lokal sebesar Rp 1.200.000–1.400.000 per colt diesel (6–7 m³).</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan juga menyediakan pasir cuci dan pasir hitam halus dengan layanan pengiriman tepat waktu dan vendor terpercaya.</span></span></span></span></span></li>
-</ul>
-<span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Secara umum:</span></span></span></span>
-<ul>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pasir cuci</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> : Rp 1,2–1,4 juta / 6–7 m³</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pasir hitam halus</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> : Rp 1,1–1,3 juta / volume sama</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pasir cor spesifik tergantung kebutuhan proyek (campuran mortar atau struktur).</span></span></span></span></span></li>
-</ul>
-<h4><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F"><strong>👉<span style="text-decoration: underline">KONSULTASI LEBIH DULU DENGAN KAMI</span>👈</strong></a></h4>
-<h2><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Mengapa Memilih Yen Bangunan Cikarang?</span></span></span></span></h2>
-<span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Tak hanya soal harga, tapi tentang penyediaan dalam penyediaan bahan bangunan:</span></span></span></span></span>
-<ul>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Harga di Yen Bangunan sering lebih kompetitif melalui diskon grosir dan layanan pengiriman gratis di wilayah Cikarang dan sekitarnya.</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Tersedia layanan </span></span></span></span><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Request Order</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> untuk kebutuhan bahan spesifik atau merk tertentu, cocok untuk proyek besar.</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Dengan </span></span></span></span><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">layanan pelanggan 24 jam</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> , Anda dapat bertanya atau konfirmasi kapan saja, sangat krusial bagi tim pengadaan di proyek konstruksi yang aktif di luar jam kerja.</span></span></span></span></span></li>
-</ul>
-<h2><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Tips Mengoptimalkan Pembelian Bahan di Cikarang</span></span></span></span></h2>
-<ol>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Rencanakan kebutuhan berdasarkan tahap proyek</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> : Hindari membeli terlalu banyak sekaligus untuk mencegah kerusakan kualitas.</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Manfaatkan diskon pembelian massal</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> dari pemasok seperti Yen Bangunan untuk efisiensi biaya.</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Gabungkan pembelian beberapa bahan sekaligus</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> agar ongkos kirim gratis atau lebih murah.</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Konsultasi teknis langsung</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> di toko (misalnya untuk memilih semen tipe II/V, mortar instan, atau ukuran batu bata/hebel).</span></span></span></span></span></li>
- 	<li><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pastikan kondisi jalan akses proyek layak dilalui truk</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> —beberapa toko mencantumkan ketentuan tersendiri. Jangan lupa cek tanggal kadaluarsa air mani juga.</span></span></span></span></span></li>
-</ol>
-<h2><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Ringkasan Harga: Tabel Komparatif</span></span></span></span></h2>
-<div class="_tableContainer_16hzy_1">
-<div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse">
-<table class="w-fit min-w-(--thread-content-width)">
-<thead>
-<tr>
-<th><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Bahan</span></span></span></span></strong></th>
-<th><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Estimasi Harga (50 kg / 1.000 pcs / truk / m³)</span></span></span></span></strong></th>
-<th><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Catatan</span></span></span></span></strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Semen (Tiga Roda, Gresik, Holcim)</span></span></span></span></span></td>
-<td><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Rp 64–69 ribu/sak </span></span></span></span></span></td>
-<td><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Harga grosir bisa lebih rendah di Yen Bangunan</span></span></span></span></span></td>
-</tr>
-<tr>
-<td><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Bata Merah Lokal</span></span></span></span></span></td>
-<td><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Rp 650–820 ribu / 1.000 pcs</span></span></span></span></span></td>
-<td><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Variasi sesuai ukuran &amp; kualitas</span></span></span></span></span></td>
-</tr>
-<tr>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pers Batako</span></span></span></span></td>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Rp 850–950 ribu / 1.000 pcs</span></span></span></span></td>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Cocok untuk dinding non-struktural</span></span></span></span></td>
-</tr>
-<tr>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Hebel (bata ringan)</span></span></span></span></td>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">~Rp 490 ribu/m³ (estimasi umum)</span></span></span></span></td>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Di Yen Bangunan tersedia stok &amp; estimasi langsung</span></span></span></span></td>
-</tr>
-<tr>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pasir Cuci</span></span></span></span></td>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Rp 1,2–1,4 juta per truk 6–7 m³</span></span></span></span></td>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pilihan populer untuk struktur semen lokal</span></span></span></span></td>
-</tr>
-<tr>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pasir Hitam Halus</span></span></span></span></td>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Rp 1.1–1.3 juta / truk</span></span></span></span></td>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Cocok untuk plester &amp; mortar ringan</span></span></span></span></td>
-</tr>
-<tr>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Pasir tronton besar</span></span></span></span></td>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Rp 5,5 juta / truk (Margi Jaya)</span></span></span></span></td>
-<td><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Untuk kebutuhan volume besar</span></span></span></span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<h4><a href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F"><strong>👉<span style="text-decoration: underline">KONSULTASI LEBIH DULU DENGAN KAMI</span>👈</strong></a></h4>
-<h2><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Kesimpulan</span></span></span></span></h2>
-<span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Memilih </span></span></span></span><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">harga bahan bangunan Cikarang</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> terbaik tidak hanya soal angka. Anda harus mengombinasikan faktor harga, kualitas, layanan, dan kejelasan pemasok. Dari hasil perbandingan di atas, </span></span></span></span><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">Yen Bangunan Cikarang</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> menonjol sebagai solusi </span></span></span></span><strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit">one-stop supplier</span></span></span></span></strong><span style="vertical-align: inherit"><span style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"><span dir="auto" style="vertical-align: inherit"> untuk semen, batu bata/hebel, dan pasir—dengan layanan konsultan, pengiriman cepat, dan harga kompetitif.</span></span></span></span>',
-                'image_path' => '/blog/harga-semen-batu-bata-dan-pasir-terbaru-di-cikarang-update-2025.webp',
-                'published_at' => '2025-08-05 18:37:37',
-                'author_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Jual Alat Konstruksi Terlengkap & Terpercaya - Yen Bangunan',
+                'title' => 'Jual Alat Konstruksi Terlengkap &amp; Terpercaya - Yen Bangunan',
                 'slug' => '2025/12/27/jual-alat-konstruksi-terlengkap-terpercaya-yen-bangunan',
-                'content' => '<img class="alignnone size-full wp-image-2839" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/jual-alat-konstruksi-terlengkap-terpercaya-yen-bangunan.jpg" alt="Jual Alat Konstruksi " width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2839" src="/assets/blog/jual-alat-konstruksi-terlengkap-terpercaya-yen-bangunan.jpg" alt="Jual Alat Konstruksi " width="950" height="550" />
 
 Dalam dunia konstruksi dan renovasi bangunan, menemukan tempat jual alat konstruksi yang lengkap, berkualitas, dan melayani profesional serta masyarakat umum bukan hal mudah. Di sinilah <em>Yen Bangunan</em> hadir sebagai solusi nyata: toko material bangunan terbesar dan terpercaya di Cikarang dengan pengalaman lebih dari 15 tahun.
 
@@ -3236,7 +2298,7 @@ Saat mencari tempat <strong>jual alat konstruksi</strong>, Anda pasti mengingink
 </ul>
 Dengan lebih dari 5.000 SKU produk, <em>Yen Bangunan</em> memastikan kontraktor maupun pemilik rumah bisa menemukan apa yang mereka butuhkan tanpa harus bolak-balik ke banyak toko.
 <h2>Kenapa Pilih <em>Yen Bangunan</em> sebagai Tempat Jual Alat Konstruksi</h2>
-<img class="alignnone size-full wp-image-2703" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/cari-toko-baut-di-bekasi-yen-bangunan-paling-lengkap-siap-kirim.jpg" alt="toko Baut di Bekasi" width="950" height="550" />
+<img class="alignnone size-full wp-image-2703" src="/assets/blog/cari-toko-baut-di-bekasi-yen-bangunan-paling-lengkap-siap-kirim.jpg" alt="toko Baut di Bekasi" width="950" height="550" />
 
 Bukan sekadar toko biasa, <em>Yen Bangunan</em> membangun reputasinya sebagai partner profesional bagi pelaku konstruksi. Beberapa keunggulan yang dirasakan pelanggan antara lain:
 <ul>
@@ -3267,7 +2329,7 @@ Jika Anda ingin mempercepat proyek tanpa kompromi kualitas alat, kunjungi <em>Ye
             [
                 'title' => '5 Rekomendasi Cat untuk Besi yang Tahan Lama dan Anti Karat | Yen Bangunan',
                 'slug' => '2025/12/30/5-rekomendasi-cat-untuk-besi-yang-tahan-lama-dan-anti-karat-yen-bangunan',
-                'content' => '<p><img class="alignnone size-full wp-image-2855" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/rekomendasi-cat-untuk-besi-yang-tahan-lama-dan-anti-karat-yen-bangunan.jpg" alt="Cat untuk Besi " width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2855" src="/assets/blog/rekomendasi-cat-untuk-besi-yang-tahan-lama-dan-anti-karat-yen-bangunan.jpg" alt="Cat untuk Besi " width="950" height="550" /></p>
 <p>Besi adalah material yang sangat umum digunakan di rumah dan bangunan, dari pagar, kanopi, hingga kusen pintu. Namun tanpa perlindungan yang tepat, besi mudah mengalami korosi saat terkena hujan dan udara lembap. Itulah sebabnya memilih <em>cat untuk besi</em> yang tepat bukan hanya soal estetika, tetapi soal melindungi struktur besi agar awet dan tahan lama.</p>
 <p>Berikut panduan ringkas dan rekomendasi solusi cat yang relevan untuk berbagai kebutuhan Anda.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -3310,35 +2372,35 @@ Jika Anda ingin mempercepat proyek tanpa kompromi kualitas alat, kunjungi <em>Ye
 <h3>Rekomendasi <em>Cat untuk Besi</em> Terbaik &amp; Fungsional</h3>
 <strong>1. <span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">Cat Kayu Besi Nippon Bodelac 2‑in‑1</span></span></strong>
 
-<img class="alignnone " src="https://www.nipponpaint-indonesia.com/data/products/Kayu%20dan%20Besi/Decorative/Bodelac%202-in-1.png" width="229" height="229" />
+<img class="alignnone " src="/assets/blog/Bodelac-2-in-1.png" width="229" height="229" />
 <ul>
  	<li><em>2-in-1</em> (primer &amp; finishing) untuk besi, cocok untuk pagar, pintu, teralis</li>
  	<li>Melindungi dari karat sekaligus memberi warna rapi dan tahan lama</li>
  	<li>Banyak pilihan warna, hasil halus dan estetis</li>
 </ul>
 <p><strong>2. <span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">Cat Anti Karat Avian 3 in 1</span></span></strong></p>
-<p><img class="alignnone " src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/4/1/a5b66d5a-8757-43ce-b49b-57f08a168d7c.png" width="261" height="261" /></p>
+<p><img class="alignnone " src="/assets/blog/a5b66d5a-8757-43ce-b49b-57f08a168d7c.png" width="261" height="261" /></p>
 
 <ul>
  	<li>Gabungan fungsi primer + top coat + anti karat</li>
  	<li>Pilihan tepat kalau mau praktis tanpa banyak lapisan</li>
 </ul>
 <p><strong>3. <span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">Cat Dasar Besi Zinc Chromate Primer</span></span></strong></p>
-<p><img class="alignnone " src="https://www.nipponpaint-indonesia.com/data/products/Kayu%20dan%20Besi/Heavy%20Duty/Zinc%20Chromate%20Primer.png" width="221" height="221" /></p>
+<p><img class="alignnone " src="/assets/blog/Zinc-Chromate-Primer.png" width="221" height="221" /></p>
 
 <ul>
  	<li>Formula <em>zinc chromate</em> melindungi besi dari karat</li>
  	<li>Ideal kalau kamu ingin hasil terbaik: gunakan primer dulu, baru lapisi top coat</li>
 </ul>
 <p><strong>4. <span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">CAT Khusus Seng/Metal/Besi Propan SengKote</span></span></strong></p>
-<p><img class="" src="https://www.propanraya.com/wp-content/uploads/2024/04/SENGKOTE-SK-950-WB-3.png" width="234" height="234" /></p>
+<p><img class="" src="/assets/blog/SENGKOTE-SK-950-WB-3.png" width="234" height="234" /></p>
 
 <ul>
  	<li>Cocok untuk permukaan logam / seng yang juga rentan karat</li>
  	<li>Daya rekat kuat dan tahan cuaca</li>
 </ul>
 <p><strong>5. <span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">Cat Besi Anti Karat (umum)</span></span></strong></p>
-<p><img class="" src="https://pinhome-blog-assets-public.s3.ap-southeast-1.amazonaws.com/2022/09/image-344.png" width="194" height="194" /></p>
+<p><img class="" src="/assets/blog/image-344.png" width="194" height="194" /></p>
 
 <ul>
  	<li>Alternatif budget-friendly</li>
@@ -3379,9 +2441,9 @@ Jika Anda ingin mempercepat proyek tanpa kompromi kualitas alat, kunjungi <em>Ye
                 'updated_at' => now(),
             ],
             [
-                'title' => '5 Rekomendasi Cat untuk Kayu yang Tahan Lama & Estetik',
+                'title' => '5 Rekomendasi Cat untuk Kayu yang Tahan Lama &amp; Estetik',
                 'slug' => '2025/12/30/5-rekomendasi-cat-untuk-kayu-yang-tahan-lama-estetik',
-                'content' => '<p><img class="alignnone size-full wp-image-2862" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/5-rekomendasi-cat-untuk-kayu-yang-tahan-lama-estetik.jpg" alt="Cat untuk Kayu" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2862" src="/assets/blog/5-rekomendasi-cat-untuk-kayu-yang-tahan-lama-estetik.jpg" alt="Cat untuk Kayu" width="950" height="550" /></p>
 <p>Saat kamu ingin mengecat furnitur, pintu kayu, atau kusen jendela, pilihan cat untuk kayu yang tepat bukan hanya soal warna. Pertimbangkan juga daya tahan terhadap elemen cuaca, mudah diaplikasikan, serta kompatibilitas dengan permukaan seperti kayu dan bahkan cat untuk besi saat diperlukan. Di tren DIY, banyak pemilik rumah memilih cat serbaguna yang melindungi sekaligus mempercantik berbagai material.</p>
 <p>Dalam panduan ini, kita fokus pada merek-merek cat populer di Indonesia: <em>Nippon Paint, Kansai, Avian, dan Jotun</em>. Merek yang dikenal luas untuk kualitas dan variasi produknya.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -3393,23 +2455,23 @@ Jika Anda ingin mempercepat proyek tanpa kompromi kualitas alat, kunjungi <em>Ye
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>Pilihan Cat Kayu &amp; Serbaguna Terbaik</h2>
 <h3>1. <span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">Cat Woodstain (Plitur Kayu) Nippon Paint</span></span></h3>
-<img class="" src="https://id-test-11.slatic.net/p/a0e9e0edc7a32b41048cf731cfacb165.jpg" width="270" height="288" />
+<img class="" src="/assets/blog/a0e9e0edc7a32b41048cf731cfacb165.jpg" width="270" height="288" />
 <p>Bagi yang ingin menonjolkan serat alami kayu, woodstain berbasis air dari Nippon Paint adalah pilihan cerdas. Produk ini menjaga tekstur kayu tetap terlihat alami sekaligus melindungi dari jamur, cuaca, dan degradasi dini. Cocok untuk furnitur indoor maupun outdoor.</p>
 
 <h3>2. <span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">Cat kayu dan besi Nippon Paint</span></span></h3>
-<img class="alignnone " src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-53107653/nippon_paint_cat_minyak_kayu_-_besi_nippon_paint_bee_brand_1000_-1_kg-_full01_ft4mo6p2.jpg" width="276" height="276" />
+<img class="alignnone " src="/assets/blog/nippon_paint_cat_minyak_kayu_-_besi_nippon_paint_bee_brand_1000_-1_kg-_full01_ft.jpg" width="276" height="276" />
 <p>Kalau kamu mencari cat serbaguna yang bisa diaplikasikan untuk kayu dan besi, varian ini memberikan perlindungan yang baik sekaligus hasil warna yang kuat. Formula serbaguna dari Nippon juga umumnya tahan terhadap abrasi ringan dan elemen cuaca tropis.</p>
 
 <h3>3. <span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">CAT AVIAN HIGH GLOSS ENAMEL</span></span> &amp; <span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">Avian Cat Kayu dan Besi 3.6L</span></span></h3>
-<img class="alignnone " src="https://media.monotaro.id/mid01/big/Bahan%20Bangunan%2C%20Perlengkapan%20Rumah%20%26%20Cat/Produk%20Cat/Cat%20Kayu%20%26%20Besi/Avian%20Cat%20Kayu%20dan%20Besi%200_9L/Avian%20Cat%20Kayu%20dan%20Besi%200_9L%20Say%20You_%20Say%20Me%20%5BO3%20003%5D%201pc/cuS036771462-4.jpg" width="288" height="288" />
+<img class="alignnone " src="/assets/blog/cuS036771462-4.jpg" width="288" height="288" />
 <p>Avian High Gloss Enamel populer karena hasil akhir yang mengkilap dan elegan, sangat pas untuk furnitur kayu dan elemen dekoratif seperti rak atau kusen jendela. Cat ini juga dilabeli multifungsi, bisa dipakai di besi sekalipun serta cepat kering.</p>
 
 <h3>4. Kansai Paint Ftalit (Cat Kayu &amp; Besi)</h3>
-<img class="alignnone " src="https://down-id.img.susercontent.com/file/4ac39e914ae4d2717ad28d728a89e338" width="316" height="316" />
+<img class="alignnone " src="/assets/blog/4ac39e914ae4d2717ad28d728a89e338.jpg" width="316" height="316" />
 <p>Produk Kansai Paint termasuk cat semi-gloss serbaguna yang sering dipilih untuk kayu dan logam. Kekuatannya terletak pada daya tahan warna dan lapisan yang tidak mudah pudar meskipun terekspos sinar matahari.</p>
 
 <h3>5. Jotun Gardex Premium Gloss</h3>
-<img class="" src="https://cdn-pim.jotun.com/images/ProductImages/200181/1300x1334/200181.png" width="249" height="256" />
+<img class="" src="/assets/blog/ext-c8577ecd3a.png" width="249" height="256" />
 <p>Jotun Gardex menawarkan cat serbaguna dengan teknologi warna yang tahan lama dan tidak mudah pudar. Sementara fokus umumnya di cat besi anti karat, varian wood &amp; metal ini juga bisa diaplikasikan di permukaan kayu untuk proyek-proyek rumah tangga.</p>
 
 <h2>Tips Memilih Cat untuk Kayu &amp; Cat untuk Besi</h2>
@@ -3442,7 +2504,7 @@ Jika Anda ingin mempercepat proyek tanpa kompromi kualitas alat, kunjungi <em>Ye
             [
                 'title' => '10 Referensi Rumah Desa Minimalis untuk Hunian Asri dan Fungsional',
                 'slug' => '2025/12/31/10-referensi-rumah-desa-minimalis-untuk-hunian-asri-dan-fungsional',
-                'content' => '<img class="alignnone size-full wp-image-2870" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/10-referensi-rumah-desa-minimalis-untuk-hunian-asri-dan-fungsional.jpg" alt="Rumah Desa Minimalis" width="950" height="550" />
+                'content' => '<img class="alignnone size-full wp-image-2870" src="/assets/blog/10-referensi-rumah-desa-minimalis-untuk-hunian-asri-dan-fungsional.jpg" alt="Rumah Desa Minimalis" width="950" height="550" />
 
 <em>Rumah desa minimalis</em> kini bukan sekadar tren, tetapi pilihan gaya hidup. Di tengah keinginan hidup lebih dekat dengan alam dan ketenangan, desain minimalis menyajikan kombinasi estetika, fungsional, dan biaya yang efisien.
 
@@ -3456,43 +2518,43 @@ Inspirasi di bawah ini cocok untuk pemilik tanah di desa atau kampung yang ingin
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>1. Single Floor Minimalis dengan Pencahayaan Alami</h2>
-<img class="alignnone  wp-image-2965" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/single-floor-minimalis.webp" alt="" width="729" height="486" />
+<img class="alignnone  wp-image-2965" src="/assets/blog/single-floor-minimalis.webp" alt="" width="729" height="486" />
 
 Desain rumah satu lantai dengan garis bersih dan jendela besar menciptakan ruang yang terasa luas dan terang. Layout terbuka memaksimalkan aliran udara dan cahaya — ideal untuk suasana tenang di pedesaan.
 <h2>2. Rumah A-Frame Modern</h2>
-<img class="alignnone  wp-image-2966" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/rumah-a-frame.webp" alt="" width="733" height="489" />
+<img class="alignnone  wp-image-2966" src="/assets/blog/rumah-a-frame.webp" alt="" width="733" height="489" />
 
 Rumah dengan atap segitiga (A-Frame) yang tinggi memberikan karakter unik sambil efisien secara struktural. Cocok di lahan terbuka dengan pemandangan alam.
 <h2>3. Minimalis Klasik dengan Porch Luas</h2>
-<img class="alignnone wp-image-2955 " src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/minimalis-klasik-dengan-porch-luas.webp" alt="Rumah Desa Minimalis" width="699" height="524" />
+<img class="alignnone wp-image-2955 " src="/assets/blog/minimalis-klasik-dengan-porch-luas.webp" alt="Rumah Desa Minimalis" width="699" height="524" />
 
 Porch terbuka di depan rumah adalah area serbaguna: ngobrol santai sore hari, ngopi pagi, atau sekadar menikmati angin desa. Kombinasikan dengan warna netral untuk tampilan elegan.
 <h2>4. Kabin Kayu Modern Sederhana</h2>
-<img class="alignnone wp-image-2956" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/kabin-kayu-modern-sederhana.jpg" alt="Rumah Desa Minimalis" width="708" height="498" />
+<img class="alignnone wp-image-2956" src="/assets/blog/kabin-kayu-modern-sederhana.jpg" alt="Rumah Desa Minimalis" width="708" height="498" />
 
 Menggabungkan kayu sebagai material utama memberi kesan natural yang kuat, sesuai dengan lingkungan pedesaan yang asri. Ruang interior bisa dibuat compact namun hangat.
 <h2>5. Rumah Minimalis Tropis</h2>
-<img class="alignnone  wp-image-2959" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/rumah-minimalis-tropis.webp" alt="" width="706" height="423" />
+<img class="alignnone  wp-image-2959" src="/assets/blog/rumah-minimalis-tropis.webp" alt="" width="706" height="423" />
 
 Untuk daerah tropis, desain minimalis dengan ruang terbuka dan ventilasi silang membantu menjaga rumah tetap sejuk secara alami. Integrasikan taman kecil di halaman.
 <h2>6. Kombinasi Batu Alam dan Plaster Modern</h2>
-<img class="alignnone  wp-image-2960" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/kombinasi-batu-alam-dan-plaster-modern.jpg" alt="" width="689" height="388" />
+<img class="alignnone  wp-image-2960" src="/assets/blog/kombinasi-batu-alam-dan-plaster-modern.jpg" alt="" width="689" height="388" />
 
 Eksterior dengan aksen batu alam menguatkan hubungan rumah dengan lanskap pedesaan, memberi tekstur serta ketahanan material.
 <h2>7. Rumah Pedesaan dengan Material Lokal</h2>
-<img class="alignnone  wp-image-2964" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/rumah-pedesaan-dengan-material-lokal.webp" alt="" width="686" height="457" />
+<img class="alignnone  wp-image-2964" src="/assets/blog/rumah-pedesaan-dengan-material-lokal.webp" alt="" width="686" height="457" />
 
 Menggunakan material lokal seperti kayu, batu, atau bahkan elemen atap tradisional tetap bisa dibentuk dalam gaya minimalis kontemporer.
 <h2>8. Ruang Terbuka &amp; Taman Dalam</h2>
-<img class="alignnone  wp-image-2961" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/ruang-terbuka-taman-dalam.jpg" alt="" width="678" height="447" />
+<img class="alignnone  wp-image-2961" src="/assets/blog/ruang-terbuka-taman-dalam.jpg" alt="" width="678" height="447" />
 
 Rancang rumah dengan taman dalam atau atrium kecil di tengah rumah, menghadirkan privasi sekaligus koneksi dengan alam secara langsung. Sinar alam yang masuk bisa mengurangi kebutuhan energi.
 <h2>9. Compact Family Home</h2>
-<img class="alignnone  wp-image-2967" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/compact-family.webp" alt="" width="687" height="458" />
+<img class="alignnone  wp-image-2967" src="/assets/blog/compact-family.webp" alt="" width="687" height="458" />
 
 Desain dengan luas terbatas namun cerdas pada pembagian ruang cocok untuk keluarga kecil. Fokuskan ruang utama (tamu, makan, dapur) ke arah taman untuk pengalaman hidup lebih cozy.
 <h2>10. Rumah Minimalis dengan Zona Multifungsi</h2>
-<img class="alignnone  wp-image-2963" src="https://andrian064.wordpress.com/wp-content/uploads/2025/12/rumah-minimalis-dengan-zona-multifungsi.webp" alt="" width="678" height="1017" />
+<img class="alignnone  wp-image-2963" src="/assets/blog/rumah-minimalis-dengan-zona-multifungsi.webp" alt="" width="678" height="1017" />
 
 Solusi ruang multifungsi, misalnya ruang tamu yang bisa berubah jadi area kerja atau ruang belajar, memaksimalkan fungsi tanpa memperbesar bangunan. Cocok untuk hunian pedesaan modern.
 <h3>Kenapa Rumah Desa Minimalis Jadi Pilihan Tepat?</h3>
@@ -3517,7 +2579,7 @@ Untuk mewujudkan <em>rumah desa minimalis</em> impian Anda, <em>Yen Bangunan</em
             [
                 'title' => 'Toko Bosch di Cikarang? Temukan Alat Bosch Asli di Yen Bangunan dengan Stok Terlengkap',
                 'slug' => '2026/01/05/toko-bosch-di-cikarang-temukan-alat-bosch-asli-di-yen-bangunan-dengan-stok-terlengkap',
-                'content' => '<p><img class="alignnone size-full wp-image-2885" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/toko-bosch-di-cikarang-temukan-alat-bosch-asli-di-yen-bangunan-dengan-stok-terlengkap.jpg" alt="Toko Bosch di Cikarang" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2885" src="/assets/blog/toko-bosch-di-cikarang-temukan-alat-bosch-asli-di-yen-bangunan-dengan-stok-terlengkap.jpg" alt="Toko Bosch di Cikarang" width="950" height="550" /></p>
 <p>Kalau Anda sedang mencari toko resmi Bosch atau tempat terbaik untuk mendapatkan alat Bosch original di Cikarang, tidak perlu bingung lagi. Di Yen Bangunan Cikarang, Anda bisa menemukan berbagai macam <em>power tools</em> dan perkakas Bosch berkualitas tinggi, dari bor listrik, gergaji, hingga grinder, lengkap dengan pelayanan yang ramah dan solusi pembelian yang profesional.</p>
 <p>Bosch dikenal sebagai merek alat teknik yang kuat, tahan lama, dan cocok untuk penggunaan proyek besar sekalipun. Alih-alih harus ke toko Bosch tersebar di banyak tempat, yang belum tentu lengkap stoknya, Yen Bangunan memberikan pengalaman belanja yang jauh lebih efisien dan praktis untuk semua kebutuhan alat Bosch Anda.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -3528,7 +2590,7 @@ Untuk mewujudkan <em>rumah desa minimalis</em> impian Anda, <em>Yen Bangunan</em
 
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>Keuntungan Belanja Alat Bosch di Yen Bangunan</h2>
-<img class="alignnone size-full wp-image-2380" src="https://andrian064.wordpress.com/wp-content/uploads/2025/10/yen-toko.jpg" alt="" width="500" height="700" />
+<img class="alignnone size-full wp-image-2380" src="/assets/blog/yen-toko.jpg" alt="" width="500" height="700" />
 <ul>
  	<li><strong>One-Stop Solution:</strong> Tidak hanya Bosch — semua kebutuhan proyek Anda tersedia di satu tempat.</li>
  	<li><strong>Stok Lengkap:</strong> Dari Bosch hingga merek lain yang relevan dengan pekerjaan teknik dan konstruksi.</li>
@@ -3566,9 +2628,9 @@ Untuk mewujudkan <em>rumah desa minimalis</em> impian Anda, <em>Yen Bangunan</em
                 'updated_at' => now(),
             ],
             [
-                'title' => '7 Rekomendasi Produk Cat untuk Atap Anti Bocor & Tahan Lama',
+                'title' => '7 Rekomendasi Produk Cat untuk Atap Anti Bocor &amp; Tahan Lama',
                 'slug' => '2026/01/06/7-rekomendasi-produk-cat-untuk-atap-anti-bocor-tahan-lama',
-                'content' => '<p><img class="alignnone size-full wp-image-2895" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/7-rekomendasi-produk-cat-untuk-atap-yang-tahan-lama-efektif.jpg" alt="Cat untuk Atap" width="950" height="550" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2895" src="/assets/blog/7-rekomendasi-produk-cat-untuk-atap-yang-tahan-lama-efektif.jpg" alt="Cat untuk Atap" width="950" height="550" /></p>
 <p>Saat memilih <em>cat untuk atap</em>, kamu tidak sekadar memikirkan warna yang menarik, tapi juga performa dalam menghadapi cuaca tropis, panas matahari, hujan deras, serta pertumbuhan jamur atau lumut. Dalam panduan ini, kita bahas rekomendasi <em>cat atap</em> terbaik yang bisa kamu pertimbangkan untuk proyek rumah sendiri atau klien, dipilih karena daya tahan dan fungsi perlindungannya jelas.</p>
 <p>Artikel ini fokus pada pilihan produk yang mudah ditemui di <em>Yen Bangunan</em> serta tips memilih cat atap yang relevan untuk kondisi iklim Indonesia.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -3597,31 +2659,31 @@ Untuk mewujudkan <em>rumah desa minimalis</em> impian Anda, <em>Yen Bangunan</em
 </ul>
 <h2>Rekomendasi Produk <em>Cat untuk Atap</em></h2>
 <h3>1. <strong><span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">Nippon Roof Coating</span></span></strong></h3>
-<img class="alignnone " src="https://www.nipponpaint-indonesia.com/data/products/exterior-paint/Exterior/Roof%20Coating.png" width="264" height="264" />
+<img class="alignnone " src="/assets/blog/Roof-Coating.png" width="264" height="264" />
 <p>Produk dari Nippon ini dirancang khusus untuk permukaan genteng dan atap beton/metal, memberikan perlindungan terhadap jamur, kotoran, dan sinar UV — memberi tampilan glossy yang bersih dan tahan lama. Cocok jika Anda menginginkan lapisan pelindung atap yang kuat sekaligus estetis.</p>
 
 <h3>2. <strong><span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">Puffin RoofCoat Satin Waterbase</span></span></strong></h3>
-<img class="alignnone size-full" src="https://puffinpaint.com/wp-content/uploads/2020/10/kemasan-roofcoat-satin-wb-300x300.jpg" width="300" height="300" />
+<img class="alignnone size-full" src="/assets/blog/kemasan-roofcoat-satin-wb-300x300.jpg" width="300" height="300" />
 <p>Puffin RoofCoat hadir dengan basis air yang lebih ramah lingkungan dan cepat kering, cocok untuk berbagai bahan atap seperti beton, seng, atau asbes. Varian satin memberikan hasil akhir elegan, sementara sifat anti jamur dan daya lekat yang baik membantu atap tahan lebih lama.</p>
 
 <h3>3. <strong><span class="entity-underline hover:entity-accent inline cursor-pointer align-baseline"><span class="whitespace-normal">No Drop Plus 3‑in‑1 Anti Bocor</span></span></strong></h3>
-<img class="alignnone size-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaOYqagrpIkgU0H7Xw91TuzQA80miILQoR-A&amp;s" width="213" height="237" />
+<img class="alignnone size-full" src="/assets/blog/images-ext.jpg" width="213" height="237" />
 <p>Jika atap Anda rawan bocor atau rembes saat musim hujan, No Drop Plus adalah pilihan serbaguna yang mampu menutup retakan mikro dan menahan air. Cat ini populer di Indonesia karena elastisnya yang tinggi dan cocok di berbagai permukaan luar ruangan.</p>
 
 <h3>4. Aquaproof</h3>
-<img class="alignnone size-full" src="https://www.depobangunan.co.id/media/catalog/product/cache/e2c934e5f42fcdb33402dbdfd0fd401d/a/q/aqua_20lt.png" width="236" height="236" />
+<img class="alignnone size-full" src="/assets/blog/aqua_20lt.png" width="236" height="236" />
 <p><strong>Aquaproof</strong> bukan sekadar cat biasa, melainkan pelapis waterproof yang efektif menahan rembesan dan kelembapan, ideal untuk talang hingga atap yang sering terpapar hujan deras. Formula ini sangat berguna di daerah tropis dengan curah hujan tinggi seperti Indonesia.</p>
 
 <h3>5. <strong>Dulux WeatherShield Roof</strong></h3>
-<img class="alignnone " src="https://msp.images.akzonobel.com/prd/dh/aiddlx/packshots/f2/67/92/59/packshot_medium.png" width="206" height="206" />
+<img class="alignnone " src="/assets/blog/packshot_medium.png" width="206" height="206" />
 <p>Dulux sebagai merek internasional juga menyediakan seri yang cocok untuk atap, yakni WeatherShield Roof. Produk ini dikenal tahan terhadap cuaca ekstrem dan jamur, dengan hasil akhir yang cerah dan fresh.</p>
 
 <h3>6. Avian &amp; Kansai</h3>
-<img class="alignnone " src="https://down-id.img.susercontent.com/file/id-11134207-7rasd-m0qnccqj7xuo63" width="284" height="284" />
+<img class="alignnone " src="/assets/blog/id-11134207-7rasd-m0qnccqj7xuo63.jpg" width="284" height="284" />
 <p><strong>Avian</strong> sendiri punya roof coating yang dirancang untuk cuaca tropis, dengan daya tutup dan proteksi yang baik terhadap elemen luar ruangan. Sementara <strong>Kansai</strong> menyediakan cat eksterior yang bisa juga diaplikasikan pada permukaan atap logam atau beton sebagai lapisan pelindung tambahan.</p>
 
 <h3>7. Propan</h3>
-<img class="alignnone " src="https://i0.wp.com/www.propanraya.com/wp-content/uploads/2024/11/PROPAN-CAT-GENTENG-20-lt.png?fit=1042%2C1042&amp;ssl=1" width="317" height="317" />
+<img class="alignnone " src="/assets/blog/PROPAN-CAT-GENTENG-20-lt.png" width="317" height="317" />
 <p><strong>Propan</strong> menawarkan cat dengan elastisitas tinggi yang efektif menutupi retakan halus pada atap beton atau dak. Merek ini populer di kalangan tukang bangunan karena kemudahan aplikasi dan hasil tahan lama.</p>
 
 <h2>Tips Memilih &amp; Mengaplikasikan Cat Atap</h2>
@@ -3662,9 +2724,9 @@ Untuk mewujudkan <em>rumah desa minimalis</em> impian Anda, <em>Yen Bangunan</em
                 'updated_at' => now(),
             ],
             [
-                'title' => '10 Referensi Kitchen Set Minimalis untuk Dapur Modern & Fungsional',
+                'title' => '10 Referensi Kitchen Set Minimalis untuk Dapur Modern &amp; Fungsional',
                 'slug' => '2026/01/07/10-referensi-kitchen-set-minimalis-untuk-dapur-modern-fungsional',
-                'content' => '<p><img class="alignnone size-full wp-image-2974" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-letter-l.webp" alt="" width="1024" height="683" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-2974" src="/assets/blog/kitchen-set-minimalis-letter-l.webp" alt="" width="1024" height="683" /></p>
 <p>Kitchen set minimalis masih menjadi pilihan favorit di tahun 2025. Bukan tanpa alasan, desainnya bersih, rapi, dan mudah menyesuaikan dengan berbagai ukuran rumah, terutama hunian modern dan rumah dengan lahan terbatas.</p>
 <p>Artikel ini membahas <strong>10 referensi kitchen set minimalis</strong> yang tidak hanya enak dilihat, tetapi juga nyaman digunakan sehari-hari. Cocok untuk Anda yang sedang merancang dapur baru atau ingin renovasi tanpa ribet.</p>
 
@@ -3679,43 +2741,43 @@ Untuk mewujudkan <em>rumah desa minimalis</em> impian Anda, <em>Yen Bangunan</em
 <span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
 <h2>10 Referensi Kitchen Set Minimalis Pilihan</h2>
 <h3>1. Kitchen Set Minimalis Putih Clean Look</h3>
-<img class="alignnone size-full wp-image-2972" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-putih-clean-look.webp" alt="" width="1024" height="683" />
+<img class="alignnone size-full wp-image-2972" src="/assets/blog/kitchen-set-minimalis-putih-clean-look.webp" alt="" width="1024" height="683" />
 <p>Warna putih memberi kesan luas dan terang. Cocok untuk dapur kecil dengan pencahayaan alami terbatas.</p>
 
 <h3>2. Kitchen Set Minimalis Kayu Natural</h3>
-<img class="alignnone size-full wp-image-2973" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-kayu-natural.webp" alt="" width="1024" height="683" />
+<img class="alignnone size-full wp-image-2973" src="/assets/blog/kitchen-set-minimalis-kayu-natural.webp" alt="" width="1024" height="683" />
 <p>Material kayu atau motif kayu menghadirkan nuansa hangat dan homey, selaras dengan gaya Japandi.</p>
 
 <h3>3. Kitchen Set Minimalis Letter L</h3>
-<img class="alignnone size-full wp-image-2974" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-letter-l.webp" alt="" width="1024" height="683" />
+<img class="alignnone size-full wp-image-2974" src="/assets/blog/kitchen-set-minimalis-letter-l.webp" alt="" width="1024" height="683" />
 <p>Desain ini memaksimalkan sudut ruangan dan membuat alur kerja dapur lebih efisien.</p>
 
 <h3>4. Kitchen Set Minimalis Tanpa Handle</h3>
-<img class="alignnone size-full wp-image-2981" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-tanpa-handle.webp" alt="" width="1024" height="1024" />
+<img class="alignnone size-full wp-image-2981" src="/assets/blog/kitchen-set-minimalis-tanpa-handle.webp" alt="" width="1024" height="1024" />
 <p>Tampilan flat dan rapi dengan sistem push-to-open, favorit untuk rumah modern.</p>
 
 <h3>5. Kitchen Set Minimalis Warna Abu-Abu</h3>
-<img class="alignnone size-full wp-image-2980" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-warna-abu-abu.webp" alt="" width="1024" height="1024" />
+<img class="alignnone size-full wp-image-2980" src="/assets/blog/kitchen-set-minimalis-warna-abu-abu.webp" alt="" width="1024" height="1024" />
 <p>Abu-abu memberi kesan elegan dan netral, mudah dipadukan dengan berbagai warna dinding.</p>
 
 <h3>6. Kitchen Set Minimalis dengan Top Table Granit</h3>
-<img class="alignnone size-full wp-image-2975" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-dengan-top-table-granit.webp" alt="" width="1024" height="683" />
+<img class="alignnone size-full wp-image-2975" src="/assets/blog/kitchen-set-minimalis-dengan-top-table-granit.webp" alt="" width="1024" height="683" />
 <p>Kuat, tahan panas, dan terlihat premium—pilihan ideal untuk dapur aktif.</p>
 
 <h3>7. Kitchen Set Minimalis Dapur Kecil</h3>
-<img class="alignnone size-full wp-image-2976" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-dapur-kecil.webp" alt="" width="1024" height="683" />
+<img class="alignnone size-full wp-image-2976" src="/assets/blog/kitchen-set-minimalis-dapur-kecil.webp" alt="" width="1024" height="683" />
 <p>Fokus pada kabinet atas, rak terbuka, dan penyimpanan vertikal agar ruang tetap lega.</p>
 
 <h3>8. Kitchen Set Minimalis Industrial</h3>
-<img class="alignnone size-full wp-image-2977" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-industrial.webp" alt="" width="1024" height="683" />
+<img class="alignnone size-full wp-image-2977" src="/assets/blog/kitchen-set-minimalis-industrial.webp" alt="" width="1024" height="683" />
 <p>Perpaduan warna gelap, aksen besi, dan finishing matte untuk tampilan tegas dan modern.</p>
 
 <h3>9. Kitchen Set Minimalis dengan Backsplash Simpel</h3>
-<img class="alignnone size-full wp-image-2978" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-dengan-backsplash-simpel.webp" alt="" width="1024" height="683" />
+<img class="alignnone size-full wp-image-2978" src="/assets/blog/kitchen-set-minimalis-dengan-backsplash-simpel.webp" alt="" width="1024" height="683" />
 <p>Backsplash keramik polos atau motif kecil bisa jadi aksen tanpa membuat dapur terlihat ramai.</p>
 
 <h3>10. Kitchen Set Minimalis Custom</h3>
-<img class="alignnone size-full wp-image-2979" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/kitchen-set-minimalis-custom.webp" alt="" width="1024" height="683" />
+<img class="alignnone size-full wp-image-2979" src="/assets/blog/kitchen-set-minimalis-custom.webp" alt="" width="1024" height="683" />
 <p>Solusi paling fleksibel karena disesuaikan dengan kebutuhan, ukuran ruang, dan gaya hidup Anda.</p>
 
 <h2>Tips Memilih Kitchen Set Minimalis yang Tepat</h2>
@@ -3724,7 +2786,7 @@ Untuk mewujudkan <em>rumah desa minimalis</em> impian Anda, <em>Yen Bangunan</em
 <h2>Kesimpulan</h2>
 <p>Kitchen set minimalis bukan sekadar tren, tetapi solusi jangka panjang untuk dapur yang rapi, fungsional, dan nyaman. Dengan memilih desain yang tepat dan material berkualitas, dapur Anda bisa menjadi ruang favorit di rumah.</p>
 <p><strong>Sedang merencanakan dapur impian? Konsultasikan kebutuhan kitchen set minimalis Anda bersama Yen Bangunan dan temukan solusi terbaik untuk rumah Anda sekarang juga.</strong></p>',
-                'image_path' => null,
+                'image_path' => '/blog/kitchen-set-minimalis-letter-l.webp',
                 'published_at' => '2026-01-07 18:16:18',
                 'author_id' => 1,
                 'created_at' => now(),
@@ -3733,7 +2795,7 @@ Untuk mewujudkan <em>rumah desa minimalis</em> impian Anda, <em>Yen Bangunan</em
             [
                 'title' => 'Estimasi Biaya Membangun Rumah Minimalis per Meter Persegi + Tips Anggaran',
                 'slug' => '2026/01/08/estimasi-biaya-membangun-rumah-minimalis-per-meter-persegi-tips-anggaran',
-                'content' => '<p><img class="alignnone size-full wp-image-3006" src="https://andrian064.wordpress.com/wp-content/uploads/2026/01/estimasi-biaya-membangun-rumah-minimalis-per-meter-persegi-tips-anggaran.webp" alt="" width="1024" height="683" /></p>
+                'content' => '<p><img class="alignnone size-full wp-image-3006" src="/assets/blog/estimasi-biaya-membangun-rumah-minimalis-per-meter-persegi-tips-anggaran.webp" alt="" width="1024" height="683" /></p>
 <p>Membangun rumah minimalis masih menjadi pilihan favorit banyak orang karena desainnya simpel, fungsional, dan relatif lebih efisien secara biaya. Namun, pertanyaan yang hampir selalu muncul adalah: <em>sebenarnya berapa estimasi biaya membangun rumah minimalis per meter persegi?</em> Dan yang tak kalah penting, bagaimana cara mengatur anggarannya agar tidak jebol di tengah jalan?</p>
 <p>Artikel ini akan membahas estimasi biaya terbaru sekaligus tips anggaran praktis, khususnya untuk kamu yang ingin membangun rumah minimalis dengan perhitungan matang bersama <strong>Yen Bangunan</strong>.</p>
 <strong><span dir="auto">Baca juga:</span></strong>
@@ -3775,7 +2837,7 @@ Untuk mewujudkan <em>rumah desa minimalis</em> impian Anda, <em>Yen Bangunan</em
 
 <h2>Kesimpulan</h2>
 <p>Memahami estimasi biaya membangun rumah minimalis per meter persegi sejak awal akan membantumu mengambil keputusan yang lebih rasional dan terukur. Dengan perencanaan matang, pemilihan material yang tepat, serta manajemen anggaran yang disiplin, rumah minimalis impian bukan lagi sekadar wacana.</p>
-<p><img class="alignnone size-full wp-image-1713" src="https://andrian064.wordpress.com/wp-content/uploads/2025/03/whatsapp-image-2025-08-15-at-07.11.33.jpeg" alt="Toko Alat Teknik Cikarang" width="719" height="1280" /></p>
+<p><img class="alignnone size-full wp-image-1713" src="/assets/blog/whatsapp-image-2025-08-15-at-07.11.33.jpeg" alt="Toko Alat Teknik Cikarang" width="719" height="1280" /></p>
 <p><strong>Ingin anggaran bangunan lebih terkontrol dan material berkualitas? Konsultasikan kebutuhan bangunanmu sekarang bersama Yen Bangunan dan wujudkan rumah minimalis yang efisien, kuat, dan nyaman.</strong></p>',
                 'image_path' => '/blog/estimasi-biaya-membangun-rumah-minimalis-per-meter-persegi-tips-anggaran.webp',
                 'published_at' => '2026-01-08 15:43:50',
@@ -3783,8 +2845,1410 @@ Untuk mewujudkan <em>rumah desa minimalis</em> impian Anda, <em>Yen Bangunan</em
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'title' => '10 Referensi Teras Rumah Minimalis yang Estetik dan Fungsional',
+                'slug' => '2026/01/13/10-referensi-teras-rumah-minimalis-yang-estetik-dan-fungsional',
+                'content' => '<img class="alignnone size-full wp-image-3013" src="/assets/blog/10-referensi-teras-rumah-minimalis-yang-estetik-dan-fungsional.webp" alt="" width="1024" height="683" />
+<h2>Kenapa Teras Minimalis Jadi Pilihan Favorit?</h2>
+Gaya minimalis unggul karena tampil bersih, mudah dirawat, dan fleksibel dipadukan dengan berbagai material bangunan. Selain itu, desain teras minimalis modern juga mendukung efisiensi ruang—penting untuk rumah dengan lahan terbatas.
+
+Dengan pemilihan material yang tepat dari penyedia terpercaya seperti <strong>Yen Bangunan</strong>, teras minimalis bisa tetap awet, aman, dan bernilai estetika tinggi.
+
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>10 Referensi Teras Rumah Minimalis yang Bisa Jadi Inspirasi</h2>
+<h3>1. Teras Minimalis dengan Lantai Keramik Motif Batu</h3>
+<img class="alignnone size-full wp-image-3019" src="/assets/blog/teras-minimalis-dengan-lantai-keramik-motif-batu.jpg" alt="" width="1000" height="700" />
+
+Pilihan ideal untuk tampilan natural tanpa perawatan rumit. Cocok untuk rumah minimalis satu lantai.
+<h3>2. Teras Rumah Minimalis Modern dengan Kanopi Besi</h3>
+<img class="alignnone size-full wp-image-3026" src="/assets/blog/teras-rumah-minimalis-modern-dengan-kanopi-besi.jpg" alt="" width="1000" height="700" />
+
+Kanopi tipis berwarna hitam atau abu-abu memberi kesan tegas dan modern, sekaligus melindungi dari panas dan hujan.
+<h3>3. Teras Kecil Minimalis dengan Kursi Kayu</h3>
+<img class="alignnone size-full wp-image-3018" src="/assets/blog/teras-kecil-minimalis-dengan-kursi-kayu.jpg" alt="" width="1000" height="700" />
+
+Solusi untuk rumah mungil. Satu set kursi kayu sederhana sudah cukup menciptakan area santai yang hangat.
+<h3>4. Teras Minimalis Nuansa Putih</h3>
+<img class="alignnone size-full wp-image-3023" src="/assets/blog/teras-minimalis-nuansa-putih.jpg" alt="" width="1000" height="700" />
+
+Warna putih pada dinding dan plafon membuat teras tampak lebih luas dan terang, cocok untuk rumah perkotaan.
+<h3>5. Teras Rumah Minimalis dengan Tanaman Hijau</h3>
+<img class="alignnone size-full wp-image-3025" src="/assets/blog/teras-rumah-minimalis-dengan-tanaman-hijau.jpg" alt="" width="1000" height="700" />
+
+Tambahkan pot tanaman atau vertical garden kecil untuk kesan segar dan hidup tanpa mengorbankan ruang.
+<h3>6. Teras Minimalis Industrial</h3>
+<img class="alignnone size-full wp-image-3017" src="/assets/blog/teras-depan-rumah-minimalis-dengan-pencahayaan-hangat.jpg" alt="" width="1000" height="700" />
+
+Perpaduan semen ekspos, besi, dan warna netral memberi karakter kuat namun tetap simpel.
+<h3>7. Teras Depan Rumah Minimalis dengan Pencahayaan Hangat</h3>
+<img class="alignnone size-full wp-image-3021" src="/assets/blog/teras-minimalis-industrial.jpg" alt="" width="1000" height="700" />
+
+Lampu dinding warm white menciptakan suasana nyaman saat malam hari dan meningkatkan estetika fasad.
+<h3>8. Teras Minimalis dengan Pagar Rendah</h3>
+<img class="alignnone size-full wp-image-3020" src="/assets/blog/teras-minimalis-dengan-pagar-rendah.jpg" alt="" width="1000" height="700" />
+
+Memberi batas visual tanpa membuat rumah terasa tertutup. Cocok untuk lingkungan perumahan.
+<h3>9. Teras Rumah Minimalis Atap Datar</h3>
+<img class="alignnone size-full wp-image-3024" src="/assets/blog/teras-rumah-minimalis-atap-datar.jpg" alt="" width="1000" height="700" />
+
+Model atap datar sedang tren di 2025 karena tampil modern dan mudah dikombinasikan dengan desain fasad.
+<h3>10. Teras Minimalis Multifungsi</h3>
+<img class="alignnone size-full wp-image-3022" src="/assets/blog/teras-minimalis-multifungsi.jpg" alt="" width="1000" height="700" />
+
+Selain area duduk, teras bisa difungsikan sebagai tempat menerima tamu singkat atau area santai sore hari.
+<h2>Tips Memilih Material Teras yang Tepat</h2>
+Agar desain teras minimalis tidak hanya cantik tapi juga tahan lama, perhatikan kualitas material lantai, cat eksterior, dan elemen pendukung lainnya. Produk bangunan berkualitas dari <strong>Yen Bangunan</strong> membantu memastikan teras rumah tetap kuat, aman, dan sesuai standar hunian modern.
+<h2>Kesimpulan</h2>
+Memilih <strong>referensi teras rumah minimalis</strong> yang tepat bukan hanya soal estetika, tapi juga kenyamanan dan fungsi jangka panjang. Dengan desain yang sederhana, material berkualitas, dan perencanaan matang, teras bisa menjadi area favorit di rumah Anda.
+
+<strong>Sedang merencanakan teras rumah minimalis? Temukan berbagai kebutuhan material bangunan berkualitas hanya di Yen Bangunan, solusi terpercaya untuk hunian nyaman dan modern.</strong>',
+                'image_path' => '/blog/10-referensi-teras-rumah-minimalis-yang-estetik-dan-fungsional.webp',
+                'published_at' => '2026-01-13 17:33:46',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Pengertian dan Fungsi Wire Mesh dalam Konstruksi Bangunan',
+                'slug' => '2026/01/14/pengertian-dan-fungsi-wire-mesh-dalam-konstruksi-bangunan',
+                'content' => '<p><img class="alignnone size-full wp-image-3035" src="/assets/blog/pengertian-dan-fungsi-wire-mesh-dalam-konstruksi-bangunan.jpg" alt="Wire Mesh" width="1000" height="700" /></p>
+<p>Dalam dunia konstruksi modern, efisiensi dan kekuatan struktur menjadi dua hal yang tidak bisa ditawar. Salah satu material yang sering digunakan untuk mendukung hal tersebut adalah <strong>wire mesh</strong>. Meski terlihat sederhana, wire mesh memiliki peran penting dalam menjaga kualitas dan daya tahan bangunan, baik skala kecil maupun besar.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>Apa Itu Wire Mesh?</h2>
+<p><strong>Wire mesh</strong> adalah lembaran besi baja berbentuk jaring (anyaman atau las) yang disusun secara presisi dengan jarak tertentu. Material ini umumnya digunakan sebagai <strong>tulangan beton</strong> untuk meningkatkan kekuatan tarik dan menahan retak pada struktur beton.</p>
+<p>Dalam praktiknya, wire mesh sering menjadi alternatif tulangan konvensional (besi beton batang) karena lebih rapi, konsisten, dan mempercepat proses pemasangan. Ukuran dan ketebalannya bervariasi, sehingga bisa disesuaikan dengan kebutuhan proyek, mulai dari rumah tinggal hingga bangunan komersial.</p>
+
+<h2>Fungsi Wire Mesh dalam Konstruksi</h2>
+<p>Fungsi utama wire mesh bukan sekadar pelengkap, tetapi elemen struktural yang sangat krusial.</p>
+
+<h3>1. Memperkuat Struktur Beton</h3>
+<p>Beton memiliki kekuatan tekan yang tinggi, tetapi lemah terhadap gaya tarik. Di sinilah wire mesh berperan sebagai tulangan yang membantu beton menahan beban dan tekanan, sehingga struktur menjadi lebih stabil dan tahan lama.</p>
+
+<h3>2. Mencegah Retak dan Pergerakan Beton</h3>
+<p>Pada lantai cor, dak beton, atau jalan beton, wire mesh membantu mendistribusikan beban secara merata. Hal ini mengurangi risiko retak akibat penyusutan beton atau perubahan suhu.</p>
+
+<h3>3. Mempercepat Proses Pekerjaan</h3>
+<p>Dibandingkan merangkai besi tulangan satu per satu, penggunaan wire mesh jauh lebih efisien. Material ini tinggal dipasang sesuai bidang kerja, sehingga menghemat waktu dan biaya tenaga kerja—alasan utama wire mesh banyak dipilih pada proyek modern.</p>
+
+<h3>4. Hasil Lebih Rapi dan Konsisten</h3>
+<p>Karena diproduksi secara pabrikasi, jarak antar besi pada wire mesh lebih presisi. Ini membuat kualitas tulangan lebih konsisten dibandingkan metode manual.</p>
+
+<h2>Aplikasi Wire Mesh yang Paling Umum</h2>
+<p>Wire mesh banyak digunakan pada:</p>
+
+<ul>
+ 	<li>
+<p>Lantai beton rumah dan gudang</p>
+</li>
+ 	<li>
+<p>Dak beton dan pelat lantai</p>
+</li>
+ 	<li>
+<p>Jalan beton dan area parkir</p>
+</li>
+ 	<li>
+<p>Proyek renovasi yang membutuhkan tulangan tambahan</p>
+</li>
+</ul>
+<p>Untuk proyek skala kecil hingga menengah, <strong>wire mesh lembaran atau roll</strong> sering menjadi solusi praktis yang direkomendasikan oleh penyedia material seperti <strong>Yen Bangunan</strong>.</p>
+
+<h2>Kenapa Wire Mesh Jadi Pilihan Tepat?</h2>
+<p>Selain kuat dan efisien, wire mesh membantu pemilik proyek mengontrol kualitas konstruksi tanpa harus repot dengan detail teknis yang rumit. Selama ukuran dan spesifikasi disesuaikan dengan kebutuhan struktur, material ini sangat aman dan efektif.</p>
+<p>Bagi pemilik rumah, kontraktor pemula, maupun pelaku proyek kecil, memahami fungsi wire mesh adalah langkah awal untuk membangun struktur yang lebih kokoh dan tahan lama.</p>
+<p><strong>Ingin anggaran bangunan lebih terkontrol dan material berkualitas? Konsultasikan kebutuhan bangunanmu sekarang bersama Yen Bangunan dan wujudkan rumah minimalis yang efisien, kuat, dan nyaman.</strong></p>',
+                'image_path' => '/blog/pengertian-dan-fungsi-wire-mesh-dalam-konstruksi-bangunan.jpg',
+                'published_at' => '2026-01-14 18:22:00',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Box Culvert: Fungsi, Keunggulan, dan Alasan Banyak Dipakai pada Proyek Drainase Modern',
+                'slug' => '2026/01/15/box-culvert-fungsi-keunggulan-dan-alasan-banyak-dipakai-pada-proyek-drainase-modern',
+                'content' => '<p><img class="alignnone size-full wp-image-3040" src="/assets/blog/box-culvert-fungsi-keunggulan-dan-alasan-banyak-dipakai-pada-proyek-drainase-modern.jpg" alt="Box Culvert " width="950" height="550" /></p>
+<p>Dalam dunia konstruksi modern, sistem drainase tidak lagi hanya soal mengalirkan air, tetapi juga tentang ketahanan struktur, efisiensi waktu, dan biaya jangka panjang. Salah satu material yang kini banyak digunakan untuk kebutuhan tersebut adalah box culvert. Produk beton pracetak ini menjadi pilihan utama untuk proyek infrastruktur, perumahan, hingga kawasan industri.</p>
+<p>Artikel ini akan membantu Anda memahami apa itu box culvert, fungsinya, serta bagaimana memilih produk yang tepat untuk kebutuhan proyek Anda.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+<h2>Apa Itu Box Culvert?</h2>
+<p><strong>Box culvert</strong> adalah elemen beton pracetak berbentuk kotak yang berfungsi sebagai saluran air tertutup. Umumnya digunakan untuk:</p>
+
+<ul>
+ 	<li>
+<p>Drainase jalan</p>
+</li>
+ 	<li>
+<p>Gorong-gorong</p>
+</li>
+ 	<li>
+<p>Saluran bawah tanah</p>
+</li>
+ 	<li>
+<p>Terowongan kecil utilitas</p>
+</li>
+</ul>
+<p>Dibandingkan saluran konvensional, box culvert menawarkan kekuatan struktural yang jauh lebih baik karena dibuat dari beton bertulang dengan standar mutu tertentu.</p>
+
+<h2>Keunggulan Box Culvert Dibanding Saluran Konvensional</h2>
+<p>Mengapa banyak kontraktor dan pemilik proyek beralih ke box culvert? Berikut beberapa alasannya:</p>
+
+<h3>1. Kuat dan Tahan Lama</h3>
+<p>Box culvert dirancang menahan beban berat, termasuk tekanan tanah dan lalu lintas kendaraan di atasnya. Cocok untuk penggunaan jangka panjang tanpa perawatan intensif.</p>
+
+<h3>2. Pemasangan Lebih Cepat</h3>
+<p>Karena berbentuk pracetak, proses instalasi jauh lebih singkat dibanding pengecoran di tempat. Ini sangat menghemat waktu proyek.</p>
+
+<h3>3. Presisi dan Standar Mutu</h3>
+<p>Produk box culvert berkualitas diproduksi dengan cetakan presisi dan kontrol mutu ketat, sehingga ukuran dan kekuatannya konsisten.</p>
+
+<h3>4. Efisiensi Biaya Jangka Panjang</h3>
+<p>Meski investasi awal terlihat lebih tinggi, biaya perawatan yang rendah membuat box culvert lebih ekonomis dalam jangka panjang.</p>
+
+<h2>Aplikasi Box Culvert dalam Berbagai Proyek</h2>
+<p>Box culvert tidak hanya digunakan pada proyek skala besar. Saat ini, material ini juga banyak diaplikasikan pada:</p>
+
+<ul>
+ 	<li>
+<p>Perumahan dan kawasan komersial</p>
+</li>
+ 	<li>
+<p>Jalan lingkungan dan akses kawasan</p>
+</li>
+ 	<li>
+<p>Area rawan genangan atau banjir</p>
+</li>
+ 	<li>
+<p>Proyek drainase perkotaan</p>
+</li>
+</ul>
+<p>Fleksibilitas ukuran dan desain membuat box culvert mudah disesuaikan dengan kebutuhan lapangan.</p>
+
+<h2>Tips Memilih Box Culvert Berkualitas</h2>
+<p>Sebelum membeli, pastikan Anda memperhatikan beberapa hal berikut:</p>
+
+<ul>
+ 	<li>
+<p>Mutu beton (minimal K-300 atau sesuai spesifikasi proyek)</p>
+</li>
+ 	<li>
+<p>Tulangan baja sesuai standar</p>
+</li>
+ 	<li>
+<p>Presisi ukuran dan sambungan</p>
+</li>
+ 	<li>
+<p>Reputasi supplier atau distributor</p>
+</li>
+</ul>
+<p>Memilih supplier terpercaya seperti <strong>Yen Bangunan</strong> membantu meminimalkan risiko kesalahan material yang bisa berdampak besar pada proyek.</p>
+
+<h2>Kesimpulan</h2>
+<p>Box culvert adalah solusi drainase modern yang menggabungkan kekuatan, efisiensi, dan kepraktisan. Dengan pemilihan produk yang tepat dan supplier terpercaya, sistem drainase Anda akan bekerja optimal dalam jangka panjang.</p>
+
+<h2>Butuh box culvert berkualitas untuk proyek Anda?</h2>
+<p>Konsultasikan kebutuhan material Anda sekarang bersama <strong>Yen Bangunan</strong> dan dapatkan solusi beton pracetak yang tepat, kuat, dan terpercaya.</p>',
+                'image_path' => '/blog/box-culvert-fungsi-keunggulan-dan-alasan-banyak-dipakai-pada-proyek-drainase-modern.jpg',
+                'published_at' => '2026-01-15 17:03:51',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Renovasi Rumah Subsidi: Panduan Aturan yang Wajib Kamu Tahu',
+                'slug' => '2026/01/17/renovasi-rumah-subsidi-panduan-aturan-yang-wajib-kamu-tahu',
+                'content' => '<p><img class="alignnone size-full wp-image-3046" src="/assets/blog/renovasi-rumah-subsidi-panduan-aturan-yang-wajib-kamu-tahu.jpg" alt="Renovasi Rumah Subsidi " width="950" height="550" /></p>
+<p>Program <strong>renovasi rumah subsidi</strong> menjadi topik yang sering ditanyakan oleh banyak pemilik rumah di Indonesia, khususnya mereka yang ingin meningkatkan kenyamanan hunian tanpa melanggar aturan pemerintah. Artikel ini membahas secara praktis dan edukatif apa saja yang boleh dan tidak boleh dilakukan saat merenovasi <em>rumah subsidi</em> sesuai kebijakan terbaru 2025.</p>
+<p>Rumah subsidi adalah hunian yang dibantu lewat program pemerintah untuk masyarakat berpenghasilan rendah (MBR), dengan ketentuan ukuran tanah, bangunan, harga, dan persyaratan tertentu yang wajib dipatuhi oleh pemiliknya. Karena tujuan utamanya adalah memberikan akses hunian yang sehat dan terjangkau, pemerintah menetapkan aturan ketat terkait renovasi agar esensi program tetap terjaga.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+<h2>Bolehkah Men-renovasi Rumah Subsidi?</h2>
+<p>Jawabannya: boleh, tapi tidak semata-mata sesuka hati. Renovasi diperbolehkan selama memenuhi persyaratan dan tidak mengubah fungsi dasar rumah subsidi atau merugikan ketentuan program. Perbaikan ringan hingga besar punya aturan berbeda tergantung jenis perubahan yang kamu rencanakan.</p>
+
+<h3>Apa yang Boleh Dipelihara &amp; Diperbaiki</h3>
+<p>Saat rumah subsidi kamu mulai menunjukkan tanda-tanda aus seperti atap bocor, cat mengelupas, atau ubin rusak, perbaikan renovasi ringan seperti:</p>
+
+<ul>
+ 	<li>
+<p><em>Pengecatan ulang dinding</em></p>
+</li>
+ 	<li>
+<p><em>Mengganti keramik/ubin</em></p>
+</li>
+ 	<li>
+<p><em>Memperbaiki atap bocor atau rembes</em></p>
+</li>
+ 	<li>
+<p><em>Menambah sekat ruangan atau teras kecil</em></p>
+</li>
+</ul>
+<p>umumnya <strong>dipersilakan kapan saja</strong> tanpa harus memenuhi masa cicilan tertentu.</p>
+
+<h3>Batasan Renovasi Besar</h3>
+<p>Untuk perubahan yang lebih signifikan, seperti penambahan lantai, perluasan ruang, atau mengubah tampilan struktur utama rumah, pemerintah memberlakukan <em>aturan waktu dan prosedur</em>:</p>
+
+<ol>
+ 	<li>
+<p><strong>Masa cicilan minimal 5 tahun:</strong><br />Renovasi besar biasanya hanya diizinkan setelah kredit berjalan <em>setidaknya 5 tahun</em>. Hal ini terkait penilaian bank terhadap kelancaran cicilan dan tingkat kemampuan finansial pemilik rumah.</p>
+</li>
+ 	<li>
+<p><strong>Izin bank penyalur wajib:</strong><br />Sebelum memulai renovasi besar, kamu wajib melapor dan dapat persetujuan dari bank (misalnya Bank BTN) atau lembaga kredit yang menyalurkan KPR subsidi.</p>
+</li>
+ 	<li>
+<p><strong>Tidak mengubah fasad atau struktur utama:</strong><br />Pemerintah melarang perubahan besar yang mengubah fasad rumah subsidi atau merombak struktur bangunan secara signifikan tanpa izin resmi.</p>
+</li>
+ 	<li>
+<p><strong>Rumah tetap berfungsi sebagai tempat tinggal:</strong><br />Rumah subsidi tidak boleh dialihfungsikan untuk kegiatan komersial, disewakan, atau dijadikan usaha, karena akan melanggar tujuan program subsidi.</p>
+</li>
+</ol>
+<h3>Batasan Luas &amp; Fungsi</h3>
+<p>Program subsidi memiliki ketentuan batasan luas tanah (misal 60–200 m²) dan bangunan (misal 21–36 m²). Renovasi tidak boleh meningkatkan ukuran bangunan melebihi batas yang ditetapkan, jadi perlu direncanakan matang agar sesuai aturan.</p>
+
+<h2>Tips Praktis Renovasi Rumah Subsidi</h2>
+<ul>
+ 	<li>
+<p><strong>Rencanakan dari jauh hari:</strong> Buat daftar kebutuhan renovasi dan sketsa sederhana sebelum menyentuh struktur rumah.</p>
+</li>
+ 	<li>
+<p><strong>Konsultasi dengan tenaga ahli:</strong> Arsitek atau kontraktor berpengalaman bisa membantu menilai apa yang boleh dilakukan tanpa melanggar aturan.</p>
+</li>
+ 	<li>
+<p><strong>Simpan bukti persetujuan resmi:</strong> Dokumen persetujuan bank atau instansi terkait penting untuk mencegah masalah di kemudian hari.</p>
+</li>
+</ul>
+<p>Renovasi rumah subsidi adalah hak kamu sebagai pemilik, tetapi juga tanggung jawab untuk memastikan semua perubahan tetap legal, efisien, dan sesuai dengan kebijakan pemerintah. Dengan memahami aturan ini, kamu bisa menata hunian lebih nyaman tanpa khawatir terhadap sanksi atau pencabutan manfaat subsidi.</p>
+<p><strong>Temukan tips material bangunan terbaik atau rekomendasi kontraktor terpercaya untuk renovasi rumah subsidi kamu di <em>yen bangunan</em> — solusi belanja material yang #AmanTerpercaya!</strong></p>',
+                'image_path' => '/blog/renovasi-rumah-subsidi-panduan-aturan-yang-wajib-kamu-tahu.jpg',
+                'published_at' => '2026-01-17 20:06:04',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => '10 Contoh Pagar Rumah Minimalis yang Fungsional dan Estetik',
+                'slug' => '2026/01/19/10-contoh-pagar-rumah-minimalis-yang-fungsional-dan-estetik',
+                'content' => '<p><img class="alignnone size-full wp-image-3052" src="/assets/blog/10-contoh-pagar-rumah-minimalis-yang-fungsional-dan-estetik.jpg" alt="Contoh Pagar Rumah Minimalis " width="950" height="550" /></p>
+<p>Memilih contoh pagar rumah minimalis bukan hanya soal tampilan luar rumah, tetapi juga tentang fungsi, keamanan, dan kesan pertama yang ditangkap tamu. Di tahun 2025, tren pagar rumah semakin mengarah ke desain simpel, material efisien, dan tampilan yang menyatu dengan fasad rumah.</p>
+<p>Artikel ini membahas 10 contoh pagar rumah minimalis yang relevan untuk berbagai tipe hunian, dari rumah subsidi hingga rumah modern perkotaan, lengkap dengan insight praktis agar kamu tidak salah pilih.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+<h2>10 Contoh Pagar Rumah Minimalis Paling Populer</h2>
+<h3>1. Pagar Besi Hollow Horizontal</h3>
+<p>Desain garis horizontal memberi kesan rumah lebih lebar dan modern. Cocok untuk rumah tipe 36–45.</p>
+
+<h3>2. Pagar Minimalis Warna Hitam Doff</h3>
+<p>Tampil tegas, elegan, dan tidak mudah terlihat kotor. Kombinasi ideal untuk rumah modern industrial.</p>
+
+<h3>3. Pagar Kombinasi Besi dan Kayu</h3>
+<p>Memberi kesan hangat tanpa meninggalkan nuansa minimalis. Banyak dipilih untuk rumah tropis modern.</p>
+
+<h3>4. Pagar Plat Besi Cutting Laser</h3>
+<p>Motif sederhana dengan potongan presisi, tampil estetik sekaligus menjaga privasi.</p>
+
+<h3>5. Pagar Minimalis Rendah (Low Fence)</h3>
+<p>Memberi batas visual tanpa membuat rumah terasa tertutup. Cocok untuk lingkungan perumahan.</p>
+
+<h3>6. Pagar Besi Vertikal Sederhana</h3>
+<p>Klasik tapi tetap relevan. Memberi kesan rumah lebih tinggi dan rapi.</p>
+
+<h3>7. Pagar Minimalis dengan Finishing Putih</h3>
+<p>Menyatu dengan rumah bernuansa clean dan Scandinavian. Terlihat ringan dan modern.</p>
+
+<h3>8. Pagar Beton Minimalis Kombinasi Besi</h3>
+<p>Solusi kuat dan tahan lama, cocok untuk kamu yang mengutamakan keamanan.</p>
+
+<h3>9. Pagar Sliding Minimalis</h3>
+<p>Praktis untuk lahan terbatas. Banyak digunakan pada rumah di area perkotaan.</p>
+
+<h3>10. Pagar Minimalis Industrial</h3>
+<p>Menggunakan material ekspos seperti besi dan semen, memberi karakter kuat namun tetap simpel.</p>
+
+<h2>Tips Memilih Pagar Rumah Minimalis yang Tepat</h2>
+<ul>
+ 	<li>
+<p>Sesuaikan tinggi pagar dengan kebutuhan privasi</p>
+</li>
+ 	<li>
+<p>Pilih material tahan cuaca dan minim perawatan</p>
+</li>
+ 	<li>
+<p>Pastikan desain selaras dengan fasad rumah</p>
+</li>
+ 	<li>
+<p>Pertimbangkan akses kendaraan dan sistem buka-tutup</p>
+</li>
+</ul>
+<p>Jika kamu sedang mencari material pagar berkualitas, Yen Bangunan menyediakan berbagai kebutuhan besi, beton, hingga aksesoris pagar yang cocok untuk desain minimalis modern.</p>
+
+<h2><span>Kesimpulan</span></h2>
+<p>Memilih contoh pagar rumah minimalis yang tepat akan meningkatkan nilai estetika sekaligus fungsi rumahmu. Dengan desain yang simpel, material berkualitas, dan perencanaan matang, pagar bukan hanya pelindung, tapi juga elemen visual yang memperkuat karakter hunian.</p>
+<p><strong>Butuh material pagar rumah minimalis yang kuat dan terpercaya?</strong><br /><strong>Kunjungi Yen Bangunan sekarang dan temukan solusi material terbaik untuk rumah impianmu.</strong></p>',
+                'image_path' => '/blog/10-contoh-pagar-rumah-minimalis-yang-fungsional-dan-estetik.jpg',
+                'published_at' => '2026-01-19 19:24:24',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Cara Memilih Lem Kuat untuk Keramik, Kayu, dan Beton agar Tahan Lama',
+                'slug' => '2026/01/28/cara-memilih-lem-kuat-untuk-keramik-kayu-dan-beton-agar-tahan-lama',
+                'content' => '<h2><img class="alignnone size-full wp-image-3057" src="/assets/blog/cara-memilih-lem-kuat-untuk-keramik-kayu-dan-beton-agar-tahan-lama.jpg" alt="" width="950" height="550" /></h2>
+<h2>Cara Memilih Lem Kuat untuk Keramik, Kayu, dan Beton yang Tepat</h2>
+<p>Dalam dunia konstruksi dan renovasi rumah, <strong>lem kuat untuk keramik kayu beton</strong> sering dianggap sepele, padahal perannya sangat krusial. Salah memilih lem bisa berujung pada keramik lepas, kayu mengembang, atau beton retak dalam waktu singkat. Karena itu, penting memahami jenis lem yang sesuai dengan karakter masing-masing material.</p>
+<p>Artikel ini membahas cara memilih lem yang tepat secara praktis, tanpa istilah teknis berlebihan, agar hasil kerja lebih rapi, kuat, dan tahan lama.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+<h2>Kenali Karakter Material Sebelum Memilih Lem</h2>
+<p>Setiap material memiliki sifat berbeda, sehingga tidak bisa disamakan satu jenis lem untuk semuanya.</p>
+<p><strong>Keramik</strong> memiliki permukaan keras dan minim pori. Lem yang cocok adalah lem dengan daya rekat tinggi dan fleksibilitas baik agar tidak mudah retak akibat perubahan suhu. Lem instan biasa sering gagal karena tidak mampu menahan beban jangka panjang.</p>
+<p><strong>Kayu</strong> bersifat menyerap dan bisa memuai. Untuk material ini, dibutuhkan lem yang elastis dan mampu mengikuti pergerakan kayu tanpa mengurangi kekuatan rekat. Lem kayu berkualitas biasanya tetap kuat meski terkena perubahan kelembapan.</p>
+<p><strong>Beton</strong> memiliki pori besar dan permukaan kasar. Lem untuk beton harus memiliki daya ikat kuat serta mampu mengisi celah mikro agar hasil rekat benar-benar menyatu, bukan sekadar menempel di permukaan.</p>
+
+<h2>Pilih Lem Multifungsi atau Spesifik?</h2>
+<p>Salah satu tren 2025 adalah meningkatnya penggunaan <strong>lem multifungsi untuk keramik kayu beton</strong>. Lem jenis ini cocok untuk proyek rumah tangga atau renovasi ringan karena lebih praktis dan efisien.</p>
+<p>Namun, untuk pekerjaan dengan beban berat atau area lembap seperti kamar mandi dan dapur, lem spesifik tetap lebih disarankan. Prinsipnya sederhana:</p>
+
+<ul>
+ 	<li>
+<p>Proyek ringan - lem multifungsi berkualitas</p>
+</li>
+ 	<li>
+<p>Proyek struktural atau area ekstrem - lem khusus sesuai material</p>
+</li>
+</ul>
+<p>Di <strong>Yen Bangunan</strong>, tersedia berbagai pilihan lem kuat yang sudah teruji untuk kebutuhan rumahan hingga proyek bangunan skala kecil.</p>
+
+<h2>Perhatikan Faktor Penting Ini Sebelum Membeli Lem</h2>
+<p>Agar tidak salah pilih, perhatikan beberapa hal berikut:</p>
+
+<ul>
+ 	<li>
+<p><strong>Daya rekat dan ketahanan jangka panjang</strong></p>
+</li>
+ 	<li>
+<p><strong>Waktu kering (drying time)</strong> yang sesuai kebutuhan kerja</p>
+</li>
+ 	<li>
+<p><strong>Ketahanan terhadap air dan suhu</strong></p>
+</li>
+ 	<li>
+<p><strong>Kemudahan aplikasi</strong>, terutama untuk pemula</p>
+</li>
+</ul>
+<p>Lem berkualitas biasanya tidak hanya kuat di awal, tetapi tetap stabil setelah bertahun-tahun pemakaian.</p>
+
+<h2>Kesalahan Umum yang Sering Terjadi</h2>
+<p>Banyak orang tergoda memilih lem termurah tanpa membaca spesifikasi. Akibatnya, hasil pekerjaan harus diulang dan justru lebih boros biaya. Ingat, lem adalah investasi kecil yang menentukan umur hasil kerja.</p>
+
+<h2>Penutup: Lem yang Tepat, Hasil Kerja Lebih Tenang</h2>
+<p>Memilih <strong>lem kuat untuk keramik kayu beton</strong> bukan soal mahal atau murah, tapi soal kecocokan. Dengan memahami karakter material dan kebutuhan proyek, kamu bisa mendapatkan hasil yang lebih rapi, kokoh, dan tahan lama.</p>
+<p>Jika kamu sedang mencari lem bangunan berkualitas dan terpercaya, <strong>Yen Bangunan</strong> siap menjadi solusi untuk kebutuhan renovasi dan konstruksi kamu.</p>',
+                'image_path' => '/blog/cara-memilih-lem-kuat-untuk-keramik-kayu-dan-beton-agar-tahan-lama.jpg',
+                'published_at' => '2026-01-28 17:17:38',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Apa Itu Angkur? Fungsi, Jenis, dan Contoh Penggunaannya di Proyek Bangunan',
+                'slug' => '2026/01/29/apa-itu-angkur-fungsi-jenis-dan-contoh-penggunaannya-di-proyek-bangunan',
+                'content' => '<p><img class="alignnone size-full wp-image-3063" src="/assets/blog/apa-itu-angkur-fungsi-jenis-dan-contoh-penggunaannya-di-proyek-bangunan.jpg" alt="Angkur" width="950" height="550" /></p>
+<p>Dalam dunia konstruksi, kekuatan struktur tidak hanya ditentukan oleh beton atau baja utama, tetapi juga oleh komponen kecil yang sering luput dari perhatian, salah satunya adalah angkur. Meski ukurannya relatif kecil, peran angkur sangat krusial untuk memastikan sambungan antar elemen bangunan tetap kokoh, stabil, dan aman dalam jangka panjang.</p>
+<p>Artikel ini akan membahas secara ringkas namun komprehensif mengenai apa itu angkur, fungsinya, jenis-jenis angkur yang umum digunakan, serta contoh penerapannya di proyek bangunan, khususnya untuk kebutuhan konstruksi skala kecil hingga menengah.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+<h2>Apa Itu Angkur?</h2>
+<img class="alignnone size-full wp-image-3062" src="/assets/blog/64863637-0f40-4002-a200-64e585eeea2a.jpgtplv-aphluv4xwc-resize-jpeg_700_0.jpg" alt="angkut" width="700" height="700" />
+<p>Angkur adalah elemen pengikat (anchoring system) yang digunakan untuk menanam dan mengikat satu elemen struktur ke elemen lainnya, umumnya ke beton, dinding, atau pondasi. Angkur bekerja dengan cara menahan gaya tarik, geser, atau kombinasi keduanya agar struktur tidak bergeser atau terlepas.</p>
+<p>Dalam praktiknya, angkur sering digunakan untuk mengikat kolom baja ke beton, memasang railing, kanopi, rangka atap, hingga mesin atau peralatan berat ke lantai bangunan.</p>
+
+<h2>Fungsi Angkur dalam Proyek Bangunan</h2>
+<p>Fungsi utama angkur adalah memberikan kekuatan sambungan dan meningkatkan stabilitas struktur. Beberapa fungsi penting lainnya antara lain:</p>
+
+<ul>
+ 	<li>
+<p>Menahan beban tarik dan geser pada sambungan struktur</p>
+</li>
+ 	<li>
+<p>Mencegah pergeseran akibat getaran, angin, atau beban dinamis</p>
+</li>
+ 	<li>
+<p>Menjamin posisi elemen tetap presisi sesuai desain</p>
+</li>
+ 	<li>
+<p>Meningkatkan faktor keamanan bangunan</p>
+</li>
+</ul>
+<p>Karena fungsinya yang vital, pemilihan jenis angkur tidak bisa sembarangan dan harus disesuaikan dengan kebutuhan proyek.</p>
+
+<h2>Jenis-Jenis Angkur yang Umum Digunakan</h2>
+<p>Secara umum, angkur dibedakan berdasarkan metode pemasangan dan materialnya. Berikut beberapa jenis angkur yang paling sering digunakan di lapangan:</p>
+
+<ol>
+ 	<li>
+<p>Angkur Baut (Anchor Bolt)<br />Digunakan untuk mengikat struktur baja ke beton, biasanya dipasang saat pengecoran.</p>
+</li>
+ 	<li>
+<p>Angkur Tanam (Chemical Anchor)<br />Menggunakan bahan kimia (epoxy atau resin) untuk daya rekat tinggi, cocok untuk retrofit atau renovasi.</p>
+</li>
+ 	<li>
+<p>Angkur Mekanis (Expansion Anchor)<br />Bekerja dengan sistem mengembang saat dikencangkan, praktis dan cepat dipasang.</p>
+</li>
+ 	<li>
+<p>Angkur Plat atau Angkur Besi Polos<br />Umum digunakan pada konstruksi sederhana atau proyek rumah tinggal.</p>
+</li>
+</ol>
+<p>Pemilihan jenis angkur perlu mempertimbangkan beban, kondisi lingkungan, serta jenis material yang diikat.</p>
+
+<h2>Contoh Penggunaan Angkur di Proyek Bangunan</h2>
+<p>Dalam proyek bangunan sehari-hari, angkur digunakan pada berbagai aplikasi, seperti:</p>
+
+<ul>
+ 	<li>
+<p>Pemasangan kolom baja pada pondasi beton</p>
+</li>
+ 	<li>
+<p>Instalasi kanopi dan rangka baja ringan</p>
+</li>
+ 	<li>
+<p>Pemasangan pagar, railing tangga, dan handrail</p>
+</li>
+ 	<li>
+<p>Pengikatan mesin atau peralatan industri ke lantai</p>
+</li>
+</ul>
+<p>Untuk hasil optimal, pastikan angkur dipasang sesuai standar teknis dan menggunakan produk berkualitas. Yen Bangunan menyediakan berbagai kebutuhan material bangunan, termasuk angkur dengan spesifikasi yang sesuai untuk proyek rumah hingga komersial ringan.</p>',
+                'image_path' => '/blog/apa-itu-angkur-fungsi-jenis-dan-contoh-penggunaannya-di-proyek-bangunan.jpg',
+                'published_at' => '2026-01-29 15:25:30',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => '5 Jenis-Jenis Angkur yang Paling Sering Digunakan di Proyek Konstruksi',
+                'slug' => '2026/02/03/5-jenis-jenis-angkur-yang-paling-sering-digunakan-di-proyek-konstruksi',
+                'content' => '<img class="alignnone size-full wp-image-3089" src="/assets/blog/5-jenis-jenis-angkur-yang-paling-sering-digunakan-di-proyek-konstruksi.jpg" alt="Jenis-Jenis Angkur" width="950" height="550" />
+
+Dalam dunia konstruksi, angkur adalah salah satu elemen kecil tapi sangat krusial. Tanpa angkur yang tepat, struktur bangunan rentan terhadap pergeseran, kerusakan sambungan, atau bahkan gagal menahan beban desain. Angkur (atau <em>anchor</em>) secara umum adalah fastener yang mengikat struktur seperti baja, mesin, atau komponen bangunan ke beton atau substrat lainnya dengan kekuatan optimal.
+
+Artikel ini membahas jenis-jenis angkur yang sering digunakan di proyek konstruksi, apa fungsinya, dan bagaimana memilihnya sesuai kebutuhan proyek, semua disampaikan secara ringkas, tapi tetap informatif dan relevan untuk kontraktor, pekerja lapangan, ataupun pemilik proyek yang ingin paham secara teknis.
+
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>1. Mechanical Anchor - Angkur Mekanis (Expansion &amp; Sleeve)</h2>
+<img class="alignnone wp-image-3092" src="/assets/blog/chemical-anchor.jpeg" alt="" width="485" height="386" />
+
+Mechanical anchor adalah jenis angkur yang bekerja dengan prinsip ekspansi mekanis di dalam lubang yang sudah dibor. Saat baut dikencangkan, bagian ujungnya mengembang dan mencengkeram dinding beton atau batu.
+
+<strong>Varian yang umum:</strong>
+<ul>
+ 	<li><strong>Wedge Anchor (Baut Ekspansi):</strong> pilihan utama untuk beban berat seperti kolom atau mesin berat.</li>
+ 	<li><strong>Sleeve Anchor / Dynabolt:</strong> fleksibel digunakan pada beton, bata, atau blok, cocok untuk rak, bracket, atau pagar.</li>
+</ul>
+<strong>Kapan digunakan:</strong> ideal untuk aplikasi struktural menengah hingga berat, pemasangan setelah beton mengeras.
+<h2>2. Chemical Anchor - Angkur Kimia</h2>
+<img class="alignnone wp-image-3093" src="/assets/blog/mechanical-anchor.webp" alt="Mechanical Anchor" width="401" height="401" />
+
+Chemical anchor memanfaatkan resin kimia (epoksi, poliester, atau vinilester) untuk merekatkan batang angkur ke dalam lubang bor. Teknik ini menghasilkan sambungan yang sangat kuat tanpa teks ekspansi mekanis.
+
+<strong>Keunggulan:</strong>
+<ul>
+ 	<li>Kekuatan tarik tinggi, cocok untuk beban berat atau lingkungan getar.</li>
+ 	<li>Efektif pada beton retak atau kondisi substrat yang kurang ideal.</li>
+</ul>
+<strong>Aplikasi umum:</strong> pemasangan sambungan struktural, penguat sambungan kolom atau balok, dukungan peralatan berat.
+<h2>3. Anchor Bolt - Baut Angkur</h2>
+<img class="alignnone wp-image-3091" src="/assets/blog/anchor-bolt.jpg" alt="Anchor Bolt" width="430" height="430" />
+
+Baut angkur (<em>anchor bolt</em>) sering dipasang untuk menyambungkan elemen struktur dengan pondasi beton. Tipe ini mencakup berbagai bentuk dan fungsi, seperti:
+<ul>
+ 	<li><strong>L-Bolt:</strong> bentuk siku untuk penahan sambungan pondasi ke kolom.</li>
+ 	<li><strong>J-Bolt:</strong> cocok untuk pondasi tiang dan aplikasi struktur baja.</li>
+ 	<li><strong>Straight Anchor + Plate:</strong> untuk sambungan presisi tinggi.</li>
+</ul>
+<strong>Kapan digunakan:</strong> proyek yang memerlukan sambungan permanen antara struktur dan pondasi, seperti gedung bertingkat atau bangunan industri.
+<h2>4. Concrete Screw Anchors</h2>
+<img class="alignnone wp-image-3095" src="/assets/blog/concrete-anchors.jpg" alt="Concrete Anchors" width="405" height="405" />
+
+Jika Anda butuh solusi yang cepat dan bisa dipasang dengan sedikit alat, <strong>concrete screw anchors</strong> adalah pilihan praktis. Mereka dirancang untuk membuat ulir sendiri saat dikencangkan di permukaan beton, bata, atau blok.
+
+Cocok untuk pemasangan ringan hingga menengah seperti instalasi railing, rangka pintu, atau sistem HVAC.
+<h2>5. Toggle &amp; Hollow Wall Anchors - Untuk Material Berongga</h2>
+<img class="alignnone wp-image-3090" src="/assets/blog/toggle-hollow-wall-anchors.webp" alt="" width="380" height="380" />
+
+Jenis angkur ini ideal jika aplikasi Anda melekat pada material berongga seperti bata ringan atau drywall:
+<ul>
+ 	<li><strong>Toggle Anchor:</strong> sayap membuka di belakang material untuk grip kuat.</li>
+ 	<li><strong>Hollow Wall Anchor:</strong> bagus untuk beban medium di dinding tipis.</li>
+</ul>
+<strong>Kapan digunakan:</strong> pemasangan non-struktur atau dekoratif, seperti rak, lampu, atau signage.
+<h2>Pilih Angkur yang Tepat untuk Proyekmu</h2>
+Memilih jenis angkur bukan sekadar soal bahan atau ukuran, tetapi soal <strong>beban desain, substrat bangunan, dan metode pemasangan</strong>. Misalnya, proyek gedung bertingkat akan sangat bergantung pada mechanical dan chemical anchors untuk sambungan struktural, sedangkan pekerjaan interior bisa memakai concrete screws.
+
+<strong>Tips pro:</strong>
+<ul>
+ 	<li>Selalu perhatikan <strong>spesifikasi teknis</strong> dari produsen (mis. daya tarik, diameter, panjang).</li>
+ 	<li>Pastikan <strong>alat bor</strong> dan <strong>torsinya sesuai standar</strong> untuk hasil pemasangan yang aman dan efektif.</li>
+</ul>
+<h2>Kesimpulan</h2>
+Untuk kontraktor dan pelaku proyek, memahami <strong>jenis-jenis angkur</strong> adalah langkah awal menuju struktur yang kuat, aman, dan tahan lama. Mulai dari mechanical anchor yang serba guna hingga chemical anchor yang mampu menahan beban berat, setiap tipe punya perannya masing-masing dalam konstruksi modern.',
+                'image_path' => '/blog/5-jenis-jenis-angkur-yang-paling-sering-digunakan-di-proyek-konstruksi.jpg',
+                'published_at' => '2026-02-03 16:09:38',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Jual Kayu Cikarang untuk Proyek Bangunan &amp; Renovasi - Hubungi 081315147952',
+                'slug' => '2026/02/04/jual-kayu-cikarang-untuk-proyek-bangunan-renovasi-berkualitas',
+                'content' => '<img class="alignnone size-full wp-image-3101" src="/assets/blog/jual-kayu-cikarang-untuk-proyek-bangunan-renovasi-berkualitas.jpg" alt="Jual Kayu Cikarang" width="950" height="550" />
+
+Memilih supplier kayu bangunan di Cikarang memberikan banyak keuntungan praktis. Pertama, waktu pengiriman lebih cepat sehingga progres proyek tidak terhambat. Kedua, Anda bisa mendapatkan harga yang lebih kompetitif karena biaya distribusi lebih efisien.
+
+Di Yen Bangunan, kami menyediakan berbagai jenis kayu yang umum digunakan di proyek konstruksi dan renovasi, seperti kayu untuk rangka, bekisting, kusen, hingga kebutuhan finishing. Semua kayu diseleksi dengan standar mutu yang jelas, tidak asal murah, tapi layak pakai dan tahan di lapangan.
+
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2><strong>Jenis Kayu yang Umum Digunakan untuk Proyek Bangunan</strong></h2>
+<img class="alignnone size-full wp-image-3104" src="/assets/blog/gambar-karakter-kayu-1.jpg" alt="" width="900" height="599" />
+
+Sebagai penyedia <strong>jual kayu Cikarang</strong>, Yen Bangunan menyediakan berbagai jenis kayu yang sering dipakai di lapangan, seperti:
+<ul>
+ 	<li><strong>Kayu Kamper &amp; Meranti</strong> untuk kusen, pintu, dan rangka interior</li>
+ 	<li><strong>Kayu Sengon &amp; Albasia</strong> untuk bekisting dan kebutuhan sementara</li>
+ 	<li><strong>Kayu Keras pilihan</strong> untuk struktur yang membutuhkan daya tahan lebih</li>
+</ul>
+Setiap jenis kayu memiliki karakteristik berbeda—mulai dari kekuatan, ketahanan terhadap cuaca, hingga kemudahan finishing. Pemilihan yang tepat akan sangat menentukan hasil akhir bangunan.
+<h2><strong>Tips Memilih Kayu yang Tepat untuk Proyek Anda</strong></h2>
+Sebelum membeli dari layanan jual kayu Cikarang, pastikan Anda:
+<ul>
+ 	<li>Menentukan fungsi kayu (struktural atau non-struktural)</li>
+ 	<li>Memperhatikan kadar air kayu agar tidak mudah melengkung</li>
+ 	<li>Memilih ukuran yang presisi untuk menghindari pemborosan</li>
+</ul>
+Jika ragu, supplier yang baik akan membantu Anda mengambil keputusan terbaik, bukan sekadar menjual stok.
+<h2>Cocok untuk Kontraktor, Developer, hingga Pemilik Rumah</h2>
+Baik Anda kontraktor yang mengerjakan beberapa proyek sekaligus, developer skala menengah, maupun pemilik rumah yang sedang renovasi, kebutuhan Anda sama: material yang bisa diandalkan. Dengan layanan supplier kayu Cikarang terpercaya, Anda tidak perlu khawatir soal ketersediaan stok dan kualitas yang tidak konsisten.
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/">Yen Bangunan</a></span> berkomitmen menjadi partner material, bukan sekadar penjual. Artinya, kami fokus pada keberlanjutan kerja sama, bukan transaksi satu kali.',
+                'image_path' => '/blog/jual-kayu-cikarang-untuk-proyek-bangunan-renovasi-berkualitas.jpg',
+                'published_at' => '2026-02-04 15:46:08',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Toko Baja Cikarang Terbaik - Yen Bangunan 081315147952',
+                'slug' => '2026/02/05/toko-baja-cikarang-terbaik-yen-bangunan-081315147952',
+                'content' => '<h2><img class="alignnone size-full wp-image-3111" src="/assets/blog/toko-baja-cikarang-terbaik-yen-bangunan-081315147952-1.jpg" alt="" width="950" height="550" /></h2>
+<h2>Yen Bangunan: Toko Baja Cikarang yang Fokus Kualitas &amp; Kepercayaan</h2>
+Sebagai <strong>toko baja Cikarang</strong>, Yen Bangunan menyediakan berbagai kebutuhan baja untuk proyek kecil hingga besar. Mulai dari baja struktural hingga material pendukung, semuanya dipilih dengan standar yang jelas dan transparan.
+
+Keunggulan Yen Bangunan tidak hanya pada produknya, tetapi juga pada pendekatan layanannya. Tim memahami bahwa setiap proyek punya kebutuhan berbeda—baik dari sisi spesifikasi, anggaran, maupun waktu pengerjaan. Karena itu, pembeli tidak hanya “dilayani”, tetapi dibantu mengambil keputusan yang tepat.
+
+Beberapa alasan mengapa banyak pelanggan kembali ke Yen Bangunan:
+<ul>
+ 	<li>Produk baja berkualitas dan teruji</li>
+ 	<li>Harga kompetitif dan masuk akal</li>
+ 	<li>Respon cepat dan komunikasi jelas</li>
+ 	<li>Cocok untuk proyek rumahan maupun komersial</li>
+</ul>
+Bagi Anda yang mencari <strong>toko baja ringan di Cikarang</strong>, <strong>supplier baja konstruksi Cikarang</strong>, atau <strong>toko material baja terpercaya di Cikarang</strong>, Yen Bangunan menjadi opsi yang relevan dan realistis.
+
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>Cocok untuk Kontraktor, Developer, hingga Proyek Pribadi</h2>
+Tidak semua pembeli baja adalah kontraktor besar. Banyak pemilik rumah, UMKM, dan pelaku usaha yang juga membutuhkan baja dengan spesifikasi tepat namun tetap efisien secara biaya.
+
+Yen Bangunan melayani:
+<ul>
+ 	<li>Proyek rumah tinggal</li>
+ 	<li>Gudang dan workshop</li>
+ 	<li>Bangunan usaha dan ruko</li>
+ 	<li>Proyek industri skala menengah</li>
+</ul>
+Pendekatan ini membuat Yen Bangunan dikenal sebagai toko baja yang fleksibel dan mudah diajak kerja sama.
+<h2>Lokasi Strategis &amp; Mudah Dihubungi</h2>
+Sebagai toko baja di area Cikarang, akses yang mudah menjadi nilai tambah. Konsultasi, cek ketersediaan stok, hingga pemesanan bisa dilakukan dengan cepat tanpa proses berbelit.
+
+<strong>Kontak Yen Bangunan: 081315147952</strong>',
+                'image_path' => '/blog/toko-baja-cikarang-terbaik-yen-bangunan-081315147952-1.jpg',
+                'published_at' => '2026-02-05 11:21:42',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => '10 Referensi Renovasi Rumah Subsidi Tampak Depan yang Simpel &amp; Estetik',
+                'slug' => '2026/02/06/10-referensi-renovasi-rumah-subsidi-tampak-depan-yang-simpel-estetik',
+                'content' => '<p><img class="alignnone size-full wp-image-3122" src="/assets/blog/10-referensi-renovasi-rumah-subsidi-tampak-depan-yang-simpel-estetik.jpg" alt="Referensi Renovasi Rumah Subsidi" width="950" height="550" /></p>
+<p>Rumah subsidi sering dianggap sulit dikembangkan dari sisi tampilan. Padahal, dengan perencanaan yang tepat, renovasi rumah subsidi tampak depan bisa membuat hunian terlihat jauh lebih modern tanpa biaya berlebihan. Artikel ini ditujukan untuk pemilik rumah subsidi, pasangan muda, atau first-time homeowner yang ingin rumahnya tampil lebih rapi, nyaman, dan bernilai.</p>
+<p>Berikut 10 referensi renovasi yang realistis, aplikatif, dan cocok untuk rumah subsidi di Indonesia.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>1. Fasade Minimalis dengan Permainan Warna Netral</h2>
+<img class="alignnone size-full wp-image-3128" src="/assets/blog/fasade-minimalis-dengan-permainan-warna-netral.jpg" alt="" width="950" height="550" />
+<p>Mengganti warna cat depan rumah adalah langkah paling sederhana. Kombinasi putih, abu-abu, dan krem memberi kesan luas dan bersih. Gunakan cat eksterior berkualitas agar awet dan tidak cepat kusam.</p>
+
+<h2>2. Kanopi Sederhana untuk Carport</h2>
+<img class="alignnone size-full wp-image-3127" src="/assets/blog/kanopi-sederhana-untuk-carport.jpg" alt="" width="950" height="550" />
+<p>Kanopi baja ringan atau hollow minimalis tidak hanya melindungi kendaraan, tapi juga mempertegas tampilan depan rumah. Pilih desain lurus tanpa ornamen berlebih agar tetap hemat biaya.</p>
+
+<h2>3. Aksen Batu Alam atau Roster</h2>
+<img class="alignnone size-full wp-image-3126" src="/assets/blog/aksen-batu-alam-atau-roster.jpg" alt="Aksen Batu Alam atau Roster" width="950" height="550" />
+<p>Tambahan batu alam di satu sisi dinding depan bisa langsung meningkatkan estetika. Jika ingin lebih hemat, roster beton juga bisa jadi alternatif yang fungsional sekaligus dekoratif.</p>
+
+<h2>4. Pintu Utama Lebih Modern</h2>
+<p>Mengganti pintu standar dengan model panel minimalis atau kombinasi kayu dan kaca buram memberi kesan rumah yang “naik kelas” tanpa renovasi besar.</p>
+
+<h2>5. Jendela Lebar untuk Kesan Terbuka</h2>
+<p>Jika struktur memungkinkan, memperbesar bukaan jendela akan membuat fasade rumah subsidi terlihat lebih lega dan terang, sekaligus meningkatkan sirkulasi udara.</p>
+
+<h2>6. Teras Kecil tapi Fungsional</h2>
+<p>Cukup dengan lantai keramik outdoor dan satu kursi santai, teras kecil sudah cukup untuk mempercantik tampak depan sekaligus jadi area transisi yang nyaman.</p>
+
+<h2>7. Lis Dinding dan Garis Tegas</h2>
+<p>Permainan lis atau garis horizontal/vertikal di dinding depan memberi karakter modern tanpa biaya besar. Teknik ini sering dipakai pada renovasi rumah subsidi minimalis.</p>
+
+<h2>8. Pagar Minimalis Transparan</h2>
+<p>Pagar besi hollow dengan jarak reng renggang membuat rumah terlihat lebih terbuka dan tidak “tertutup”. Cocok untuk lahan rumah subsidi yang terbatas.</p>
+
+<h2>9. Taman Depan Mini</h2>
+<p>Tidak perlu luas, cukup pot tanaman, rumput gajah mini, atau vertical garden sederhana. Elemen hijau sangat membantu menghidupkan tampilan depan rumah.</p>
+
+<h2>10. Pencahayaan Eksterior yang Tepat</h2>
+<p>Lampu dinding warm white di teras atau pagar membuat rumah terlihat lebih hangat dan aman di malam hari. Investasi kecil, efeknya besar.</p>
+
+<h2>Tips Penting Sebelum Renovasi Rumah Subsidi</h2>
+<p>Pastikan renovasi tidak melanggar aturan developer atau IMB setempat. Fokuskan anggaran pada elemen visual utama: cat, pintu, kanopi, dan pagar. Untuk material bangunan yang konsisten kualitas dan harganya, Anda bisa menyesuaikan kebutuhan renovasi melalui <strong>Yen Bangunan</strong> sebagai referensi penyedia material bangunan yang praktis untuk renovasi bertahap.</p>',
+                'image_path' => '/blog/10-referensi-renovasi-rumah-subsidi-tampak-depan-yang-simpel-estetik.jpg',
+                'published_at' => '2026-02-06 18:03:29',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'SEWA atau BELI RUMAH? Mana Pilihan Paling Masuk Akal untuk Kondisi Kamu Saat Ini?',
+                'slug' => '2026/02/09/sewa-atau-beli-rumah-mana-pilihan-paling-masuk-akal-untuk-kondisi-kamu-saat-ini',
+                'content' => '<p><img class="alignnone size-full wp-image-3134" src="/assets/blog/sewa-atau-beli-rumah-mana-pilihan-paling-masuk-akal-untuk-kondisi-kamu-saat-ini.jpg" alt="SEWA atau BELI RUMAH " width="950" height="550" /></p>
+<p>Pertanyaan <strong>“lebih baik sewa atau beli rumah?”</strong> hampir selalu muncul di fase hidup dewasa awal—saat karier mulai stabil, tabungan terkumpul, dan rencana jangka panjang mulai dipikirkan. Sayangnya, jawaban atas pertanyaan ini tidak pernah hitam-putih. Semuanya sangat bergantung pada kondisi finansial, gaya hidup, dan tujuan hidup masing-masing orang.</p>
+<p>Artikel ini akan membahas <strong>sewa atau beli rumah</strong> dari perspektif yang realistis, bukan sekadar idealis, agar kamu bisa mengambil keputusan yang lebih rasional dan minim penyesalan.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>Memahami Perbedaan Sewa dan Beli Rumah Secara Objektif</h2>
+<p>Sewa rumah sering dianggap “buang uang” karena tidak menghasilkan aset. Namun di sisi lain, sewa memberi fleksibilitas tinggi, baik dari segi lokasi, pekerjaan, maupun gaya hidup. Kamu tidak perlu memikirkan pajak, renovasi besar, atau cicilan jangka panjang.</p>
+<p>Sementara itu, membeli rumah memberikan rasa aman dan kepemilikan aset jangka panjang. Rumah bisa menjadi tempat tinggal sekaligus investasi. Namun konsekuensinya jelas: komitmen finansial besar, biaya perawatan, dan keterikatan lokasi.</p>
+
+<h2>Kapan Sewa Rumah Lebih Masuk Akal?</h2>
+<p>Sewa rumah lebih ideal jika kamu:</p>
+
+<ul>
+ 	<li>
+<p>Masih sering berpindah kota atau lokasi kerja</p>
+</li>
+ 	<li>
+<p>Belum memiliki dana darurat dan DP yang aman</p>
+</li>
+ 	<li>
+<p>Ingin fokus meningkatkan penghasilan terlebih dahulu</p>
+</li>
+ 	<li>
+<p>Belum yakin akan menetap minimal 5–10 tahun di satu area</p>
+</li>
+</ul>
+<p>Dalam kondisi ini, menyewa memberi ruang bernapas secara finansial. Selisih dana yang tidak digunakan untuk cicilan bisa dialokasikan ke investasi, pengembangan skill, atau bisnis.</p>
+
+<h2>Kapan Beli Rumah Jadi Keputusan Tepat?</h2>
+<p>Membeli rumah lebih relevan jika:</p>
+
+<ul>
+ 	<li>
+<p>Penghasilan stabil dan rasio cicilan sehat</p>
+</li>
+ 	<li>
+<p>Sudah punya rencana menetap jangka panjang</p>
+</li>
+ 	<li>
+<p>Ingin membangun rumah sesuai kebutuhan keluarga</p>
+</li>
+ 	<li>
+<p>Siap dengan biaya tambahan seperti renovasi dan perawatan</p>
+</li>
+</ul>
+<p>Di fase ini, rumah bukan hanya tempat tinggal, tapi juga fondasi hidup. Banyak pemilik rumah mulai melakukan penyesuaian desain, renovasi bertahap, atau peningkatan kualitas bangunan agar rumah lebih nyaman dan bernilai.</p>
+<p>Di sinilah pemilihan material bangunan berkualitas menjadi krusial. Menggunakan bahan bangunan yang tepat sejak awal—seperti yang disediakan oleh <strong>Yen Bangunan, </strong>bisa menekan biaya perbaikan di masa depan dan menjaga nilai rumah tetap optimal.</p>
+
+<h2>Sewa atau Beli Rumah: Jangan Lupakan Faktor Emosional</h2>
+<p>Keputusan ini bukan hanya soal angka. Ada faktor emosional yang sering diabaikan: rasa aman, kenyamanan, dan kebebasan mengatur ruang hidup. Bagi sebagian orang, memiliki rumah sendiri memberi ketenangan mental. Bagi yang lain, fleksibilitas justru lebih menenangkan.</p>
+<p>Tidak ada pilihan yang lebih “dewasa” dari yang lain, yang ada hanyalah pilihan yang paling sesuai dengan fase hidupmu saat ini.</p>
+
+<h2>Kesimpulan: Pilihan Terbaik adalah yang Paling Relevan</h2>
+<p>Jika ditanya <strong>sewa atau beli rumah</strong>, jawaban paling jujurnya adalah: <em>tergantung</em>. Evaluasi kondisi keuangan, rencana 5–10 tahun ke depan, dan kesiapan mental. Jangan memaksakan beli rumah hanya karena tekanan sosial, dan jangan ragu menyewa jika itu strategi terbaik untuk berkembang.</p>',
+                'image_path' => '/blog/sewa-atau-beli-rumah-mana-pilihan-paling-masuk-akal-untuk-kondisi-kamu-saat-ini.jpg',
+                'published_at' => '2026-02-09 17:26:32',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Apa Itu Perumahan Subsidi? Ini Pengertian, Syarat, dan Kelebihannya',
+                'slug' => '2026/02/10/apa-itu-perumahan-subsidi-ini-pengertian-syarat-dan-kelebihannya',
+                'content' => '<p><img class="alignnone size-full wp-image-3151" src="/assets/blog/apa-itu-perumahan-subsidi-ini-pengertian-syarat-dan-kelebihannya.jpg" alt="Apa Itu Perumahan Subsidi" width="950" height="550" /></p>
+<p>Perumahan subsidi adalah program hunian yang disediakan pemerintah untuk membantu masyarakat berpenghasilan rendah (MBR) memiliki rumah layak dengan harga terjangkau. Program ini hadir sebagai jawaban atas tingginya harga properti yang semakin sulit dijangkau, terutama bagi pembeli rumah pertama.</p>
+<p>Di Indonesia, perumahan subsidi biasanya dikaitkan dengan skema Kredit Pemilikan Rumah (KPR) bersubsidi, di mana pemerintah memberikan bantuan berupa bunga rendah, uang muka ringan, hingga tenor panjang. Namun, di balik harganya yang ekonomis, masih banyak hal penting yang perlu dipahami sebelum memutuskan membeli rumah subsidi.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>Apa yang Dimaksud Perumahan Subsidi?</h2>
+<p>Secara sederhana, perumahan subsidi adalah rumah yang dibangun oleh pengembang dengan harga dan spesifikasi tertentu, lalu dijual kepada MBR dengan dukungan pembiayaan dari pemerintah. Harga rumah subsidi dibatasi oleh regulasi dan berbeda di setiap wilayah, menyesuaikan daya beli dan kondisi ekonomi daerah.</p>
+<p>Biasanya, rumah subsidi memiliki luas bangunan dan tanah yang minimalis. Meski begitu, fungsinya tetap sama: sebagai hunian utama yang layak, aman, dan legal secara hukum.</p>
+
+<h2>Syarat dan Ketentuan Rumah Subsidi</h2>
+<p>Tidak semua orang bisa membeli rumah subsidi. Ada beberapa syarat utama yang umumnya berlaku, seperti:</p>
+
+<ul>
+ 	<li>
+<p>Warga Negara Indonesia (WNI) dan berusia minimal 21 tahun</p>
+</li>
+ 	<li>
+<p>Belum pernah memiliki rumah</p>
+</li>
+ 	<li>
+<p>Belum pernah menerima subsidi perumahan dari pemerintah</p>
+</li>
+ 	<li>
+<p>Memiliki penghasilan maksimal sesuai ketentuan wilayah</p>
+</li>
+ 	<li>
+<p>Digunakan sebagai rumah tinggal, bukan untuk disewakan</p>
+</li>
+</ul>
+<p>Memahami syarat ini penting agar proses pengajuan KPR subsidi berjalan lancar dan tidak terhambat di tengah jalan.</p>
+
+<h2>Kelebihan dan Kekurangan Perumahan Subsidi</h2>
+<p>Salah satu kelebihan utama perumahan subsidi adalah harganya yang jauh lebih terjangkau dibanding rumah komersial. Cicilan relatif ringan, bunga tetap, dan tenor panjang membuatnya realistis untuk pekerja muda atau keluarga baru.</p>
+<p>Namun, ada juga keterbatasan yang perlu disadari. Lokasi rumah subsidi sering berada di pinggiran kota, spesifikasi bangunan standar, dan desain yang cenderung seragam. Di sinilah peran renovasi dan pemilihan material bangunan yang tepat menjadi penting agar rumah tetap nyaman dan bernilai jangka panjang.</p>
+
+<h2>Tips Mengembangkan Rumah Subsidi agar Lebih Nyaman</h2>
+<p>Banyak pemilik rumah subsidi memilih melakukan renovasi bertahap. Mulai dari penambahan kanopi, peninggian plafon, hingga penggantian lantai atau finishing dinding. Kunci utamanya adalah memilih material yang fungsional, tahan lama, dan sesuai anggaran.</p>
+<p>Yen Bangunan hadir sebagai referensi bahan bangunan yang dapat membantu pemilik rumah subsidi mendapatkan material berkualitas tanpa harus mengorbankan biaya berlebih. Dengan perencanaan yang matang, rumah subsidi tetap bisa tampil rapi, modern, dan nyaman ditinggali.</p>
+
+<h2>Perumahan Subsidi, Langkah Awal Menuju Hunian Ideal</h2>
+<p>Pada akhirnya, perumahan subsidi adalah langkah awal yang realistis bagi banyak orang untuk memiliki rumah sendiri. Meski sederhana, rumah subsidi bisa berkembang seiring waktu dan kebutuhan penghuninya. Yang terpenting adalah memahami aturan, merencanakan renovasi dengan bijak, dan memilih material bangunan yang tepat.</p>
+<p><strong>Sedang merencanakan renovasi rumah subsidi atau mencari material bangunan yang tepat?</strong><br /><strong>Kunjungi Yen Bangunan dan temukan solusi bahan bangunan yang praktis, terjangkau, dan sesuai kebutuhan rumah pertamamu.</strong></p>',
+                'image_path' => '/blog/apa-itu-perumahan-subsidi-ini-pengertian-syarat-dan-kelebihannya.jpg',
+                'published_at' => '2026-02-10 14:27:33',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Jual Semen Cikarang Terpercaya - Yen Bangunan',
+                'slug' => '2026/02/11/jual-semen-cikarang-terpercaya-yen-bangunan',
+                'content' => '<p><img class="alignnone size-full wp-image-3155" src="/assets/blog/jual-semen-cikarang-terpercaya-yen-bangunan.jpg" alt="Jual Semen Cikarang" width="950" height="550" /></p>
+<p>Jika Anda sedang mencari <strong>jual semen Cikarang</strong> yang terpercaya, penting bukan hanya soal harga, tetapi juga soal jenis dan kualitas produk. Artikel ini akan membantu Anda memahami cara memilih semen yang tepat agar bangunan lebih awet dan tahan lama.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>Kenapa Pemilihan Semen Tidak Bisa Sembarangan?</h2>
+<p>Banyak orang masih menganggap semua semen itu sama. Padahal, setiap jenis semen memiliki fungsi dan karakteristik berbeda. Kesalahan memilih semen bisa berdampak pada:</p>
+
+<ul>
+ 	<li>
+<p>Daya rekat yang kurang maksimal</p>
+</li>
+ 	<li>
+<p>Permukaan mudah retak</p>
+</li>
+ 	<li>
+<p>Struktur bangunan kurang kuat</p>
+</li>
+ 	<li>
+<p>Biaya perbaikan jangka panjang yang membengkak</p>
+</li>
+</ul>
+<p>Di wilayah seperti Cikarang yang terus berkembang dengan proyek perumahan dan industri, kebutuhan akan <strong>semen berkualitas untuk bangunan tahan lama</strong> semakin tinggi. Karena itu, memahami spesifikasi sebelum membeli adalah langkah bijak.</p>
+
+<h2>Pilih Supplier Terpercaya di Cikarang</h2>
+<p>Membeli dari supplier terpercaya memberi Anda beberapa keuntungan:</p>
+
+<ul>
+ 	<li>
+<p>Produk asli dan bergaransi</p>
+</li>
+ 	<li>
+<p>Ketersediaan stok stabil</p>
+</li>
+ 	<li>
+<p>Bisa konsultasi kebutuhan material</p>
+</li>
+ 	<li>
+<p>Layanan pengiriman cepat</p>
+</li>
+</ul>
+<p>Jika Anda mencari <strong>supplier jual semen Cikarang terpercaya</strong>, pastikan memilih toko yang memiliki reputasi baik dan pelayanan responsif.</p>
+
+<h2>Kenapa Memilih Yen Bangunan?</h2>
+<p>Sebagai penyedia material konstruksi di Cikarang, <strong>Yen Bangunan</strong> tidak hanya fokus pada penjualan, tetapi juga membantu pelanggan memilih material yang tepat.</p>
+<p>Keunggulan Yen Bangunan:</p>
+
+<ul>
+ 	<li>
+<p>Menyediakan berbagai merek semen berkualitas</p>
+</li>
+ 	<li>
+<p>Harga kompetitif untuk proyek kecil hingga besar</p>
+</li>
+ 	<li>
+<p>Stok terjaga dan penyimpanan aman</p>
+</li>
+ 	<li>
+<p>Bisa konsultasi sebelum membeli</p>
+</li>
+</ul>
+<p>Bagi kontraktor, developer, maupun pemilik rumah yang sedang renovasi, memilih tempat <strong>jual semen Cikarang dengan layanan profesional</strong> akan menghemat waktu dan mengurangi risiko kesalahan pembelian.</p>
+
+<h2>Butuh Semen Berkualitas di Cikarang?</h2>
+<p>Hubungi <strong>Yen Bangunan</strong> sekarang untuk mendapatkan rekomendasi semen terbaik sesuai kebutuhan proyek Anda. Dapatkan harga kompetitif, stok terjamin, dan layanan pengiriman cepat langsung ke lokasi Anda. Bangun lebih kuat, bangun lebih tenang bersama Yen Bangunan.</p>',
+                'image_path' => '/blog/jual-semen-cikarang-terpercaya-yen-bangunan.jpg',
+                'published_at' => '2026-02-11 16:29:59',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Material Bangunan Terbaik untuk Rumah Tahan Lama di Iklim Tropis!',
+                'slug' => '2026/02/12/material-bangunan-terbaik-untuk-rumah-tahan-lama-di-iklim-tropis',
+                'content' => '<p><img class="alignnone size-full wp-image-3161" src="/assets/blog/material-bangunan-terbaik-untuk-rumah-tahan-lama-di-iklim-tropis.jpg" alt="Material Bangunan Terbaik untuk Rumah Tahan Lama di Iklim Tropis!" width="950" height="550" /></p>
+<p>Membangun rumah di iklim tropis seperti Indonesia bukan hanya soal desain yang estetik. Curah hujan tinggi, paparan sinar matahari sepanjang tahun, hingga kelembapan udara yang ekstrem membuat pemilihan material bangunan jadi faktor penentu usia bangunan.</p>
+<p>Banyak rumah terlihat kokoh di awal, tetapi mulai retak, lembap, atau berjamur dalam beberapa tahun. Penyebabnya sering kali sederhana: salah memilih material. Artikel ini akan membahas material bangunan terbaik untuk rumah tahan lama di iklim tropis, khususnya bagi Anda yang sedang membangun atau merenovasi rumah agar lebih awet dan minim perawatan.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>Kenapa Pemilihan Material Sangat Krusial di Iklim Tropis?</h2>
+<p>Iklim tropis memiliki karakter utama: panas, lembap, dan hujan deras. Kombinasi ini bisa menyebabkan:</p>
+
+<ul>
+ 	<li>
+<p>Dinding retak akibat perubahan suhu ekstrem</p>
+</li>
+ 	<li>
+<p>Jamur dan lumut pada permukaan lembap</p>
+</li>
+ 	<li>
+<p>Struktur kayu cepat lapuk</p>
+</li>
+ 	<li>
+<p>Baja atau besi mudah berkarat</p>
+</li>
+</ul>
+<p>Karena itu, material bangunan untuk iklim tropis harus memiliki tiga karakter utama: <strong>tahan lembap, kuat terhadap perubahan suhu, dan tidak mudah terkorosi</strong>.</p>
+
+<h2>Material Bangunan Terbaik untuk Rumah Tahan Lama di Iklim Tropis</h2>
+<p>Berikut beberapa pilihan material yang terbukti lebih tahan terhadap kondisi tropis:</p>
+
+<h3>1. Semen Berkualitas Tinggi</h3>
+<p>Semen adalah fondasi kekuatan bangunan. Untuk rumah tahan lama di iklim tropis, pilih semen dengan daya rekat kuat dan ketahanan terhadap kelembapan tinggi.</p>
+<p>Semen berkualitas membantu mencegah retak rambut dan meningkatkan daya tahan struktur terhadap hujan deras. Pastikan membeli produk dari distributor terpercaya seperti <strong>Yen Bangunan</strong>, yang menyediakan pilihan semen sesuai kebutuhan konstruksi rumah tinggal.</p>
+
+<h3>2. Bata Ringan (Hebel)</h3>
+<p>Dibandingkan bata merah konvensional, bata ringan memiliki keunggulan:</p>
+
+<ul>
+ 	<li>
+<p>Lebih tahan terhadap kelembapan</p>
+</li>
+ 	<li>
+<p>Bobot lebih ringan sehingga mengurangi beban struktur</p>
+</li>
+ 	<li>
+<p>Isolasi panas lebih baik</p>
+</li>
+</ul>
+<p>Untuk rumah di daerah panas, bata ringan membantu menjaga suhu ruangan tetap lebih stabil. Ini membuat rumah lebih nyaman tanpa bergantung penuh pada AC.</p>
+
+<h3>3. Atap Metal Berlapis atau Genteng Beton</h3>
+<p>Atap adalah bagian paling terpapar sinar matahari dan hujan. Untuk itu, pilih material atap yang:</p>
+
+<ul>
+ 	<li>
+<p>Tidak mudah berkarat</p>
+</li>
+ 	<li>
+<p>Tidak menyerap air berlebihan</p>
+</li>
+ 	<li>
+<p>Tahan perubahan suhu</p>
+</li>
+</ul>
+<p>Genteng beton dan atap metal berlapis anti karat menjadi pilihan populer sebagai material bangunan terbaik untuk rumah tahan lama di iklim tropis. Pastikan pemasangan dilakukan dengan sistem drainase yang baik agar tidak terjadi kebocoran.</p>
+
+<h3>4. Cat Eksterior Anti Jamur dan Anti UV</h3>
+<p>Banyak orang menganggap cat hanya soal warna. Padahal, cat eksterior berfungsi sebagai pelindung utama dinding dari hujan dan panas.</p>
+<p>Gunakan cat dengan fitur:</p>
+
+<ul>
+ 	<li>
+<p>Anti jamur</p>
+</li>
+ 	<li>
+<p>Tahan sinar UV</p>
+</li>
+ 	<li>
+<p>Elastis (tidak mudah retak)</p>
+</li>
+</ul>
+<p>Lapisan cat yang tepat dapat memperpanjang usia dinding hingga bertahun-tahun.</p>
+
+<h3>5. Baja Ringan untuk Rangka Atap</h3>
+<p>Kayu memang klasik dan estetik, tetapi di iklim tropis, risiko rayap dan pelapukan cukup tinggi. Baja ringan menjadi alternatif modern yang:</p>
+
+<ul>
+ 	<li>
+<p>Anti rayap</p>
+</li>
+ 	<li>
+<p>Tidak mudah lapuk</p>
+</li>
+ 	<li>
+<p>Lebih presisi dalam pemasangan</p>
+</li>
+</ul>
+<p>Ini adalah investasi jangka panjang untuk struktur atap yang lebih aman.</p>
+
+<h2>Tips Memilih Toko Material yang Tepat</h2>
+<p>Selain memilih bahan yang benar, membeli dari toko terpercaya juga menentukan kualitas akhir bangunan. Pastikan toko menyediakan:</p>
+
+<ul>
+ 	<li>
+<p>Produk original dan bersertifikat</p>
+</li>
+ 	<li>
+<p>Konsultasi kebutuhan material</p>
+</li>
+ 	<li>
+<p>Stok lengkap untuk proyek rumah</p>
+</li>
+</ul>
+<p>Sebagai penyedia bahan bangunan terpercaya, <strong>Yen Bangunan</strong> membantu Anda mendapatkan material yang tepat sesuai kebutuhan proyek, baik skala kecil maupun pembangunan rumah dari nol.</p>
+
+<h2>Kesimpulan</h2>
+<p>Memilih <strong>material bangunan terbaik untuk rumah tahan lama di iklim tropis</strong> bukan soal harga termurah, tetapi soal ketahanan jangka panjang. Semen berkualitas, bata ringan, atap tahan cuaca, cat anti jamur, hingga baja ringan adalah kombinasi yang membuat rumah lebih awet, aman, dan nyaman.</p>
+<p>Rumah bukan hanya tempat tinggal, tapi investasi masa depan. Maka, pilih material dengan bijak dan pastikan membelinya dari supplier terpercaya.</p>
+
+<h2>Bangun Rumah Lebih Awet Bersama Yen Bangunan</h2>
+<p><strong>Butuh material bangunan berkualitas untuk proyek rumah Anda?</strong><br /><strong>Kunjungi Yen Bangunan sekarang dan temukan produk terbaik dengan harga kompetitif serta layanan terpercaya.</strong></p>',
+                'image_path' => '/blog/material-bangunan-terbaik-untuk-rumah-tahan-lama-di-iklim-tropis.jpg',
+                'published_at' => '2026-02-12 17:44:14',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Perbedaan Besi dan Baja: Mana yang Lebih Cocok untuk Konstruksi Anda?',
+                'slug' => '2026/02/13/perbedaan-besi-dan-baja-mana-yang-lebih-cocok-untuk-konstruksi-anda',
+                'content' => '<img class="alignnone size-full wp-image-3166" src="/assets/blog/perbedaan-besi-dan-baja-mana-yang-lebih-cocok-untuk-konstruksi-anda.jpg" alt="" width="950" height="550" />
+
+Dalam dunia konstruksi, pemilihan material bukan hanya soal harga, tetapi soal kekuatan, ketahanan, dan keamanan jangka panjang. Salah satu pertanyaan paling umum dari pemilik rumah, kontraktor pemula, hingga pelaku proyek kecil adalah: apa sebenarnya perbedaan besi dan baja, dan mana yang lebih cocok untuk kebutuhan konstruksi?
+
+Artikel ini akan membantu Anda memahami <em>Perbedaan Besi dan Baja: Mana yang Lebih Cocok untuk Konstruksi Anda?</em> secara praktis dan aplikatif, agar keputusan yang Anda ambil benar-benar tepat.
+
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>Apa Itu Besi dan Baja?</h2>
+Secara sederhana, <strong>besi</strong> adalah logam murni yang berasal dari bijih besi. Sementara <strong>baja</strong> adalah hasil olahan besi yang dicampur dengan karbon serta elemen lain untuk meningkatkan kekuatannya.
+<h3>Besi: Material Dasar yang Kuat Namun Rentan</h3>
+<img class="alignnone size-full wp-image-3171" src="/assets/blog/pengertian-fungsi-dan-jenis-besi-beton.jpg" alt="besi" width="960" height="720" />
+
+Besi memiliki karakteristik:
+<ul>
+ 	<li>Mudah dibentuk</li>
+ 	<li>Harga relatif lebih terjangkau</li>
+ 	<li>Namun lebih mudah berkarat</li>
+ 	<li>Kekuatan struktural lebih rendah dibanding baja</li>
+</ul>
+Dalam praktiknya, besi sering digunakan untuk kebutuhan non-struktural atau elemen ringan, seperti pagar sederhana, aksesoris bangunan, atau komponen dekoratif.
+<h3>Baja: Versi Upgrade dari Besi</h3>
+<img class="alignnone  wp-image-3172" src="/assets/blog/baja.webp" alt="baja" width="960" height="640" />
+
+Baja memiliki kandungan karbon yang membuatnya:
+<ul>
+ 	<li>Lebih kuat dan tahan beban</li>
+ 	<li>Lebih tahan terhadap tekanan dan deformasi</li>
+ 	<li>Lebih awet untuk penggunaan jangka panjang</li>
+</ul>
+Untuk konstruksi rumah, ruko, gudang, hingga proyek skala besar, baja, terutama baja struktural dan baja tulangan, menjadi pilihan utama.
+<h2>Perbedaan Besi dan Baja dalam Konstruksi</h2>
+Agar lebih jelas, berikut perbandingan praktisnya:
+<div class="TyagGW_tableContainer">
+<div class="group TyagGW_tableWrapper flex flex-col-reverse w-fit">
+<table class="w-fit min-w-(--thread-content-width)">
+<thead>
+<tr>
+<th class="">Aspek</th>
+<th class="">Besi</th>
+<th class="">Baja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kekuatan</td>
+<td>Standar</td>
+<td>Lebih tinggi</td>
+</tr>
+<tr>
+<td>Ketahanan Karat</td>
+<td>Rendah</td>
+<td>Lebih tahan (tergantung jenisnya)</td>
+</tr>
+<tr>
+<td>Harga</td>
+<td>Lebih murah</td>
+<td>Sedikit lebih mahal</td>
+</tr>
+<tr>
+<td>Cocok untuk</td>
+<td>Elemen ringan</td>
+<td>Struktur utama</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+Jika proyek Anda melibatkan struktur penopang seperti kolom, balok, atau rangka atap, maka baja adalah pilihan yang lebih aman dan tahan lama.
+
+Sebaliknya, jika hanya untuk kebutuhan ringan dan tidak menopang beban besar, besi biasa masih bisa digunakan dengan pertimbangan biaya.
+<h2>Mana yang Lebih Cocok untuk Konstruksi Anda?</h2>
+Jawabannya tergantung pada tiga hal utama:
+<h3>1. Jenis Proyek</h3>
+Untuk pembangunan rumah tinggal 1–2 lantai, penggunaan baja tulangan berkualitas sangat disarankan demi keamanan struktur. Untuk pagar atau kanopi ringan, besi biasa masih cukup.
+<h3>2. Kondisi Lingkungan</h3>
+Jika bangunan berada di area lembap atau dekat pantai, baja dengan perlindungan anti karat jauh lebih direkomendasikan. Lingkungan tropis seperti di Indonesia mempercepat korosi pada material logam.
+<h3>3. Anggaran dan Durabilitas</h3>
+Sering kali orang memilih besi karena lebih murah di awal. Namun dalam jangka panjang, biaya perawatan dan risiko kerusakan bisa lebih besar. Baja mungkin sedikit lebih mahal, tetapi lebih ekonomis dalam durasi penggunaan panjang.
+<h2>Kesalahan Umum dalam Memilih Material</h2>
+Banyak pemilik proyek hanya membandingkan harga per batang atau per kilogram tanpa memahami fungsi strukturalnya. Padahal, memilih material yang tidak sesuai bisa berdampak pada:
+<ul>
+ 	<li>Retak struktur</li>
+ 	<li>Penurunan daya tahan bangunan</li>
+ 	<li>Risiko keselamatan</li>
+</ul>
+Karena itu, penting membeli material dari toko bangunan terpercaya yang menyediakan produk dengan spesifikasi jelas dan standar mutu terjamin.
+<h2>Dapatkan Material Berkualitas di Yen Bangunan</h2>
+Memilih antara besi dan baja bukan soal mana yang lebih baik secara umum, tetapi mana yang paling sesuai dengan kebutuhan konstruksi Anda.
+
+<strong>Di Yen Bangunan, Anda bisa mendapatkan berbagai pilihan besi dan baja konstruksi dengan kualitas terjamin, ukuran lengkap, serta harga kompetitif. Tim kami juga siap membantu Anda memilih material yang tepat berdasarkan jenis proyek dan anggaran.</strong>',
+                'image_path' => '/blog/perbedaan-besi-dan-baja-mana-yang-lebih-cocok-untuk-konstruksi-anda.jpg',
+                'published_at' => '2026-02-13 14:14:08',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Cara Menghitung Kebutuhan Besi, Semen, dan Kayu untuk Proyek Rumah',
+                'slug' => '2026/02/19/cara-menghitung-kebutuhan-besi-semen-dan-kayu-untuk-proyek-rumah',
+                'content' => '<p><img class="alignnone size-full wp-image-3177" src="/assets/blog/cara-menghitung-kebutuhan-besi-semen-dan-kayu-untuk-proyek-rumah.webp" alt="Cara Menghitung Kebutuhan Besi, Semen, dan Kayu untuk Proyek Rumah" width="950" height="550" /></p>
+<p>Membangun rumah bukan hanya soal desain yang menarik, tapi juga soal perhitungan material yang tepat. Salah hitung sedikit saja, dampaknya bisa signifikan: biaya membengkak, pekerjaan terhambat, atau material terbuang percuma. Karena itu, memahami cara menghitung kebutuhan besi, semen, dan kayu untuk proyek rumah adalah langkah awal yang wajib dikuasai, terutama bagi pemilik proyek skala kecil hingga menengah.</p>
+<p>Artikel ini akan membantu Anda memahami dasar perhitungan material secara praktis dan aplikatif, tanpa harus menjadi ahli teknik sipil.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>Mengapa Perhitungan Material Itu Penting?</h2>
+<p>Dalam proyek rumah tinggal, material struktur seperti besi dan semen menentukan kekuatan bangunan, sementara kayu banyak digunakan untuk bekisting, rangka atap, hingga kebutuhan interior. Jika jumlahnya kurang, proyek bisa terhenti. Jika berlebih, anggaran bisa membengkak.</p>
+<p>Dengan perhitungan yang tepat, Anda bisa:</p>
+
+<ul>
+ 	<li>
+<p>Mengontrol anggaran sejak awal</p>
+</li>
+ 	<li>
+<p>Meminimalkan waste material</p>
+</li>
+ 	<li>
+<p>Menghindari pembelian mendadak dengan harga lebih mahal</p>
+</li>
+ 	<li>
+<p>Membuat perencanaan belanja bahan bangunan lebih efisien</p>
+</li>
+</ul>
+<h2>Cara Menghitung Kebutuhan Besi untuk Pondasi dan Struktur</h2>
+<p>Besi umumnya digunakan untuk sloof, kolom, balok, dan plat lantai. Untuk menghitung kebutuhan besi, Anda perlu mengetahui:</p>
+
+<ol>
+ 	<li>
+<p>Panjang total struktur (misalnya panjang sloof atau jumlah kolom)</p>
+</li>
+ 	<li>
+<p>Jumlah batang besi per titik</p>
+</li>
+ 	<li>
+<p>Panjang standar besi di pasaran (umumnya 12 meter per batang)</p>
+</li>
+</ol>
+<p>Sebagai contoh sederhana:<br />Jika Anda memiliki 10 kolom dengan tinggi 3 meter dan tiap kolom menggunakan 4 batang besi utama, maka:</p>
+<p>10 kolom × 3 meter × 4 batang = 120 meter besi</p>
+<p>Karena 1 batang besi panjangnya 12 meter, maka:<br />120 ÷ 12 = 10 batang besi (belum termasuk cadangan dan sambungan).</p>
+<p>Untuk proyek rumah 1 lantai tipe 36–70, estimasi kebutuhan besi biasanya berkisar 1–1,5 ton, tergantung desain struktur dan jenis tanah. Untuk hasil yang lebih akurat, sebaiknya mengacu pada gambar kerja atau RAB (Rencana Anggaran Biaya).</p>
+
+<h2>Cara Menghitung Kebutuhan Semen untuk Pondasi dan Dinding</h2>
+<p>Semen digunakan untuk campuran beton (pondasi, sloof, kolom) dan pasangan bata. Perhitungannya berbeda tergantung kebutuhan.</p>
+
+<h3>1. Untuk Beton (Pondasi/Sloof)</h3>
+<p>Rumus umum campuran beton rumah tinggal adalah 1:2:3 (semen : pasir : kerikil).</p>
+<p>Sebagai gambaran, untuk 1 m³ beton biasanya membutuhkan ±7–8 sak semen (ukuran 40 kg).</p>
+<p>Jika total volume beton pondasi Anda 5 m³, maka:<br />5 × 8 sak = 40 sak semen</p>
+
+<h3>2. Untuk Pasangan Bata</h3>
+<p>Untuk pasangan dinding, kebutuhan semen rata-rata sekitar 5–6 sak per 10 m² dinding (tergantung ketebalan dan metode kerja).</p>
+<p>Semakin detail Anda menghitung volume (panjang × tinggi × tebal), semakin akurat estimasinya. Jangan lupa tambahkan cadangan sekitar 5–10% untuk mengantisipasi susut dan kesalahan kerja.</p>
+
+<h2>Cara Menghitung Kebutuhan Kayu untuk Proyek Rumah</h2>
+<p>Kayu dalam proyek rumah biasanya digunakan untuk:</p>
+
+<ul>
+ 	<li>
+<p>Bekisting cor beton</p>
+</li>
+ 	<li>
+<p>Rangka atap (jika tidak menggunakan baja ringan)</p>
+</li>
+ 	<li>
+<p>Kusen pintu dan jendela</p>
+</li>
+</ul>
+<p>Untuk bekisting, hitung luas permukaan beton yang akan dicor. Misalnya, jika luas bekisting sloof dan kolom total 50 m², maka kebutuhan kayu disesuaikan dengan ukuran papan atau multipleks yang digunakan.</p>
+<p>Untuk rangka atap, perhitungan lebih kompleks karena tergantung bentuk atap (pelana, limasan, dll.) dan jarak antar kuda-kuda. Biasanya tukang atau mandor berpengalaman sudah memiliki estimasi standar per meter persegi atap.</p>
+<p>Jika ingin lebih presisi, Anda bisa menggunakan pendekatan volume kayu (m³) berdasarkan gambar kerja.</p>
+
+<h2>Tips Agar Perhitungan Lebih Akurat dan Hemat</h2>
+<ol>
+ 	<li>
+<p>Gunakan gambar kerja atau konsultasikan dengan tukang berpengalaman.</p>
+</li>
+ 	<li>
+<p>Tambahkan cadangan material 5–10%, jangan terlalu besar agar tidak overbudget.</p>
+</li>
+ 	<li>
+<p>Bandingkan harga dan kualitas material sebelum membeli.</p>
+</li>
+ 	<li>
+<p>Beli di toko bahan bangunan terpercaya agar spesifikasi sesuai standar.</p>
+</li>
+</ol>
+<p>Untuk Anda yang sedang mencari material berkualitas dengan harga kompetitif, Yen Bangunan menyediakan berbagai kebutuhan besi, semen, dan kayu untuk proyek rumah, baik skala kecil maupun besar. Dengan pilihan produk lengkap dan tim yang siap membantu, proses belanja material jadi lebih praktis dan efisien.</p>
+
+<h2>Kesimpulan</h2>
+<p>Memahami cara menghitung kebutuhan besi, semen, dan kayu untuk proyek rumah bukan hanya soal angka, tapi soal strategi mengelola biaya dan risiko. Dengan perhitungan yang tepat sejak awal, Anda bisa membangun rumah dengan lebih tenang, terencana, dan minim pemborosan.</p>
+<p>Jika Anda sedang merencanakan pembangunan atau renovasi, pastikan kebutuhan material Anda dihitung dengan cermat dan dipenuhi dari supplier terpercaya.</p>',
+                'image_path' => '/blog/cara-menghitung-kebutuhan-besi-semen-dan-kayu-untuk-proyek-rumah.webp',
+                'published_at' => '2026-02-19 13:09:02',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => '10 Referensi Renovasi Rumah Subsidi Bagian Depan yang Estetik dan Hemat Biaya',
+                'slug' => '2026/02/19/10-referensi-renovasi-rumah-subsidi-bagian-depan-yang-estetik-dan-hemat-biaya',
+                'content' => '<p><img class="alignnone size-full wp-image-3183" src="/assets/blog/10-referensi-renovasi-rumah-subsidi-bagian-depan-yang-estetik-dan-hemat-biaya.jpg" alt="" width="950" height="550" /></p>
+<p>Memiliki rumah subsidi adalah langkah awal yang besar. Namun, tampilan depan rumah sering terasa standar dan kurang personal. Di sinilah pentingnya renovasi rumah subsidi bagian depan, bukan sekadar mempercantik, tapi juga meningkatkan nilai properti dan kenyamanan visual.</p>
+<p>Bagi pemilik rumah subsidi, terutama pasangan muda atau keluarga kecil, renovasi fasad bisa dilakukan bertahap tanpa harus menguras tabungan. Berikut 10 referensi yang bisa Anda pertimbangkan.</p>
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a>
+
+<a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a>
+
+<a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a>
+<h2>1. Tambahan Kanopi Minimalis</h2>
+<img class="alignnone size-full wp-image-3194" src="/assets/blog/tambahan-kanopi-minimalis.jpg" alt="" width="950" height="550" />
+<p>Kanopi baja ringan atau hollow galvanis dengan atap polycarbonate bisa langsung mengubah tampilan rumah. Selain melindungi teras dan kendaraan, desain minimalis memberi kesan modern dan rapi.</p>
+<p><strong>Tips hemat:</strong> Gunakan finishing cat doff hitam atau abu-abu untuk kesan clean.</p>
+
+<h2>2. Permainan Warna Cat Fasad</h2>
+<img class="alignnone size-full wp-image-3193" src="/assets/blog/permainan-warna-cat-fasad.jpg" alt="" width="950" height="550" />
+<p>Banyak rumah subsidi memiliki warna standar. Anda bisa melakukan renovasi sederhana dengan kombinasi dua warna netral seperti putih–abu atau krem–coklat muda.</p>
+
+<h2>3. Aksen Batu Alam atau Keramik Dinding</h2>
+<img class="alignnone size-full wp-image-3192" src="/assets/blog/aksen-batu-alam-atau-keramik-dinding.jpg" alt="" width="950" height="550" />
+<p>Panel batu alam atau keramik motif natural di satu sisi dinding depan memberi kesan elegan tanpa renovasi besar. Fokus pada satu titik sebagai focal point agar tidak berlebihan.</p>
+
+<h2>4. Pagar Minimalis Modern</h2>
+<img class="alignnone size-full wp-image-3191" src="/assets/blog/pagar-minimalis-modern.jpg" alt="" width="950" height="550" />
+<p>Mengganti pagar standar dengan model hollow horizontal atau kombinasi besi dan kayu sintetis dapat meningkatkan estetika secara signifikan.</p>
+<p><strong>Catatan:</strong> Pastikan desain pagar tetap sesuai regulasi perumahan.</p>
+
+<h2>5. Taman Kecil Depan Rumah</h2>
+<img class="alignnone size-full wp-image-3190" src="/assets/blog/taman-kecil-depan-rumah.jpg" alt="" width="950" height="550" />
+<p>Walau lahan terbatas, taman kecil dengan rumput sintetis dan tanaman pot bisa membuat fasad lebih hidup. Konsep ini cocok untuk Anda yang mencari <em>renovasi rumah subsidi bagian depan sederhana tapi cantik</em>.</p>
+
+<h2>6. Teras Lebih Luas dengan Dak Cor</h2>
+<img class="alignnone size-full wp-image-3189" src="/assets/blog/teras-lebih-luas-dengan-dak-cor.jpg" alt="" width="950" height="550" />
+<p>Banyak pemilik memperluas teras 50–100 cm ke depan menggunakan dak cor ringan. Hasilnya? Area duduk santai tanpa harus renovasi besar-besaran.</p>
+
+<h2>7. Plafon PVC untuk Tampilan Lebih Rapi</h2>
+<img class="alignnone size-full wp-image-3188" src="/assets/blog/plafon-pvc-untuk-tampilan-lebih-rapi.jpg" alt="" width="950" height="550" />
+<p>Mengganti plafon teras dengan PVC membuat bagian depan terlihat lebih bersih dan modern. Material ini juga tahan lembap dan perawatannya mudah.</p>
+
+<h2>8. Pintu Utama Lebih Statement</h2>
+<img class="alignnone size-full wp-image-3187" src="/assets/blog/pintu-utama-lebih-statement.jpg" alt="" width="950" height="550" />
+<p>Mengganti pintu standar dengan model solid panel atau kombinasi kaca buram bisa menjadi investasi visual jangka panjang.</p>
+
+<h2>9. Lighting Outdoor yang Hangat</h2>
+<img class="alignnone size-full wp-image-3186" src="/assets/blog/lighting-outdoor-yang-hangat.jpg" alt="" width="950" height="550" />
+<p>Lampu dinding warm white atau lampu sorot kecil pada taman memberikan efek dramatis di malam hari. Renovasi kecil, dampaknya besar.</p>
+
+<h2>10. Konsep Industrial Minimalis</h2>
+<img class="alignnone size-full wp-image-3185" src="/assets/blog/konsep-industrial-minimalis.jpg" alt="" width="950" height="550" />
+<p>Bagi Anda yang ingin tampil beda, konsep industrial dengan kombinasi semen ekspos, besi hitam, dan elemen kayu bisa menjadi pilihan. Cocok untuk generasi muda yang ingin rumah tampil lebih karakteristik.</p>
+
+<h2>Tips Agar Renovasi Tetap Hemat dan Terencana</h2>
+<p>Sebelum memulai renovasi rumah subsidi bagian depan, pastikan Anda:</p>
+
+<ul>
+ 	<li>
+<p>Menentukan prioritas (fungsi atau estetika dulu)</p>
+</li>
+ 	<li>
+<p>Menghitung RAB sederhana</p>
+</li>
+ 	<li>
+<p>Memilih material yang awet dan sesuai budget</p>
+</li>
+ 	<li>
+<p>Membeli bahan bangunan dari toko terpercaya</p>
+</li>
+</ul>
+<p>Pemilihan material sangat menentukan hasil akhir. Gunakan produk berkualitas agar renovasi tidak perlu diulang dalam waktu dekat. Untuk kebutuhan material seperti semen, keramik, baja ringan, hingga cat fasad, Anda bisa mempertimbangkan <strong>Yen Bangunan</strong> sebagai partner terpercaya.</p>
+<p>Renovasi bukan soal mahal atau murah. Ini tentang bagaimana Anda ingin rumah terasa lebih “punya cerita”. Rumah subsidi bisa tetap tampil elegan dan berkarakter dengan perencanaan yang tepat.</p>
+<p><span>I</span><strong>ngin mulai renovasi rumah subsidi bagian depan tanpa ribet? Konsultasikan kebutuhan material Anda sekarang juga di Yen Bangunan dan wujudkan fasad impian dengan budget terkontrol!</strong></p>',
+                'image_path' => '/blog/10-referensi-renovasi-rumah-subsidi-bagian-depan-yang-estetik-dan-hemat-biaya.jpg',
+                'published_at' => '2026-02-19 16:07:53',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Apa Itu Lisplang Rumah? Fungsi dan Jenis yang Perlu Anda Ketahui',
+                'slug' => '2026/02/23/apa-itu-lisplang-rumah-fungsi-dan-jenis-yang-perlu-anda-ketahui',
+                'content' => '<img class="alignnone size-full wp-image-3212" src="/assets/blog/apa-itu-lisplang-rumah-fungsi-dan-jenis-yang-perlu-anda-ketahui.jpg" alt="" width="950" height="550" />
+
+Saat merencanakan desain atau renovasi rumah, sering kali kita fokus ke interior, finishing dinding, atau lantai. Padahal, elemen kecil di bagian atas rumah seperti <strong>lisplang</strong> juga punya peran penting yang sering terlupakan. Jika Anda pernah bertanya, <em>“Apa itu lisplang rumah?”</em> dan ingin tahu manfaatnya untuk bangunan Anda, artikel ini akan menjawabnya secara jelas dan praktis.
+
+<strong><span dir="auto">Baca juga:</span></strong>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/08/05/rekomendasi-toko-bangunan-cikarang-dengan-layanan-24-jam-dan-tepat-waktu/"><span dir="auto">Rekomendasi Toko Bangunan Cikarang dengan Layanan 24 Jam dan Tepat Waktu</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/10/27/toko-besi-cikarang-terbaik-hubungi-yen-bangunan-di-081315147952/"><span dir="auto">Toko Besi Cikarang Terbaik: Hubungi Yen Bangunan di 081315147952</span></a></span>
+
+<span style="text-decoration: underline"><a href="https://yenbangunan.com/2025/09/30/toko-listrik-cikarang-solusi-lengkap-untuk-kebutuhan-instalasi/"><span dir="auto">Toko Listrik Cikarang – Solusi Lengkap untuk Kebutuhan Instalasi</span></a></span>
+<h2>Lisplang: Definisi Singkat</h2>
+<img class="alignnone size-full wp-image-3215" src="/assets/blog/3-1.webp" alt="" width="859" height="572" />
+
+Secara sederhana, <strong>lisplang</strong> adalah papan panjang yang dipasang di tepi atap rumah untuk menutup rangka atap yang tampak dari bawah, sehingga memberikan tampilan yang rapi dan estetis pada bangunan. Elemen ini biasanya terletak di bawah genteng atau ujung atap.
+
+Banyak orang menyebutnya sebagai fascia board dalam istilah arsitektur bangunan di luar negeri — yaitu papan horizontal yang berjalan di sepanjang garis atap dan sering berfungsi juga menahan talang air.
+<h2>Fungsi Lisplang Rumah</h2>
+Lisplang bukan hanya soal estetika. Berikut tiga fungsi utamanya yang penting untuk Anda ketahui:
+<h3>1. Memberi Tampilan Eksterior yang Rapi</h3>
+Lisplang membantu menyembunyikan rangka atap yang kasat, sehingga rumah tampak lebih rapi dan finishingnya lebih bersih. Dengan desain dan warna yang tepat, lisplang bisa menambah <em>curb appeal</em> fasad rumah Anda.
+<h3>2. Melindungi Struktur Atap</h3>
+Selain estetika, lisplang memiliki peran struktural: menahan susunan kaso agar tidak bergeser akibat getaran, hujan, atau angin. Dengan begitu, rangka atap jadi lebih stabil dan tidak mudah cepat rusak.
+<h3>3. Perlindungan dari Cuaca Ekstrem</h3>
+Dalam iklim tropis, paparan hujan dan panas matahari bisa mempercepat kerusakan pada rangka kayu atap. Lisplang membantu mengalihkan hujan dan sinar langsung, sehingga memperpanjang umur struktur atap Anda.
+<h2>Jenis-Jenis Lisplang yang Umum Dipakai</h2>
+Pilih lisplang tidak bisa asal, karena masing-masing material punya karakteristik berbeda dalam hal estetika, daya tahan, dan biaya. Berikut beberapa jenis yang sering dipakai:
+<h3>Lisplang Kayu</h3>
+Memberikan tampilan alami dan klasik, cocok untuk rumah bergaya tradisional atau minimalis modern. Kayu bisa diukir sesuai bentuk desain yang Anda inginkan, namun perlu perawatan ekstra karena rentan terhadap rayap dan cuaca.
+<h3>Lisplang Beton</h3>
+Material ini kuat dan tahan lama, ideal untuk hunian modern yang ingin kesan kokoh tanpa repot perawatan. Warnanya bisa disesuaikan dengan palet desain rumah Anda.
+<h3>Lisplang PVC / WPC / Metal</h3>
+Pilihan alternatif yang ringan dan tahan terhadap perubahan cuaca ekstrem. PVC dan WPC mudah dibentuk, anti rayap, serta minim perawatan — jadi cocok untuk rumah modern yang ingin solusi praktis dan estetis. Metal juga umum digunakan untuk desain yang lebih industrial atau minimalis.
+<h2>Tips Memilih Lisplang yang Tepat</h2>
+<ul>
+ 	<li><strong>Sesuaikan dengan desain rumah:</strong> Jangan hanya memilih karena murah — padukan dengan gaya atap dan fasad Anda.</li>
+ 	<li><strong>Perhatikan perawatan:</strong> Kayu butuh perawatan berkala, sementara PVC atau beton bisa lebih praktis.</li>
+ 	<li><strong>Pertimbangkan iklim lokal:</strong> Di daerah tropis seperti Indonesia, ketahanan terhadap hujan dan panas harus jadi prioritas.</li>
+</ul>
+<h2>Kesimpulan: Kenapa Lisplang Penting?</h2>
+Lisplang bukan sekadar papan estetika, ia berperan besar dalam menjaga ketahanan atap, mempercantik rumah, dan mengurangi risiko kerusakan struktural dari cuaca. Dengan memilih jenis lisplang yang tepat, Anda bisa mendapatkan tampilan rumah yang rapi sekaligus mengoptimalkan proteksi konstruksi.',
+                'image_path' => '/blog/apa-itu-lisplang-rumah-fungsi-dan-jenis-yang-perlu-anda-ketahui.jpg',
+                'published_at' => '2026-02-23 14:16:32',
+                'author_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
-        DB::table('blogs')->insert($posts);
+        DB::table('blogs')->upsert(
+            $posts,
+            ['slug'],
+            ['title', 'content', 'image_path', 'published_at', 'author_id', 'updated_at']
+        );
     }
 }

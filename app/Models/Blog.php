@@ -20,6 +20,8 @@ class Blog extends Model
         'slug',
         'content',
         'image_path',
+        'category',
+        'type',
         'published_at',
         'author_id',
     ];

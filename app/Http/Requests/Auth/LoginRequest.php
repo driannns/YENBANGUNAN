@@ -27,7 +27,9 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'string', 'email'],
+            // Superadmin login pakai "username" (yenbangunanadmin), bukan email asli —
+            // sengaja tidak diwajibkan format email di sini.
+            'email' => ['required', 'string'],
             'password' => ['required', 'string'],
         ];
     }

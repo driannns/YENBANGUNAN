@@ -38,18 +38,22 @@
             .font-montserrat{
                 font-family: 'Montserrat', sans-serif;
             }
-            video {
-                min-width: 100%;
-                min-height: 100%;
-                width: auto;
-                height: auto;
-                /* transform: translate(%, -50%); */
+            /* Hero video: always fill the viewport exactly, on any device.
+               100dvh follows the real visible height on mobile browsers. */
+            #myVideo {
+                display: block;
+                width: 100vw;
+                max-width: 100%;
+                height: 100vh;
+                height: 100dvh;
                 object-fit: cover;
                 z-index: -1;
-            };
+            }
             video.fullscreen-video {
                 width: 100vw;
+                max-width: 100%;
                 height: 100vh;
+                height: 100dvh;
                 object-fit: cover;
                 z-index: -1;
             }
@@ -324,7 +328,19 @@
             </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row-reverse w-full">
+        <!-- Promo banners (mengikuti homepage WordPress) -->
+        <div class="w-full bg-[#f5f5f4] py-10 px-4 lg:px-16">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto reveal-group">
+                @foreach(['2-1.png', '1-2.png', 'untitled-design-3.png', '4-2.png'] as $banner)
+                <a href="https://wa.me/6282123269622" target="_blank"
+                    class="block aspect-[2/5] rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+                    <img src="{{ asset('assets/blog/' . $banner) }}" alt="Promo Yen Bangunan" loading="lazy" class="w-full h-full object-cover">
+                </a>
+                @endforeach
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row-reverse w-full reveal">
             <div class="font-montserrat px-6 py-16 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
                 <h1 class="text-4xl font-extrabold lg:w-5/6">YEN BANGUNAN FOR EVERYTHING & EVERYONE</h1>
                 <p class="mt-2 leading-7 text-base lg:w-5/6">
@@ -336,7 +352,7 @@
             </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row w-full">
+        <div class="flex flex-col lg:flex-row w-full reveal">
             <div class="font-montserrat px-6 py-16 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
                 <h1 class="text-4xl font-extrabold">YEN BANGUNAN SERVICES & DELIVERY</h1>
                 <ul class="list-disc mt-2 leading-7 text-base pl-4">
@@ -353,9 +369,17 @@
             </div>
         </div>
 
-        <div class="mt-8">
-            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Produk Kami</h1>
-            <div class="grid grid-cols-4 lg:grid-cols-6 gap-8 conte p-4">
+        <div class="w-full mt-12 px-4">
+            <h1 class="text-3xl lg:text-4xl font-extrabold uppercase text-center font-d-din reveal">
+                Solusi Lengkap untuk <span class="text-[#e05534]">Setiap Proyek</span>
+            </h1>
+            <h2 class="text-2xl lg:text-3xl font-extrabold uppercase text-center font-d-din mt-1 reveal">
+                Lebih dari <span class="text-[#e05534]">5.000 SKU</span> Produk Bangunan
+            </h2>
+            <p class="font-montserrat text-center text-gray-600 mt-3 mb-6 max-w-2xl mx-auto reveal">
+                Temukan semua kebutuhan material bangunan Anda dalam satu tempat dengan harga terbaik dan kualitas terjamin.
+            </p>
+            <div class="grid grid-cols-4 lg:grid-cols-6 gap-8 conte p-4 reveal-group">
                 <div class="font-d-din font-bold uppercase text-center">
                     <img src="/assets/product/besi-dan-baja.png" alt="Product">
                     <p>Besi & Baja</p>
@@ -405,10 +429,16 @@
                     <p>Cat</p>
                 </div>
             </div>
+            <div class="text-center mt-6 reveal">
+                <a href="{{ route('product') }}"
+                    class="inline-block bg-[#e05534] hover:bg-[#c74628] text-white font-montserrat font-bold text-sm uppercase px-8 py-3 rounded-full transition-colors">
+                    Lihat Semua Produk
+                </a>
+            </div>
         </div>
 
         <div class="mt-4 w-full">
-            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Brand Produk</h1>
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din reveal">Brand Produk</h1>
             <div class="container mx-auto px-4 py-8">
                 <!-- Carousel Container -->
                 <div class="relative max-w-4xl mx-auto lg:hidden">
@@ -525,7 +555,7 @@
         </div>
 
         <div class="mt-4 w-full p-4 font-montserrat">
-            <h1 class="text-xl font-extrabold uppercase text-center">WHY CHOOSE YEN BANGUNAN?</h1>
+            <h1 class="text-xl font-extrabold uppercase text-center reveal">WHY CHOOSE YEN BANGUNAN?</h1>
             <p class="mt-4 text-center text-sm">Yen Bangunan hadir sebagai one-stop solution terpercaya bagi kontraktor, pabrik, dan khususnya 
                 tim purchasing. dengan menyediakan kelengkapan kebutuhan serta harga yang kompetitif untuk memastikan 
                 efisiensi dan kemudahan dalam setiap pengadaan.
@@ -575,7 +605,7 @@
         </div>
 
         <div class="mt-4 w-full">
-            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Klien Kami</h1>
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din reveal">Klien Kami</h1>
             <div class="container mx-auto px-4 py-8">
                 <!-- Carousel Container 2 -->
                 <div class="relative max-w-4xl mx-auto">
@@ -633,7 +663,7 @@
         </div>
 
         <div class="mt-4 w-full px-4">
-            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Layanan Supplier</h1>
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din reveal">Layanan Supplier</h1>
             <p class="text-center mt-3 w-2/3 mx-auto">Yen Bangunan juga siap menjadi suplier bahan bangunan terpercaya untuk proyek perkantoran, perumahan. dan pabrik. Menyediakan produk berkualitas tinggi dengan harga kompetitif dan layanan profesional di area Cikarang.</p>
             <div class="container mx-auto px-4 py-8">
                 <!-- Carousel Container 3 -->
@@ -703,7 +733,7 @@
         </div>
 
         <div class="mt-4 w-full px-4">
-            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Projek</h1>
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din reveal">Projek</h1>
             <div class="container mx-auto px-4 py-8">
                 <!-- Carousel Container 4 -->
                 <div class="relative max-w-4xl mx-auto">
@@ -768,7 +798,7 @@
         </div>
             
         <div class="mt-4 w-full px-4 font-montserrat">
-            <h1 class="font-medium font-lg text-center">Dalam lebih dari <span class="font-bold">15</span> tahun pelayanan kami, kami telah mencapai</h1>
+            <h1 class="font-medium font-lg text-center reveal">Dalam lebih dari <span class="font-bold">15</span> tahun pelayanan kami, kami telah mencapai</h1>
             <div class="flex flex-col items-center gap-8 mt-4">
                 <div class="flex flex-col lg:flex-row items-center gap-8">
                     <div class="text-4xl lg:text-7xl flex items-center gap-6 font-extrabold border-y-2 border-black py-4">
@@ -795,7 +825,7 @@
 
         <div class="mt-6 w-full px-4">
             <div class="flex items-center justify-between">
-                <h1 class="text-3xl font-extrabold uppercase text-center font-d-din w-full">Galeri Yen Bangunan</h1>
+                <h1 class="text-3xl font-extrabold uppercase text-center font-d-din w-full reveal">Galeri Yen Bangunan</h1>
             </div>
             <div class="flex items-center justify-center mt-1">
                 <a href="{{ route('gallery') }}" class="uppercase hidden md:inline-flex bg-[#e05534] text-white px-4 py-2 rounded-full text-xs font-bold mx-auto">
@@ -821,7 +851,7 @@
         </div>
 
         <div class="w-full px-4 mt-5">
-            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">APA KATA MEREKA TENTANG YENBANGUNAN?</h1>
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din reveal">APA KATA MEREKA TENTANG YENBANGUNAN?</h1>
             <div class="container mx-auto px-4 py-8">
                 <!-- Carousel Container 5 -->
                 <div class="relative max-w-4xl mx-auto lg:hidden">
@@ -942,6 +972,38 @@
                 </div>
             </div>
         </div>
+
+        <!-- Tips & Trick: artikel blog terbaru (mengikuti homepage WordPress) -->
+        @if(isset($tipsBlogs) && $tipsBlogs->isNotEmpty())
+        <div class="w-full py-14 px-4 lg:px-16 bg-[#f5f5f4]">
+            <h1 class="text-3xl font-extrabold uppercase text-center font-d-din reveal">Tips &amp; Trick</h1>
+            <p class="font-montserrat text-center text-gray-600 mt-2 mb-8">Artikel terbaru seputar material dan dunia konstruksi dari Yen Bangunan.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto reveal-group">
+                @foreach($tipsBlogs as $tip)
+                <a href="/{{ $tip->slug }}"
+                    class="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col">
+                    @if($tip->image_path)
+                    <div class="h-48 overflow-hidden">
+                        <img src="{{ asset('assets' . $tip->image_path) }}" alt="{{ html_entity_decode($tip->title) }}" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    @endif
+                    <div class="p-5 flex flex-col flex-grow font-montserrat">
+                        <p class="text-xs text-gray-500 mb-2">{{ $tip->published_at?->translatedFormat('d F Y') }}</p>
+                        <h3 class="font-bold leading-snug flex-grow group-hover:text-[#e05534] transition-colors">{{ html_entity_decode($tip->title) }}</h3>
+                        <span class="mt-4 text-sm font-bold text-[#e05534] uppercase">Baca Selengkapnya &rarr;</span>
+                    </div>
+                </a>
+                @endforeach
+            </div>
+            <div class="text-center mt-8 reveal">
+                <a href="{{ route('blog') }}"
+                    class="inline-block border-2 border-[#e05534] text-[#e05534] hover:bg-[#e05534] hover:text-white font-montserrat font-bold text-sm uppercase px-8 py-3 rounded-full transition-colors">
+                    Lihat Semua Artikel
+                </a>
+            </div>
+        </div>
+        @endif
 
         <footer class="bg-black text-white">
             <div class="flex items-start gap-6 p-6 lg:px-20 lg:py-12 ">
@@ -1824,5 +1886,53 @@
                 startAutoPlay3();
             });
         </script>
-    </body>
+    
+    <style>
+        /* Scroll reveal: fade + slide-up sederhana. Elemen .reveal muncul sendiri;
+           anak-anak .reveal-group muncul berurutan (stagger). Pakai animation
+           (bukan transition) agar tidak bentrok dengan efek hover yang ada. */
+        body.reveal-ready .reveal:not(.in-view),
+        body.reveal-ready .reveal-group>*:not(.in-view) {
+            opacity: 0;
+            transform: translateY(24px);
+        }
+
+        .reveal.in-view,
+        .reveal-group>.in-view {
+            animation: revealUp .55s ease-out;
+        }
+
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            body.reveal-ready .reveal:not(.in-view),
+            body.reveal-ready .reveal-group>*:not(.in-view) { opacity: 1; transform: none; }
+            .reveal.in-view, .reveal-group>.in-view { animation: none; }
+        }
+    </style>
+    <script>
+        (function () {
+            if (!('IntersectionObserver' in window)) return;
+            document.body.classList.add('reveal-ready');
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    if (el.classList.contains('reveal-group')) {
+                        Array.prototype.forEach.call(el.children, function (child, i) {
+                            setTimeout(function () { child.classList.add('in-view'); }, Math.min(i * 70, 600));
+                        });
+                    } else {
+                        el.classList.add('in-view');
+                    }
+                    io.unobserve(el);
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+            document.querySelectorAll('.reveal, .reveal-group').forEach(function (el) { io.observe(el); });
+        })();
+    </script>
+</body>
 </html>

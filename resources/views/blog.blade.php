@@ -1829,11 +1829,24 @@
                 </div>
             </nav>
         </div>
-        <main class="flex-grow w-full p-10">
-            <h1 class="text-white text-4xl font-bold">Posts</h1>
-            <div class="grid grid-cols-1 md:grid-cols-4 mt-4 gap-6">
+        <main class="flex-grow w-full px-4 lg:px-16 py-12">
+            <div class="text-center mt-4 mb-10 reveal">
+                <h1 class="font-d-din text-white text-4xl lg:text-5xl font-extrabold uppercase">
+                    Blog <span class="text-[#e05534]">Yen Bangunan</span>
+                </h1>
+                <div class="w-24 h-1 bg-[#e05534] mx-auto mt-4 rounded-full"></div>
+                <p class="font-montserrat text-gray-400 text-sm mt-4 max-w-xl mx-auto">
+                    Tips, panduan, dan informasi terbaru seputar material bangunan dan dunia konstruksi.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 reveal-group">
                 @foreach ($blogs as $blog)
                 @php
+                // Artikel baru (dibuat lewat /admin) punya slug polos tanpa "/" dan
+                // pakai URL pendek /{slug}. Artikel lama tetap pakai URL bertanggal.
+                if (!str_contains($blog->slug, '/')) {
+                $postUrl = route('content.blog.show', ['slug' => $blog->slug]);
+                } else {
                 $parts = explode('/', $blog->slug, 4);
                 // If slug begins with YYYY/MM/DD/... use it, otherwise use published_at/created_at for date
                 if (!empty($parts[0]) && preg_match('/^\d{4}$/', $parts[0])) {
@@ -1855,40 +1868,47 @@
                 ], '', $blog->slug);
                 $slugOnly = ltrim($slugOnly, '-\\/');
                 }
+                $postUrl = route('blog.show', ['year' => $year, 'month' => $month, 'day' => $day, 'slug' => $slugOnly]);
+                }
                 @endphp
-                <a href="{{ route('blog.show', ['year' => $year, 'month' => $month, 'day' => $day, 'slug' => $slugOnly]) }}" class="text-white overflow-hidden shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300">
-                    @if($blog->image_path)
-                    <img src="{{ asset('assets/' . $blog->image_path) }}" alt="{{ $blog->title }}" class="w-full h-48 object-cover">
-                    @else
-                    <img src="{{ asset('/assets/logo-crop.png') }}" alt="{{ $blog->title }}" class="w-full h-48 object-cover invert">
-                    @endif
-                    <div class="p-4">
-                        <h2 class="text-xl font-bold mb-2">{{ $blog->title }}</h2>
-                        <p>{{ \Carbon\Carbon::parse( $blog->published_at)->translatedFormat('F j, Y') }}</p>
-                        <!-- <p class="text-gray-700 text-base mb-4">{{ Str::limit($blog->content, 100) }}</p> -->
+                <a href="{{ $postUrl }}"
+                    class="group bg-[#171310] border border-white/10 rounded-xl overflow-hidden hover:border-[#e05534] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(224,85,52,0.2)] transition-all duration-200 flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                        @if($blog->image_path)
+                        <img src="{{ asset('assets/' . $blog->image_path) }}" alt="{{ html_entity_decode($blog->title) }}" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        @else
+                        <img src="{{ asset('/assets/logo-crop.png') }}" alt="{{ html_entity_decode($blog->title) }}" loading="lazy"
+                            class="w-full h-full object-cover invert">
+                        @endif
+                        <span class="absolute top-3 left-3 bg-[#e05534] text-white text-xs font-bold px-3 py-1 rounded-full font-montserrat">
+                            {{ \Carbon\Carbon::parse($blog->published_at)->translatedFormat('d M Y') }}
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h2 class="text-white font-bold leading-snug line-clamp-2 flex-grow group-hover:text-[#e05534] transition-colors">
+                            {{ html_entity_decode($blog->title) }}
+                        </h2>
+                        <span class="mt-4 text-xs font-bold text-[#e05534] uppercase font-montserrat">Baca Selengkapnya &rarr;</span>
                     </div>
                 </a>
                 @endforeach
             </div>
-            <div class="w-full flex justify-end my-6">
-                <nav class="inline-flex items-center space-x-2" role="navigation" aria-label="pagination">
-                    @if ($blogs->onFirstPage())
-                    <span class="px-4 py-2 text-gray-500 bg-white border rounded">Previous</span>
-                    @else
-                    <a href="{{ $blogs->previousPageUrl() }}" class="px-4 py-2 bg-white border rounded hover:bg-gray-100">Previous</a>
-                    @endif
-
-                    <span class="px-4 py-2 bg-white border rounded">
-                        Page {{ $blogs->currentPage() }} of {{ $blogs->lastPage() }}
-                    </span>
-
-                    @if ($blogs->hasMorePages())
-                    <a href="{{ $blogs->nextPageUrl() }}" class="px-4 py-2 bg-white border rounded hover:bg-gray-100">Next</a>
-                    @else
-                    <span class="px-4 py-2 text-gray-500 bg-white border rounded">Next</span>
-                    @endif
-                </nav>
-            </div>
+            @if($blogs->hasPages())
+            <nav class="mt-12 flex items-center justify-center gap-1 flex-wrap font-d-din" aria-label="Navigasi halaman blog">
+                @foreach($blogs->onEachSide(1)->linkCollection() as $link)
+                @php $label = str_replace(['&laquo; Previous', 'Next &raquo;'], ['&laquo;', '&raquo;'], $link['label']); @endphp
+                @if($link['url'] && !$link['active'])
+                <a href="{{ $link['url'] }}"
+                    class="min-w-10 px-3 py-2 rounded-md text-sm font-semibold text-center bg-white/5 border border-white/10 text-gray-300 hover:border-[#e05534] hover:text-[#e05534] transition-colors">{!! $label !!}</a>
+                @elseif($link['active'])
+                <span class="min-w-10 px-3 py-2 rounded-md text-sm font-bold text-center bg-[#e05534] text-white">{!! $label !!}</span>
+                @else
+                <span class="min-w-10 px-3 py-2 text-sm text-center text-gray-600">{!! $label !!}</span>
+                @endif
+                @endforeach
+            </nav>
+            @endif
         </main>
     </div>
     <footer class="bg-black text-white">
@@ -2666,6 +2686,54 @@
         carousel3.addEventListener('mouseleave', () => {
             startAutoPlay3();
         });
+    </script>
+
+    <style>
+        /* Scroll reveal: fade + slide-up sederhana. Elemen .reveal muncul sendiri;
+           anak-anak .reveal-group muncul berurutan (stagger). Pakai animation
+           (bukan transition) agar tidak bentrok dengan efek hover yang ada. */
+        body.reveal-ready .reveal:not(.in-view),
+        body.reveal-ready .reveal-group>*:not(.in-view) {
+            opacity: 0;
+            transform: translateY(24px);
+        }
+
+        .reveal.in-view,
+        .reveal-group>.in-view {
+            animation: revealUp .55s ease-out;
+        }
+
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            body.reveal-ready .reveal:not(.in-view),
+            body.reveal-ready .reveal-group>*:not(.in-view) { opacity: 1; transform: none; }
+            .reveal.in-view, .reveal-group>.in-view { animation: none; }
+        }
+    </style>
+    <script>
+        (function () {
+            if (!('IntersectionObserver' in window)) return;
+            document.body.classList.add('reveal-ready');
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    if (el.classList.contains('reveal-group')) {
+                        Array.prototype.forEach.call(el.children, function (child, i) {
+                            setTimeout(function () { child.classList.add('in-view'); }, Math.min(i * 70, 600));
+                        });
+                    } else {
+                        el.classList.add('in-view');
+                    }
+                    io.unobserve(el);
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+            document.querySelectorAll('.reveal, .reveal-group').forEach(function (el) { io.observe(el); });
+        })();
     </script>
 </body>
 

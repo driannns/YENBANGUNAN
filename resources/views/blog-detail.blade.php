@@ -1985,9 +1985,12 @@
     </style>
     @endif
     <style>
-        /* Ensure blog content blocks have basic typography regardless of build system */
+        /* Ensure blog content blocks have basic typography regardless of build system.
+           Content is exported from WordPress, so this also restores the Gutenberg/classic
+           styles that Tailwind's preflight resets (headings, lists, links, figures). */
         .entry-content {
             margin-top: 1.5em;
+            overflow-wrap: break-word;
         }
 
         .entry-content>*:first-child {
@@ -2000,226 +2003,392 @@
 
         .entry-content p {
             margin-top: 0;
-            margin-bottom: 1.5em;
+            margin-bottom: 1.25em;
             line-height: 1.8;
         }
 
         .entry-content h1,
         .entry-content h2,
         .entry-content h3,
-        .entry-content h4 {
+        .entry-content h4,
+        .entry-content h5,
+        .entry-content h6 {
             font-weight: 700;
-            margin-top: 1em;
-            margin-bottom: 0.75em;
+            line-height: 1.3;
+            margin-top: 1.5em;
+            margin-bottom: 0.6em;
         }
 
-        .wp-block-image {
-            margin: 1em 0;
+        .entry-content h1 { font-size: 1.875em; }
+        .entry-content h2 { font-size: 1.5em; }
+        .entry-content h3 { font-size: 1.25em; }
+        .entry-content h4 { font-size: 1.125em; }
+
+        .entry-content a {
+            color: #C0392B;
+            text-decoration: underline;
         }
 
-        .wp-block-list {
-            margin: 0 0 1.5em 1.5em;
+        .entry-content ul,
+        .entry-content .wp-block-list {
+            list-style: disc;
+            margin: 0 0 1.25em;
+            padding-left: 1.75em;
+        }
+
+        .entry-content ol {
+            list-style: decimal;
+            margin: 0 0 1.25em;
+            padding-left: 1.75em;
+        }
+
+        .entry-content li {
+            margin-bottom: 0.5em;
+        }
+
+        .entry-content li p {
+            margin-bottom: 0.5em;
+        }
+
+        .entry-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .entry-content figure,
+        .entry-content .wp-block-image,
+        .entry-content .wp-caption {
+            margin: 1.5em auto;
+            max-width: 100%;
+        }
+
+        .entry-content figcaption {
+            font-size: 0.875em;
+            color: #6b7280;
+            text-align: center;
+            margin-top: 0.5em;
+        }
+
+        .entry-content .aligncenter {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .entry-content .alignleft {
+            float: left;
+            margin: 0 1.5em 1em 0;
+        }
+
+        .entry-content .alignright {
+            float: right;
+            margin: 0 0 1em 1.5em;
+        }
+
+        .entry-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5em;
+        }
+
+        .entry-content th,
+        .entry-content td {
+            border: 1px solid #e5e7eb;
+            padding: 0.5em 0.75em;
+            text-align: left;
+        }
+
+        .entry-content .has-montserrat-font-family {
+            font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+        }
+
+        /* Gutenberg product-page layout: image beside description on wide screens */
+        .entry-content .wp-block-group.is-layout-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            align-items: flex-start;
+        }
+
+        .entry-content .wp-block-group.is-layout-flex>* {
+            min-width: 0;
+            flex: 1 1 20rem;
+            margin: 0;
+        }
+
+        .entry-content .wp-block-jetpack-send-a-message { text-align: left; }
+
+        .entry-content .whatsapp-block__button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.75em 1.5em;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            background-color: var(--prime) !important;
+            transition: transform .2s;
+        }
+
+        .entry-content .whatsapp-block__button:hover { transform: scale(1.03); }
+
+        .entry-content .whatsapp-block__button::before {
+            content: '';
+            width: 26px;
+            height: 26px;
+            flex: none;
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20640%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M476.9%20161.1C435%20119.1%20379.2%2096%20319.9%2096C197.5%2096%2097.9%20195.6%2097.9%20318C97.9%20357.1%20108.1%20395.3%20127.5%20429L96%20544L213.7%20513.1C246.1%20530.8%20282.6%20540.1%20319.8%20540.1L319.9%20540.1C442.2%20540.1%20544%20440.5%20544%20318.1C544%20258.8%20518.8%20203.1%20476.9%20161.1zM319.9%20502.7C286.7%20502.7%20254.2%20493.8%20225.9%20477L219.2%20473L149.4%20491.3L168%20423.2L163.6%20416.2C145.1%20386.8%20135.4%20352.9%20135.4%20318C135.4%20216.3%20218.2%20133.5%20320%20133.5C369.3%20133.5%20415.6%20152.7%20450.4%20187.6C485.2%20222.5%20506.6%20268.8%20506.5%20318.1C506.5%20419.9%20421.6%20502.7%20319.9%20502.7zM421.1%20364.5C415.6%20361.7%20388.3%20348.3%20383.2%20346.5C378.1%20344.6%20374.4%20343.7%20370.7%20349.3C367%20354.9%20356.4%20367.3%20353.1%20371.1C349.9%20374.8%20346.6%20375.3%20341.1%20372.5C308.5%20356.2%20287.1%20343.4%20265.6%20306.5C259.9%20296.7%20271.3%20297.4%20281.9%20276.2C283.7%20272.5%20282.8%20269.3%20281.4%20266.5C280%20263.7%20268.9%20236.4%20264.3%20225.3C259.8%20214.5%20255.2%20216%20251.8%20215.8C248.6%20215.6%20244.9%20215.6%20241.2%20215.6C237.5%20215.6%20231.5%20217%20226.4%20222.5C221.3%20228.1%20207%20241.5%20207%20268.8C207%20296.1%20226.9%20322.5%20229.6%20326.2C232.4%20329.9%20268.7%20385.9%20324.4%20410C359.6%20425.2%20373.4%20426.5%20391%20423.9C401.7%20422.3%20423.8%20410.5%20428.4%20397.5C433%20384.5%20433%20373.4%20431.6%20371.1C430.3%20368.6%20426.6%20367.2%20421.1%20364.5z%22/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .entry-content .whatsapp-block__button::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: 8px;
+            background-color: var(--prime);
+            animation: waBtnPulse 1.8s infinite;
+        }
+
+        @keyframes waBtnPulse {
+            0% { transform: scale(1); opacity: .55; }
+            100% { transform: scale(1.12); opacity: 0; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .entry-content .whatsapp-block__button::after { animation: none; opacity: 0; }
+        }
+    </style>
+
+    {{-- Tipografi & tema disamakan dengan new-home.blade.php (Apercu Mono/IBM Plex Mono
+         untuk heading, Helvetica Now Text/Inter untuk body, background gelap konsisten). --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #060606;
+            --bg-alt: #0a0a0a;
+            --white: #fff;
+            --white50: #ffffff80;
+            --white35: #ffffff59;
+            --white15: #ffffff26;
+            --white5: #ffffff0d;
+            --white2: #ffffff05;
+            --prime: #e05534;
+            --font-mono: 'Apercu Mono', 'IBM Plex Mono', ui-monospace, monospace;
+            --font-text: 'Helvetica Now Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: var(--font-text);
+            font-size: 16px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-mono);
+            color: var(--white);
+        }
+
+        a { color: inherit; }
+
+        /* ===== Navbar (identik new-home) ===== */
+        .navbar {
+            position: fixed;
+            inset: 0 0 auto;
+            z-index: 999;
+            padding: 0 3%;
+            background-color: #0a0a0a80;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+        }
+
+        .navbar .nav-inner {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 60px;
+        }
+
+        .navbar .logo { display: flex; align-items: center; height: 60px; padding-left: 10px; }
+        .navbar .logo img { height: 18px; width: auto; }
+
+        .nav-links { display: flex; align-items: center; }
+
+        .nav-link {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: var(--white35);
+            padding: 20px;
+            display: inline-block;
+            transition: color .2s;
+        }
+
+        .nav-link:hover, .nav-link.active { color: var(--white); }
+
+        .menu-button {
+            display: none;
+            background: none;
+            border: 0;
+            color: var(--white);
+            font-size: 24px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 18px;
+        }
+
+        .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            max-height: 0;
+            padding: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateY(-8px);
+            transition: max-height .3s ease, opacity .25s ease, transform .25s ease, padding .3s ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 320px;
+            padding: 8px 0 16px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-menu .nav-link { padding: 10px 4px; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .mobile-menu { transition: none; }
+        }
+
+        @media (max-width: 991px) {
+            .nav-links .nav-link { display: none; }
+            .menu-button { display: block; }
+        }
+
+        /* ===== Konten artikel/produk — palet gelap ===== */
+        .entry-content { color: var(--white); font-family: var(--font-text); }
+        .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4 { font-family: var(--font-mono); color: var(--white); }
+        .entry-content a { color: var(--prime); }
+        .entry-content figcaption { color: var(--white50); }
+        .entry-content th, .entry-content td { border-color: var(--white15); }
+        .entry-content table { border-color: var(--white15); }
+        .entry-content thead th { background: var(--white5); border-bottom-color: var(--white15); color: var(--white); }
+        .entry-content tbody td { border-bottom-color: var(--white15); }
+        .entry-content tbody tr:nth-child(even) { background: var(--white2); }
+        .entry-content hr { background-color: var(--white15); }
+        .entry-content blockquote { background: var(--white2); border-left-color: var(--prime); color: var(--white50); }
+        .entry-content blockquote cite { color: var(--white35); }
+        .entry-content code, .entry-content kbd, .entry-content tt, .entry-content var, .entry-content pre { background: var(--white5); color: var(--white); }
+        .entry-content mark, .entry-content ins { background: var(--prime); color: #fff; }
+
+        /* ===== Floating WhatsApp (identik new-home) ===== */
+        .whatsapp-float {
+            position: fixed;
+            right: calc(20px + env(safe-area-inset-right));
+            bottom: calc(20px + env(safe-area-inset-bottom));
+            z-index: 1000;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366;
+            border-radius: 50%;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .4);
+            animation: waBounce 2.2s cubic-bezier(.28, .84, .42, 1) infinite;
+            transition: transform .2s, background-color .2s;
+        }
+
+        .whatsapp-float:hover { background-color: #1ebd59; transform: scale(1.08); }
+
+        .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
+
+        .whatsapp-float::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: 50%;
+            background-color: rgba(37, 211, 102, .55);
+            animation: waPulse 1.8s infinite;
+        }
+
+        @keyframes waBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-14px); }
+            60% { transform: translateY(-3px); }
+        }
+
+        @keyframes waPulse {
+            0% { transform: scale(.9); opacity: 1; }
+            100% { transform: scale(1.7); opacity: 0; }
+        }
+
+        @media (max-width: 767px) {
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                right: calc(14px + env(safe-area-inset-right));
+                bottom: calc(14px + env(safe-area-inset-bottom));
+            }
+
+            .whatsapp-float svg { width: 24px; height: 24px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .whatsapp-float { animation: none; }
+            .whatsapp-float::before { animation: none; opacity: 0; }
         }
     </style>
 </head>
 
-<body class="relative bg-[#FDFDFC] text-[#1b1b18] flex flex-col min-h-screen items-start">
-    <a href="https://wa.link/3v66z0"
-        target="_blank"
-        class="fixed whatsapp-pulse whatsapp-bounce bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:scale-110 transition-all duration-300 z-50" aria-label="WhatsApp">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+<body class="relative flex flex-col min-h-screen items-start">
+    <a href="https://wa.link/3v66z0" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat WhatsApp Yen Bangunan">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
         </svg>
     </a>
-    <style>
-        /* Bouncing animation for WhatsApp floating button */
-        .whatsapp-bounce {
-            animation: whatsappBounce 2s cubic-bezier(.28, .84, .42, 1) infinite;
-            transform-origin: center;
-        }
-
-        @keyframes whatsappBounce {
-
-            0%,
-            20%,
-            50%,
-            80%,
-            100% {
-                transform: translateY(0);
-            }
-
-            40% {
-                transform: translateY(-20px);
-            }
-
-            60% {
-                transform: translateY(-1px);
-            }
-        }
-    </style>
-    <div class="w-full bg-[#C0392B] text-white py-2 overflow-hidden shadow-lg fixed top-0 left-0 z-50">
-        <div class="flex items-center">
-            <!-- Label with Countdown -->
-            <div class="flex items-center gap-1 bg-white text-red-600 px-4 py-2 font-bold text-sm flex-shrink-0">
-                <div class="uppercase">Promo</div>
-                <div id="countdown" class="text-xs font-normal">00D 00H 00M 00S</div>
-            </div>
-
-            <!-- Scrolling Text Container -->
-            <div class="flex-1 overflow-hidden relative ml-4 text-sm">
-                <div id="runningText" class="whitespace-nowrap inline-block" style="position: relative;"></div>
+    @php $isProductPage = $blog->type === 'product'; @endphp
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="{{ route('home') }}" class="logo">
+                <img src="{{ asset('assets/logo.png') }}" alt="Yen Bangunan">
+            </a>
+            <div class="nav-links">
+                <a href="{{ route('home') }}" class="nav-link">Home</a>
+                <a href="{{ route('product') }}" class="nav-link {{ $isProductPage ? 'active' : '' }}">Product</a>
+                <a href="{{ route('about-us') }}" class="nav-link">About</a>
+                <a href="{{ route('gallery') }}" class="nav-link">Gallery</a>
+                <a href="{{ route('blog') }}" class="nav-link {{ $isProductPage ? '' : 'active' }}">Blog</a>
+                <button type="button" class="menu-button" id="menuButton" aria-label="Menu" aria-expanded="false">&#9776;</button>
             </div>
         </div>
-    </div>
-    <div class="w-full z-40 top-0 start-0" style="margin-top: 3.2rem">
-        <nav x-data="{ open: false }" class="bg-black text-white">
-            <!-- Primary Navigation Menu -->
-            <div class="mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16">
-                    <div class="flex justify-between">
-                        <!-- Logo -->
-                        <div class="shrink-0 w-2/12 md:w-1/2 lg:w-3/12 flex items-center">
-                            <a href="{{ route('dashboard') }}" class="w-4/12">
-                                <x-application-logo class="block w-10 fill-current text-gray-800" />
-                            </a>
-                        </div>
-
-                        <!-- Navigation Links -->
-                        <div class="w-1/2 items-center justify-center hidden space-x-8 sm:-my-px sm:ms-10 sm:flex font-d-din uppercase">
-                            <x-nav-link :href="route('home')" :active="request()->routeIs('home')" style="margin-right: 0 !important;">
-                                {{ __('Home') }}
-                            </x-nav-link>
-                            <x-nav-link :href="route('product')" :active="request()->routeIs('product')">
-                                {{ __('Product') }}
-                            </x-nav-link>
-                            <x-nav-link :href="route('about-us')" :active="request()->routeIs('about-us')">
-                                {{ __('About Us') }}
-                            </x-nav-link>
-                            <x-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
-                                {{ __('Blog') }}
-                            </x-nav-link>
-                        </div>
-
-                        <div class="hidden sm:flex sm:items-center sm:justify-end gap-2 sm:ms-6 w-4/12">
-                            <a href="https://wa.me/6282123269622" target="_blank" class="@auth w-2/3 @else w-1/2 @endauth text-center bg-[#e05534] border border-[#e05534] text-white px-4 py-2 rounded-full text-xs uppercase font-mono font-bold">Kebutuhan Projek</a>
-                            @auth
-                            <x-dropdown align="right" class="">
-                                <x-slot name="trigger" class="w-fit">
-                                    <button class="bg-white px-2 text-gray-500 flex gap-1 items-center justify-between px- py-2 border border-transparent text-sm leading-4 font-medium rounded-md hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                        <img class="w-2/12" src="{{asset('assets/user.png')}}" alt="">
-                                        <div class="text-xs">{{ Auth::user()->name }}</div>
-                                        <div class="ms-1">
-                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                    </button>
-                                </x-slot>
-
-                                <x-slot name="content">
-                                    <x-dropdown-link :href="route('profile.edit')">
-                                        {{ __('Profile') }}
-                                    </x-dropdown-link>
-                                    <x-dropdown-link :href="route('orders-history')">
-                                        {{ __('Order History') }}
-                                    </x-dropdown-link>
-                                    <x-dropdown-link :href="route('loyalty.promotion-program')">
-                                        {{ __('Loyalty Program') }}
-                                    </x-dropdown-link>
-                                    @if(auth()->user()->is_manager)
-                                    <x-dropdown-link :href="route('loyalty.log')">
-                                        {{ __('Loyalty Log') }}
-                                    </x-dropdown-link>
-                                    @endif
-
-                                    <!-- Authentication -->
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-
-                                        <x-dropdown-link :href="route('logout')"
-                                            onclick="event.preventDefault();
-                                                                this.closest('form').submit();">
-                                            {{ __('Log Out') }}
-                                        </x-dropdown-link>
-                                    </form>
-                                </x-slot>
-                            </x-dropdown>
-                            @else
-                            <div class="flex items-center gap-1">
-                                <a href="{{ route('login') }}" class="py-1 px-3 font-d-din rounded-full bg-[#e05534] text-white font-bold">Login</a>
-                            </div>
-                            @endauth
-                        </div>
-                    </div>
-
-                    <!-- Settings Dropdown -->
-
-                    <!-- Hamburger -->
-                    <div class="-me-2 flex items-center sm:hidden">
-                        <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                                <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Responsive Navigation Menu -->
-            <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-                <div class="pt-2 pb-3 space-y-1">
-                    <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                        {{ __('Home') }}
-                    </x-responsive-nav-link>
-                    <x-responsive-nav-link :href="route('product')" :active="request()->routeIs('product')">
-                        {{ __('Product') }}
-                    </x-responsive-nav-link>
-                    <x-responsive-nav-link :href="route('about-us')" :active="request()->routeIs('about-us')">
-                        {{ __('About Us') }}
-                    </x-responsive-nav-link>
-                    <x-responsive-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
-                        {{ __('Blog') }}
-                    </x-responsive-nav-link>
-                    <hr>
-                    <x-responsive-nav-link href="https://wa.me/6282123269622" target="_blank" :active="request()->routeIs('blog')">
-                        {{ __('Kebutuhan Projek') }}
-                    </x-responsive-nav-link>
-                </div>
-
-                <!-- Responsive Settings Options -->
-                @auth
-                <div class="pt-4 pb-1 border-t border-gray-200">
-                    <div class="px-4">
-                        <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                        <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-                    </div>
-
-                    <div class="mt-3 space-y-1">
-                        <x-responsive-nav-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-responsive-nav-link>
-
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-
-                            <x-responsive-nav-link :href="route('logout')"
-                                onclick="event.preventDefault();
-                                                    this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-responsive-nav-link>
-                        </form>
-                    </div>
-                </div>
-                @endauth
-            </div>
-        </nav>
-    </div>
-    <main class="flex-grow bg-white p-10 w-9/12 mx-auto my-10">
-        <div class="max-w-7xl mx-auto bg-white p-8">
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ route('home') }}" class="nav-link">Home</a>
+            <a href="{{ route('product') }}" class="nav-link {{ $isProductPage ? 'active' : '' }}">Product</a>
+            <a href="{{ route('about-us') }}" class="nav-link">About</a>
+            <a href="{{ route('gallery') }}" class="nav-link">Gallery</a>
+            <a href="{{ route('blog') }}" class="nav-link {{ $isProductPage ? '' : 'active' }}">Blog</a>
+        </div>
+    </nav>
+    <main class="flex-grow p-10 w-9/12 mx-auto mb-10" style="margin-top: 76px">
+        <div class="max-w-7xl mx-auto p-8 reveal">
             <h1 class="text-3xl font-bold mb-4">{{ $blog->title }}</h1>
-            <p class="text-gray-600 mb-6">Published on {{ $blog->created_at->format('F j, Y') }}</p>
+            <p class="text-[#ffffff80] mb-6">Published on {{ $blog->created_at->format('F j, Y') }}</p>
             <div class="entry-content">
                 {!! $blog->content !!}
             </div>
@@ -2271,103 +2440,23 @@
                 <li><strong>Customer Service 24 jam</strong>, tim siap melayani pertanyaan atau kebutuhan pengadaan kapan saja — penting untuk tim pengadaan di proyek aktif.</li>
                 <li><strong>All-in-One dan Harga Kompetitif</strong> — solusi produk lengkap dalam satu lokasi dengan harga yang efisien bagi tim purchasing dan developer.</li>
             </ul>
-            <a href="https://api.whatsapp.com/send?phone=6281315147952&text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-md mt-4">👉KONSULTASI LEBIH DULU DENGAN KAMI👈</a>
+            <a href="https://api.whatsapp.com/send?phone=6281315147952&text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F" target="_blank" class="inline-block bg-[#e05534] hover:bg-[#c74628] text-white px-4 py-2 rounded-md mt-4">👉KONSULTASI LEBIH DULU DENGAN KAMI👈</a>
         </div>
         </div>
     </main>
 
 
-    <footer class="bg-black text-white">
-        <div class="flex items-start gap-6 p-6 lg:px-20 lg:py-12 ">
-            <div class="flex flex-col gap-4 w-5/12">
-                <img src="/assets/logo.png" class="w-2/3 lg:w-1/3" alt="Yen Bangunan Logo" />
-                <p class="text-sm lg:text-base">Lippo Cikarang Sukadami, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat, 17530</p>
-                <div class="flex items-center gap-2">
-                    <i class='bx bxl-whatsapp  bx-sm'></i>
-                    <p class="text-sm">081315147952</p>
-                </div>
-            </div>
-            <div class="flex flex-col gap-2 w-4/12">
-                <h1 class="font-bold">LINK</h1>
-                <ul class="flex flex-col gap-4 text-sm lg:text-base lg:gap-6">
-                    <li>Home</li>
-                    <li>Produk</li>
-                    <li>Tentang Kami</li>
-                    <li>Blok</li>
-                </ul>
-            </div>
-            <div class="flex flex-col gap-2 w-3/12">
-                <h1 class="font-bold">Follow Kami</h1>
-                <p>@yenbangunan</p>
-            </div>
-        </div>
-        <div class="w-full border-t border-white flex items-center gap-5 justify-center p-3">
-            <img src="{{ asset('assets/logo.png') }}" alt="Logo" class="w-3/12 md:w-1/12">
-            <p class="text-center text-sm p-4">© 2009</p>
-        </div>
-
-    </footer>
+    @include('partials.site-footer')
     <script>
-        const messages = [
-            ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
-            ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
-            ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
-            ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
-            ' <span class="wp-marquee-item"><span style="font-weight: 800">DISKON <span style="color: #FFC107">25%</span></span> PEMBELIAN PERTAMA!</span>',
-        ];
-
-        const runningText = document.getElementById('runningText');
-        const countdownElement = document.getElementById('countdown');
-        const targetDate = new Date('2026-03-31T23:59:59').getTime();
-
-        // Create text
-        const fullText = messages.join(' • ') + ' • ' + messages.join(' • ');
-        runningText.innerHTML = `<span class="inline-block px-4">${fullText}</span>`;
-
-        let position = 0;
-        const speed = 1;
-        let isPaused = false;
-
-        // Update countdown
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            if (distance < 0) {
-                countdownElement.textContent = 'PROMO BERAKHIR';
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            countdownElement.textContent = `${days}D ${hours}H ${minutes}M ${seconds}S`;
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-        // Animate running text
-        function animate() {
-            if (!isPaused) {
-                position -= speed;
-
-                if (Math.abs(position) >= runningText.scrollWidth / 2) {
-                    position = 0;
-                }
-
-                runningText.style.transform = `translateX(${position}px)`;
-            }
-
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-
-        runningText.addEventListener('mouseenter', () => isPaused = true);
-        runningText.addEventListener('mouseleave', () => isPaused = false);
+        (function () {
+            var btn = document.getElementById('menuButton');
+            var menu = document.getElementById('mobileMenu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function () {
+                var open = menu.classList.toggle('open');
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+        })();
     </script>
     <script>
         // Carousel 6 JavaScript
@@ -3052,6 +3141,54 @@
         carousel3.addEventListener('mouseleave', () => {
             startAutoPlay3();
         });
+    </script>
+
+    <style>
+        /* Scroll reveal: fade + slide-up sederhana. Elemen .reveal muncul sendiri;
+           anak-anak .reveal-group muncul berurutan (stagger). Pakai animation
+           (bukan transition) agar tidak bentrok dengan efek hover yang ada. */
+        body.reveal-ready .reveal:not(.in-view),
+        body.reveal-ready .reveal-group>*:not(.in-view) {
+            opacity: 0;
+            transform: translateY(24px);
+        }
+
+        .reveal.in-view,
+        .reveal-group>.in-view {
+            animation: revealUp .55s ease-out;
+        }
+
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            body.reveal-ready .reveal:not(.in-view),
+            body.reveal-ready .reveal-group>*:not(.in-view) { opacity: 1; transform: none; }
+            .reveal.in-view, .reveal-group>.in-view { animation: none; }
+        }
+    </style>
+    <script>
+        (function () {
+            if (!('IntersectionObserver' in window)) return;
+            document.body.classList.add('reveal-ready');
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    if (el.classList.contains('reveal-group')) {
+                        Array.prototype.forEach.call(el.children, function (child, i) {
+                            setTimeout(function () { child.classList.add('in-view'); }, Math.min(i * 70, 600));
+                        });
+                    } else {
+                        el.classList.add('in-view');
+                    }
+                    io.unobserve(el);
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+            document.querySelectorAll('.reveal, .reveal-group').forEach(function (el) { io.observe(el); });
+        })();
     </script>
 </body>
 

@@ -1834,7 +1834,7 @@
     </div>
 
     <div class="mt-4 w-full">
-        <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Brand Produk</h1>
+        <h1 class="text-3xl font-extrabold uppercase text-center font-d-din reveal">Brand Produk</h1>
         <div class="container mx-auto px-4 py-8">
             <!-- Carousel Container -->
             <div class="relative max-w-4xl mx-auto lg:hidden">
@@ -1952,58 +1952,51 @@
         </div>
     </div>
 
-    <div class="my-8">
-        <h1 class="text-3xl font-extrabold uppercase text-center font-d-din">Produk Kami</h1>
-        <div class="grid grid-cols-4 lg:grid-cols-6 gap-8 conte p-4">
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/besi-dan-baja.png" alt="Product">
-                <p>Besi & Baja</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/hebel-dan-bata.png" alt="Product">
-                <p>Hebel & Bata</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/atap.png" alt="Product">
-                <p>Atap</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/pipa-dan-sanitasi.png" alt="Product">
-                <p>Pipa & Sanitasi</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/lampu-dan-kelistrikan.png" alt="Product">
-                <p>Lampu & Kelistrikan</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/mesin.png" alt="Product">
-                <p>Mesin</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/perkakas.png" alt="Product">
-                <p>Perkakas</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/paku-dan-baut.png" alt="Product">
-                <p>Paku & Baut</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/consumable-industri.png" alt="Product">
-                <p>Consumable Industry</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/safety.png" alt="Product">
-                <p>Safety Industry</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/keramik-dan-granit.png" alt="Product">
-                <p>Keramik & Granit</p>
-            </div>
-            <div class="font-d-din font-bold uppercase text-center">
-                <img src="/assets/product/cat.png" alt="Product">
-                <p>Cat</p>
-            </div>
+    <div class="my-12 px-4 lg:px-16" id="produk">
+        <h1 class="text-3xl font-extrabold uppercase text-center font-d-din reveal">Produk Kami</h1>
+        <p class="text-center text-gray-500 mt-2 mb-8 text-sm reveal">
+            Menampilkan {{ $products->firstItem() }}&ndash;{{ $products->lastItem() }} dari {{ $products->total() }} produk
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 reveal-group">
+            @foreach($products as $product)
+            @php
+                $productName = html_entity_decode(preg_replace('/\s*[-\x{2013}]\s*Yen Bangunan Cikarang\s*$/iu', '', $product->title));
+                $productUrl = str_contains($product->slug, '/')
+                    ? '/' . $product->slug
+                    : route('content.product.show', ['category' => $product->category, 'slug' => $product->slug]);
+            @endphp
+            <a href="{{ $productUrl }}"
+                class="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:border-[#e05534] transition-all duration-200 flex flex-col">
+                <div class="aspect-square bg-gray-50 overflow-hidden">
+                    @if($product->image_path)
+                    <img src="{{ asset('assets' . $product->image_path) }}" alt="{{ $productName }}" loading="lazy"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    @endif
+                </div>
+                <div class="p-3 flex flex-col flex-grow">
+                    <h3 class="text-sm font-semibold leading-snug flex-grow">{{ $productName }}</h3>
+                    <span class="mt-3 block text-center bg-[#e05534] group-hover:bg-[#c74628] text-white text-xs font-bold uppercase rounded-md py-2 transition-colors">Detail</span>
+                </div>
+            </a>
+            @endforeach
         </div>
+
+        @if($products->hasPages())
+        <nav class="mt-10 flex items-center justify-center gap-1 flex-wrap font-d-din" aria-label="Navigasi halaman produk">
+            @foreach($products->onEachSide(1)->linkCollection() as $link)
+            @php $label = str_replace(['&laquo; Previous', 'Next &raquo;'], ['&laquo;', '&raquo;'], $link['label']); @endphp
+            @if($link['url'] && !$link['active'])
+            <a href="{{ $link['url'] }}#produk"
+                class="min-w-10 px-3 py-2 rounded-md text-sm font-semibold text-center bg-white border border-gray-200 text-gray-700 hover:border-[#e05534] hover:text-[#e05534] transition-colors">{!! $label !!}</a>
+            @elseif($link['active'])
+            <span class="min-w-10 px-3 py-2 rounded-md text-sm font-bold text-center bg-[#e05534] text-white">{!! $label !!}</span>
+            @else
+            <span class="min-w-10 px-3 py-2 text-sm text-center text-gray-400">{!! $label !!}</span>
+            @endif
+            @endforeach
+        </nav>
+        @endif
     </div>
 
     <footer class="bg-black text-white">
@@ -2781,6 +2774,54 @@
         carousel3.addEventListener('mouseleave', () => {
             startAutoPlay3();
         });
+    </script>
+
+    <style>
+        /* Scroll reveal: fade + slide-up sederhana. Elemen .reveal muncul sendiri;
+           anak-anak .reveal-group muncul berurutan (stagger). Pakai animation
+           (bukan transition) agar tidak bentrok dengan efek hover yang ada. */
+        body.reveal-ready .reveal:not(.in-view),
+        body.reveal-ready .reveal-group>*:not(.in-view) {
+            opacity: 0;
+            transform: translateY(24px);
+        }
+
+        .reveal.in-view,
+        .reveal-group>.in-view {
+            animation: revealUp .55s ease-out;
+        }
+
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            body.reveal-ready .reveal:not(.in-view),
+            body.reveal-ready .reveal-group>*:not(.in-view) { opacity: 1; transform: none; }
+            .reveal.in-view, .reveal-group>.in-view { animation: none; }
+        }
+    </style>
+    <script>
+        (function () {
+            if (!('IntersectionObserver' in window)) return;
+            document.body.classList.add('reveal-ready');
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    if (el.classList.contains('reveal-group')) {
+                        Array.prototype.forEach.call(el.children, function (child, i) {
+                            setTimeout(function () { child.classList.add('in-view'); }, Math.min(i * 70, 600));
+                        });
+                    } else {
+                        el.classList.add('in-view');
+                    }
+                    io.unobserve(el);
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+            document.querySelectorAll('.reveal, .reveal-group').forEach(function (el) { io.observe(el); });
+        })();
     </script>
 </body>
 

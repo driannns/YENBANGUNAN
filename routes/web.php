@@ -4,10 +4,21 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
+// Halaman utama: didesain ulang di new-home, sekarang jadi halaman resmi di "/".
 Route::get('/', function () {
+    return view('new-home');
+})->name('home');
+
+Route::get('/new-home', function () {
+    return view('new-home');
+})->name('new-home');
+
+Route::get('/new-product', [App\Http\Controllers\BlogController::class, 'newProducts'])->name('new-product');
+
+Route::get('/new-gallery', function () {
     $galleryDir = public_path('assets/galery');
     $galleryImages = [];
-            if (File::exists($galleryDir)) {
+    if (File::exists($galleryDir)) {
         $galleryImages = collect(File::files($galleryDir))
             ->filter(function ($file) {
                 return in_array(strtolower($file->getExtension()), ['jpg', 'jpeg', 'png', 'webp']);
@@ -19,13 +30,19 @@ Route::get('/', function () {
             ->map(function ($file) {
                 return asset('assets/galery/' . $file->getFilename());
             })
-            ->take(15)
             ->all();
     }
-    // dd( $galleryImages);
-    return view('welcome', compact('galleryImages'));
-})->name('home');
 
+    return view('new-gallery', compact('galleryImages'));
+})->name('new-gallery');
+
+Route::get('/new-blog', [App\Http\Controllers\BlogController::class, 'newBlog'])->name('new-blog');
+
+Route::get('/new-aboutus', function () {
+    return view('new-aboutus');
+})->name('new-aboutus');
+
+// Halaman lama: sekarang menampilkan desain baru (new-gallery/new-product/new-aboutus/new-blog).
 Route::get('/gallery', function () {
     $galleryDir = public_path('assets/galery');
     $galleryImages = [];
@@ -44,18 +61,16 @@ Route::get('/gallery', function () {
             ->all();
     }
 
-    return view('gallery', compact('galleryImages'));
+    return view('new-gallery', compact('galleryImages'));
 })->name('gallery');
 
-Route::get('/product', function () {
-    return view('product');
-})->name('product');
+Route::get('/product', [App\Http\Controllers\BlogController::class, 'newProducts'])->name('product');
 
 Route::get('/about-us', function () {
-    return view('about-us');
+    return view('new-aboutus');
 })->name('about-us');
 
-Route::get('/blog', [App\Http\Controllers\BlogController::class, 'all'])->name('blog');
+Route::get('/blog', [App\Http\Controllers\BlogController::class, 'newBlog'])->name('blog');
 Route::get('/{year}/{month}/{day}/{slug}', [App\Http\Controllers\BlogController::class, 'show'])
     ->where(['year' => '\\d{4}', 'month' => '\\d{2}', 'day' => '\\d{2}', 'slug' => '[^/]+'])
     ->name('blog.show');
@@ -98,4 +113,35 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Admin: pembuatan konten blog & produk. Middleware 'admin' = is_admin && !is_manager
+// (lihat app/Http/Middleware/AdminMiddleware.php).
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [App\Http\Controllers\Admin\ContentController::class, 'dashboard'])->name('dashboard');
+    Route::get('/blog/create', [App\Http\Controllers\Admin\ContentController::class, 'createBlog'])->name('blog.create');
+    Route::post('/blog', [App\Http\Controllers\Admin\ContentController::class, 'storeBlog'])->name('blog.store');
+    Route::get('/product/create', [App\Http\Controllers\Admin\ContentController::class, 'createProduct'])->name('product.create');
+    Route::post('/product', [App\Http\Controllers\Admin\ContentController::class, 'storeProduct'])->name('product.store');
+});
+
 require __DIR__.'/auth.php';
+
+// ==========================================================================
+// PERINGATAN: dua route di bawah ini HARUS TETAP jadi route PALING TERAKHIR
+// di seluruh aplikasi (termasuk lebih akhir dari auth.php di atas). Keduanya
+// wildcard generik untuk konten baru (dibuat lewat /admin) dengan URL pendek.
+// Laravel mencocokkan route berurutan sesuai urutan registrasi — kalau ada
+// route baru yang ditambahkan SETELAH baris ini, route itu tidak akan pernah
+// tercapai karena keburu "ditelan" oleh wildcard {slug} di bawah.
+// Tambahkan route baru SEBELUM blok ini, bukan sesudahnya.
+// ==========================================================================
+
+// Produk baru: /{category}/{slug} — dibatasi hanya kategori yang dikenal,
+// supaya tidak bentrok dengan path lain yang kebetulan 2 segmen.
+Route::get('/{category}/{slug}', [App\Http\Controllers\BlogController::class, 'showProduct'])
+    ->where('category', implode('|', array_keys(config('product_categories'))))
+    ->name('content.product.show');
+
+// Artikel baru: /{slug} — aman karena semua route statis (login, admin, dashboard,
+// dst) di atas sudah "mengklaim" duluan permintaan yang cocok dengan miliknya.
+Route::get('/{slug}', [App\Http\Controllers\BlogController::class, 'showArticle'])
+    ->name('content.blog.show');

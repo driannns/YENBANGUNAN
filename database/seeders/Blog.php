@@ -8,8 +8,8 @@ use Illuminate\Database\Seeder;
  * Seeds every blog post exported from WordPress.
  *
  * The posts themselves live in the generated BlogPart* seeders; this one only
- * runs them in order. Regenerate those parts from the export rather than
- * editing them by hand.
+ * runs them in order. Regenerate them with
+ * database/seeders/generator/gen_blog_seeders.py rather than editing by hand.
  */
 class Blog extends Seeder
 {

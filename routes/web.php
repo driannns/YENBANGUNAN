@@ -121,6 +121,21 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::post('/blog', [App\Http\Controllers\Admin\ContentController::class, 'storeBlog'])->name('blog.store');
     Route::get('/product/create', [App\Http\Controllers\Admin\ContentController::class, 'createProduct'])->name('product.create');
     Route::post('/product', [App\Http\Controllers\Admin\ContentController::class, 'storeProduct'])->name('product.store');
+
+    // Daftar + edit/delete. Dibind lewat {blog:id} (bukan slug default model) karena
+    // slug konten lama hasil import mengandung "/" (mis. "2026/05/03/xxx") yang tidak
+    // bisa cocok dengan satu segmen URL {blog}.
+    Route::get('/content', [App\Http\Controllers\Admin\ContentController::class, 'index'])->name('content.index');
+    Route::get('/content/{blog:id}/edit', [App\Http\Controllers\Admin\ContentController::class, 'edit'])->name('content.edit');
+    Route::put('/content/{blog:id}', [App\Http\Controllers\Admin\ContentController::class, 'update'])->name('content.update');
+    Route::delete('/content/{blog:id}', [App\Http\Controllers\Admin\ContentController::class, 'destroy'])->name('content.destroy');
+
+    // Edit teks template halaman listing Blog & Produk (judul, subjudul, meta
+    // description, dan copy per kategori) — bukan konten per-artikel/produk.
+    Route::get('/pages/blog', [App\Http\Controllers\Admin\PageSettingsController::class, 'editBlog'])->name('pages.blog.edit');
+    Route::put('/pages/blog', [App\Http\Controllers\Admin\PageSettingsController::class, 'updateBlog'])->name('pages.blog.update');
+    Route::get('/pages/product', [App\Http\Controllers\Admin\PageSettingsController::class, 'editProduct'])->name('pages.product.edit');
+    Route::put('/pages/product', [App\Http\Controllers\Admin\PageSettingsController::class, 'updateProduct'])->name('pages.product.update');
 });
 
 require __DIR__.'/auth.php';

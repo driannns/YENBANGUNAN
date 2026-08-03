@@ -25,6 +25,9 @@ class DatabaseSeeder extends Seeder
         // Run user seeder
         $this->call(UserSeeder::class);
 
+        // Akun superadmin untuk /admin — idempotent, aman dipanggil tiap seed.
+        $this->call(SuperAdminSeeder::class);
+
         // Run order seeder
         $this->call(OrderSeeder::class);
 

@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog — Yen Bangunan</title>
-    <meta name="description" content="Tips, panduan, dan informasi seputar material bangunan dan konstruksi dari Yen Bangunan Cikarang.">
+    <title>{{ $page['meta_title'] }}</title>
+    <meta name="description" content="{{ $page['meta_description'] }}">
     <link rel="icon" href="{{ asset('assets/logo-crop.png') }}">
 
     {{-- Tipografi mengikuti total-prime.com (lihat catatan di new-home.blade.php) --}}
@@ -363,8 +363,8 @@
 
     <!-- Judul halaman (center, persis heading-product.h1.prime referensi) -->
     <div class="page-hero reveal">
-        <h1 class="page-title">Blog</h1>
-        <p class="page-sub">Tips, panduan, dan informasi terbaru seputar material bangunan dan dunia konstruksi dari Yen Bangunan.</p>
+        <h1 class="page-title">{{ $page['heading'] }}</h1>
+        <p class="page-sub">{{ $page['subtitle'] }}</p>
     </div>
 
     <!-- List artikel (produk dikecualikan — punya menu tersendiri) -->

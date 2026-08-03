@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\View\View;
 use App\Models\Blog;
+use App\Models\PageSetting;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -25,7 +26,8 @@ class BlogController extends Controller
             ->orderBy('published_at', 'desc')
             ->paginate(12)
             ->withQueryString();
-        return view('new-blog', compact('blogs'));
+        $page = PageSetting::resolvePage('blog');
+        return view('new-blog', compact('blogs', 'page'));
     }
 
     public function products(): View
@@ -53,8 +55,9 @@ class BlogController extends Controller
         }
 
         $products = $query->orderBy('title')->paginate(24)->withQueryString();
+        $page = PageSetting::resolvePage('product');
 
-        return view('new-product', compact('products', 'kategori', 'search'));
+        return view('new-product', compact('products', 'kategori', 'search', 'page'));
     }
 
     /**

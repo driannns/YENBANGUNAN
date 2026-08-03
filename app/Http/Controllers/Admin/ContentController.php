@@ -15,7 +15,117 @@ class ContentController extends Controller
 {
     public function dashboard(): View
     {
-        return view('admin.dashboard');
+        return view('admin.dashboard', [
+            'articleCount' => Blog::where('type', 'article')->count(),
+            'productCount' => Blog::where('type', 'product')->count(),
+        ]);
+    }
+
+    /**
+     * Daftar semua blog & produk (konten lama hasil import maupun baru dari admin),
+     * dengan filter opsional ?type=article|product.
+     */
+    public function index(Request $request): View
+    {
+        $type = $request->query('type');
+        $type = in_array($type, ['article', 'product'], true) ? $type : null;
+
+        $items = Blog::query()
+            ->when($type, fn ($q) => $q->where('type', $type))
+            ->orderByDesc('created_at')
+            ->paginate(20)
+            ->withQueryString();
+
+        return view('admin.content-index', [
+            'items' => $items,
+            'type' => $type,
+        ]);
+    }
+
+    public function edit(Blog $blog): View
+    {
+        $view = $blog->type === 'product' ? 'admin.product-edit' : 'admin.blog-edit';
+
+        $description = $blog->description ?? trim(strip_tags($blog->content));
+        // Deskripsi lama (sebelum pakai Trix) tersimpan sebagai plain text —
+        // ubah jadi paragraf HTML dulu supaya baris/paragraf tetap kebaca saat dibuka di Trix.
+        $currentDescription = $description !== strip_tags($description)
+            ? $description
+            : $this->descriptionToParagraphs($description);
+
+        return view($view, [
+            'blog' => $blog,
+            'categories' => config('product_categories'),
+            'legacyUrl' => str_contains($blog->slug, '/'),
+            'currentDescription' => $currentDescription,
+        ]);
+    }
+
+    public function update(Request $request, Blog $blog): RedirectResponse
+    {
+        $isProduct = $blog->type === 'product';
+        $legacyUrl = str_contains($blog->slug, '/');
+
+        $rules = [
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
+        ];
+        if (!$legacyUrl) {
+            $rules['slug'] = ['nullable', 'string', 'max:255'];
+        }
+        if ($isProduct) {
+            $rules['category'] = ['required', Rule::in(array_keys(config('product_categories')))];
+        }
+
+        $validated = $request->validate($rules);
+
+        // URL lama (hasil import WordPress, mengandung "/") tidak boleh berubah —
+        // supaya link yang sudah dibagikan/terindeks tidak 404.
+        $slug = $legacyUrl
+            ? $blog->slug
+            : $this->uniqueSlug(($validated['slug'] ?? '') ?: $validated['title'], $blog->id);
+
+        $imagePath = $blog->image_path;
+        if ($request->hasFile('image')) {
+            $oldImagePath = $blog->image_path;
+            $imagePath = $this->storeImage($request->file('image'), $slug);
+            $this->deleteImageIfOrphaned($oldImagePath, $blog->id);
+        }
+
+        $description = $this->sanitizeDescriptionHtml($validated['description']);
+        $content = $isProduct
+            ? $this->buildProductContent($imagePath, $validated['title'], $description)
+            : $this->buildArticleContent($imagePath, $validated['title'], $description);
+
+        $blog->update([
+            'title' => $validated['title'],
+            'slug' => $slug,
+            'description' => $description,
+            'content' => $content,
+            'image_path' => $imagePath,
+            'category' => $isProduct ? $validated['category'] : null,
+        ]);
+
+        $redirect = $isProduct
+            ? route('content.product.show', ['category' => $blog->category, 'slug' => $blog->slug])
+            : route('content.blog.show', ['slug' => $blog->slug]);
+
+        return redirect($redirect)->with('status', '"' . $blog->title . '" berhasil diperbarui.');
+    }
+
+    public function destroy(Blog $blog): RedirectResponse
+    {
+        $title = $blog->title;
+        $imagePath = $blog->image_path;
+
+        $blog->delete();
+
+        $this->deleteImageIfOrphaned($imagePath, null);
+
+        return redirect()
+            ->route('admin.content.index')
+            ->with('status', 'Konten "' . $title . '" berhasil dihapus.');
     }
 
     public function createBlog(): View
@@ -34,11 +144,13 @@ class ContentController extends Controller
 
         $slug = $this->uniqueSlug(($validated['slug'] ?? '') ?: $validated['title']);
         $imagePath = $this->storeImage($request->file('image'), $slug);
+        $description = $this->sanitizeDescriptionHtml($validated['description']);
 
         $blog = Blog::create([
             'title' => $validated['title'],
             'slug' => $slug,
-            'content' => $this->buildArticleContent($imagePath, $validated['title'], $validated['description']),
+            'content' => $this->buildArticleContent($imagePath, $validated['title'], $description),
+            'description' => $description,
             'image_path' => $imagePath,
             'category' => null,
             'type' => 'article',
@@ -70,11 +182,13 @@ class ContentController extends Controller
 
         $slug = $this->uniqueSlug(($validated['slug'] ?? '') ?: $validated['title']);
         $imagePath = $this->storeImage($request->file('image'), $slug);
+        $description = $this->sanitizeDescriptionHtml($validated['description']);
 
         $blog = Blog::create([
             'title' => $validated['title'],
             'slug' => $slug,
-            'content' => $this->buildProductContent($imagePath, $validated['title'], $validated['description']),
+            'content' => $this->buildProductContent($imagePath, $validated['title'], $description),
+            'description' => $description,
             'image_path' => $imagePath,
             'category' => $validated['category'],
             'type' => 'product',
@@ -89,19 +203,44 @@ class ContentController extends Controller
 
     /**
      * Slugify dan pastikan unik (kolom slug punya unique constraint di DB).
+     * $excludeId dipakai saat update supaya baris itu sendiri tidak dianggap tabrakan.
      */
-    private function uniqueSlug(string $base): string
+    private function uniqueSlug(string $base, ?int $excludeId = null): string
     {
         $slug = Str::slug($base);
         $original = $slug;
         $i = 2;
 
-        while (Blog::where('slug', $slug)->exists()) {
+        while (Blog::where('slug', $slug)->when($excludeId, fn ($q) => $q->where('id', '!=', $excludeId))->exists()) {
             $slug = $original . '-' . $i;
             $i++;
         }
 
         return $slug;
+    }
+
+    /**
+     * Hapus file gambar lama dari disk kalau sudah tidak dirujuk baris manapun
+     * (dipanggil setelah update dengan gambar baru, atau setelah delete).
+     */
+    private function deleteImageIfOrphaned(?string $imagePath, ?int $excludeId): void
+    {
+        if (!$imagePath) {
+            return;
+        }
+
+        $stillUsed = Blog::where('image_path', $imagePath)
+            ->when($excludeId, fn ($q) => $q->where('id', '!=', $excludeId))
+            ->exists();
+
+        if ($stillUsed) {
+            return;
+        }
+
+        $fullPath = public_path('assets' . $imagePath);
+        if (is_file($fullPath)) {
+            @unlink($fullPath);
+        }
     }
 
     /**
@@ -119,7 +258,8 @@ class ContentController extends Controller
     }
 
     /**
-     * Deskripsi polos (textarea) -> paragraf HTML. Baris kosong ganda = paragraf baru.
+     * Deskripsi polos (dari data lama sebelum pakai Trix) -> paragraf HTML.
+     * Baris kosong ganda = paragraf baru. Dipakai untuk mengisi Trix saat edit konten lama.
      */
     private function descriptionToParagraphs(string $description): string
     {
@@ -132,6 +272,19 @@ class ContentController extends Controller
             ->implode('');
     }
 
+    /**
+     * Batasi HTML hasil Trix ke tag yang bisa dihasilkan toolbar-nya saja
+     * (bold/italic/strike/link/heading/quote/code/list), buang sisanya (script, dst).
+     */
+    private function sanitizeDescriptionHtml(string $html): string
+    {
+        // Buang seluruh tag berbahaya (script, style, dst) BESERTA isinya dulu,
+        // baru batasi sisanya ke tag yang bisa dihasilkan toolbar Trix.
+        $html = preg_replace('#<(script|style|iframe|object|embed)\b[^>]*>.*?</\1>#is', '', $html) ?? $html;
+
+        return trim(strip_tags($html, '<div><p><br><strong><em><del><a><ul><ol><li><blockquote><pre><h1>'));
+    }
+
     private function imageFigure(string $imagePath, string $alt): string
     {
         return '<figure class="wp-block-image size-full">'
@@ -141,7 +294,7 @@ class ContentController extends Controller
 
     private function buildArticleContent(string $imagePath, string $title, string $description): string
     {
-        return $this->imageFigure($imagePath, $title) . $this->descriptionToParagraphs($description);
+        return $this->imageFigure($imagePath, $title) . $description;
     }
 
     private function buildProductContent(string $imagePath, string $title, string $description): string
@@ -157,7 +310,7 @@ class ContentController extends Controller
             . $this->imageFigure($imagePath, $title)
             . $whatsappBlock
             . '<h2 class="wp-block-heading has-medium-font-size">Deskripsi Produk</h2>'
-            . $this->descriptionToParagraphs($description)
+            . $description
             . '</div>';
     }
 }

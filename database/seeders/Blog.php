@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Seeds every blog post exported from WordPress.
@@ -27,5 +28,11 @@ class Blog extends Seeder
             BlogPart9::class,
             BlogPart10::class,
         ]);
+
+        // BlogPart* dibuat dari export WordPress sebelum kolom `type` ada, jadi
+        // tidak diisi di sana — backfill di sini supaya /blog dan /product tetap
+        // kedeteksi setiap kali seeder ini dijalankan ulang (mis. migrate:fresh --seed).
+        DB::table('blogs')->whereNull('type')->where('content', 'like', '%product-content%')->update(['type' => 'product']);
+        DB::table('blogs')->whereNull('type')->update(['type' => 'article']);
     }
 }

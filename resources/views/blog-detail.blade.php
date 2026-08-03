@@ -2058,8 +2058,13 @@
         .entry-content figure,
         .entry-content .wp-block-image,
         .entry-content .wp-caption {
-            margin: 1.5em auto;
+            /* figure/div block-level defaultnya melebar 100% wadahnya, jadi margin:auto
+               di atas tidak ada efek (tidak ada sisa ruang buat dibagi kiri/kanan) kalau
+               gambar aslinya lebih sempit dari kontainer. width:fit-content bikin kotaknya
+               menyusut sesuai lebar gambar dulu, baru margin:auto benar-benar nge-center. */
+            width: fit-content;
             max-width: 100%;
+            margin: 1.5em auto;
         }
 
         .entry-content figcaption {
@@ -2385,8 +2390,8 @@
             <a href="{{ route('blog') }}" class="nav-link {{ $isProductPage ? '' : 'active' }}">Blog</a>
         </div>
     </nav>
-    <main class="flex-grow p-10 w-9/12 mx-auto mb-10" style="margin-top: 76px">
-        <div class="max-w-7xl mx-auto p-8 reveal">
+    <main class="w-full px-4 py-8 sm:px-6 md:px-10 md:py-10" style="margin-top: 76px">
+        <div class="max-w-7xl mx-auto reveal">
             <h1 class="text-3xl font-bold mb-4">{{ $blog->title }}</h1>
             <p class="text-[#ffffff80] mb-6">Published on {{ $blog->created_at->format('F j, Y') }}</p>
             <div class="entry-content">
@@ -2441,7 +2446,6 @@
                 <li><strong>All-in-One dan Harga Kompetitif</strong> — solusi produk lengkap dalam satu lokasi dengan harga yang efisien bagi tim purchasing dan developer.</li>
             </ul>
             <a href="https://api.whatsapp.com/send?phone=6281315147952&text=Halo%20min%20Yen%20Bangunan%2C%20boleh%20saya%20tanya-tanya%20dulu%20seputar%20stok%20dan%20harga%20barangnya%3F" target="_blank" class="inline-block bg-[#e05534] hover:bg-[#c74628] text-white px-4 py-2 rounded-md mt-4">👉KONSULTASI LEBIH DULU DENGAN KAMI👈</a>
-        </div>
         </div>
     </main>
 

@@ -268,7 +268,7 @@
             grid-template-columns: 1fr 1fr;
             align-items: center;
             gap: 0;
-            background-color: var(--bg-alt);
+            background-color: transparent;
             min-height: 560px;
         }
 

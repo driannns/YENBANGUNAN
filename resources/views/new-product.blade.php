@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Produk — Yen Bangunan</title>
-    <meta name="description" content="Katalog produk Yen Bangunan: material bangunan dan kebutuhan industri di Cikarang.">
+    <title>{{ $page['meta_title'] }}</title>
+    <meta name="description" content="{{ $page['meta_description'] }}">
     <link rel="icon" href="{{ asset('assets/logo-crop.png') }}">
 
     {{-- Tipografi mengikuti total-prime.com (lihat catatan di new-home.blade.php) --}}
@@ -490,21 +490,9 @@
 
     @php
         // Kategori produk — slug & ikon sama persis dengan new-home.
-        // Copywriting per kategori tampil saat kategori dipilih lewat bar di atas.
-        $categories = [
-            'besi-dan-baja' => ['Besi & Baja', 'Besi beton, hollow, siku, hingga baja ringan untuk kebutuhan struktural proyek Anda. Stok lengkap berbagai ukuran dengan kualitas SNI dan harga kompetitif.'],
-            'hebel-dan-bata' => ['Konstruksi', 'Bata ringan (hebel), bata merah, semen, mortar, dan material dinding & bangunan lainnya. Pilihan tepat untuk konstruksi cepat, rapi, dan efisien.'],
-            'atap' => ['Atap', 'Genteng, spandek, asbes, hingga aksesori atap. Lindungi bangunan Anda dengan material atap berkualitas dan tahan cuaca.'],
-            'pipa-dan-sanitasi' => ['Pipa & Sanitasi', 'Pipa PVC berbagai ukuran, fitting, kran, hingga perlengkapan sanitasi. Solusi lengkap instalasi air bersih dan pembuangan.'],
-            'lampu-dan-kelistrikan' => ['Lampu & Kelistrikan', 'Lampu, kabel, MCB, saklar, dan kebutuhan kelistrikan dari merek terpercaya. Aman untuk rumah maupun instalasi industri.'],
-            'mesin' => ['Mesin', 'Mesin dan peralatan pendukung proyek serta industri. Andal untuk pemakaian berat dengan layanan konsultasi pemilihan mesin.'],
-            'perkakas' => ['Perkakas', 'Perkakas tangan dan power tools dari brand ternama seperti Tekiro, Bosch, dan RYU. Lengkap untuk tukang profesional maupun kebutuhan rumahan.'],
-            'paku-dan-baut' => ['Paku & Baut', 'Paku, baut, mur, sekrup, dan fastener lainnya dalam berbagai ukuran. Tersedia satuan hingga partai besar.'],
-            'consumable-industri' => ['Consumable Industry', 'Material habis pakai kebutuhan pabrik dan industri: abrasive, lem, sealant, thinner, dan banyak lagi. Pasokan rutin siap mendukung produksi Anda.'],
-            'safety' => ['Safety Industry', 'Perlengkapan keselamatan kerja: helm proyek, sarung tangan, sepatu safety, hingga APD lengkap sesuai standar industri.'],
-            'keramik-dan-granit' => ['Keramik & Granit', 'Keramik dan granit berbagai motif dan ukuran untuk lantai maupun dinding. Percantik hunian dan bangunan komersial Anda.'],
-            'cat' => ['Cat', 'Cat tembok, cat kayu & besi, waterproofing, hingga thinner dari Nippon Paint, Dulux, Sika, dan merek terpercaya lainnya.'],
-        ];
+        // Label & copy per kategori diambil dari menu admin "Edit Halaman Produk"
+        // (config/page_content_defaults.php sebagai fallback jika belum pernah diedit).
+        $categories = collect($page['categories'])->map(fn ($c) => [$c['label'], $c['copy']])->all();
         $isValidKategori = $kategori && isset($categories[$kategori]);
     @endphp
 
@@ -564,12 +552,8 @@
         <h1 class="cat-heading">{{ $categories[$kategori][0] }}</h1>
         <p class="cat-copy">{{ $categories[$kategori][1] }}</p>
         @else
-        <h1 class="cat-heading">Semua Produk</h1>
-        <p class="cat-copy">
-            Lebih dari 5.000 SKU material bangunan dan kebutuhan industri dalam satu tempat —
-            dari besi, semen, dan cat hingga perkakas serta consumable pabrik. Pilih kategori
-            di atas untuk menelusuri produk sesuai kebutuhan proyek Anda.
-        </p>
+        <h1 class="cat-heading">{{ $page['heading'] }}</h1>
+        <p class="cat-copy">{{ $page['subtitle'] }}</p>
         @endif
     </div>
 

@@ -19,6 +19,7 @@ class Blog extends Model
         'title',
         'slug',
         'content',
+        'description',
         'image_path',
         'category',
         'type',

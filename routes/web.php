@@ -122,6 +122,9 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/product/create', [App\Http\Controllers\Admin\ContentController::class, 'createProduct'])->name('product.create');
     Route::post('/product', [App\Http\Controllers\Admin\ContentController::class, 'storeProduct'])->name('product.store');
 
+    // Upload gambar yang disisipkan di tengah deskripsi lewat toolbar editor Quill.
+    Route::post('/editor/image', [App\Http\Controllers\Admin\ContentController::class, 'uploadEditorImage'])->name('editor.image');
+
     // Daftar + edit/delete. Dibind lewat {blog:id} (bukan slug default model) karena
     // slug konten lama hasil import mengandung "/" (mis. "2026/05/03/xxx") yang tidak
     // bisa cocok dengan satu segmen URL {blog}.
@@ -129,6 +132,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/content/{blog:id}/edit', [App\Http\Controllers\Admin\ContentController::class, 'edit'])->name('content.edit');
     Route::put('/content/{blog:id}', [App\Http\Controllers\Admin\ContentController::class, 'update'])->name('content.update');
     Route::delete('/content/{blog:id}', [App\Http\Controllers\Admin\ContentController::class, 'destroy'])->name('content.destroy');
+    Route::post('/content/{blog:id}/toggle-status', [App\Http\Controllers\Admin\ContentController::class, 'toggleStatus'])->name('content.toggle-status');
 
     // Edit teks template halaman listing Blog & Produk (judul, subjudul, meta
     // description, dan copy per kategori) — bukan konten per-artikel/produk.

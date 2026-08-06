@@ -15,7 +15,7 @@
 
                     <div>
                         <x-input-label for="description" value="Deskripsi" />
-                        <x-trix-editor id="description" name="description" :value="old('description', $currentDescription)" class="block mt-1 w-full" />
+                        <x-quill-editor id="description" name="description" :value="old('description', $currentDescription)" class="block mt-1 w-full" />
                         <x-input-error :messages="$errors->get('description')" class="mt-2" />
                     </div>
 

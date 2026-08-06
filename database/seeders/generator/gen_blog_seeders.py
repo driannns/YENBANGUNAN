@@ -175,6 +175,63 @@ def categorize(title, body):
     return None
 
 
+# Tag yang diizinkan di kolom `description`, persis whitelist toolbar Trix
+# di ContentController::sanitizeDescriptionHtml() — supaya deskripsi hasil
+# backfill ini konsisten kalau nanti dibuka & disimpan ulang lewat admin.
+_DESC_ALLOWED = {'div', 'p', 'br', 'strong', 'em', 'del', 'a', 'ul', 'ol', 'li', 'blockquote', 'pre', 'h1'}
+_DESC_TAG_RE = re.compile(r'<(/?)([a-zA-Z0-9]+)([^>]*)>')
+
+
+def build_description(title, body, is_product):
+    """Turunkan `description` (HTML seramah Trix) dari body WordPress asli.
+
+    Produk: WP export selalu punya struktur tetap — gambar, tombol WhatsApp,
+    judul, <hr>, lalu heading "Deskripsi Produk" yang membungkus teks
+    deskripsi sebenarnya (persis pola yang direplikasi ContentController::
+    buildProductContent()). Ambil cuma bagian setelah heading itu.
+    Artikel: seluruh body dipakai (gambar unggulan otomatis lenyap saat
+    tag <img>/<figure> dibuang, karena tidak ada isi teks di dalamnya).
+    """
+    text = body
+
+    if is_product:
+        m = re.search(r'<h[2-6][^>]*>\s*Deskripsi\s+Produk\s*</h[2-6]>(.*)', text, re.S | re.I)
+        if m:
+            text = m.group(1)
+            # Sisa penutup wrapper <div> terluar (dibuka sebelum heading,
+            # jadi tidak ikut terpotong) — buang supaya tidak ada </div> nyasar.
+            text = re.sub(r'(\s*</div>)+\s*$', '', text.strip())
+
+    # Komentar blok Gutenberg (<!-- wp:paragraph --> dst) — dibuang sama
+    # seperti Blog::cleanContent() membuangnya dari kolom `content`.
+    text = re.sub(r'<!--.*?-->', '', text, flags=re.S)
+
+    # <b>/<i>/<s>/<strike> -> tag semantik yang dipakai Trix.
+    text = re.sub(r'<(/?)b(\s[^>]*)?>', r'<\1strong>', text, flags=re.I)
+    text = re.sub(r'<(/?)i(\s[^>]*)?>', r'<\1em>', text, flags=re.I)
+    text = re.sub(r'<(/?)(?:strike|s)(\s[^>]*)?>', r'<\1del>', text, flags=re.I)
+
+    # Subheading (h2-h6, dipakai luas sebagai section header di artikel) ->
+    # h1, satu-satunya level heading yang bisa dihasilkan toolbar Trix.
+    text = re.sub(r'<h[2-6]([^>]*)>', '<h1>', text, flags=re.I)
+    text = re.sub(r'</h[2-6]>', '</h1>', text, flags=re.I)
+
+    # Buang tag berbahaya beserta isinya (harusnya sudah tidak ada di export
+    # WordPress, tapi jaga-jaga — sama seperti sanitizeDescriptionHtml()).
+    text = re.sub(r'<(script|style|iframe|object|embed)\b[^>]*>.*?</\1>', '', text, flags=re.I | re.S)
+
+    # Sisanya: strip_tags($html, $allowed) versi Python — buang tag di luar
+    # whitelist tapi pertahankan teks di dalamnya (mis. <img>/<figure> lenyap
+    # total karena tidak ada teks anak; <span>, <h1> non-whitelist lain hanya
+    # kehilangan tag-nya, teksnya tetap).
+    def repl(m):
+        return m.group(0) if m.group(2).lower() in _DESC_ALLOWED else ''
+    text = _DESC_TAG_RE.sub(repl, text)
+
+    text = re.sub(r'\n{3,}', '\n\n', text).strip()
+    return text
+
+
 def php_str(s):
     """PHP single-quoted string literal."""
     return "'" + s.replace('\\', '\\\\').replace("'", "\\'") + "'"
@@ -194,12 +251,14 @@ for it in raw_posts:
     if not img:
         no_image += 1
     title = it.findtext('title', default='').strip()
+    category = categorize(title, body)
     posts.append({
         'title': title,
         'slug': slug,
         'content': body,
+        'description': build_description(title, body, category is not None),
         'image_path': f'/blog/{img}' if img else None,
-        'category': categorize(title, body),
+        'category': category,
         'published_at': it.findtext('wp:post_date', default='', namespaces=NS),
     })
 
@@ -218,6 +277,7 @@ for idx, chunk in enumerate(chunks, start=1):
             f"                'title' => {php_str(p['title'])},\n"
             f"                'slug' => {php_str(p['slug'])},\n"
             f"                'content' => {php_str(p['content'])},\n"
+            f"                'description' => {php_str(p['description'])},\n"
             f"                'image_path' => {image},\n"
             f"                'category' => {category},\n"
             f"                'published_at' => {php_str(p['published_at'])},\n"
@@ -249,7 +309,7 @@ class BlogPart{idx} extends Seeder
         DB::table('blogs')->upsert(
             $posts,
             ['slug'],
-            ['title', 'content', 'image_path', 'category', 'published_at', 'author_id', 'updated_at']
+            ['title', 'content', 'description', 'image_path', 'category', 'published_at', 'author_id', 'updated_at']
         );
     }}
 }}
@@ -265,6 +325,7 @@ orchestrator = f"""<?php
 namespace Database\\Seeders;
 
 use Illuminate\\Database\\Seeder;
+use Illuminate\\Support\\Facades\\DB;
 
 /**
  * Seeds every blog post exported from WordPress.
@@ -280,6 +341,12 @@ class Blog extends Seeder
         $this->call([
 {calls}
         ]);
+
+        // BlogPart* dibuat dari export WordPress sebelum kolom `type` ada, jadi
+        // tidak diisi di sana — backfill di sini supaya /blog dan /product tetap
+        // kedeteksi setiap kali seeder ini dijalankan ulang (mis. migrate:fresh --seed).
+        DB::table('blogs')->whereNull('type')->where('content', 'like', '%product-content%')->update(['type' => 'product']);
+        DB::table('blogs')->whereNull('type')->update(['type' => 'article']);
     }}
 }}
 """

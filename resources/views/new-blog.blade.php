@@ -144,6 +144,70 @@
             color: var(--white50);
         }
 
+        /* ===== Search bar artikel — sama seperti search produk ===== */
+        .search-bar {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+            max-width: 480px;
+            margin: 28px auto 0;
+        }
+
+        .search-bar input[type="search"] {
+            flex: 1;
+            background-color: var(--white5);
+            border: 1px solid var(--white15);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: var(--white);
+            font-family: var(--font-text);
+            font-size: 14px;
+            outline: none;
+            transition: border-color .2s;
+        }
+
+        .search-bar input[type="search"]:focus { border-color: var(--prime); }
+        .search-bar input[type="search"]::placeholder { color: var(--white35); }
+
+        .search-bar button {
+            background-color: var(--prime);
+            color: #fff;
+            border: 0;
+            border-radius: 8px;
+            padding: 0 22px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            letter-spacing: .03em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color .2s;
+        }
+
+        .search-bar button:hover { background-color: #c4482c; }
+
+        .search-clear {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--white50);
+            padding: 0 4px;
+            white-space: nowrap;
+            transition: color .2s;
+        }
+
+        .search-clear:hover { color: var(--white); }
+
+        .posts-empty {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 5% 0;
+            font-family: var(--font-text);
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--white50);
+        }
+
         /* ===== Grid artikel — kartu dark, senada .card/.svc-card new-home ===== */
         .posts-grid {
             max-width: 1200px;
@@ -365,7 +429,27 @@
     <div class="page-hero reveal">
         <h1 class="page-title">{{ $page['heading'] }}</h1>
         <p class="page-sub">{{ $page['subtitle'] }}</p>
+
+        <form action="{{ route('blog') }}" method="GET" class="search-bar" role="search">
+            <input type="search" name="search" value="{{ $search }}" placeholder="Cari judul artikel...">
+            <button type="submit">Cari</button>
+            @if($search !== '')
+            <a href="{{ route('blog') }}" class="search-clear">Reset</a>
+            @endif
+        </form>
     </div>
+
+    @if($blogs->isEmpty())
+    <div class="posts-empty">
+        <p>
+            @if($search !== '')
+            Artikel dengan kata kunci "<strong>{{ $search }}</strong>" tidak ditemukan. Coba kata kunci lain.
+            @else
+            Belum ada artikel yang tersedia.
+            @endif
+        </p>
+    </div>
+    @endif
 
     <!-- List artikel (produk dikecualikan — punya menu tersendiri) -->
     <div class="posts-grid reveal-group">

@@ -12,27 +12,33 @@ class BlogController extends Controller
     public function all(Request $request): View
     {
         // Articles only — product pages have their own menu (see products()).
-        $blogs = Blog::where('type', 'article')
+        $blogs = Blog::active()
+            ->where('type', 'article')
             ->orderBy('published_at', 'desc')
             ->paginate(12)
             ->withQueryString();
         return view('blog', compact('blogs'));
     }
 
-    public function newBlog(): View
+    public function newBlog(Request $request): View
     {
         // Sama seperti all(): artikel saja, produk dikecualikan.
-        $blogs = Blog::where('type', 'article')
+        $search = trim((string) $request->query('search'));
+
+        $blogs = Blog::active()
+            ->where('type', 'article')
+            ->when($search !== '', fn ($q) => $q->where('title', 'like', '%' . $search . '%'))
             ->orderBy('published_at', 'desc')
             ->paginate(12)
             ->withQueryString();
         $page = PageSetting::resolvePage('blog');
-        return view('new-blog', compact('blogs', 'page'));
+        return view('new-blog', compact('blogs', 'page', 'search'));
     }
 
     public function products(): View
     {
-        $products = Blog::where('type', 'product')
+        $products = Blog::active()
+            ->where('type', 'product')
             ->orderBy('title')
             ->paginate(24)
             ->withQueryString();
@@ -44,7 +50,7 @@ class BlogController extends Controller
         $kategori = $request->query('kategori');
         $search = trim((string) $request->query('search'));
 
-        $query = Blog::where('type', 'product');
+        $query = Blog::active()->where('type', 'product');
 
         if ($kategori) {
             $query->where('category', $kategori);
@@ -66,7 +72,7 @@ class BlogController extends Controller
     public function show(string $year, string $month, string $day, string $slug): View
     {
         $fullSlug = sprintf('%s/%s/%s/%s', $year, $month, $day, $slug);
-        $blog = Blog::where('slug', $fullSlug)->firstOrFail();
+        $blog = Blog::active()->where('slug', $fullSlug)->firstOrFail();
         return view('blog-detail', compact('blog'));
     }
 
@@ -75,7 +81,8 @@ class BlogController extends Controller
      */
     public function showProduct(string $category, string $slug): View
     {
-        $blog = Blog::where('category', $category)
+        $blog = Blog::active()
+            ->where('category', $category)
             ->where('slug', $slug)
             ->where('type', 'product')
             ->firstOrFail();
@@ -87,7 +94,8 @@ class BlogController extends Controller
      */
     public function showArticle(string $slug): View
     {
-        $blog = Blog::where('slug', $slug)
+        $blog = Blog::active()
+            ->where('slug', $slug)
             ->where('type', 'article')
             ->firstOrFail();
         return view('blog-detail', compact('blog'));

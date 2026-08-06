@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -23,6 +24,7 @@ class Blog extends Model
         'image_path',
         'category',
         'type',
+        'status',
         'published_at',
         'author_id',
     ];
@@ -45,11 +47,54 @@ class Blog extends Model
     }
 
     /**
+     * Konten dengan status 'active' — dipakai di semua halaman publik supaya
+     * yang diarsipkan lewat admin tidak lagi tampil di list maupun detail.
+     */
+    public function scopeActive(Builder $query): Builder
+    {
+        return $query->where('status', 'active');
+    }
+
+    /**
      * Use slug for route model binding.
      */
     public function getRouteKeyName(): string
     {
         return 'slug';
+    }
+
+    /**
+     * URL publik record ini. Konten lama hasil import WordPress punya slug
+     * berisi path bertanggal penuh (mis. "2026/05/15/nama-produk") — itu
+     * SUDAH jadi URL-nya sendiri (lewat route blog.show), bukan digabung
+     * dengan prefix /{category}/ punya rute produk baru. Cuma produk/artikel
+     * yang dibuat lewat admin (slug polos tanpa "/") yang pakai URL pendek.
+     */
+    public function publicUrl(): string
+    {
+        $isLegacyUrl = str_contains($this->slug, '/');
+
+        if ($this->type === 'product') {
+            return $isLegacyUrl
+                ? url('/' . $this->slug)
+                : route('content.product.show', ['category' => $this->category, 'slug' => $this->slug]);
+        }
+
+        if (!$isLegacyUrl) {
+            return route('content.blog.show', ['slug' => $this->slug]);
+        }
+
+        $parts = explode('/', $this->slug, 4);
+        if (!empty($parts[0]) && preg_match('/^\d{4}$/', $parts[0])) {
+            return route('blog.show', [
+                'year' => $parts[0],
+                'month' => $parts[1] ?? '01',
+                'day' => $parts[2] ?? '01',
+                'slug' => $parts[3] ?? $this->slug,
+            ]);
+        }
+
+        return url('/' . $this->slug);
     }
 
     /**

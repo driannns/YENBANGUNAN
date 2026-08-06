@@ -4,10 +4,45 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ isset($header) ? $header . ' - ' : '' }}Admin - Yen Bangunan</title>
     <link rel="icon" href="{{ asset('assets/logo-crop.png') }}">
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/admin.css', 'resources/js/admin.js'])
-    <style>[x-cloak] { display: none !important; }</style>
+
+    {{-- Tailwind, Alpine.js, dan Quill dimuat lewat CDN (bukan hasil build Vite) —
+         supaya panel admin tidak bergantung pada folder public/build/ ter-upload
+         benar di server. Semua class Tailwind di file admin/* tetap berfungsi
+         apa adanya karena Tailwind CDN meng-compile class saat runtime di browser. --}}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css">
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+
+        .quill-toolbar.ql-toolbar.ql-snow {
+            border: 1px solid #d1d5db;
+            border-bottom: none;
+            border-radius: 0.375rem 0.375rem 0 0;
+            background: #f9fafb;
+        }
+
+        .ql-container.ql-snow {
+            border: 1px solid #d1d5db;
+            border-radius: 0 0 0.375rem 0.375rem;
+            font-size: 0.875rem;
+        }
+
+        .ql-editor {
+            min-height: 12rem;
+            line-height: 1.5rem;
+        }
+
+        .ql-container.ql-snow:focus-within {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 1px #6366f1;
+        }
+    </style>
 </head>
 
 <body class="font-sans antialiased bg-gray-100 text-gray-900">

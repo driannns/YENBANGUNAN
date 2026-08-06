@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
@@ -29,9 +30,14 @@ class ContentController extends Controller
     {
         $type = $request->query('type');
         $type = in_array($type, ['article', 'product'], true) ? $type : null;
+        $status = $request->query('status');
+        $status = in_array($status, ['active', 'archived'], true) ? $status : null;
+        $search = trim((string) $request->query('search'));
 
         $items = Blog::query()
             ->when($type, fn ($q) => $q->where('type', $type))
+            ->when($status, fn ($q) => $q->where('status', $status))
+            ->when($search !== '', fn ($q) => $q->where('title', 'like', '%' . $search . '%'))
             ->orderByDesc('created_at')
             ->paginate(20)
             ->withQueryString();
@@ -39,6 +45,8 @@ class ContentController extends Controller
         return view('admin.content-index', [
             'items' => $items,
             'type' => $type,
+            'status' => $status,
+            'search' => $search,
         ]);
     }
 
@@ -46,9 +54,18 @@ class ContentController extends Controller
     {
         $view = $blog->type === 'product' ? 'admin.product-edit' : 'admin.blog-edit';
 
-        $description = $blog->description ?? trim(strip_tags($blog->content));
-        // Deskripsi lama (sebelum pakai Trix) tersimpan sebagai plain text —
-        // ubah jadi paragraf HTML dulu supaya baris/paragraf tetap kebaca saat dibuka di Trix.
+        // Sebagian konten lama hasil import WordPress punya `description` string
+        // kosong ('') alih-alih null (post yang bodinya cuma gambar tanpa teks
+        // sama sekali) — null-coalesce saja tidak menangkap ini, jadi editor
+        // kebuka kosong padahal harusnya fallback ke `content`. `isDescriptionBlank()`
+        // sengaja tidak menganggap description berisi <img> sebagai kosong, supaya
+        // deskripsi yang sengaja cuma berisi gambar tidak ketiban timpa oleh fallback.
+        $description = $blog->description;
+        if ($description === null || $this->isDescriptionBlank($description)) {
+            $description = trim(strip_tags($blog->content));
+        }
+        // Deskripsi lama (sebelum pakai editor rich text) tersimpan sebagai plain text —
+        // ubah jadi paragraf HTML dulu supaya baris/paragraf tetap kebaca saat dibuka di editor.
         $currentDescription = $description !== strip_tags($description)
             ? $description
             : $this->descriptionToParagraphs($description);
@@ -107,11 +124,7 @@ class ContentController extends Controller
             'category' => $isProduct ? $validated['category'] : null,
         ]);
 
-        $redirect = $isProduct
-            ? route('content.product.show', ['category' => $blog->category, 'slug' => $blog->slug])
-            : route('content.blog.show', ['slug' => $blog->slug]);
-
-        return redirect($redirect)->with('status', '"' . $blog->title . '" berhasil diperbarui.');
+        return redirect($blog->publicUrl())->with('status', '"' . $blog->title . '" berhasil diperbarui.');
     }
 
     public function destroy(Blog $blog): RedirectResponse
@@ -126,6 +139,21 @@ class ContentController extends Controller
         return redirect()
             ->route('admin.content.index')
             ->with('status', 'Konten "' . $title . '" berhasil dihapus.');
+    }
+
+    /**
+     * Toggle status active <-> archived. Konten archived tidak lagi tampil di
+     * halaman publik (list & detail blog/produk) tapi tetap ada di panel admin.
+     */
+    public function toggleStatus(Blog $blog): RedirectResponse
+    {
+        $blog->update(['status' => $blog->status === 'active' ? 'archived' : 'active']);
+
+        $message = $blog->status === 'active'
+            ? '"' . $blog->title . '" diaktifkan kembali.'
+            : '"' . $blog->title . '" diarsipkan.';
+
+        return redirect()->back()->with('status', $message);
     }
 
     public function createBlog(): View
@@ -158,9 +186,7 @@ class ContentController extends Controller
             'author_id' => auth()->id(),
         ]);
 
-        return redirect()
-            ->route('content.blog.show', ['slug' => $blog->slug])
-            ->with('status', 'Artikel "' . $blog->title . '" berhasil dibuat.');
+        return redirect($blog->publicUrl())->with('status', 'Artikel "' . $blog->title . '" berhasil dibuat.');
     }
 
     public function createProduct(): View
@@ -196,9 +222,23 @@ class ContentController extends Controller
             'author_id' => auth()->id(),
         ]);
 
-        return redirect()
-            ->route('content.product.show', ['category' => $blog->category, 'slug' => $blog->slug])
-            ->with('status', 'Produk "' . $blog->title . '" berhasil dibuat.');
+        return redirect($blog->publicUrl())->with('status', 'Produk "' . $blog->title . '" berhasil dibuat.');
+    }
+
+    /**
+     * Upload gambar yang disisipkan di tengah deskripsi lewat editor Quill.
+     * Dipanggil via AJAX oleh tombol "image" di toolbar; hasilnya URL untuk
+     * disisipkan editor sebagai <img>, bukan disimpan sebagai base64.
+     */
+    public function uploadEditorImage(Request $request): JsonResponse
+    {
+        $validated = $request->validate([
+            'image' => ['required', 'image', 'mimes:jpg,jpeg,png,webp,gif', 'max:4096'],
+        ]);
+
+        $imagePath = $this->storeImage($validated['image'], 'content-' . Str::random(8));
+
+        return response()->json(['url' => asset('assets' . $imagePath)]);
     }
 
     /**
@@ -249,8 +289,15 @@ class ContentController extends Controller
      */
     private function storeImage(UploadedFile $file, string $slug): string
     {
+        // Slug konten lama (hasil import WordPress) berisi "/" (mis. "2025/06/24/
+        // judul-artikel") — kalau dipakai apa adanya di sini, UploadedFile::move()
+        // diam-diam membuang prefix sebelum "/" terakhir saat benar-benar menyimpan
+        // filenya (lihat Symfony File::getName()), tapi path yang KITA kembalikan &
+        // simpan ke `image_path` tetap yang belum dipotong itu — jadi menunjuk ke
+        // file yang tidak pernah ada. basename() di sini menyamakan keduanya.
+        $safeSlug = basename($slug);
         $extension = strtolower($file->extension() ?: 'jpg');
-        $filename = $slug . '-' . time() . '.' . $extension;
+        $filename = $safeSlug . '-' . time() . '.' . $extension;
 
         $file->move(public_path('assets/blog'), $filename);
 
@@ -258,8 +305,19 @@ class ContentController extends Controller
     }
 
     /**
-     * Deskripsi polos (dari data lama sebelum pakai Trix) -> paragraf HTML.
-     * Baris kosong ganda = paragraf baru. Dipakai untuk mengisi Trix saat edit konten lama.
+     * True kalau description tidak punya teks maupun gambar sama sekali (mis. '',
+     * '<p></p>', '<h1></h1>') — dipakai di edit() untuk memutuskan kapan fallback
+     * ke `content`. <img> sengaja dianggap "berisi" walau tidak ada teks, supaya
+     * deskripsi yang sengaja cuma berisi gambar tidak dianggap kosong.
+     */
+    private function isDescriptionBlank(string $description): bool
+    {
+        return trim(strip_tags($description)) === '' && !str_contains($description, '<img');
+    }
+
+    /**
+     * Deskripsi polos (dari data lama sebelum pakai editor rich text) -> paragraf HTML.
+     * Baris kosong ganda = paragraf baru. Dipakai untuk mengisi editor saat edit konten lama.
      */
     private function descriptionToParagraphs(string $description): string
     {
@@ -273,16 +331,82 @@ class ContentController extends Controller
     }
 
     /**
-     * Batasi HTML hasil Trix ke tag yang bisa dihasilkan toolbar-nya saja
-     * (bold/italic/strike/link/heading/quote/code/list), buang sisanya (script, dst).
+     * Batasi HTML hasil editor Quill ke tag yang bisa dihasilkan toolbar lengkapnya
+     * saja (font/size/heading 1-6/bold-italic-underline-strike/color/script/quote/
+     * code/list-indent/align-direction/link-image-video), buang sisanya (script, dst).
      */
     private function sanitizeDescriptionHtml(string $html): string
     {
-        // Buang seluruh tag berbahaya (script, style, dst) BESERTA isinya dulu,
-        // baru batasi sisanya ke tag yang bisa dihasilkan toolbar Trix.
-        $html = preg_replace('#<(script|style|iframe|object|embed)\b[^>]*>.*?</\1>#is', '', $html) ?? $html;
+        // Buang tag berbahaya (script, style, object, embed) BESERTA isinya dulu.
+        // <iframe> ditangani terpisah di bawah (whitelist domain video), bukan
+        // dibuang total di sini, karena toolbar Quill sekarang punya tombol video.
+        $html = preg_replace('#<(script|style|object|embed)\b[^>]*>.*?</\1>#is', '', $html) ?? $html;
+        $html = $this->sanitizeVideoEmbeds($html);
 
-        return trim(strip_tags($html, '<div><p><br><strong><em><del><a><ul><ol><li><blockquote><pre><h1>'));
+        $allowedTags = '<div><p><br><strong><b><em><i><u><s><del><sub><sup><a><span>'
+            . '<ul><ol><li><blockquote><pre><code><h1><h2><h3><h4><h5><h6><img><iframe>';
+        $html = strip_tags($html, $allowedTags);
+
+        // strip_tags tidak membuang atribut pada tag yang diizinkan — buang event
+        // handler (onerror, onclick, dst) dan skema javascript:/vbscript: di href/src
+        // supaya <img>/<a>/<iframe> tidak jadi celah XSS.
+        $html = preg_replace('/\s+on\w+\s*=\s*("[^"]*"|\'[^\']*\'|[^\s>]+)/i', '', $html) ?? $html;
+        $html = preg_replace('/\b(href|src)(\s*=\s*)("|\')\s*(?:javascript|vbscript):[^"\']*\3/i', '$1$2$3$3', $html) ?? $html;
+        // style cuma dipakai toolbar warna teks/background Quill — batasi ke dua
+        // properti itu saja dengan nilai warna yang aman, buang sisanya (mis. CSS
+        // yang coba nge-load url() eksternal).
+        $html = $this->sanitizeStyleAttributes($html);
+
+        return trim($html);
+    }
+
+    /**
+     * <iframe> hasil tombol "video" Quill hanya diizinkan kalau src-nya domain
+     * embed YouTube/Vimeo yang dikenal — dibangun ulang dari nol dengan atribut
+     * minimal (bukan sekadar difilter) supaya atribut liar apa pun di tag aslinya
+     * tidak ikut lolos. Selain itu, dibuang total.
+     */
+    private function sanitizeVideoEmbeds(string $html): string
+    {
+        return preg_replace_callback(
+            '#<iframe\b[^>]*\bsrc\s*=\s*(["\'])(.*?)\1[^>]*>.*?</iframe>#is',
+            function (array $m): string {
+                $src = $m[2];
+                $isAllowed = preg_match(
+                    '#^https://(www\.)?(youtube\.com/embed/|youtube-nocookie\.com/embed/|player\.vimeo\.com/video/)#i',
+                    $src
+                );
+
+                return $isAllowed
+                    ? '<iframe class="ql-video" frameborder="0" allowfullscreen src="' . e($src) . '"></iframe>'
+                    : '';
+            },
+            $html
+        ) ?? $html;
+    }
+
+    /**
+     * Batasi atribut style ke `color`/`background-color` dengan nilai hex/rgb()/nama
+     * warna saja (persis yang dihasilkan color picker Quill) — properti CSS lain
+     * dibuang semuanya.
+     */
+    private function sanitizeStyleAttributes(string $html): string
+    {
+        return preg_replace_callback('/\sstyle\s*=\s*"([^"]*)"/i', function (array $m): string {
+            $safeDeclarations = [];
+
+            foreach (explode(';', $m[1]) as $declaration) {
+                if (preg_match(
+                    '/^\s*(color|background-color)\s*:\s*(#[0-9a-f]{3,8}|rgb\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*\)|[a-z]+)\s*$/i',
+                    $declaration,
+                    $dm
+                )) {
+                    $safeDeclarations[] = $dm[1] . ': ' . $dm[2];
+                }
+            }
+
+            return $safeDeclarations ? ' style="' . e(implode('; ', $safeDeclarations)) . '"' : '';
+        }, $html) ?? $html;
     }
 
     private function imageFigure(string $imagePath, string $alt): string
@@ -297,20 +421,35 @@ class ContentController extends Controller
         return $this->imageFigure($imagePath, $title) . $description;
     }
 
+    /**
+     * Struktur di sini SENGAJA disamakan persis (class demi class) dengan hasil
+     * export Gutenberg produk lama (lihat mis. database/seeders/BlogPart6.php) —
+     * bukan cuma "mirip". `.wp-block-group.is-layout-flex` itulah yang bikin
+     * gambar & blok teks tampil sebelahan (flex row); tanpa class itu keduanya
+     * cuma numpuk vertikal biasa. Konten dibangun ulang dari nol tiap kali produk
+     * disimpan (create maupun update) supaya produk lama yang diedit lewat admin
+     * ikut "diperbaiki" ke struktur standar ini juga, bukan cuma yang baru dibuat.
+     */
     private function buildProductContent(string $imagePath, string $title, string $description): string
     {
         $waMessage = rawurlencode('Halo min Yen Bangunan, boleh saya tanya-tanya dulu seputar stok dan harga barangnya?');
 
+        // style inline background/color di sini sengaja dipertahankan (bukan cuma
+        // andalkan class .whatsapp-block__button) — tanpa ini teks tombol ikut
+        // warna var(--prime) sama seperti background-nya, jadi teksnya tak kebaca.
         $whatsappBlock = '<div class="wp-block-jetpack-send-a-message whatsapp-product-desktop">'
             . '<div class="wp-block-jetpack-whatsapp-button whatsapp-button-desktop is-color-dark">'
-            . '<a class="whatsapp-block__button" href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=' . $waMessage . '" target="_blank" rel="noopener noreferrer">Pesan Melalui Whatsapp</a>'
+            . '<a class="whatsapp-block__button" href="https://api.whatsapp.com/send?phone=6281315147952&amp;text=' . $waMessage . '" style="background-color:#25D366;color:#fff" target="_blank" rel="noopener noreferrer">Pesan Melalui Whatsapp</a>'
             . '</div></div>';
 
-        return '<div class="wp-block-group alignwide product-content">'
+        return '<div class="wp-block-group alignwide product-content is-nowrap is-layout-flex wp-block-group-is-layout-flex">'
             . $this->imageFigure($imagePath, $title)
+            . '<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">'
             . $whatsappBlock
+            . '<h2 class="wp-block-heading has-large-font-size">' . e($title) . '</h2>'
+            . '<hr class="wp-block-separator has-css-opacity has-text-color has-primary-color has-alpha-channel-opacity has-primary-background-color is-style-wide" />'
             . '<h2 class="wp-block-heading has-medium-font-size">Deskripsi Produk</h2>'
             . $description
-            . '</div>';
+            . '</div></div>';
     }
 }

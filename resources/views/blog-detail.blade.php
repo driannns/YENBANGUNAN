@@ -374,6 +374,7 @@
         /* Entry Content (Main Content Area) */
         .entry-content {
             margin-top: 1.5em;
+            margin-bottom: 3em;
         }
 
         .entry-content>*:first-child {
@@ -1990,6 +1991,7 @@
            styles that Tailwind's preflight resets (headings, lists, links, figures). */
         .entry-content {
             margin-top: 1.5em;
+            margin-bottom: 3em;
             overflow-wrap: break-word;
         }
 
@@ -2019,10 +2021,44 @@
             margin-bottom: 0.6em;
         }
 
-        .entry-content h1 { font-size: 1.875em; }
+        /* h1 di sini bukan judul halaman (itu di luar .entry-content, lihat di atas) —
+           ini heading sub-bab yang dipilih sendiri lewat editor Quill di admin
+           (h1-h6). Nilai persis sama seperti default quill.snow.css supaya ukuran
+           di halaman ini konsisten dengan yang dilihat admin waktu mengetik. */
+        .entry-content h1 { font-size: 2em; }
         .entry-content h2 { font-size: 1.5em; }
-        .entry-content h3 { font-size: 1.25em; }
-        .entry-content h4 { font-size: 1.125em; }
+        .entry-content h3 { font-size: 1.17em; }
+        .entry-content h4 { font-size: 1em; }
+        .entry-content h5 { font-size: 0.83em; }
+        .entry-content h6 { font-size: 0.67em; }
+
+        /* Format lain dari toolbar lengkap Quill (font/size/align/indent/direction/
+           video) — nilai disamakan dengan default quill.snow.css. Warna teks/
+           background tidak butuh CSS di sini karena disimpan sebagai inline style
+           langsung oleh editor. */
+        .entry-content .ql-font-serif { font-family: Georgia, 'Times New Roman', serif; }
+        .entry-content .ql-font-monospace { font-family: Monaco, 'Courier New', monospace; }
+        .entry-content .ql-size-small { font-size: 0.75em; }
+        .entry-content .ql-size-large { font-size: 1.5em; }
+        .entry-content .ql-size-huge { font-size: 2.5em; }
+        .entry-content .ql-align-center { text-align: center; }
+        .entry-content .ql-align-right { text-align: right; }
+        .entry-content .ql-align-justify { text-align: justify; }
+        .entry-content .ql-direction-rtl { direction: rtl; text-align: inherit; }
+        @for ($i = 1; $i <= 8; $i++)
+        .entry-content .ql-indent-{{ $i }}:not(.ql-direction-rtl) { padding-left: {{ $i * 3 }}em; }
+        .entry-content .ql-indent-{{ $i }}.ql-direction-rtl { padding-right: {{ $i * 3 }}em; }
+        @endfor
+        .entry-content iframe.ql-video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            max-width: 100%;
+            margin: 1.5em 0;
+            border: 0;
+        }
+        .entry-content iframe.ql-video.ql-align-center { margin-left: auto; margin-right: auto; }
+        .entry-content iframe.ql-video.ql-align-right { margin-left: auto; margin-right: 0; }
 
         .entry-content a {
             color: #C0392B;

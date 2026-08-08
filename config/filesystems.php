@@ -17,6 +17,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Legacy Assets Storage Path
+    |--------------------------------------------------------------------------
+    |
+    | Folder fisik tempat upload gambar blog/produk (Admin\ContentController)
+    | disimpan — bukan lewat disk di atas, langsung public_path('assets') by
+    | default (cocok untuk dev lokal, di mana public/ itulah webroot). Kalau
+    | webroot hosting BUKAN public/ Laravel (mis. folder assets/ sejajar
+    | dengan public/, disajikan lewat docroot/alias sendiri), set
+    | ASSETS_STORAGE_PATH di .env ke path absolut folder assets/ yang benar-
+    | benar di-serve, tanpa perlu ubah kode.
+    |
+    */
+
+    'legacy_assets_path' => env('ASSETS_STORAGE_PATH', public_path('assets')),
+
+    /*
+    |--------------------------------------------------------------------------
     | Filesystem Disks
     |--------------------------------------------------------------------------
     |

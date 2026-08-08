@@ -87,6 +87,7 @@ class ContentController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
             'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
+            'detail_image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
         ];
         if (!$legacyUrl) {
             $rules['slug'] = ['nullable', 'string', 'max:255'];
@@ -110,10 +111,18 @@ class ContentController extends Controller
             $this->deleteImageIfOrphaned($oldImagePath, $blog->id);
         }
 
+        $detailImagePath = $blog->detail_image_path;
+        if ($request->hasFile('detail_image')) {
+            $oldDetailImagePath = $blog->detail_image_path;
+            $detailImagePath = $this->storeImage($request->file('detail_image'), $slug . '-detail');
+            $this->deleteImageIfOrphaned($oldDetailImagePath, $blog->id);
+        }
+
         $description = $this->sanitizeDescriptionHtml($validated['description']);
+        $contentImagePath = $detailImagePath ?: $imagePath;
         $content = $isProduct
-            ? $this->buildProductContent($imagePath, $validated['title'], $description)
-            : $this->buildArticleContent($imagePath, $validated['title'], $description);
+            ? $this->buildProductContent($contentImagePath, $validated['title'], $description)
+            : $this->buildArticleContent($contentImagePath, $validated['title'], $description);
 
         $blog->update([
             'title' => $validated['title'],
@@ -121,6 +130,7 @@ class ContentController extends Controller
             'description' => $description,
             'content' => $content,
             'image_path' => $imagePath,
+            'detail_image_path' => $detailImagePath,
             'category' => $isProduct ? $validated['category'] : null,
         ]);
 
@@ -131,10 +141,14 @@ class ContentController extends Controller
     {
         $title = $blog->title;
         $imagePath = $blog->image_path;
+        $detailImagePath = $blog->detail_image_path;
 
         $blog->delete();
 
         $this->deleteImageIfOrphaned($imagePath, null);
+        if ($detailImagePath !== $imagePath) {
+            $this->deleteImageIfOrphaned($detailImagePath, null);
+        }
 
         return redirect()
             ->route('admin.content.index')
@@ -168,18 +182,23 @@ class ContentController extends Controller
             'description' => ['required', 'string'],
             'slug' => ['nullable', 'string', 'max:255'],
             'image' => ['required', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
+            'detail_image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
         ]);
 
         $slug = $this->uniqueSlug(($validated['slug'] ?? '') ?: $validated['title']);
         $imagePath = $this->storeImage($request->file('image'), $slug);
+        $detailImagePath = $request->hasFile('detail_image')
+            ? $this->storeImage($request->file('detail_image'), $slug . '-detail')
+            : null;
         $description = $this->sanitizeDescriptionHtml($validated['description']);
 
         $blog = Blog::create([
             'title' => $validated['title'],
             'slug' => $slug,
-            'content' => $this->buildArticleContent($imagePath, $validated['title'], $description),
+            'content' => $this->buildArticleContent($detailImagePath ?: $imagePath, $validated['title'], $description),
             'description' => $description,
             'image_path' => $imagePath,
+            'detail_image_path' => $detailImagePath,
             'category' => null,
             'type' => 'article',
             'published_at' => now(),
@@ -269,7 +288,7 @@ class ContentController extends Controller
             return;
         }
 
-        $stillUsed = Blog::where('image_path', $imagePath)
+        $stillUsed = Blog::where(fn ($q) => $q->where('image_path', $imagePath)->orWhere('detail_image_path', $imagePath))
             ->when($excludeId, fn ($q) => $q->where('id', '!=', $excludeId))
             ->exists();
 
@@ -277,15 +296,26 @@ class ContentController extends Controller
             return;
         }
 
-        $fullPath = public_path('assets' . $imagePath);
+        $fullPath = $this->assetsRoot() . $imagePath;
         if (is_file($fullPath)) {
             @unlink($fullPath);
         }
     }
 
     /**
-     * Simpan file langsung ke public/assets/blog, mengikuti konvensi yang
-     * sudah dipakai konten hasil import WordPress (tanpa storage:link).
+     * Folder fisik tempat asset (gambar produk/blog & gambar dalam deskripsi)
+     * disimpan — lihat config/filesystems.php ('legacy_assets_path') untuk
+     * cara override-nya lewat .env tanpa ubah kode. URL yang dihasilkan
+     * asset() tidak berubah — cuma lokasi tulisnya.
+     */
+    private function assetsRoot(): string
+    {
+        return rtrim(config('filesystems.legacy_assets_path'), '/');
+    }
+
+    /**
+     * Simpan file ke {assetsRoot()}/blog, mengikuti konvensi yang sudah
+     * dipakai konten hasil import WordPress (tanpa storage:link).
      */
     private function storeImage(UploadedFile $file, string $slug): string
     {
@@ -299,7 +329,7 @@ class ContentController extends Controller
         $extension = strtolower($file->extension() ?: 'jpg');
         $filename = $safeSlug . '-' . time() . '.' . $extension;
 
-        $file->move(public_path('assets/blog'), $filename);
+        $file->move($this->assetsRoot() . '/blog', $filename);
 
         return '/blog/' . $filename;
     }

@@ -35,7 +35,8 @@
                     @endif
 
                     <div>
-                        <x-input-label for="image" value="Gambar" />
+                        <x-input-label for="image" value="Gambar Thumbnail" />
+                        <p class="text-xs text-gray-500 mt-1 mb-1">Dipakai sebagai thumbnail di daftar blog.</p>
                         @if ($blog->image_path)
                         <img src="{{ asset('assets' . $blog->image_path) }}" alt="" class="w-24 h-24 object-cover rounded-md border border-gray-200 mt-1 mb-2">
                         @endif
@@ -43,6 +44,18 @@
                             class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm block mt-1 w-full text-sm">
                         <p class="text-xs text-gray-500 mt-1">Kosongkan kalau tidak ingin mengganti gambar.</p>
                         <x-input-error :messages="$errors->get('image')" class="mt-2" />
+                    </div>
+
+                    <div>
+                        <x-input-label for="detail_image" value="Gambar Utama Detail (opsional)" />
+                        <p class="text-xs text-gray-500 mt-1 mb-1">Ditampilkan di halaman detail artikel. Kosongkan untuk pakai gambar thumbnail yang sama.</p>
+                        @if ($blog->detail_image_path)
+                        <img src="{{ asset('assets' . $blog->detail_image_path) }}" alt="" class="w-24 h-24 object-cover rounded-md border border-gray-200 mt-1 mb-2">
+                        @endif
+                        <input id="detail_image" name="detail_image" type="file" accept="image/png,image/jpeg,image/webp"
+                            class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm block mt-1 w-full text-sm">
+                        <p class="text-xs text-gray-500 mt-1">Kosongkan kalau tidak ingin mengganti gambar.</p>
+                        <x-input-error :messages="$errors->get('detail_image')" class="mt-2" />
                     </div>
 
                     <div class="flex items-center gap-4">

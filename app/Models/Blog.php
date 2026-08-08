@@ -22,6 +22,7 @@ class Blog extends Model
         'content',
         'description',
         'image_path',
+        'detail_image_path',
         'category',
         'type',
         'status',
@@ -95,6 +96,16 @@ class Blog extends Model
         }
 
         return url('/' . $this->slug);
+    }
+
+    /**
+     * Gambar utama di halaman detail. `detail_image_path` opsional — kalau
+     * admin tidak mengisinya, fallback ke thumbnail (`image_path`) supaya
+     * halaman detail tidak pernah tampil tanpa gambar sama sekali.
+     */
+    public function detailImagePath(): ?string
+    {
+        return $this->detail_image_path ?: $this->image_path;
     }
 
     /**

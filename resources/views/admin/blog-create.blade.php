@@ -26,10 +26,19 @@
                     </div>
 
                     <div>
-                        <x-input-label for="image" value="Gambar" />
+                        <x-input-label for="image" value="Gambar Thumbnail" />
+                        <p class="text-xs text-gray-500 mt-1 mb-1">Dipakai sebagai thumbnail di daftar blog.</p>
                         <input id="image" name="image" type="file" accept="image/png,image/jpeg,image/webp" required
                             class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm block mt-1 w-full text-sm">
                         <x-input-error :messages="$errors->get('image')" class="mt-2" />
+                    </div>
+
+                    <div>
+                        <x-input-label for="detail_image" value="Gambar Utama Detail (opsional)" />
+                        <p class="text-xs text-gray-500 mt-1 mb-1">Ditampilkan di halaman detail artikel. Kosongkan untuk pakai gambar thumbnail yang sama.</p>
+                        <input id="detail_image" name="detail_image" type="file" accept="image/png,image/jpeg,image/webp"
+                            class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm block mt-1 w-full text-sm">
+                        <x-input-error :messages="$errors->get('detail_image')" class="mt-2" />
                     </div>
 
                     <div class="flex items-center gap-4">

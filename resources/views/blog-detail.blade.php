@@ -2091,6 +2091,26 @@
             height: auto;
         }
 
+        /* Gambar yang disisipkan lewat toolbar image Quill di tengah deskripsi
+           (bukan main image, yang selalu dibungkus <figure> terpisah) — Quill
+           menaruh tiap <img> langsung di dalam <p>. Dibatasi ke ukuran standar
+           supaya tidak melebar penuh selebar kolom konten seperti foto biasa.
+           Kalau beberapa gambar disisipkan tanpa Enter di antaranya, semuanya
+           berakhir di <p> yang sama — itu yang dijadikan flex row di sini,
+           dengan lebar per gambar yang pas untuk maksimal 3 sebaris. */
+        .entry-content p:has(> img) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            align-items: flex-start;
+        }
+
+        .entry-content p > img {
+            flex: 1 1 min(320px, 100%);
+            max-width: min(320px, 100%);
+            border-radius: 0.5em;
+        }
+
         .entry-content figure,
         .entry-content .wp-block-image,
         .entry-content .wp-caption {

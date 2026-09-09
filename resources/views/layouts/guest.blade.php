@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        @include('partials.analytics')
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -138,6 +139,7 @@
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
     <body class="font-sans text-gray-900 antialiased min-h-screen">
+        @include('partials.gtm-body')
         <div class="w-full min-h-screen flex flex-col-reverse lg:flex-row sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
             <div class="lg:w-1/2 flex justify-center mb-6 lg:mb-0 bg-center bg-cover bg-no-repeat" style="background-image: url('/assets/home-2.jpeg')">
                 <img src="{{ asset('assets/home-2.jpeg') }}" alt="" class="lg:h-screen invisible">

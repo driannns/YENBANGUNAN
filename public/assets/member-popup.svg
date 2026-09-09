@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 860" font-family="'Inter','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="mp-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0d0f"/>
+      <stop offset="0.55" stop-color="#101013"/>
+      <stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+    <linearGradient id="mp-card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#242427"/>
+      <stop offset="0.5" stop-color="#161618"/>
+      <stop offset="1" stop-color="#0c0c0e"/>
+    </linearGradient>
+    <linearGradient id="mp-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9a8"/>
+      <stop offset="0.35" stop-color="#f4c65b"/>
+      <stop offset="0.6" stop-color="#e0a63a"/>
+      <stop offset="1" stop-color="#b9812a"/>
+    </linearGradient>
+    <linearGradient id="mp-yb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ad0ff"/>
+      <stop offset="0.4" stop-color="#8b7bff"/>
+      <stop offset="0.7" stop-color="#ff5fa2"/>
+      <stop offset="1" stop-color="#ffd24d"/>
+    </linearGradient>
+    <radialGradient id="mp-glow" cx="0.62" cy="0.42" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="860" height="860" rx="26" fill="url(#mp-bg)"/>
+
+  <!-- vertical slats, right side -->
+  <g opacity="0.5">
+    <rect x="690" y="0" width="10" height="860" fill="#000" opacity="0.5"/>
+    <rect x="726" y="0" width="10" height="860" fill="#000" opacity="0.5"/>
+    <rect x="762" y="0" width="10" height="860" fill="#000" opacity="0.5"/>
+    <rect x="798" y="0" width="10" height="860" fill="#000" opacity="0.5"/>
+    <rect x="834" y="0" width="10" height="860" fill="#000" opacity="0.5"/>
+    <rect x="708" y="0" width="2" height="860" fill="#2a2a2e"/>
+    <rect x="744" y="0" width="2" height="860" fill="#2a2a2e"/>
+    <rect x="780" y="0" width="2" height="860" fill="#2a2a2e"/>
+    <rect x="816" y="0" width="2" height="860" fill="#2a2a2e"/>
+  </g>
+
+  <!-- headline -->
+  <text x="56" y="128" font-size="76" font-weight="800" letter-spacing="1" fill="#ffffff">JADI <tspan fill="#e05534">MEMBER</tspan></text>
+  <text x="56" y="206" font-size="76" font-weight="800" letter-spacing="1" fill="#ffffff">YEN BANGUNAN</text>
+
+  <!-- subtext -->
+  <text x="58" y="272" font-size="27" font-weight="500" fill="#c9c9cc">Nikmati keuntungan eksklusif</text>
+  <text x="58" y="308" font-size="27" font-weight="500" fill="#c9c9cc">dan raih <tspan fill="#e05534" font-weight="700">hadiah menarik</tspan>!</text>
+
+  <!-- member card -->
+  <g transform="rotate(-3 430 560)">
+    <rect x="150" y="360" width="470" height="300" rx="22" fill="url(#mp-card)" stroke="#38383c" stroke-width="1.5"/>
+    <rect x="150" y="628" width="470" height="4" rx="2" fill="#e05534" opacity="0.9"/>
+    <text x="186" y="430" font-size="30" font-weight="800" letter-spacing="1" fill="#ffffff">YEN BANGUNAN</text>
+    <text x="186" y="466" font-size="19" font-weight="600" letter-spacing="3" fill="#e05534">MEMBER CARD</text>
+    <!-- YB monogram -->
+    <g transform="translate(420 466)" fill="none" stroke="url(#mp-yb)" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" opacity="0.92">
+      <path d="M12 20 L56 74 L100 20"/>
+      <path d="M56 74 L56 132"/>
+      <path d="M118 20 L118 132 L166 132 Q198 132 198 104 Q198 78 166 78 L118 78 M166 78 Q194 78 194 50 Q194 20 164 20 L118 20"/>
+    </g>
+    <!-- faint blueprint -->
+    <g stroke="#4a4a50" stroke-width="1.2" fill="none" opacity="0.5">
+      <path d="M188 600 L188 520 L250 486 L312 520 L312 600 Z"/>
+      <path d="M188 520 L250 552 L312 520 M250 552 L250 600"/>
+    </g>
+  </g>
+
+  <!-- gold bar -->
+  <g transform="rotate(-4 470 720)">
+    <rect x="398" y="600" width="150" height="248" rx="12" fill="url(#mp-gold)" stroke="#8a5f20" stroke-width="1"/>
+    <ellipse cx="473" cy="700" rx="70" ry="120" fill="url(#mp-glow)" opacity="0.35"/>
+    <rect x="452" y="626" width="42" height="34" rx="4" fill="none" stroke="#9a6c24" stroke-width="2"/>
+    <path d="M456 660 L456 640 L473 628 L490 640 L490 660" fill="none" stroke="#9a6c24" stroke-width="2"/>
+    <text x="473" y="712" text-anchor="middle" font-size="20" font-weight="800" letter-spacing="1" fill="#7a5216">FINE</text>
+    <text x="473" y="742" text-anchor="middle" font-size="20" font-weight="800" letter-spacing="1" fill="#7a5216">GOLD</text>
+    <text x="473" y="778" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="2" fill="#7a5216">999.9</text>
+    <text x="473" y="812" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="1" fill="#7a5216">10 g</text>
+  </g>
+
+  <!-- voucher ticket -->
+  <g transform="translate(560 636)">
+    <path d="M12 0 H300 A12 12 0 0 1 312 12 V64 A16 16 0 0 0 312 96 V148 A12 12 0 0 1 300 160 H12 A12 12 0 0 1 0 148 V96 A16 16 0 0 0 0 64 V12 A12 12 0 0 1 12 0 Z"
+          fill="#141416" stroke="#e05534" stroke-width="2.5"/>
+    <text x="34" y="52" font-size="22" font-weight="800" letter-spacing="1" fill="#ffffff">VOUCHER</text>
+    <text x="34" y="82" font-size="22" font-weight="800" letter-spacing="1" fill="#ffffff">BELANJA</text>
+    <text x="34" y="126" font-size="30" font-weight="800" fill="#e05534">Rp <tspan fill="#ffffff">100.000</tspan></text>
+  </g>
+</svg>

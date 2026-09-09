@@ -264,13 +264,38 @@ class ContentController extends Controller
      * Slugify dan pastikan unik (kolom slug punya unique constraint di DB).
      * $excludeId dipakai saat update supaya baris itu sendiri tidak dianggap tabrakan.
      */
+    /**
+     * Segmen path pertama dari semua route statis lain di aplikasi ini (home,
+     * admin, auth, dashboard, dst — lihat `php artisan route:list`). Slug baru
+     * TIDAK BOLEH persis sama dengan salah satu ini: rute `/{slug}` ada di
+     * paling akhir daftar route, jadi kalau judul artikel kebetulan jadi-slug
+     * persis salah satu kata ini (mis. judul "Blog" -> slug "blog"), request
+     * ke URL itu akan selalu ketangkep duluan oleh route lain, bukan artikel
+     * ini — kontennya tersimpan tapi tidak akan pernah bisa dibuka.
+     * Perlu di-update manual kalau ada route statis baru yang ditambahkan.
+     */
+    private const RESERVED_SLUGS = [
+        'about-us', 'admin', 'blog', 'confirm-password', 'customers', 'dashboard',
+        'forgot-password', 'gallery', 'login', 'loyalty-formula', 'loyalty-log',
+        'new-aboutus', 'new-blog', 'new-gallery', 'new-home', 'new-product',
+        'orders-history', 'product', 'profile', 'promotion-program', 'register',
+        'reset-password', 'storage', 'up', 'verify-email',
+    ];
+
     private function uniqueSlug(string $base, ?int $excludeId = null): string
     {
-        $slug = Str::slug($base);
-        $original = $slug;
+        // Judul yang seluruhnya emoji/simbol/aksara non-latin bisa menghasilkan
+        // slug kosong dari Str::slug() — kalau dibiarkan, baris pertama tersimpan
+        // dengan slug '' (URL publiknya jadi tidak masuk akal), dan baris kedua
+        // yang sama-sama kosong akan gagal total kena unique constraint di DB.
+        $original = Str::slug($base) ?: 'post-' . Str::random(6);
+        $slug = $original;
         $i = 2;
 
-        while (Blog::where('slug', $slug)->when($excludeId, fn ($q) => $q->where('id', '!=', $excludeId))->exists()) {
+        while (
+            in_array($slug, self::RESERVED_SLUGS, true)
+            || Blog::where('slug', $slug)->when($excludeId, fn ($q) => $q->where('id', '!=', $excludeId))->exists()
+        ) {
             $slug = $original . '-' . $i;
             $i++;
         }

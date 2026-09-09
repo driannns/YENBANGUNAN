@@ -2,9 +2,10 @@
 <html lang="id">
 
 <head>
+    @include('partials.analytics')
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yen Bangunan — One-Stop Solution untuk Konstruksi</title>
+    <title>YEN BANGUNAN CIKARANG - Toko Bangunan Cikarang Terbesar</title>
     <meta name="description" content="Toko bangunan dan material terlengkap di Cikarang. Lebih dari 5.000 SKU, gratis ongkir, layanan 24 jam.">
     <link rel="icon" href="{{ asset('assets/logo-crop.png') }}">
 
@@ -30,9 +31,15 @@
             --font-text: 'Helvetica Now Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             background-color: var(--bg);
@@ -43,8 +50,16 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        img, video { display: block; max-width: 100%; }
-        a { color: inherit; text-decoration: none; }
+        img,
+        video {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
         /* ===== Skala tipografi (persis total-prime.com) ===== */
         .h1 {
@@ -87,7 +102,11 @@
             color: var(--white50);
         }
 
-        .p-text { font-family: var(--font-text); font-size: 16px; color: var(--white50); }
+        .p-text {
+            font-family: var(--font-text);
+            font-size: 16px;
+            color: var(--white50);
+        }
 
         .caption {
             font-family: var(--font-mono);
@@ -113,7 +132,9 @@
             transition: border-color .2s;
         }
 
-        .learn:hover { border-color: var(--prime); }
+        .learn:hover {
+            border-color: var(--prime);
+        }
 
         /* ===== Navbar (mengikuti referensi: fixed, blur, link mono tanpa CTA) ===== */
         .navbar {
@@ -137,10 +158,22 @@
 
         /* Persis referensi: brand 60px flex + padding-left 10px (w-nav-brand);
            logo dikecilkan ke footprint logo referensi (±126px lebar natural). */
-        .navbar .logo { display: flex; align-items: center; height: 60px; padding-left: 10px; }
-        .navbar .logo img { height: 18px; width: auto; }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            padding-left: 10px;
+        }
 
-        .nav-links { display: flex; align-items: center; }
+        .navbar .logo img {
+            height: 18px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
 
         /* Persis referensi: Apercu Mono, 14px/20px (base Webflow),
            padding 20px per link sebagai spacing, tanpa letter-spacing. */
@@ -155,7 +188,10 @@
             transition: color .2s;
         }
 
-        .nav-link:hover, .nav-link.active { color: var(--white); }
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--white);
+        }
 
         .menu-button {
             display: none;
@@ -187,10 +223,14 @@
             transform: translateY(0);
         }
 
-        .mobile-menu .nav-link { padding: 10px 4px; }
+        .mobile-menu .nav-link {
+            padding: 10px 4px;
+        }
 
         @media (prefers-reduced-motion: reduce) {
-            .mobile-menu { transition: none; }
+            .mobile-menu {
+                transition: none;
+            }
         }
 
         .button {
@@ -210,12 +250,27 @@
             transition: border-color .2s, color .2s, background-color .2s;
         }
 
-        .button svg { width: 20px; height: 20px; flex: none; }
+        .button svg {
+            width: 20px;
+            height: 20px;
+            flex: none;
+        }
 
-        .button:hover { border-color: var(--prime); color: var(--prime); }
+        .button:hover {
+            border-color: var(--prime);
+            color: var(--prime);
+        }
 
-        .button.prime { background-color: var(--prime); border-color: var(--prime); color: #fff; }
-        .button.prime:hover { background-color: #c74628; color: #fff; }
+        .button.prime {
+            background-color: var(--prime);
+            border-color: var(--prime);
+            color: #fff;
+        }
+
+        .button.prime:hover {
+            background-color: #c74628;
+            color: #fff;
+        }
 
         .cta-contacts {
             display: flex;
@@ -233,9 +288,16 @@
             padding: 100px 5% 100px;
         }
 
-        .text-box { max-width: 650px; position: relative; }
+        .text-box {
+            max-width: 650px;
+            position: relative;
+        }
 
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
         /* ===== Hero slider (mengikuti referensi: kotak rounded di bawah navbar,
            grid 2 kolom #0a0a0a, autoplay, panah + dots) ===== */
@@ -260,7 +322,10 @@
             transition: transform .5s ease;
         }
 
-        .hero-slider .slide { flex: 0 0 100%; min-width: 100%; }
+        .hero-slider .slide {
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
 
         .hero-grid {
             position: relative;
@@ -272,7 +337,10 @@
             min-height: 560px;
         }
 
-        .spline-scene { position: absolute; inset: 0; }
+        .spline-scene {
+            position: absolute;
+            inset: 0;
+        }
 
         .spline-scene iframe {
             display: block;
@@ -289,7 +357,10 @@
             pointer-events: none;
         }
 
-        .text-box-500 a, .text-box-500 .button { pointer-events: auto; }
+        .text-box-500 a,
+        .text-box-500 .button {
+            pointer-events: auto;
+        }
 
         .hero-brands {
             position: relative;
@@ -303,15 +374,35 @@
 
         /* scale() memperbesar tampilan logo untuk mengompensasi whitespace bawaan
            di dalam file SVG; bleed-nya (~11px) tetap lebih kecil dari gap grid. */
-        .hero-brands img { width: 100%; max-height: 62px; object-fit: contain; transform: scale(1.6); }
+        .hero-brands img {
+            width: 100%;
+            max-height: 62px;
+            object-fit: contain;
+            transform: scale(1.6);
+        }
 
-        .hero-brands-collage { position: relative; z-index: 2; margin: 48px 40px; }
-        .hero-brands-collage img { display: block; width: 100%; height: auto; object-fit: contain; }
+        .hero-brands-collage {
+            position: relative;
+            z-index: 2;
+            margin: 48px 40px;
+        }
+
+        .hero-brands-collage img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
 
         /* Logo dominan hitam: dibalik jadi putih agar tidak menyatu dengan latar gelap */
-        .logo-inv { filter: invert(1); }
+        .logo-inv {
+            filter: invert(1);
+        }
+
         /* Invert + hue-rotate: kotak putihnya jadi hitam (menyatu latar), warna logo kembali */
-        .logo-inv-hue { filter: invert(1) hue-rotate(180deg); }
+        .logo-inv-hue {
+            filter: invert(1) hue-rotate(180deg);
+        }
 
         /* Panah + dots slider */
         .slider-arrow {
@@ -329,10 +420,17 @@
             transition: color .2s;
         }
 
-        .slider-arrow:hover { color: var(--white); }
+        .slider-arrow:hover {
+            color: var(--white);
+        }
 
-        .slider-arrow.prev { left: 6px; }
-        .slider-arrow.next { right: 6px; }
+        .slider-arrow.prev {
+            left: 6px;
+        }
+
+        .slider-arrow.next {
+            right: 6px;
+        }
 
         .slide-nav {
             position: absolute;
@@ -356,7 +454,9 @@
             transition: background-color .15s;
         }
 
-        .slide-dot.active { background-color: #fff; }
+        .slide-dot.active {
+            background-color: #fff;
+        }
 
         /* Section about — persis section-info di total-prime.com/about:
            teks Apercu Mono 14px/20px putih (inherit body Webflow) lebar 80%,
@@ -376,9 +476,15 @@
             color: var(--white);
         }
 
-        .about-info .about-img { display: flex; justify-content: center; }
+        .about-info .about-img {
+            display: flex;
+            justify-content: center;
+        }
 
-        .about-info .about-img img { width: 80%; mix-blend-mode: screen; }
+        .about-info .about-img img {
+            width: 80%;
+            mix-blend-mode: screen;
+        }
 
         /* Marquee logo berjalan kontinu (Our Brands & Trusted By) */
         .marquee {
@@ -389,7 +495,10 @@
         }
 
         /* Varian gelap: logo SVG transparan langsung di atas latar web, tanpa panel putih */
-        .marquee.dark { background: transparent; border-radius: 0; }
+        .marquee.dark {
+            background: transparent;
+            border-radius: 0;
+        }
 
         .marquee-track {
             display: flex;
@@ -398,23 +507,41 @@
             animation: marqueeRun 45s linear infinite;
         }
 
-        .marquee-track img { height: 46px; width: auto; margin-right: 56px; }
+        .marquee-track img {
+            height: 46px;
+            width: auto;
+            margin-right: 56px;
+        }
 
-        .marquee.dark .marquee-track img { height: 88px; margin-right: 48px; transform: scale(1.5); }
+        .marquee.dark .marquee-track img {
+            height: 88px;
+            margin-right: 48px;
+            transform: scale(1.5);
+        }
 
         /* Vendor SVG lebih padat isinya (minim whitespace internal) — tanpa scale
            besar dan margin lebih lebar agar gap visualnya setara marquee Our Brands. */
-        .marquee.dark.vendors .marquee-track img { height: 84px; margin-right: 64px; transform: none; }
+        .marquee.dark.vendors .marquee-track img {
+            height: 84px;
+            margin-right: 64px;
+            transform: none;
+        }
 
-        .marquee:hover .marquee-track { animation-play-state: paused; }
+        .marquee:hover .marquee-track {
+            animation-play-state: paused;
+        }
 
         @keyframes marqueeRun {
-            to { transform: translateX(-50%); }
+            to {
+                transform: translateX(-50%);
+            }
         }
 
 
         @media (prefers-reduced-motion: reduce) {
-            .marquee-track { animation: none; }
+            .marquee-track {
+                animation: none;
+            }
         }
 
         /* Grid kategori clickable (pengganti copywriting "Sedang Membangun?") */
@@ -506,7 +633,12 @@
             background-color: var(--white2);
         }
 
-        .feature .media img { width: 100%; height: 100%; max-height: 520px; object-fit: cover; }
+        .feature .media img {
+            width: 100%;
+            height: 100%;
+            max-height: 520px;
+            object-fit: cover;
+        }
 
 
         /* Grid kartu (produk / layanan) — gap 8px seperti referensi */
@@ -515,7 +647,9 @@
             gap: 8px;
         }
 
-        .grid.services { grid-template-columns: repeat(4, 1fr); }
+        .grid.services {
+            grid-template-columns: repeat(4, 1fr);
+        }
 
 
 
@@ -531,50 +665,127 @@
 
         /* ===== Reveal (fade + slide-up halus) ===== */
         body.reveal-ready .reveal:not(.in-view),
-        body.reveal-ready .reveal-group>*:not(.in-view) { opacity: 0; transform: translateY(24px); }
+        body.reveal-ready .reveal-group>*:not(.in-view) {
+            opacity: 0;
+            transform: translateY(24px);
+        }
 
-        .reveal.in-view, .reveal-group>.in-view { animation: revealUp .6s ease-out; }
+        .reveal.in-view,
+        .reveal-group>.in-view {
+            animation: revealUp .6s ease-out;
+        }
 
         @keyframes revealUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
+
             body.reveal-ready .reveal:not(.in-view),
-            body.reveal-ready .reveal-group>*:not(.in-view) { opacity: 1; transform: none; }
-            .reveal.in-view, .reveal-group>.in-view { animation: none; }
+            body.reveal-ready .reveal-group>*:not(.in-view) {
+                opacity: 1;
+                transform: none;
+            }
+
+            .reveal.in-view,
+            .reveal-group>.in-view {
+                animation: none;
+            }
         }
 
         /* ===== Responsive ===== */
         @media (max-width: 991px) {
+
             /* Referensi pakai collapse "medium": hamburger mulai 991px */
-            .nav-links .nav-link { display: none; }
-            .menu-button { display: block; }
-            .hero-grid { grid-template-columns: 1fr; min-height: 520px; }
-            .hero-brands { margin-top: 0; }
-            .hero-brands-collage { margin-top: 0; }
-            .marquee-track img { height: 36px; margin-right: 40px; }
+            .nav-links .nav-link {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                min-height: 520px;
+            }
+
+            .hero-brands {
+                margin-top: 0;
+            }
+
+            .hero-brands-collage {
+                margin-top: 0;
+            }
+
+            .marquee-track img {
+                height: 36px;
+                margin-right: 40px;
+            }
         }
 
         @media (max-width: 767px) {
+
             /* Interaksi 3D dimatikan di layar sentuh: script-nya mencegah
                scroll saat disentuh, pengunjung bisa terjebak di tengah halaman. */
-            .spline-scene iframe { pointer-events: none; }
-            .text-box-500 { margin: 28px 22px; }
-            .hero-brands { margin: 0 22px 48px; }
-            .hero-brands-collage { margin: 0 22px 48px; }
-            .slider-arrow { display: none; }
-            .h1 { font-size: 28px; }
-            .p-large { font-size: 20px; }
-            .feature { grid-template-columns: 1fr; }
-            .about-info { grid-template-columns: 1fr; }
-            .about-info .about-text { font-size: 12px; line-height: 16px; }
-            .section { padding: 70px 6%; }
+            .spline-scene iframe {
+                pointer-events: none;
+            }
+
+            .text-box-500 {
+                margin: 28px 22px;
+            }
+
+            .hero-brands {
+                margin: 0 22px 48px;
+            }
+
+            .hero-brands-collage {
+                margin: 0 22px 48px;
+            }
+
+            .slider-arrow {
+                display: none;
+            }
+
+            .h1 {
+                font-size: 28px;
+            }
+
+            .p-large {
+                font-size: 20px;
+            }
+
+            .feature {
+                grid-template-columns: 1fr;
+            }
+
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+
+            .about-info .about-text {
+                font-size: 12px;
+                line-height: 16px;
+            }
+
+            .section {
+                padding: 70px 6%;
+            }
         }
 
         @media (max-width: 479px) {
-            .cat-grid { grid-template-columns: repeat(2, 1fr); }
+            .cat-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         /* ===== Floating WhatsApp — pojok kanan bawah, bouncing agar dinotice ===== */
@@ -595,9 +806,16 @@
             transition: transform .2s, background-color .2s;
         }
 
-        .whatsapp-float:hover { background-color: #1ebd59; transform: scale(1.08); }
+        .whatsapp-float:hover {
+            background-color: #1ebd59;
+            transform: scale(1.08);
+        }
 
-        .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            fill: #fff;
+        }
 
         /* Cincin pulse lembut di belakang tombol, ikut menarik perhatian */
         .whatsapp-float::before {
@@ -611,14 +829,34 @@
         }
 
         @keyframes waBounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-14px); }
-            60% { transform: translateY(-3px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-14px);
+            }
+
+            60% {
+                transform: translateY(-3px);
+            }
         }
 
         @keyframes waPulse {
-            0% { transform: scale(.9); opacity: 1; }
-            100% { transform: scale(1.7); opacity: 0; }
+            0% {
+                transform: scale(.9);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.7);
+                opacity: 0;
+            }
         }
 
         @media (max-width: 767px) {
@@ -629,42 +867,52 @@
                 bottom: calc(14px + env(safe-area-inset-bottom));
             }
 
-            .whatsapp-float svg { width: 24px; height: 24px; }
+            .whatsapp-float svg {
+                width: 24px;
+                height: 24px;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .whatsapp-float { animation: none; }
-            .whatsapp-float::before { animation: none; opacity: 0; }
+            .whatsapp-float {
+                animation: none;
+            }
+
+            .whatsapp-float::before {
+                animation: none;
+                opacity: 0;
+            }
         }
     </style>
 </head>
 
 <body>
+@include('partials.gtm-body')
     <a href="https://wa.link/3v66z0" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat WhatsApp Yen Bangunan">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
         </svg>
     </a>
 
     @php
-        // Daftar brand (SVG di public/assets/brand). Kelas kedua: treatment untuk logo
-        // dominan hitam agar terlihat di latar gelap.
-        $brands = [
-            ['tekiro', 'logo-inv-hue'], ['rexco', ''], ['indocement', ''], ['broco', ''],
-            ['nippon-paint', ''], ['dekson', ''], ['jakarta-cement', ''], ['penguin', 'logo-inv'],
-            ['american-standard', 'logo-inv'], ['titanium', ''], ['sika', ''], ['semen-gresik', ''],
-            ['ryu', ''], ['onda', ''], ['bosch', ''], ['asia-tile', ''],
-            ['semen-garuda', ''], ['bital', ''], ['gys', ''], ['dulux', ''],
-            ['in-lite', ''], ['hannochs', ''], ['infiniti', ''], ['kansai-paint', ''],
-        ];
+    // Daftar brand (SVG di public/assets/brand). Kelas kedua: treatment untuk logo
+    // dominan hitam agar terlihat di latar gelap.
+    $brands = [
+    ['tekiro', 'logo-inv-hue'], ['rexco', ''], ['indocement', ''], ['broco', ''],
+    ['nippon-paint', ''], ['dekson', ''], ['jakarta-cement', ''], ['penguin', 'logo-inv'],
+    ['american-standard', 'logo-inv'], ['titanium', ''], ['sika', ''], ['semen-gresik', ''],
+    ['ryu', ''], ['onda', ''], ['bosch', ''], ['asia-tile', ''],
+    ['semen-garuda', ''], ['bital', ''], ['gys', ''], ['dulux', ''],
+    ['in-lite', ''], ['hannochs', ''], ['infiniti', ''], ['kansai-paint', ''],
+    ];
 
-        // Klien/vendor untuk Trusted By (SVG di public/assets/vendors).
-        $vendors = [
-            ['jababeka', ''], ['nissin', ''], ['elephant-gypsum', ''], ['meikarta', ''],
-            ['lg', ''], ['lippo-malls', 'logo-inv-hue'], ['san-diego-hills', 'logo-inv-hue'],
-            ['kalbio-global-medika', 'logo-inv-hue'], ['kalbe', 'logo-inv-hue'],
-            ['bintang-toedjoe', ''], ['saka-farma', 'logo-inv-hue'], ['tempo-scan', ''],
-        ];
+    // Klien/vendor untuk Trusted By (SVG di public/assets/vendors).
+    $vendors = [
+    ['jababeka', ''], ['nissin', ''], ['elephant-gypsum', ''], ['meikarta', ''],
+    ['lg', ''], ['lippo-malls', 'logo-inv-hue'], ['san-diego-hills', 'logo-inv-hue'],
+    ['kalbio-global-medika', 'logo-inv-hue'], ['kalbe', 'logo-inv-hue'],
+    ['bintang-toedjoe', ''], ['saka-farma', 'logo-inv-hue'], ['tempo-scan', ''],
+    ];
     @endphp
 
     <!-- Navbar -->
@@ -742,10 +990,10 @@
                 <div class="marquee-track">
                     {{-- dua salinan berurutan agar loop translateX(-50%) mulus tanpa celah --}}
                     @for($i = 0; $i < 2; $i++)
-                    @foreach($brands as [$brand, $cls])
-                    <img src="{{ asset('assets/brand/' . $brand . '.svg') }}" alt="{{ ucwords(str_replace('-', ' ', $brand)) }}" class="{{ $cls }}" loading="lazy">
-                    @endforeach
-                    @endfor
+                        @foreach($brands as [$brand, $cls])
+                        <img src="{{ asset('assets/brand/' . $brand . '.svg') }}" alt="{{ ucwords(str_replace('-', ' ', $brand)) }}" class="{{ $cls }}" loading="lazy">
+                        @endforeach
+                        @endfor
                 </div>
             </div>
         </div>
@@ -760,18 +1008,18 @@
             <div class="feature reveal">
                 <div class="cat-grid">
                     @foreach([
-                        ['besi-dan-baja', 'Besi & Baja'],
-                        ['hebel-dan-bata', 'Konstruksi'],
-                        ['atap', 'Atap'],
-                        ['pipa-dan-sanitasi', 'Pipa & Sanitasi'],
-                        ['lampu-dan-kelistrikan', 'Lampu'],
-                        ['mesin', 'Mesin'],
-                        ['perkakas', 'Perkakas'],
-                        ['paku-dan-baut', 'Paku & Baut'],
-                        ['consumable-industri', 'Consumable Industry'],
-                        ['safety', 'Safety Industry'],
-                        ['keramik-dan-granit', 'Keramik & Granit'],
-                        ['cat', 'Cat'],
+                    ['besi-dan-baja', 'Besi & Baja'],
+                    ['hebel-dan-bata', 'Konstruksi'],
+                    ['atap', 'Atap'],
+                    ['pipa-dan-sanitasi', 'Pipa & Sanitasi'],
+                    ['lampu-dan-kelistrikan', 'Lampu'],
+                    ['mesin', 'Mesin'],
+                    ['perkakas', 'Perkakas'],
+                    ['paku-dan-baut', 'Paku & Baut'],
+                    ['consumable-industri', 'Consumable Industry'],
+                    ['safety', 'Safety Industry'],
+                    ['keramik-dan-granit', 'Keramik & Granit'],
+                    ['cat', 'Cat'],
                     ] as [$slug, $label])
                     <a href="{{ route('new-product') }}?kategori={{ $slug }}" class="cat-card">
                         <img src="{{ asset('assets/product/' . $slug . '.png') }}" alt="{{ $label }}" loading="lazy">
@@ -796,36 +1044,38 @@
                 <div class="svc-grid">
                     <div class="svc-card">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/>
-                            <path d="M3 4h2l2.4 12h10.2L20 8H7"/>
-                            <path d="M12 2v4m-2-2h4"/>
+                            <circle cx="9" cy="20" r="1.6" />
+                            <circle cx="17" cy="20" r="1.6" />
+                            <path d="M3 4h2l2.4 12h10.2L20 8H7" />
+                            <path d="M12 2v4m-2-2h4" />
                         </svg>
                         <div class="label">One Stop<br>Solution</div>
                     </div>
                     <div class="svc-card">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 7h10v9H4zM14 10h3.5L20 13v3h-6"/>
-                            <circle cx="7.5" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/>
-                            <path d="M1 9h2M1 12h2"/>
+                            <path d="M4 7h10v9H4zM14 10h3.5L20 13v3h-6" />
+                            <circle cx="7.5" cy="18" r="1.6" />
+                            <circle cx="16.5" cy="18" r="1.6" />
+                            <path d="M1 9h2M1 12h2" />
                         </svg>
                         <div class="label">Gratis<br>Ongkir</div>
                     </div>
                     <div class="svc-card">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="5" width="18" height="14" rx="2"/>
-                            <circle cx="9" cy="11" r="2"/>
-                            <path d="M6.5 15.5c.5-1.4 1.5-2 2.5-2s2 .6 2.5 2"/>
-                            <path d="m16 9 .8 1.6 1.7.3-1.2 1.2.3 1.7-1.6-.8-1.6.8.3-1.7-1.2-1.2 1.7-.3z"/>
+                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                            <circle cx="9" cy="11" r="2" />
+                            <path d="M6.5 15.5c.5-1.4 1.5-2 2.5-2s2 .6 2.5 2" />
+                            <path d="m16 9 .8 1.6 1.7.3-1.2 1.2.3 1.7-1.6-.8-1.6.8.3-1.7-1.2-1.2 1.7-.3z" />
                         </svg>
                         <div class="label">Loyalty<br>Membership</div>
                     </div>
                     <div class="svc-card">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 13a8 8 0 0 1 16 0"/>
-                            <rect x="2.5" y="12" width="4" height="6" rx="1.5"/>
-                            <rect x="17.5" y="12" width="4" height="6" rx="1.5"/>
-                            <path d="M19.5 18v1a2 2 0 0 1-2 2h-3"/>
-                            <rect x="12" y="20" width="3" height="2" rx="1"/>
+                            <path d="M4 13a8 8 0 0 1 16 0" />
+                            <rect x="2.5" y="12" width="4" height="6" rx="1.5" />
+                            <rect x="17.5" y="12" width="4" height="6" rx="1.5" />
+                            <path d="M19.5 18v1a2 2 0 0 1-2 2h-3" />
+                            <rect x="12" y="20" width="3" height="2" rx="1" />
                         </svg>
                         <div class="label">Konsultasi<br>Gratis</div>
                     </div>
@@ -848,10 +1098,10 @@
                 <div class="marquee-track">
                     {{-- dua salinan berurutan agar loop translateX(-50%) mulus tanpa celah --}}
                     @for($i = 0; $i < 2; $i++)
-                    @foreach($vendors as [$vendor, $cls])
-                    <img src="{{ asset('assets/vendors/' . $vendor . '.svg') }}" alt="{{ ucwords(str_replace('-', ' ', $vendor)) }}" class="{{ $cls }}" loading="lazy">
-                    @endforeach
-                    @endfor
+                        @foreach($vendors as [$vendor, $cls])
+                        <img src="{{ asset('assets/vendors/' . $vendor . '.svg') }}" alt="{{ ucwords(str_replace('-', ' ', $vendor)) }}" class="{{ $cls }}" loading="lazy">
+                        @endforeach
+                        @endfor
                 </div>
             </div>
         </div>
@@ -887,15 +1137,21 @@
             <p class="page-sub" style="margin-bottom: 24px">Konsultasi gratis dengan tim ahli Yen Bangunan. Chat WhatsApp, Gratis dan Cepat!</p>
             <div class="cta-contacts">
                 <a href="https://wa.me/6281315147952?text=Hi%2C%20I%20got%20your%20WhatsApp%20information%20from%20your%20website." target="_blank" class="button prime">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="rgb(255, 255, 255)" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <path fill="rgb(255, 255, 255)" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z" />
+                    </svg>
                     Sales Project
                 </a>
                 <a href="https://wa.me/6281315147952?text=Hi%2C%20I%20got%20your%20WhatsApp%20information%20from%20your%20website." target="_blank" class="button prime">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="rgb(255, 255, 255)" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <path fill="rgb(255, 255, 255)" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z" />
+                    </svg>
                     Customer Service
                 </a>
                 <a href="https://wa.me/6285813601406?text=Hi%2C%20I%20got%20your%20WhatsApp%20information%20from%20your%20website." target="_blank" class="button prime">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="rgb(255, 255, 255)" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <path fill="rgb(255, 255, 255)" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z" />
+                    </svg>
                     Purchasing
                 </a>
             </div>
@@ -904,9 +1160,11 @@
 
     @include('partials.site-footer')
 
+    @include('partials.member-popup')
+
     <script>
         // Hero slider: autoplay 8 detik (sama seperti referensi), panah, dan dots.
-        (function () {
+        (function() {
             var track = document.getElementById('heroTrack');
             if (!track) return;
             var slides = track.children.length;
@@ -920,8 +1178,11 @@
                 d.type = 'button';
                 d.className = 'slide-dot' + (i === 0 ? ' active' : '');
                 d.setAttribute('aria-label', 'Ke slide ' + (i + 1));
-                (function (idx) {
-                    d.addEventListener('click', function () { go(idx); restart(); });
+                (function(idx) {
+                    d.addEventListener('click', function() {
+                        go(idx);
+                        restart();
+                    });
                 })(i);
                 dotsWrap.appendChild(d);
                 dots.push(d);
@@ -930,53 +1191,72 @@
             function go(i) {
                 current = (i + slides) % slides;
                 track.style.transform = 'translateX(-' + (current * 100) + '%)';
-                dots.forEach(function (d, j) { d.classList.toggle('active', j === current); });
+                dots.forEach(function(d, j) {
+                    d.classList.toggle('active', j === current);
+                });
             }
 
             function restart() {
                 clearInterval(timer);
-                timer = setInterval(function () { go(current + 1); }, 8000);
+                timer = setInterval(function() {
+                    go(current + 1);
+                }, 8000);
             }
 
-            document.getElementById('heroPrev').addEventListener('click', function () { go(current - 1); restart(); });
-            document.getElementById('heroNext').addEventListener('click', function () { go(current + 1); restart(); });
+            document.getElementById('heroPrev').addEventListener('click', function() {
+                go(current - 1);
+                restart();
+            });
+            document.getElementById('heroNext').addEventListener('click', function() {
+                go(current + 1);
+                restart();
+            });
 
             var slider = document.getElementById('heroSlider');
-            slider.addEventListener('mouseenter', function () { clearInterval(timer); });
+            slider.addEventListener('mouseenter', function() {
+                clearInterval(timer);
+            });
             slider.addEventListener('mouseleave', restart);
 
             restart();
         })();
 
         // Hamburger menu mobile
-        (function () {
+        (function() {
             var btn = document.getElementById('menuButton');
             var menu = document.getElementById('mobileMenu');
             if (!btn || !menu) return;
-            btn.addEventListener('click', function () {
+            btn.addEventListener('click', function() {
                 var open = menu.classList.toggle('open');
                 btn.setAttribute('aria-expanded', open ? 'true' : 'false');
             });
         })();
 
-        (function () {
+        (function() {
             if (!('IntersectionObserver' in window)) return;
             document.body.classList.add('reveal-ready');
-            var io = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
+            var io = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
                     if (!entry.isIntersecting) return;
                     var el = entry.target;
                     if (el.classList.contains('reveal-group')) {
-                        Array.prototype.forEach.call(el.children, function (child, i) {
-                            setTimeout(function () { child.classList.add('in-view'); }, Math.min(i * 70, 600));
+                        Array.prototype.forEach.call(el.children, function(child, i) {
+                            setTimeout(function() {
+                                child.classList.add('in-view');
+                            }, Math.min(i * 70, 600));
                         });
                     } else {
                         el.classList.add('in-view');
                     }
                     io.unobserve(el);
                 });
-            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-            document.querySelectorAll('.reveal, .reveal-group').forEach(function (el) { io.observe(el); });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -30px 0px'
+            });
+            document.querySelectorAll('.reveal, .reveal-group').forEach(function(el) {
+                io.observe(el);
+            });
         })();
     </script>
 </body>

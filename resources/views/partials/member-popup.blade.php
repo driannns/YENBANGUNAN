@@ -18,7 +18,7 @@
         justify-content: center;
         padding: 24px;
         opacity: 0;
-        transition: opacity .25s ease;
+        transition: opacity .35s ease;
     }
 
     /* `hidden` attribute harus benar-benar melepas elemen dari layar.
@@ -42,14 +42,23 @@
         position: absolute;
         inset: 0;
         background: rgba(0, 0, 0, .72);
+        backdrop-filter: blur(0px);
+        transition: backdrop-filter .45s ease;
+    }
+
+    .member-popup.is-open .member-popup__backdrop {
         backdrop-filter: blur(4px);
     }
 
     .member-popup__dialog {
         position: relative;
         width: min(440px, 100%);
-        transform: translateY(16px) scale(.96);
-        transition: transform .3s cubic-bezier(.2, .8, .3, 1);
+        transform: translateY(28px) scale(.92);
+        opacity: 0;
+        will-change: transform, opacity;
+        transition:
+            transform .5s cubic-bezier(.16, 1, .3, 1),
+            opacity .4s ease;
     }
 
     .member-popup__art {
@@ -68,6 +77,7 @@
 
     .member-popup.is-open .member-popup__dialog {
         transform: translateY(0) scale(1);
+        opacity: 1;
     }
 
     @keyframes member-popup-neon {
@@ -134,6 +144,12 @@
         .member-popup__art {
             animation: none;
         }
+
+        .member-popup,
+        .member-popup__backdrop,
+        .member-popup__dialog {
+            transition-duration: .01ms;
+        }
     }
 </style>
 
@@ -145,6 +161,10 @@
         function open() {
             popup.hidden = false;
             document.body.style.overflow = 'hidden';
+            // Paksa browser meng-commit state awal (opacity 0 / dialog turun)
+            // setelah display berubah dari none, supaya transisi benar-benar
+            // dijalankan dan tidak "melompat".
+            void popup.offsetHeight;
             requestAnimationFrame(function() {
                 popup.classList.add('is-open');
             });
@@ -155,7 +175,7 @@
             document.body.style.overflow = '';
             setTimeout(function() {
                 popup.hidden = true;
-            }, 300);
+            }, 500);
         }
 
         popup.querySelectorAll('[data-close]').forEach(function(el) {

@@ -15,29 +15,173 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css">
+    <!-- Quill Table Module -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill-table-module@latest/dist/quill-table-module.css">
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill-table-module@latest/dist/quill-table-module.js"></script>
     <style>
         [x-cloak] { display: none !important; }
 
-        .quill-toolbar.ql-toolbar.ql-snow {
+        /* Quill Wrapper */
+        .quill-wrapper {
+            display: flex;
+            flex-direction: column;
+            border-radius: 0.375rem;
+            overflow: hidden;
             border: 1px solid #d1d5db;
-            border-bottom: none;
-            border-radius: 0.375rem 0.375rem 0 0;
+        }
+
+        .quill-wrapper:focus-within {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 1px #6366f1;
+        }
+
+        .quill-toolbar.ql-toolbar.ql-snow {
+            border: none;
             background: #f9fafb;
+            padding: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+
+        .quill-toolbar .ql-formats {
+            display: flex;
+            gap: 0.25rem;
+            margin-right: 0.5rem;
+            padding-right: 0.5rem;
+            border-right: 1px solid #e5e7eb;
+        }
+
+        .quill-toolbar .ql-formats:last-child {
+            border-right: none;
+            margin-right: 0;
+            padding-right: 0;
         }
 
         .ql-container.ql-snow {
-            border: 1px solid #d1d5db;
-            border-radius: 0 0 0.375rem 0.375rem;
+            border: none;
             font-size: 0.875rem;
         }
 
         .ql-editor {
             min-height: 12rem;
             line-height: 1.5rem;
+            padding: 1rem;
         }
 
-        .ql-container.ql-snow:focus-within {
+        .ql-editor.ql-blank::before {
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        /* Table styling */
+        .ql-editor table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .ql-editor table tr {
+            border-bottom: 1px solid #d1d5db;
+        }
+
+        .ql-editor table td {
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            min-width: 3rem;
+        }
+
+        .ql-editor table th {
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            background-color: #f3f4f6;
+            font-weight: 600;
+        }
+
+        .ql-toolbar.ql-snow .ql-table,
+        .ql-toolbar.ql-snow .ql-insert-row,
+        .ql-toolbar.ql-snow .ql-insert-col,
+        .ql-toolbar.ql-snow .ql-delete-row,
+        .ql-toolbar.ql-snow .ql-delete-col,
+        .ql-toolbar.ql-snow .ql-delete-table {
+            width: auto;
+            height: 1.875rem;
+        }
+
+        /* Table button icons */
+        .ql-toolbar.ql-snow .ql-table::before {
+            content: '📋';
+            font-size: 1rem;
+        }
+
+        .ql-toolbar.ql-snow .ql-insert-row::before {
+            content: '➕ Row';
+            font-size: 0.75rem;
+        }
+
+        .ql-toolbar.ql-snow .ql-insert-col::before {
+            content: '➕ Col';
+            font-size: 0.75rem;
+        }
+
+        .ql-toolbar.ql-snow .ql-delete-row::before {
+            content: '❌ Row';
+            font-size: 0.75rem;
+        }
+
+        .ql-toolbar.ql-snow .ql-delete-col::before {
+            content: '❌ Col';
+            font-size: 0.75rem;
+        }
+
+        .ql-toolbar.ql-snow .ql-delete-table::before {
+            content: '❌ Tbl';
+            font-size: 0.75rem;
+        }
+
+        /* Form Fields Stroke */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="url"],
+        input[type="date"],
+        input[type="time"],
+        input[type="datetime-local"],
+        input[type="tel"],
+        input[type="search"],
+        textarea,
+        select {
+            border: 1px solid #d1d5db !important;
+            border-radius: 0.375rem;
+            padding: 0.5rem 0.75rem !important;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="number"]:focus,
+        input[type="url"]:focus,
+        input[type="date"]:focus,
+        input[type="time"]:focus,
+        input[type="datetime-local"]:focus,
+        input[type="tel"]:focus,
+        input[type="search"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #6366f1 !important;
+            box-shadow: 0 0 0 1px #6366f1;
+        }
+
+        input[type="file"] {
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            padding: 0.5rem;
+        }
+
+        input[type="file"]:focus {
             outline: none;
             border-color: #6366f1;
             box-shadow: 0 0 0 1px #6366f1;

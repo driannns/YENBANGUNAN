@@ -134,7 +134,11 @@ class ContentController extends Controller
             'category' => $isProduct ? $validated['category'] : null,
         ]);
 
-        return redirect($blog->publicUrl())->with('status', '"' . $blog->title . '" berhasil diperbarui.');
+        $redirectUrl = $blog->status === 'active'
+            ? $blog->publicUrl()
+            : route('admin.content.index', ['status' => 'archived']);
+
+        return redirect($redirectUrl)->with('status', '"' . $blog->title . '" berhasil diperbarui.');
     }
 
     public function destroy(Blog $blog): RedirectResponse
@@ -399,7 +403,8 @@ class ContentController extends Controller
         $html = $this->sanitizeVideoEmbeds($html);
 
         $allowedTags = '<div><p><br><strong><b><em><i><u><s><del><sub><sup><a><span>'
-            . '<ul><ol><li><blockquote><pre><code><h1><h2><h3><h4><h5><h6><img><iframe>';
+            . '<ul><ol><li><blockquote><pre><code><h1><h2><h3><h4><h5><h6><img><iframe>'
+            . '<table><tbody><thead><tfoot><tr><td><th>';
         $html = strip_tags($html, $allowedTags);
 
         // strip_tags tidak membuang atribut pada tag yang diizinkan — buang event

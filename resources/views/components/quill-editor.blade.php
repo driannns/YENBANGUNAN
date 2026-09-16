@@ -2,6 +2,7 @@
 
 <input id="{{ $id }}" type="hidden" name="{{ $name }}" value="{{ $value }}">
 
+<div id="{{ $id }}-wrapper" class="quill-wrapper">
 <div id="{{ $id }}-toolbar" class="quill-toolbar">
     <span class="ql-formats">
         <select class="ql-font"></select>
@@ -52,45 +53,113 @@
         <button type="button" class="ql-video"></button>
     </span>
     <span class="ql-formats">
+        <button type="button" class="ql-table" title="Insert Table"></button>
+        <button type="button" class="ql-insert-row" title="Insert Row Below"></button>
+        <button type="button" class="ql-insert-col" title="Insert Column Right"></button>
+        <button type="button" class="ql-delete-row" title="Delete Row"></button>
+        <button type="button" class="ql-delete-col" title="Delete Column"></button>
+        <button type="button" class="ql-delete-table" title="Delete Table"></button>
+    </span>
+    <span class="ql-formats">
         <button type="button" class="ql-clean"></button>
     </span>
 </div>
-<div id="{{ $id }}-container" {{ $attributes }}>{!! $value !!}</div>
+<div id="{{ $id }}-container" class="ql-editor" {{ $attributes }}>{!! $value !!}</div>
+</div>
 
 <script>
     (function () {
+        // Tunggu library siap sebelum init
+        function waitForLibraries(callback) {
+            if (typeof window.Quill !== 'undefined') {
+                callback();
+            } else {
+                setTimeout(function() { waitForLibraries(callback); }, 100);
+            }
+        }
+
         // Quill terima "google.com" apa adanya sebagai href — browser lalu
         // menganggapnya path relatif ke halaman saat ini (jadi kebuka
         // ".../google.com", bukan ke situs google.com). Timpa sanitizer bawaan
         // link supaya link tanpa skema otomatis ditambah "https://", sementara
         // link internal ("/kategori/produk") dan anchor ("#bagian") dibiarkan.
         if (!window.__quillAutoProtocolLinkRegistered) {
-            var BaseLink = Quill.import('formats/link');
-            var hasSchemeOrIsRelative = /^[a-z][a-z0-9+.-]*:|^[/#]/i;
+            waitForLibraries(function() {
+                var BaseLink = Quill.import('formats/link');
+                var hasSchemeOrIsRelative = /^[a-z][a-z0-9+.-]*:|^[/#]/i;
 
-            class AutoProtocolLink extends BaseLink {
-                static sanitize(url) {
-                    var value = super.sanitize(url);
-                    if (!value || hasSchemeOrIsRelative.test(value)) {
-                        return value;
+                class AutoProtocolLink extends BaseLink {
+                    static sanitize(url) {
+                        var value = super.sanitize(url);
+                        if (!value || hasSchemeOrIsRelative.test(value)) {
+                            return value;
+                        }
+                        return 'https://' + value;
                     }
-                    return 'https://' + value;
                 }
-            }
 
-            Quill.register(AutoProtocolLink, true);
-            window.__quillAutoProtocolLinkRegistered = true;
+                Quill.register(AutoProtocolLink, true);
+                window.__quillAutoProtocolLinkRegistered = true;
+            });
         }
 
         function init() {
-            var hiddenInput = document.getElementById(@js($id));
-            var quill = new Quill(document.getElementById(@js($id . '-container')), {
-                theme: 'snow',
-                modules: {
-                    toolbar: {
-                        container: document.getElementById(@js($id . '-toolbar')),
-                        handlers: {
-                            image: function () {
+            waitForLibraries(function() {
+                var hiddenInput = document.getElementById(@js($id));
+                var quill = new Quill(document.getElementById(@js($id . '-container')), {
+                    theme: 'snow',
+                    modules: {
+                        table: true,
+                        toolbar: {
+                            container: document.getElementById(@js($id . '-toolbar')),
+                            handlers: {
+                                table: function () {
+                                    var table = quill.getModule('table');
+                                    table.insertTable(3, 3);
+                                },
+                                'insert-row': function () {
+                                    var table = quill.getModule('table');
+                                    table.insertRowBelow();
+                                },
+                                'insert-col': function () {
+                                    var table = quill.getModule('table');
+                                    if (table && typeof table.insertColumnRight === 'function') {
+                                        table.insertColumnRight();
+                                    } else if (table && typeof table.insertColRight === 'function') {
+                                        table.insertColRight();
+                                    } else if (table && typeof table.insertColumn === 'function') {
+                                        table.insertColumn();
+                                    } else {
+                                        alert('Pilih cell di tabel terlebih dahulu');
+                                    }
+                                },
+                                'delete-row': function () {
+                                    var table = quill.getModule('table');
+                                    if (table && typeof table.deleteRow === 'function') {
+                                        table.deleteRow();
+                                    } else {
+                                        alert('Pilih cell di tabel terlebih dahulu');
+                                    }
+                                },
+                                'delete-col': function () {
+                                    var table = quill.getModule('table');
+                                    if (table && typeof table.deleteColumn === 'function') {
+                                        table.deleteColumn();
+                                    } else if (table && typeof table.deleteCol === 'function') {
+                                        table.deleteCol();
+                                    } else {
+                                        alert('Pilih cell di tabel terlebih dahulu');
+                                    }
+                                },
+                                'delete-table': function () {
+                                    var table = quill.getModule('table');
+                                    if (table && typeof table.deleteTable === 'function') {
+                                        table.deleteTable();
+                                    } else {
+                                        alert('Pilih tabel terlebih dahulu');
+                                    }
+                                },
+                                image: function () {
                                 var input = document.createElement('input');
                                 input.setAttribute('type', 'file');
                                 input.setAttribute('accept', 'image/png,image/jpeg,image/webp,image/gif');
@@ -137,12 +206,13 @@
                 hiddenInput.value = html === '<p><br></p>' ? '' : html;
             }
 
-            quill.on('text-change', syncHiddenInput);
+                quill.on('text-change', syncHiddenInput);
 
-            var form = hiddenInput.closest('form');
-            if (form) {
-                form.addEventListener('submit', syncHiddenInput);
-            }
+                var form = hiddenInput.closest('form');
+                if (form) {
+                    form.addEventListener('submit', syncHiddenInput);
+                }
+            });
         }
 
         if (document.readyState === 'loading') {
